@@ -1,11 +1,20 @@
-import express from 'express';
-import { configDotenv } from 'dotenv';
+import express, { Application, Request, Response } from "express";
+import { config as configDotenv } from "dotenv";
+import connectDB from "./config/db";
 
-const app =  express();
+
 configDotenv();
+
+
+connectDB();
+
+const app: Application = express();
 app.use(express.json());
 
-const port = process.env.PORT || 5000;
-console.log(port);
-app.listen(port, ()=> console.log(`Server running on port ${port}`));
+const port: number = parseInt(process.env.PORT || "5000", 10);
 
+app.get("/", (req: Request, res: Response) => {
+  res.send("API is running...");
+});
+
+app.listen(port, () => console.log(` Server running on port ${port}`));
