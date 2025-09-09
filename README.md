@@ -1,7 +1,9 @@
 # past_lens
+
 A digital Museum
 
-Commands 
+Commands
+
 ```bash
-npm init -y // add a package.json 
+npm init -y // add a package.json
 ```
