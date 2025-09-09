@@ -145,7 +145,10 @@ export default function Header() {
             <a href="#team" className="block py-2 px-4 rounded hover:bg-[#f3f4f5] font-bold">Team</a>
             <a href="#faq" className="block py-2 px-4 rounded hover:bg-[#f3f4f5] font-bold">FAQ</a>
             <a href="#contact" className="block py-2 px-4 rounded hover:bg-[#f3f4f5] font-bold">Contact</a>
-            <Button size="lg" variant="secondary" className="w-full mt-4 bg-[#eeeff1] text-[#1b1b1d] rounded-full px-8 py-3 font-bold shadow">Sign Up</Button>
+            <Button size="lg" variant="secondary" 
+            className="w-full mt-4 bg-[#eeeff1] text-[#1b1b1d] rounded-full px-8 py-3 font-bold shadow">
+              <a className='' href='/signup'>Sign Up</a>
+            </Button>
           </div>
         )}
       </div>
@@ -178,7 +181,10 @@ export default function Header() {
           )}
         </motion.div>
         <motion.div whileHover={{ scale: 1.05}}>
-          <Button size="lg" variant="secondary" className="bg-[#eeeff1] text-[#1b1b1d] rounded-full px-8 py-3 font-bold shadow">Sign Up</Button>
+          <Button size="lg" variant="secondary" 
+            className="w-full mt-4 bg-[#eeeff1] text-[#1b1b1d] rounded-full px-8 py-3 font-bold shadow">
+              <a className='' href='/signup'>Sign Up</a>
+          </Button>        
         </motion.div>
       </nav>
       </motion.header>
