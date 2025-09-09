@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { motion} from 'framer-motion';
-import { Star, Coffee, BookOpen, Globe, Mic, Languages, Mail, Phone, MapPin, Bot, ArrowUp, ChevronRightIcon } from 'lucide-react';
+import { Star, Coffee, BookOpen, Globe, Mic, Languages, Bot, ArrowUp, ChevronRightIcon } from 'lucide-react';
 import content from '@/utils/content';
 
 function getFeatureIcon(idx: number) {
@@ -19,11 +19,8 @@ function getFeatureIcon(idx: number) {
 }
 
 export default function Homepage() {
-  // All homepage logic, hooks, and UI except header/footer
   // Floating buttons state
   const [showScrollTop, setShowScrollTop] = useState(false);
-  // Dropdown menu logic
-  const [showDropdown, setShowDropdown] = useState<string | null>(null);
   // Tooltip state for virtual assistant button
   const [showTooltip, setShowTooltip] = useState(false);
   // Chat box state
@@ -46,16 +43,7 @@ export default function Homepage() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  // Dropdown menu hover fix
-  const handleDropdownEnter = (menu: string) => setShowDropdown(menu);
-  const handleDropdownLeave = (menu: string) => {
-    setTimeout(() => {
-      const dropdown = document.getElementById(`dropdown-${menu}`);
-      if (dropdown && !dropdown.matches(':hover')) {
-        setShowDropdown(null);
-      }
-    }, 100);
-  };
+
   // FAQ dropdown state
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -282,7 +270,10 @@ export default function Homepage() {
                 key={idx}
                 whileHover={{ scale: 1.07, rotate: [0, 2, -2, 0], boxShadow: "0 8px 32px #64646455" }}
                 whileTap={{ scale: 0.97 }}
-                className="min-w-[300px] max-w-[300px] bg-[#f3f4f5] border-none shadow-xl rounded-2xl flex flex-col items-center p-10 relative"
+                className="min-w-[300px] max-w-[300px] border-none shadow-xl rounded-2xl flex flex-col items-center p-10 relative"
+                style={{
+                  background: 'linear-gradient(135deg, #e0e7ef 0%, #f3f4f5 60%, #ffe5d0 100%)',
+                }}
               >
                 <motion.div
                   className="w-24 h-24 rounded-full bg-[#646464] flex items-center justify-center mb-4 shadow-lg"

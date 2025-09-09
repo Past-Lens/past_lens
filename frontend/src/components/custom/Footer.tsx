@@ -22,79 +22,43 @@ export default function Footer() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
-        className="py-16 px-4 text-center rounded-t-3xl"
+  className="py-16 px-4 text-center rounded-t-3xl relative"
         style={{ background: 'linear-gradient(120deg, #232325 0%, #1b1b1d 80%, #1b1b1d 100%)', marginBottom: 0 }}
       >
-        {/* Micro Animations - Join Us Subsection */}
+        {/* Micro Animations - Join Us Subsection (fixed, visible) */}
         <motion.span
           initial={{ scale: 1 }}
           animate={{ scale: [1, 1.15, 1] }}
           transition={{ repeat: Infinity, duration: 1.2, ease: 'easeInOut' }}
-          className="absolute left-16 top-16 text-[1.1rem] opacity-30 pointer-events-none select-none z-0"
-        //   aria-hidden="true"
-        >💡</motion.span>
-        <motion.span
-          initial={{ rotate: 0 }}
-          animate={{ rotate: 360 }}
-          transition={{ repeat: Infinity, duration: 2.5, ease: 'linear' }}
-          className="absolute right-24 top-24 text-[1rem] opacity-30 pointer-events-none select-none z-0"
-        //   aria-hidden="true"
-        >✨</motion.span>
-        <motion.span
-          initial={{ y: 0 }}
-          animate={{ y: [0, -10, 0] }}
-          transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' }}
-          className="absolute left-1/2 top-32 text-[0.9rem] opacity-30 pointer-events-none select-none z-0"
-        //   aria-hidden="true"
-        >🔵</motion.span>
-        <motion.span
-          initial={{ x: 0 }}
-          animate={{ x: [0, 12, 0] }}
-          transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
-          className="absolute right-32 bottom-24 text-[1rem] opacity-30 pointer-events-none select-none z-0"
-        //   aria-hidden="true"
-        >🟢</motion.span>
-        <motion.span
-          initial={{ opacity: 0.2 }}
-          animate={{ opacity: [0.2, 1, 0.2] }}
-          transition={{ repeat: Infinity, duration: 1.1, ease: 'easeInOut' }}
-          className="absolute left-24 bottom-16 text-[0.9rem] opacity-30 pointer-events-none select-none z-0"
-          aria-hidden="true"
-        >🟣</motion.span>
-        {/* Micro Animations - Join Us Subsection */}
-        <motion.span
-          initial={{ scale: 1 }}
-          animate={{ scale: [1, 1.15, 1] }}
-          transition={{ repeat: Infinity, duration: 1.2, ease: 'easeInOut' }}
-          className="absolute left-8 top-8 text-[1rem] opacity-30 pointer-events-none select-none z-0"
+          className="absolute left-8 top-8 text-[1rem] opacity-30 pointer-events-none select-none z-10"
           aria-hidden="true"
         >💡</motion.span>
         <motion.span
           initial={{ rotate: 0 }}
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 2.5, ease: 'linear' }}
-          className="absolute right-16 top-16 text-[0.9rem] opacity-30 pointer-events-none select-none z-0"
-        //   aria-hidden="true"
+          className="absolute right-16 top-16 text-[0.9rem] opacity-30 pointer-events-none select-none z-10"
+          aria-hidden="true"
         >✨</motion.span>
         <motion.span
           initial={{ y: 0 }}
           animate={{ y: [0, -10, 0] }}
           transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' }}
-          className="absolute left-1/2 top-24 text-[0.8rem] opacity-30 pointer-events-none select-none z-0"
+          className="absolute left-1/2 top-24 text-[0.8rem] opacity-30 pointer-events-none select-none z-10"
           aria-hidden="true"
         >🔵</motion.span>
         <motion.span
           initial={{ x: 0 }}
           animate={{ x: [0, 12, 0] }}
           transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
-          className="absolute right-24 bottom-16 text-[0.9rem] opacity-30 pointer-events-none select-none z-0"
+          className="absolute right-24 bottom-16 text-[0.9rem] opacity-30 pointer-events-none select-none z-10"
           aria-hidden="true"
         >🟢</motion.span>
         <motion.span
           initial={{ opacity: 0.2 }}
           animate={{ opacity: [0.2, 1, 0.2] }}
           transition={{ repeat: Infinity, duration: 1.1, ease: 'easeInOut' }}
-          className="absolute left-24 bottom-8 text-[0.8rem] opacity-30 pointer-events-none select-none z-0"
+          className="absolute left-24 bottom-8 text-[0.8rem] opacity-30 pointer-events-none select-none z-10"
           aria-hidden="true"
         >🟣</motion.span>
         <h3 className="text-2xl font-bold mb-4 text-[#eeeff1]">Join Us in Preserving Culture</h3>
