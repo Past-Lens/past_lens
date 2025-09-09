@@ -55,7 +55,7 @@ export default function Homepage() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
-        className="py-24 px-4 flex flex-col items-center justify-center relative overflow-hidden"
+        className="py-36 px-4 flex flex-col items-center justify-center relative overflow-hidden"
         style={{ background: 'linear-gradient(120deg, #f3f4f5 0%, #ffe5d0 40%, #ffd6e0 80%, #eeeff1 100%)' }}
       >
         {/* Rotating heart emoji background animation */}
@@ -131,6 +131,7 @@ export default function Homepage() {
           className="absolute left-24 top-24 text-[1.2rem] opacity-30 pointer-events-none select-none z-0"
           aria-hidden="true"
         >🟣</motion.span>
+    <h3 className="text-3xl font-bold text-center mb-12 text-[#1b1b1d]"> Explore Our Features</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {content.features.map((feature, idx) => (
             <motion.div whileHover={{ scale: 1.05, boxShadow: '0 0 4px #aaa', borderRadius:"1rem" }} key={idx}>
