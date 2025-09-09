@@ -64,7 +64,7 @@ export default function Footer() {
         <h3 className="text-2xl font-bold mb-4 text-[#eeeff1]">Join Us in Preserving Culture</h3>
         <p className="max-w-xl mx-auto text-[#bdbdbd] mb-6">Be part of the movement to preserve and celebrate cultural heritage. Together, we can ensure our traditions live on for future generations.</p>
         <motion.div  className='flex items-center justify-center w-full gap-12'>
-          <Button size="lg" variant="default" className="bg-[#eeeff1] text-[#1b1b1d] cursor-pointer p-4 hover:bg-amber-500 text-lg">Contact Us</Button>
+          <Button size="lg" variant="default" className="bg-[#eeeff1] text-[#1b1b1d] cursor-pointer p-4 hover:bg-amber-500 text-lg">Contribute </Button>
 
           {/* Digital Clock */}
             <div className="flex gap-6 items-center justify-center px-6 py-2 rounded-xl bg-gradient-to-r from-[#232222] via-[#1b1b1d] to-[#232325] shadow border border-[#232325] min-w-[120px]">

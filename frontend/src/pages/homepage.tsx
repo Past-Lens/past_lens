@@ -176,8 +176,7 @@ export default function Homepage() {
             ))}
           </div>
         </div>
-        {/* Micro Animations - FAQ Section */}
-        {/* Micro Animations - FAQ Section (smaller, reordered) */}
+        
         <motion.span
           initial={{ scale: 1 }}
           animate={{ scale: [1, 1.1, 1] }}
@@ -317,31 +316,7 @@ export default function Homepage() {
           )}
         </button>
       </div>
-      {/* Chip and Chat Box (bottom left) */}
-      <div className="fixed left-4 bottom-16 z-40 flex flex-col items-start">
-        <button
-          className="px-4 py-3 rounded-full shadow font-semibold text-base transition cursor-pointer text-white bg-gradient-to-r from-orange-400 via-pink-500 to-red-500 hover:from-orange-500 hover:to-pink-600"
-          onClick={() => setShowChat(true)}
-          style={{ boxShadow: '0 2px 16px rgba(255, 140, 0, 0.25)' }}
-        >
-          Ask LensAI
-        </button>
-        {showChat && (
-          <div className="absolute left-0 bottom-12 w-80 bg-white rounded-xl shadow-2xl p-4 flex flex-col gap-2 border border-orange-200 animate-fade-in">
-            <div className="flex justify-between items-center mb-2">
-              <span className="font-bold text-orange-700">LensAI Chat</span>
-              <button className="text-gray-500 hover:text-orange-700 text-lg font-bold" onClick={() => setShowChat(false)}>×</button>
-            </div>
-            <div className="flex-1 min-h-[120px] bg-orange-50 rounded p-2 mb-2 text-sm text-gray-700">How can I help you today?</div>
-            <form className="relative flex items-center" onSubmit={e => { e.preventDefault(); /* handle submit here */ }}>
-              <input type="text" placeholder="Type your message..." className="border border-orange-200 rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-orange-400 w-full pr-10" />
-              <button type="submit" className="absolute right-2 top-1/2 -translate-y-1/2 text-orange-600 hover:text-orange-800 p-1 cursor-pointer">
-                <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
-              </button>
-            </form>
-          </div>
-        )}
-      </div>
+   
       {/* Scroll-to-Top Button */}
       {showScrollTop && (
         <button
