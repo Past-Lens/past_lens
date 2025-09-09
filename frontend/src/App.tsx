@@ -1,7 +1,7 @@
-import Homepage from "@/pages/homepage";
-import Header from "@/components/custom/Header";
-import Footer from "@/components/custom/Footer";
-import { useState, useRef, useEffect } from "react";
+import Homepage from '@/pages/homepage';
+import Header from '@/components/custom/Header';
+import Footer from '@/components/custom/Footer';
+import { useState, useRef, useEffect } from 'react';
 
 function App() {
   // Header sticky/hide on scroll logic
@@ -20,15 +20,15 @@ function App() {
       }
       lastScrollY.current = window.scrollY;
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   // Dropdown menu hover fix
   const handleDropdownEnter = (menu: string) => setShowDropdown(menu);
   const handleDropdownLeave = (menu: string) => {
     setTimeout(() => {
       const dropdown = document.getElementById(`dropdown-${menu}`);
-      if (dropdown && !dropdown.matches(":hover")) {
+      if (dropdown && !dropdown.matches(':hover')) {
         setShowDropdown(null);
       }
     }, 100);
