@@ -3,28 +3,19 @@ import { useNavigate } from "react-router-dom";
 import { EyeClosed, Eye } from "lucide-react";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
+import { useAuth } from "../../context/authcontext";
 import { z } from "zod";
 
-// NOTE: This component assumes that the parent component or application provides
-// the AuthContext and its `login` function. For a self-contained example, this
-// hook is provided as a placeholder.
-const useAuth = () => {
-  const login = (userData: any) => {
-    console.log("User data received:", userData);
-    // In a real app, this would set the user in a global context
-    // or state management system.
-  };
-  return { login };
-};
+
 
 // Define the colors based on the provided image
 const coffeeColors = {
-  primary: "#4F3325", // Dark brown for text and accents
-  background: "#B39885", // Muted brown for the background
-  cardBackground: "#F5F5E9", // Off-white for the login card
-  hover: "#7E5C4E", // A slightly lighter brown for hover effects
-  error: "#E53E3E", // Standard red for errors
-  border: "#D1C6BB", // Light brown for borders
+  primary: "#4F3325", 
+  background: "#B39885", 
+  cardBackground: "#F5F5E9", 
+  hover: "#7E5C4E", 
+  error: "#E53E3E",
+  border: "#D1C6BB", 
 };
 
 // Simple JWT decode function to replace the external library
@@ -495,7 +486,7 @@ const Login = () => {
 
         console.log("Decoded user data from token:", userData);
 
-        login(userData);
+        login();
 
         toast.success("Login successful!");
         setFormData({
