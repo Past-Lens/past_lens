@@ -33,7 +33,7 @@ export default function Header({
     <>
       {/* Floating Chat Button */}
       <button
-        className="group fixed bottom-8 left-8 z-50 bg-orange-600 hover:bg-orange-700 px-4 py-0 text-white rounded-full shadow-lg flex items-center cursor-pointer justify-center transition-all duration-200"
+        className="group fixed bottom-8 left-8 z-50 bg-orange-600 hover:bg-orange-700 px-4 py-0 text-white rounded-full shadow-lg flex items-center cursor-pointer justify-center transition-all duration-200 min-h-16"
         onClick={() => setShowChat((v) => !v)}
         aria-label="Open chat"
       >
