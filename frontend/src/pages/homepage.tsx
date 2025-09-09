@@ -5,6 +5,8 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { motion} from 'framer-motion';
 import { Star, Coffee, BookOpen, Globe, Mic, Languages, Bot, ArrowUp, ChevronRightIcon } from 'lucide-react';
 import content from '@/utils/content';
+import Header from '@/components/custom/Header';
+import Footer from '@/components/custom/Footer';
 
 function getFeatureIcon(idx: number) {
   switch (idx) {
@@ -49,6 +51,7 @@ export default function Homepage() {
 
   return (
     <>
+      <Header/>
       {/* Hero Section */}
       <motion.section
         initial={{ opacity: 0, y: 40 }}
@@ -327,6 +330,8 @@ export default function Homepage() {
           <ArrowUp size={22} />
         </button>
       )}
+
+      <Footer/>
     </>
   );
 }

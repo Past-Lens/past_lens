@@ -2,18 +2,38 @@ import { motion } from 'framer-motion';
 import { Coffee, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
+import { useRef, useEffect } from 'react';
 
-export default function Header({
-  showHeader,
-  showDropdown,
-  handleDropdownEnter,
-  handleDropdownLeave
-}: {
-  showHeader: boolean,
-  showDropdown: string | null,
-  handleDropdownEnter: (menu: string) => void,
-  handleDropdownLeave: (menu: string) => void
-}) {
+export default function Header() {
+  // Header sticky/hide on scroll logic
+  const [showHeader, setShowHeader] = useState(true);
+  // Dropdown menu logic
+  const [showDropdown, setShowDropdown] = useState<string | null>(null);
+  const lastScrollY = useRef(window.scrollY);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY < 40) {
+        setShowHeader(true);
+      } else if (window.scrollY > lastScrollY.current) {
+        setShowHeader(false); // scrolling down
+      } else {
+        setShowHeader(true); // scrolling up
+      }
+      lastScrollY.current = window.scrollY;
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  // Dropdown menu hover fix
+  const handleDropdownEnter = (menu: string) => setShowDropdown(menu);
+  const handleDropdownLeave = (menu: string) => {
+    setTimeout(() => {
+      const dropdown = document.getElementById(`dropdown-${menu}`);
+      if (dropdown && !dropdown.matches(':hover')) {
+        setShowDropdown(null);
+      }
+    }, 100);
+  };
   // Chat box state
   const [showChat, setShowChat] = useState(false);
   const [chatInput, setChatInput] = useState("");
