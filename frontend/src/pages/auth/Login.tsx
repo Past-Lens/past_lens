@@ -467,7 +467,7 @@ const Login = () => {
       const response = await axios.post(
         "http://localhost:5000/api/auth/login",
         {
-          email,
+          emailOrUsername: email,
           password,
           remember_me: rememberMe,
         },
@@ -478,7 +478,8 @@ const Login = () => {
         }
       );
 
-      const { access_token, refresh_token } = response.data;
+      // Destructure 'token' from the response data and rename it to 'access_token'
+      const { token: access_token, refresh_token } = response.data;
 
       if (access_token) {
         const decodedToken: any = jwtDecode(access_token);
@@ -503,7 +504,7 @@ const Login = () => {
         });
         setErrors({});
 
-        navigate("/dashboard");
+        navigate("/");
       } else {
         throw new Error("Access token not received from server.");
       }
