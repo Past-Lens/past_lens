@@ -72,6 +72,28 @@ const content = {
     phone: "+254 700 000 000",
     address: "Culture Preservation and Archiving Project",
   },
+  faq: [
+    {
+      question: "What is Past Lens?",
+      answer:
+        "Past Lens is an intelligent digital museum platform that uses AI to preserve and promote cultural heritage.",
+    },
+    {
+      question: "How does Past Lens use AI?",
+      answer:
+        "We use computer vision and natural language processing to identify, categorize, and archive cultural artifacts and oral histories.",
+    },
+    {
+      question: "Who can contribute to Past Lens?",
+      answer:
+        "Anyone interested in cultural preservation can contribute stories, artifacts, and knowledge to our platform.",
+    },
+    {
+      question: "Is Past Lens free to use?",
+      answer:
+        "Yes, Past Lens is free for educational and personal use. Some advanced features may require registration.",
+    },
+  ],
 };
 
 export default content;
