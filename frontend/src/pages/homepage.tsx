@@ -72,8 +72,8 @@ export default function Homepage() {
         >❤️</motion.span>
         <div className="absolute inset-0 pointer-events-none z-0" style={{background: 'radial-gradient(circle at 60% 20%, #ffb86c33 0%, #ff61a633 60%, #eeeff1 100%)'}}></div>
         <div className="relative z-10 max-w-6xl w-full flex flex-col md:flex-row items-center gap-16">
-          <motion.div whileHover={{ scale: 1.05, rotate: 8 }} className="w-80 h-80 rounded-[2.5rem]" style={{background: themeColors.cardBackground, border: `4px solid ${themeColors.border}`}}>
-            <Coffee size={96} color={themeColors.text || themeColors.primary} />
+          <motion.div whileHover={{ scale: 1.05, rotate: 5 }} className="w-80 h-80 rounded-[2.5rem]" style={{ border: `4px solid ${themeColors.border}`}}>
+            <img src="/PLlogo.jpg" alt="" className='h-[95% w-[100%] place-self-center rounded-4xl'/> 
           </motion.div>
           <div className="flex-1 text-left">
             <h1 className="text-6xl font-extrabold mb-6" style={{color: themeColors.text || themeColors.primary}}>{content.hero.title}: {content.hero.subtitle}</h1>
