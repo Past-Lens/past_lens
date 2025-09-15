@@ -85,7 +85,8 @@ export default function Homepage() {
             </div>
             <h2 className="text-2xl font-semibold mb-4 text-[#646464]">{content.hero.description}</h2>
             <motion.div whileHover={{ scale: 1.05}}>
-              <Button size="lg" variant="default" className="bg-[#1b1b1d] text-[#eeeff1] rounded-full px-10 py-4 text-2xl h-20 tracking-wider font-bold shadow-lg cursor-pointer">Get Started</Button>
+              <Button size="lg" variant="default" className="bg-[#1b1b1d] text-[#eeeff1] rounded-full px-10 py-4 text-2xl h-20 tracking-wider 
+              font-bold shadow-lg cursor-pointer max-w-50">Get Started</Button>
             </motion.div>
           </div>
         </div>
