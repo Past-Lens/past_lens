@@ -85,7 +85,7 @@ export default function Homepage() {
             </div>
             <h2 className="text-2xl font-semibold mb-4 text-[#646464]">{content.hero.description}</h2>
             <motion.div whileHover={{ scale: 1.05}}>
-              <Button size="lg" variant="default" className="bg-[#1b1b1d] text-[#eeeff1] rounded-full px-10 py-4 text-xl font-bold shadow-lg cursor-pointer">Get Started</Button>
+              <Button size="lg" variant="default" className="bg-[#1b1b1d] text-[#eeeff1] rounded-full px-10 py-4 text-2xl h-20 tracking-wider font-bold shadow-lg cursor-pointer">Get Started</Button>
             </motion.div>
           </div>
         </div>
@@ -263,7 +263,7 @@ export default function Homepage() {
           </button>
           <motion.div
             id="team-scroll"
-            className="flex gap-8 overflow-x-auto p-4 scroll-smooth team-scroll"
+            className="flex gap-6 overflow-x-auto w-full min-w-0 p-4 scroll-smooth team-scroll snap-x snap-mandatory"
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
@@ -275,7 +275,7 @@ export default function Homepage() {
                 key={idx}
                 whileHover={{ scale: 1.07, rotate: [0, 2, -2, 0], boxShadow: "0 8px 32px #64646455" }}
                 whileTap={{ scale: 0.97 }}
-                className="min-w-[300px] max-w-[300px] border-none shadow-xl rounded-2xl flex flex-col items-center p-10 relative"
+                className={`min-w-[80vw] sm:min-w-[300px] max-w-[300px] border-none shadow-xl rounded-2xl flex flex-col items-center p-10 relative snap-start${idx === content.team.length - 1 ? ' mr-4' : ''}`}
                 style={{
                   background: 'linear-gradient(135deg, #e0e7ef 0%, #f3f4f5 60%, #ffe5d0 100%)',
                 }}
