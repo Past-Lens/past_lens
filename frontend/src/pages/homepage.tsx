@@ -28,8 +28,8 @@ export default function Homepage() {
   // Tooltip state for virtual assistant button
   const [showTooltip, setShowTooltip] = useState(false);
   // Chat box state
-  const [showChat, setShowChat] = useState(false);
-  // Header sticky/hide on scroll logic
+  // const [showChat, setShowChat] = useState(false);
+  // // Header sticky/hide on scroll logic
   const [showHeader, setShowHeader] = useState(true);
   const lastScrollY = useRef(window.scrollY);
   useEffect(() => {
@@ -85,7 +85,7 @@ export default function Homepage() {
             </div>
             <h2 className="text-2xl font-semibold mb-4 text-[#646464]">{content.hero.description}</h2>
             <motion.div whileHover={{ scale: 1.05}}>
-              <Button size="xl" variant="default" className="bg-[#1b1b1d] text-[#eeeff1] rounded-full px-16 py-6 text-2xl font-bold shadow-lg cursor-pointer">Get Started</Button>
+              <Button size="lg" variant="default" className="bg-[#1b1b1d] text-[#eeeff1] rounded-full px-10 py-4 text-xl font-bold shadow-lg cursor-pointer">Get Started</Button>
             </motion.div>
           </div>
         </div>

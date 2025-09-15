@@ -587,6 +587,7 @@ const Login = () => {
         className="flex min-h-screen relative"
         style={{ background: homepageGradient }}
       >
+        <ForegroundAnimations/>
         <MicroAnimation />
         <div
           className="hidden lg:flex w-1/2 items-center justify-center p-8 text-white relative overflow-hidden"
