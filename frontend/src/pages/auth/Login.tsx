@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Header from "../../components/custom/Header";
 import { useTheme } from "../../context/themecontext";
-import { themes } from "../../utils/colors";
 import { useNavigate } from "react-router-dom";
 import { EyeClosed, Eye } from "lucide-react";
 import toast, { Toaster } from "react-hot-toast";
