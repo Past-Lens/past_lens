@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
 import { Coffee, Menu } from 'lucide-react';
+import { themes } from '../../utils/colors';
+import { useTheme } from '../../context/themecontext';
 import { Button } from '@/components/ui/button';
-import { useState } from 'react';
-import { useRef, useEffect } from 'react';
-
+import { useState, useRef, useEffect } from 'react';
 export default function Header() {
+  const { themeName, setThemeName } = useTheme();
+  const [showThemeDropdown, setShowThemeDropdown] = useState(false);
   // Header sticky/hide on scroll logic
   const [showHeader, setShowHeader] = useState(true);
   // Dropdown menu logic
@@ -54,7 +56,7 @@ export default function Header() {
       {/* Floating Chat Button */}
       <button
         className="group fixed bottom-8 left-8 z-50 bg-orange-600 hover:bg-orange-700 px-4 py-0 text-white rounded-full shadow-lg flex items-center cursor-pointer justify-center transition-all duration-200 min-h-16"
-        onClick={() => setShowChat((v) => !v)}
+  onClick={() => setShowChat((v: boolean) => !v)}
         aria-label="Open chat"
       >
         <span className="font-bold text-lg align-center">💬</span>
@@ -65,7 +67,7 @@ export default function Header() {
   <div className="fixed bottom-24 left-8 z-50 bg-white rounded-2xl shadow-2xl w-80 max-w-full p-4 flex flex-col">
           <div className="font-bold text-[#1b1b1d] mb-2">LensAI Chat</div>
           <div className="flex-1 overflow-y-auto mb-2 max-h-48">
-            {chatMessages.map((msg, idx) => (
+            {chatMessages.map((msg: {user: string, text: string}, idx: number) => (
               <div key={idx} className={`mb-2 text-sm ${msg.user === "You" ? "text-right" : "text-left"}`}>
                 <span className={`inline-block px-3 py-2 rounded-xl ${msg.user === "You" ? "bg-[#eeeff1] text-[#1b1b1d]" : "bg-orange-100 text-orange-700"}`}>{msg.text}</span>
               </div>
@@ -94,6 +96,47 @@ export default function Header() {
           <Coffee size={28} color="#1b1b1d" />
         </motion.div>
         <span className="text-3xl font-extrabold tracking-tight text-[#eeeff1]">Past Lens</span>
+        {/* Rose icon theme dropdown */}
+        <div className="relative">
+          <div className="relative group">
+            <button
+              className="ml-2 px-2 py-1 rounded-full bg-pink-200 hover:bg-pink-300 text-pink-700 shadow flex items-center"
+              onClick={() => setShowThemeDropdown((v: boolean) => !v)}
+              aria-label="Choose theme"
+            >
+              <span style={{fontSize:'1.5rem'}}>🌹</span>
+            </button>
+            <span className="absolute left-1/2 -translate-x-1/2 top-full mt-2 px-3 py-1 bg-black text-white text-xs rounded shadow-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+              choose a theme
+            </span>
+          </div>
+          {showThemeDropdown && (
+            <div className="absolute left-0 top-full mt-2 bg-white border rounded-xl shadow-lg py-2 px-2 min-w-[180px] z-50 flex flex-col gap-2">
+              <button
+                key="coffee"
+                className={`flex items-center gap-2 w-full text-left py-2 px-4 rounded font-bold transition-all duration-200 ${themeName === 'coffee' ? 'ring-2 ring-[#4F3325]' : ''}`}
+                style={{ background: themeName === 'coffee' ? '#B39885' : '#F5F5E9' }}
+                onClick={() => { setThemeName('coffee'); setShowThemeDropdown(false); }}
+              >
+                <span className="inline-flex items-center justify-center w-7 h-7 rounded-full" style={{ background: '#4F3325' }}>
+                  <Coffee size={18} color="#F5F5E9" />
+                </span>
+                <span className="font-bold text-base text-[#4F3325]">Coffee</span>
+              </button>
+              <button
+                key="rose"
+                className={`flex items-center gap-2 w-full text-left py-2 px-4 rounded font-bold transition-all duration-200 ${themeName === 'roseFlower' ? 'ring-2 ring-pink-400' : ''}`}
+                style={{ background: themeName === 'roseFlower' ? '#ffd6e0' : '#fff0f6' }}
+                onClick={() => { setThemeName('roseFlower'); setShowThemeDropdown(false); }}
+              >
+                <span className="inline-flex items-center justify-center w-7 h-7 rounded-full" style={{ background: '#ffb7c5' }}>
+                  <span style={{ fontSize: '1.2rem' }}>🌹</span>
+                </span>
+                <span className="font-bold text-base text-pink-700">Rose</span>
+              </button>
+            </div>
+          )}
+        </div>
       </div>
       <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="flex-1 mx-8">
         <input
@@ -106,14 +149,14 @@ export default function Header() {
       <div className="flex md:hidden items-center">
         <button
           className="p-2 rounded-full bg-[#eeeff1] text-[#1b1b1d] shadow focus:outline-none"
-          onClick={() => setMobileMenuOpen((open) => !open)}
+          onClick={() => setMobileMenuOpen((open: boolean) => !open)}
           aria-label="Open menu"
         >
           <Menu size={28} />
         </button>
         {mobileMenuOpen && (
           <div className="absolute top-22 right-4 bg-[#eeeff1] text-[#1b1b1d] rounded-xl shadow-lg py-4 px-6 min-w-[220px] z-50">
-            <a href="#home" className="block py-2 px-4 rounded hover:bg-[#f3f4f5] font-bold">Home</a>
+            <a href="/" className="block py-2 px-4 rounded hover:bg-[#f3f4f5] font-bold">Home</a>
             <div>
               <button
                 className="block w-full text-left py-2 px-4 rounded hover:bg-[#f3f4f5] font-bold"
@@ -153,7 +196,7 @@ export default function Header() {
         )}
       </div>
       <nav className="hidden md:flex gap-8 text-[#eeeff1] font-medium text-lg items-center">
-        <motion.a href="#home" className="px-4 py-2 rounded-full transition font-bold bg-[#eeeff1] text-[#1b1b1d] shadow">Home</motion.a>
+        <motion.a href="/" className="px-4 py-2 rounded-full transition font-bold bg-[#eeeff1] text-[#1b1b1d] shadow">Home</motion.a>
         <motion.div className="relative group" onMouseEnter={() => handleDropdownEnter('community')} onMouseLeave={() => handleDropdownLeave('community')}>
           <button className="px-4 py-2 rounded-full transition font-bold hover:bg-[#eeeff1] hover:text-[#1b1b1d]">Community</button>
           {showDropdown === 'community' && (
@@ -183,7 +226,7 @@ export default function Header() {
         <motion.div whileHover={{ scale: 1.05}}>
           <Button size="lg" variant="secondary" 
             className="w-full mt-4 bg-[#eeeff1] text-[#1b1b1d] rounded-full px-8 py-3 font-bold shadow">
-              <a className='' href='/signup'>Sign Up</a>
+              <a className='' href='/login'>Sign In</a>
           </Button>        
         </motion.div>
       </nav>

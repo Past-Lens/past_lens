@@ -1,18 +1,11 @@
 import React, { useState } from "react";
+import Header from "../../components/custom/Header";
+import { useTheme } from "../../context/themecontext";
 import { useNavigate } from "react-router-dom";
 import { EyeClosed, Eye } from "lucide-react";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
 import { z } from "zod";
-
-const coffeeColors = {
-  primary: "#4F3325",
-  background: "#B39885",
-  cardBackground: "#F5F5E9",
-  hover: "#7E5C4E",
-  error: "#E53E3E",
-  border: "#D1C6BB",
-};
 
 // SVG Animation Components
 const AnimatedCamera = ({ delay = 0, x = 0, y = 0 }) => (
@@ -328,7 +321,6 @@ const BackgroundPattern = () => (
         </g>
       ))}
     </svg>
-    
   </div>
 );
 
@@ -392,6 +384,18 @@ const Register = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [registerError, setRegisterError] = useState<string | null>(null);
+
+  const { themeName, themeColors } = useTheme();
+  const homepageGradients = {
+    roseFlower: 'linear-gradient(120deg, #f3f4f5 0%, #ffe5d0 40%, #ffd6e0 80%, #eeeff1 100%)',
+    coffee: 'linear-gradient(120deg, #B39885 0%, #F5F5E9 60%, #D1C6BB 100%)',
+  };
+  const cardGradients = {
+    roseFlower: 'linear-gradient(135deg, #e0e7ef 0%, #f3f4f5 60%, #ffe5d0 100%)',
+    coffee: 'linear-gradient(135deg, #F5F5E9 0%, #B39885 60%, #D1C6BB 100%)',
+  };
+  const homepageGradient = homepageGradients[themeName as keyof typeof homepageGradients] || homepageGradients.roseFlower;
+  const cardGradient = cardGradients[themeName as keyof typeof cardGradients] || cardGradients.roseFlower;
 
   const navigate = useNavigate();
 
@@ -488,10 +492,7 @@ const Register = () => {
     if (!registerError) return null;
 
     return (
-      <div
-        className="p-3 rounded-md border text-sm"
-        style={{ borderColor: coffeeColors.error, color: coffeeColors.error }}
-      >
+      <div className="p-3 rounded-md border text-sm" style={{ borderColor: themeColors.error, color: themeColors.error }}>
         <div className="flex items-center justify-between">
           <span>{registerError}</span>
         </div>
@@ -500,302 +501,224 @@ const Register = () => {
   };
 
   return (
-    <div
-      className="flex min-h-screen"
-      style={{ backgroundColor: coffeeColors.background }}
-    >
-      <div
-        className="hidden lg:flex w-1/2 items-center justify-center p-8 text-white relative overflow-hidden"
-        style={{ backgroundColor: coffeeColors.primary }}
-      >
-        <BackgroundPattern />
-        {/* <ForegroundAnimations /> */}
-        <div className="text-center">
-          <h1 className="text-5xl font-bold font-inter">
-            Welcome to Past Lens
-          </h1>
-          <p className="text-xl mt-4 opacity-80">
-            Create an account to get started.
-          </p>
+    <>
+      <Header />
+      <div className="flex min-h-screen relative" style={{ background: homepageGradient }}>
+        <div className="hidden lg:flex w-1/2 items-center justify-center p-8 text-white relative overflow-hidden" style={{ background: themeName === 'coffee' ? themeColors.primary : 'linear-gradient(120deg, #232325 0%, #1b1b1d 80%, #1b1b1d 100%)' }}>
+          <BackgroundPattern />
+          <div className="text-center relative z-10">
+            <div className="flex items-center">
+              <h1 className="text-5xl font-bold font-inter mr-2">Welcome to</h1>
+              <h2 className="text-6xl font-bold font-inter bg-gradient-to-r from-yellow-200 to-orange-200 bg-clip-text text-transparent">Past Lens</h2>
+            </div>
+            <p className="text-xl opacity-90 mb-2">Create an account to get started</p>
+            <p className="text-lg opacity-70">Share your story and explore history</p>
+            <div className="mt-8 flex justify-center space-x-8">
+              <div className="w-3 h-3 rounded-full bg-yellow-200 animate-pulse"></div>
+              <div className="w-3 h-3 rounded-full bg-orange-200 animate-pulse" style={{ animationDelay: "0.5s" }}></div>
+              <div className="w-3 h-3 rounded-full bg-yellow-200 animate-pulse" style={{ animationDelay: "1s" }}></div>
+            </div>
+          </div>
         </div>
-      </div>
+        <div className="w-full lg:w-1/2 flex items-center justify-center p-8 lg:p-16">
+          <div className="w-full max-w-md p-8 rounded-2xl shadow-xl border relative mt-12" style={{ background: cardGradient, borderColor: themeColors.border, boxShadow: themeColors.cardShadow || '0 8px 32px #64646422' }}>
+            <form onSubmit={handleRegister} className="w-full flex flex-col gap-5 mt-8">
+              <div>
+                <h2 className="text-3xl font-extrabold mb-2 text-center" style={{ color: themeColors.text || themeColors.primary }}>
+                  Register
+                </h2>
+                <p className="text-sm mt-1 text-center" style={{color: themeColors.text || themeColors.primary}}>
+                  Enter your details to create a new account
+                </p>
+              </div>
 
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 lg:p-16">
-        <div
-          className="w-full max-w-md p-8 rounded-lg shadow-xl"
-          style={{ backgroundColor: coffeeColors.cardBackground }}
-        >
-          <form
-            onSubmit={handleRegister}
-            className="w-full flex flex-col gap-5"
-          >
-            <div>
-              <h2
-                className="text-2xl font-bold font-inter"
-                style={{ color: coffeeColors.primary }}
-              >
-                Register
-              </h2>
-              <p className="text-sm mt-1">
-                Enter your details to create a new account
-              </p>
-            </div>
+              {renderErrorMessage()}
 
-            {renderErrorMessage()}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="flex flex-col gap-1">
+                  <label htmlFor="firstName" className="font-semibold text-sm font-inter" style={{ color: themeColors.text || themeColors.primary }}>
+                    First Name
+                  </label>
+                  <input
+                    id="firstName"
+                    type="text"
+                    name="firstName"
+                    value={formData.firstName}
+                    autoComplete="off"
+                    placeholder="e.g. John"
+                    onChange={handleInputChange}
+                    className="p-4 border rounded-md outline-none focus:ring-2"
+                    style={{
+                      borderColor: errors.firstName ? themeColors.error : '#6b4f2a',
+                      boxShadow: errors.firstName ? `0 0 0 2px ${themeColors.error}` : undefined,
+                    }}
+                  />
+                  <p className="text-xs min-h-[1rem] font-inter" style={{ color: themeColors.error }}>
+                    {errors.firstName}
+                  </p>
+                </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="flex flex-col gap-1">
+                  <label htmlFor="lastName" className="font-semibold text-sm font-inter" style={{ color: themeColors.text || themeColors.primary }}>
+                    Last Name
+                  </label>
+                  <input
+                    id="lastName"
+                    type="text"
+                    name="lastName"
+                    value={formData.lastName}
+                    autoComplete="off"
+                    placeholder="e.g. Doe"
+                    onChange={handleInputChange}
+                    className="p-4 border rounded-md outline-none focus:ring-2"
+                    style={{
+                      borderColor: errors.lastName ? themeColors.error : '#6b4f2a',
+                      boxShadow: errors.lastName ? `0 0 0 2px ${themeColors.error}` : undefined,
+                    }}
+                  />
+                  <p className="text-xs min-h-[1rem] font-inter" style={{ color: themeColors.error }}>
+                    {errors.lastName}
+                  </p>
+                </div>
+              </div>
+
               <div className="flex flex-col gap-1">
-                <label
-                  htmlFor="firstName"
-                  className="font-semibold text-sm font-inter"
-                  style={{ color: coffeeColors.primary }}
-                >
-                  First Name
+                <label htmlFor="email" className="font-semibold text-sm font-inter" style={{ color: themeColors.text || themeColors.primary }}>
+                  E-mail
                 </label>
                 <input
-                  id="firstName"
-                  type="text"
-                  name="firstName"
-                  value={formData.firstName}
+                  id="email"
+                  type="email"
+                  name="email"
+                  value={formData.email}
                   autoComplete="off"
-                  placeholder="e.g. John"
+                  placeholder="e.g. you@example.com"
                   onChange={handleInputChange}
                   className="p-4 border rounded-md outline-none focus:ring-2"
                   style={{
-                    borderColor: errors.firstName
-                      ? coffeeColors.error
-                      : coffeeColors.border,
-                    boxShadow: `0 0 0 2px ${
-                      errors.firstName ? coffeeColors.error : ""
-                    }`,
+                    borderColor: errors.email ? themeColors.error : '#6b4f2a',
+                    boxShadow: errors.email ? `0 0 0 2px ${themeColors.error}` : undefined,
                   }}
                 />
-                <p
-                  className="text-xs min-h-[1rem] font-inter"
-                  style={{ color: coffeeColors.error }}
-                >
-                  {errors.firstName}
+                <p className="text-xs min-h-[1rem] font-inter" style={{ color: themeColors.error }}>
+                  {errors.email}
                 </p>
               </div>
 
               <div className="flex flex-col gap-1">
-                <label
-                  htmlFor="lastName"
-                  className="font-semibold text-sm font-inter"
-                  style={{ color: coffeeColors.primary }}
-                >
-                  Last Name
+                <label htmlFor="username" className="font-semibold text-sm font-inter" style={{ color: themeColors.text || themeColors.primary }}>
+                  Username
                 </label>
                 <input
-                  id="lastName"
+                  id="username"
                   type="text"
-                  name="lastName"
-                  value={formData.lastName}
+                  name="username"
+                  value={formData.username}
                   autoComplete="off"
-                  placeholder="e.g. Doe"
+                  placeholder="e.g. johndoe123"
                   onChange={handleInputChange}
                   className="p-4 border rounded-md outline-none focus:ring-2"
                   style={{
-                    borderColor: errors.lastName
-                      ? coffeeColors.error
-                      : coffeeColors.border,
-                    boxShadow: `0 0 0 2px ${
-                      errors.lastName ? coffeeColors.error : ""
-                    }`,
+                    borderColor: errors.username ? themeColors.error : '#6b4f2a',
+                    boxShadow: errors.username ? `0 0 0 2px ${themeColors.error}` : undefined,
                   }}
                 />
-                <p
-                  className="text-xs min-h-[1rem] font-inter"
-                  style={{ color: coffeeColors.error }}
-                >
-                  {errors.lastName}
+                <p className="text-xs min-h-[1rem] font-inter" style={{ color: themeColors.error }}>
+                  {errors.username}
                 </p>
               </div>
-            </div>
 
-            <div className="flex flex-col gap-1">
-              <label
-                htmlFor="email"
-                className="font-semibold text-sm font-inter"
-                style={{ color: coffeeColors.primary }}
-              >
-                E-mail
-              </label>
-              <input
-                id="email"
-                type="email"
-                name="email"
-                value={formData.email}
-                autoComplete="off"
-                placeholder="e.g. you@example.com"
-                onChange={handleInputChange}
-                className="p-4 border rounded-md outline-none focus:ring-2"
-                style={{
-                  borderColor: errors.email
-                    ? coffeeColors.error
-                    : coffeeColors.border,
-                  boxShadow: `0 0 0 2px ${
-                    errors.email ? coffeeColors.error : ""
-                  }`,
-                }}
-              />
-              <p
-                className="text-xs min-h-[1rem] font-inter"
-                style={{ color: coffeeColors.error }}
-              >
-                {errors.email}
-              </p>
-            </div>
+              <div className="flex flex-col gap-1 relative">
+                <label htmlFor="password" className="font-semibold text-sm font-inter" style={{ color: themeColors.text || themeColors.primary }}>
+                  Password
+                </label>
+                <input
+                  id="password"
+                  type={showPassword ? "text" : "password"}
+                  value={formData.password}
+                  autoComplete="off"
+                  name="password"
+                  placeholder="Enter a secure password"
+                  onChange={handleInputChange}
+                  className="p-3 border rounded-md outline-none focus:ring-2"
+                  style={{
+                    borderColor: errors.password ? themeColors.error : '#6b4f2a',
+                    boxShadow: errors.password ? `0 0 0 2px ${themeColors.error}` : undefined,
+                  }}
+                />
+                {formData.password && (
+                  <span className="absolute right-3 top-9 cursor-pointer" onClick={() => setShowPassword((prev) => !prev)} style={{ color: themeColors.text || themeColors.primary }}>
+                    {showPassword ? (
+                      <EyeClosed className="text-gray-500" size={18} />
+                    ) : (
+                      <Eye className="text-gray-500" size={18} />
+                    )}
+                  </span>
+                )}
+                <p className="text-xs min-h-[1rem] font-inter" style={{ color: themeColors.error }}>
+                  {errors.password}
+                </p>
+              </div>
 
-            <div className="flex flex-col gap-1">
-              <label
-                htmlFor="username"
-                className="font-semibold text-sm font-inter"
-                style={{ color: coffeeColors.primary }}
-              >
-                Username
-              </label>
-              <input
-                id="username"
-                type="text"
-                name="username"
-                value={formData.username}
-                autoComplete="off"
-                placeholder="e.g. johndoe123"
-                onChange={handleInputChange}
-                className="p-4 border rounded-md outline-none focus:ring-2"
-                style={{
-                  borderColor: errors.username
-                    ? coffeeColors.error
-                    : coffeeColors.border,
-                  boxShadow: `0 0 0 2px ${
-                    errors.username ? coffeeColors.error : ""
-                  }`,
-                }}
-              />
-              <p
-                className="text-xs min-h-[1rem] font-inter"
-                style={{ color: coffeeColors.error }}
-              >
-                {errors.username}
-              </p>
-            </div>
+              <div className="flex flex-col gap-1">
+                <label htmlFor="confirmPassword" className="font-semibold text-sm font-inter" style={{ color: themeColors.text || themeColors.primary }}>
+                  Confirm Password
+                </label>
+                <input
+                  id="confirmPassword"
+                  type="password"
+                  name="confirmPassword"
+                  value={formData.confirmPassword}
+                  autoComplete="off"
+                  placeholder="Re-enter your password"
+                  onChange={handleInputChange}
+                  className="p-3 border rounded-md outline-none focus:ring-2"
+                  style={{
+                    borderColor: errors.confirmPassword ? themeColors.error : '#6b4f2a',
+                    boxShadow: errors.confirmPassword ? `0 0 0 2px ${themeColors.error}` : undefined,
+                  }}
+                />
+                <p className="text-xs min-h-[1rem] font-inter" style={{ color: themeColors.error }}>
+                  {errors.confirmPassword}
+                </p>
+              </div>
 
-            <div className="flex flex-col gap-1 relative">
-              <label
-                htmlFor="password"
-                className="font-semibold text-sm font-inter"
-                style={{ color: coffeeColors.primary }}
-              >
-                Password
-              </label>
-              <input
-                id="password"
-                type={showPassword ? "text" : "password"}
-                value={formData.password}
-                autoComplete="off"
-                name="password"
-                placeholder="Enter a secure password"
-                onChange={handleInputChange}
-                className="p-3 border rounded-md outline-none focus:ring-2"
-                style={{
-                  borderColor: errors.password
-                    ? coffeeColors.error
-                    : coffeeColors.border,
-                  boxShadow: `0 0 0 2px ${
-                    errors.password ? coffeeColors.error : ""
-                  }`,
-                }}
-              />
-              {formData.password && (
-                <span
-                  className="absolute right-3 top-9 cursor-pointer"
-                  onClick={() => setShowPassword((prev) => !prev)}
-                  style={{ color: coffeeColors.primary }}
-                >
-                  {showPassword ? (
-                    <EyeClosed className="text-gray-500" size={18} />
-                  ) : (
-                    <Eye className="text-gray-500" size={18} />
-                  )}
-                </span>
-              )}
-              <p
-                className="text-xs min-h-[1rem] font-inter"
-                style={{ color: coffeeColors.error }}
-              >
-                {errors.password}
-              </p>
-            </div>
-
-            <div className="flex flex-col gap-1">
-              <label
-                htmlFor="confirmPassword"
-                className="font-semibold text-sm font-inter"
-                style={{ color: coffeeColors.primary }}
-              >
-                Confirm Password
-              </label>
-              <input
-                id="confirmPassword"
-                type="password"
-                name="confirmPassword"
-                value={formData.confirmPassword}
-                autoComplete="off"
-                placeholder="Re-enter your password"
-                onChange={handleInputChange}
-                className="p-3 border rounded-md outline-none focus:ring-2"
-                style={{
-                  borderColor: errors.confirmPassword
-                    ? coffeeColors.error
-                    : coffeeColors.border,
-                  boxShadow: `0 0 0 2px ${
-                    errors.confirmPassword ? coffeeColors.error : ""
-                  }`,
-                }}
-              />
-              <p
-                className="text-xs min-h-[1rem] font-inter"
-                style={{ color: coffeeColors.error }}
-              >
-                {errors.confirmPassword}
-              </p>
-            </div>
-
-            <button
-              type="submit"
-              disabled={isLoading}
-              className={`cursor-pointer mt-2 w-full font-semibold py-2 rounded-md transition-all duration-300 border-2`}
-              style={{
-                backgroundColor: coffeeColors.primary,
-                color: coffeeColors.cardBackground,
-                borderColor: coffeeColors.primary,
-                opacity: isLoading ? 0.5 : 1,
-              }}
-            >
-              {isLoading ? "Registering..." : "Register"}
-            </button>
-
-            <div className="flex items-center justify-center text-sm mt-2 font-inter">
-              <span style={{ color: coffeeColors.primary }}>
-                Already have an account?{" "}
-              </span>
               <button
-                type="button"
-                className="ml-1 font-semibold hover:underline"
-                onClick={() => {
-                  navigate("/login");
+                type="submit"
+                disabled={isLoading}
+                className={`cursor-pointer mt-2 w-full font-semibold py-3 rounded-full transition-all duration-300 border-2 text-lg`}
+                style={{
+                  background: themeColors.buttonBg || themeColors.primary,
+                  color: themeColors.buttonText || themeColors.cardBackground,
+                  borderColor: themeColors.buttonBg || themeColors.primary,
+                  opacity: isLoading ? 0.5 : 1,
+                  boxShadow: themeColors.cardShadow || '0 2px 8px #1b1b1d22',
                 }}
-                style={{ color: coffeeColors.primary }}
               >
-                Log in
+                {isLoading ? "Registering..." : "Register"}
               </button>
-            </div>
-          </form>
+
+              <div className="flex items-center justify-center text-sm mt-2 font-inter">
+                <span style={{ color: themeColors.text || themeColors.primary }}>
+                  Already have an account?{" "}
+                </span>
+                <button
+                  type="button"
+                  className="ml-1 font-semibold hover:underline"
+                  onClick={() => {
+                    navigate("/login");
+                  }}
+                  style={{ color: themeColors.text || themeColors.primary }}
+                >
+                  Log in
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
+        <Toaster position="top-center" reverseOrder={false} />
       </div>
-      <Toaster position="top-center" reverseOrder={false} />
-    </div>
+    </>
   );
 };
 

@@ -7,6 +7,7 @@ import { Star, Coffee, BookOpen, Globe, Mic, Languages, Bot, ArrowUp, ChevronRig
 import content from '@/utils/content';
 import Header from '@/components/custom/Header';
 import Footer from '@/components/custom/Footer';
+import { useTheme } from "../context/themecontext";
 
 function getFeatureIcon(idx: number) {
   switch (idx) {
@@ -21,6 +22,7 @@ function getFeatureIcon(idx: number) {
 }
 
 export default function Homepage() {
+  const { themeColors, themeName } = useTheme();
   // Floating buttons state
   const [showScrollTop, setShowScrollTop] = useState(false);
   // Tooltip state for virtual assistant button
@@ -59,7 +61,7 @@ export default function Homepage() {
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
         className="py-36 px-4 flex flex-col items-center justify-center relative overflow-hidden"
-        style={{ background: 'linear-gradient(120deg, #f3f4f5 0%, #ffe5d0 40%, #ffd6e0 80%, #eeeff1 100%)' }}
+        style={{ background: themeName === 'coffee' ? themeColors.background : 'linear-gradient(120deg, #f3f4f5 0%, #ffe5d0 40%, #ffd6e0 80%, #eeeff1 100%)' }}
       >
         {/* Rotating heart emoji background animation */}
         <motion.span
@@ -70,20 +72,20 @@ export default function Homepage() {
         >❤️</motion.span>
         <div className="absolute inset-0 pointer-events-none z-0" style={{background: 'radial-gradient(circle at 60% 20%, #ffb86c33 0%, #ff61a633 60%, #eeeff1 100%)'}}></div>
         <div className="relative z-10 max-w-6xl w-full flex flex-col md:flex-row items-center gap-16">
-          <motion.div whileHover={{ scale: 1.05, rotate: 8 }} className="w-80 h-80 rounded-[2.5rem] bg-[#ffffff] flex items-center justify-center shadow-2xl border-4 border-[#eeeff1] mb-8 md:mb-0">
-            <Coffee size={96} color="#1b1b1d" />
+          <motion.div whileHover={{ scale: 1.05, rotate: 8 }} className="w-80 h-80 rounded-[2.5rem]" style={{background: themeColors.cardBackground, border: `4px solid ${themeColors.border}`}}>
+            <Coffee size={96} color={themeColors.text || themeColors.primary} />
           </motion.div>
           <div className="flex-1 text-left">
-            <h1 className="text-6xl font-extrabold mb-6 text-[#1b1b1d] leading-tight">{content.hero.title}: {content.hero.subtitle}</h1>
+            <h1 className="text-6xl font-extrabold mb-6" style={{color: themeColors.text || themeColors.primary}}>{content.hero.title}: {content.hero.subtitle}</h1>
             <div className="flex items-center gap-2 mb-4">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} size={28} color="#FFD700" fill="#FFD700" className="drop-shadow" />
+                <Star key={i} size={28} color={themeColors.accent || '#FFD700'} fill={themeColors.accent || '#FFD700'} className="drop-shadow" />
               ))}
-              <span className="ml-2 text-lg font-semibold text-[#646464]">AI-powered, trusted by thousands</span>
+              <span className="ml-2 text-lg font-semibold" style={{color: themeColors.text || '#646464'}}>AI-powered, trusted by thousands</span>
             </div>
             <h2 className="text-2xl font-semibold mb-4 text-[#646464]">{content.hero.description}</h2>
             <motion.div whileHover={{ scale: 1.05}}>
-              <Button size="lg" variant="default" className="bg-[#1b1b1d] text-[#eeeff1] rounded-full px-10 py-4 text-xl font-bold shadow-lg cursor-pointer">Get Started</Button>
+              <Button size="xl" variant="default" className="bg-[#1b1b1d] text-[#eeeff1] rounded-full px-16 py-6 text-2xl font-bold shadow-lg cursor-pointer">Get Started</Button>
             </motion.div>
           </div>
         </div>
