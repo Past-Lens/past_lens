@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { Coffee, Menu } from 'lucide-react';
-import { themes } from '../../utils/colors';
 import { useTheme } from '../../context/themecontext';
 import { Button } from '@/components/ui/button';
 import { useState, useRef, useEffect } from 'react';
