@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
-import { Coffee, Menu } from 'lucide-react';
+import { Coffee, Menu, Plus } from 'lucide-react';
 import { useTheme } from '../../context/themecontext';
 import { Button } from '@/components/ui/button';
 import { useState, useRef, useEffect } from 'react';
+import { Tooltip } from '../ui/tooltip';
 export default function Header() {
   const { themeName, setThemeName } = useTheme();
   const [showThemeDropdown, setShowThemeDropdown] = useState(false);
@@ -222,12 +223,17 @@ export default function Header() {
             </div>
           )}
         </motion.div>
-        <motion.div whileHover={{ scale: 1.05}}>
-          <Button size="lg" variant="secondary" 
-            className="w-full mt-4 bg-[#eeeff1] text-[#1b1b1d] rounded-full px-8 py-3 font-bold shadow">
-              <a className='' href='/login'>Sign In</a>
-          </Button>        
-        </motion.div>
+        <div className="flex items-center">
+          <div className="inline-flex rounded-full shadow overflow-hidden border border-[#eeeff1] bg-[#eeeff1]">
+            <Button size="lg" variant="secondary" className="rounded-none border-0 font-bold px-12 py-3 flex items-center gap-3 bg-[#eeeff1] text-[#1b1b1d] hover:bg-[#e0e7ef] min-w-[160px] justify-center" style={{ borderRight: '1px solid #d1d5db' }}>
+              <Plus size={24} />
+              Contribute
+            </Button>
+            <Button size="lg" variant="secondary" className="rounded-none border-0 font-bold px-10 py-3 min-w-[120px] justify-center" style={{ background: '#e5e7eb', color: '#1b1b1d' }}>
+      <a className='' href='/login'>Sign In</a>
+    </Button>
+          </div>
+        </div>
       </nav>
       </motion.header>
     </>
