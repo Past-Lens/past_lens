@@ -92,7 +92,7 @@ export default function Header() {
       >
       <div className="flex items-center gap-4">
         <motion.div whileHover={{ scale: 1.1, rotate: 10 }} className="w-12 h-12 rounded-full bg-[#eeeff1] flex items-center justify-center shadow">
-          <Coffee size={28} color="#1b1b1d" />
+          <a href="/"><img src="/PLTransparent.png" alt="PL" /></a>
         </motion.div>
         <span className="text-3xl font-extrabold tracking-tight text-[#eeeff1]">Past Lens</span>
         {/* Rose icon theme dropdown */}
@@ -189,7 +189,7 @@ export default function Header() {
             <a href="#contact" className="block py-2 px-4 rounded hover:bg-[#f3f4f5] font-bold">Contact</a>
             <Button size="lg" variant="secondary" 
             className="w-full mt-4 bg-[#eeeff1] text-[#1b1b1d] rounded-full px-8 py-3 font-bold shadow">
-              <a className='' href='/signup'>Sign Up</a>
+              <a className='' href='/login'>Sign In</a>
             </Button>
           </div>
         )}
