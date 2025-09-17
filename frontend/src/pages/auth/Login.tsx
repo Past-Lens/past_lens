@@ -8,26 +8,60 @@ import axios from "axios";
 import { useAuth } from "../../context/authcontext";
 import { z } from "zod";
 
-
-
-
-
 // Theme selection (default to roseFlower)
 const homepageGradients = {
-  roseFlower: 'linear-gradient(120deg, #f3f4f5 0%, #ffe5d0 40%, #ffd6e0 80%, #eeeff1 100%)',
-  coffee: 'linear-gradient(120deg, #B39885 0%, #F5F5E9 60%, #D1C6BB 100%)',
+  roseFlower:
+    "linear-gradient(120deg, #f3f4f5 0%, #ffe5d0 40%, #ffd6e0 80%, #eeeff1 100%)",
+  coffee: "linear-gradient(120deg, #B39885 0%, #F5F5E9 60%, #D1C6BB 100%)",
 };
 const cardGradients = {
-  roseFlower: 'linear-gradient(135deg, #e0e7ef 0%, #f3f4f5 60%, #ffe5d0 100%)',
-  coffee: 'linear-gradient(135deg, #F5F5E9 0%, #B39885 60%, #D1C6BB 100%)',
+  roseFlower: "linear-gradient(135deg, #e0e7ef 0%, #f3f4f5 60%, #ffe5d0 100%)",
+  coffee: "linear-gradient(135deg, #F5F5E9 0%, #B39885 60%, #D1C6BB 100%)",
 };
 
 // Micro Animation (emoji sparkles)
 const MicroAnimation = () => (
   <>
-    <span style={{position:'absolute',left:24,top:24,fontSize:'1.5rem',opacity:0.18,pointerEvents:'none',zIndex:0}}>✨</span>
-    <span style={{position:'absolute',right:32,top:32,fontSize:'1.2rem',opacity:0.18,pointerEvents:'none',zIndex:0}}>💡</span>
-    <span style={{position:'absolute',left:'50%',top:80,transform:'translateX(-50%)',fontSize:'4rem',opacity:0.12,pointerEvents:'none',zIndex:0}}>❤️</span>
+    <span
+      style={{
+        position: "absolute",
+        left: 24,
+        top: 24,
+        fontSize: "1.5rem",
+        opacity: 0.18,
+        pointerEvents: "none",
+        zIndex: 0,
+      }}
+    >
+      ✨
+    </span>
+    <span
+      style={{
+        position: "absolute",
+        right: 32,
+        top: 32,
+        fontSize: "1.2rem",
+        opacity: 0.18,
+        pointerEvents: "none",
+        zIndex: 0,
+      }}
+    >
+      💡
+    </span>
+    <span
+      style={{
+        position: "absolute",
+        left: "50%",
+        top: 80,
+        transform: "translateX(-50%)",
+        fontSize: "4rem",
+        opacity: 0.12,
+        pointerEvents: "none",
+        zIndex: 0,
+      }}
+    >
+      ❤️
+    </span>
   </>
 );
 
@@ -42,7 +76,7 @@ const jwtDecode = (token: string) => {
         .map(function (c) {
           return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
         })
-        .join("")
+        .join(""),
     );
     return JSON.parse(jsonPayload);
   } catch (e) {
@@ -428,8 +462,8 @@ const Login = () => {
       name === "login_email"
         ? "email"
         : name === "login_password"
-        ? "password"
-        : name;
+          ? "password"
+          : name;
 
     setFormData((prev) => ({ ...prev, [field]: value }));
 
@@ -479,7 +513,7 @@ const Login = () => {
           headers: {
             "Content-Type": "application/json",
           },
-        }
+        },
       );
 
       // Destructure 'token' from the response data and rename it to 'access_token'
@@ -554,7 +588,7 @@ const Login = () => {
     return (
       <div
         className="p-3 rounded-md border border-red-200 bg-red-50 text-sm"
-  style={{ borderColor: themeColors.error, color: themeColors.error }}
+        style={{ borderColor: themeColors.error, color: themeColors.error }}
       >
         <div className="flex items-center justify-between">
           <span>{loginError.message}</span>
@@ -576,21 +610,30 @@ const Login = () => {
   };
 
   const { themeName, themeColors } = useTheme();
-  const homepageGradient = homepageGradients[themeName as keyof typeof homepageGradients] || homepageGradients.roseFlower;
-  const cardGradient = cardGradients[themeName as keyof typeof cardGradients] || cardGradients.roseFlower;
+  const homepageGradient =
+    homepageGradients[themeName as keyof typeof homepageGradients] ||
+    homepageGradients.roseFlower;
+  const cardGradient =
+    cardGradients[themeName as keyof typeof cardGradients] ||
+    cardGradients.roseFlower;
 
   return (
     <>
-  <Header/>
+      <Header />
       <div
         className="flex min-h-screen relative"
         style={{ background: homepageGradient }}
       >
-        <ForegroundAnimations/>
+        <ForegroundAnimations />
         <MicroAnimation />
         <div
           className="hidden lg:flex w-1/2 items-center justify-center p-8 text-white relative overflow-hidden"
-          style={{ background: themeName === 'coffee' ? themeColors.primary : 'linear-gradient(120deg, #232325 0%, #1b1b1d 80%, #1b1b1d 100%)' }}
+          style={{
+            background:
+              themeName === "coffee"
+                ? themeColors.primary
+                : "linear-gradient(120deg, #232325 0%, #1b1b1d 80%, #1b1b1d 100%)",
+          }}
         >
           <BackgroundPattern />
           {/* <ForegroundAnimations /> */}
@@ -627,9 +670,16 @@ const Login = () => {
         <div className="w-full lg:w-1/2 flex items-center justify-center p-8 lg:p-16">
           <div
             className="w-full max-w-md p-8 rounded-2xl shadow-xl border relative mt-12"
-            style={{ background: cardGradient, borderColor: themeColors.border, boxShadow: themeColors.cardShadow || '0 8px 32px #64646422' }}
+            style={{
+              background: cardGradient,
+              borderColor: themeColors.border,
+              boxShadow: themeColors.cardShadow || "0 8px 32px #64646422",
+            }}
           >
-            <form onSubmit={handleLogin} className="w-full flex flex-col gap-5 mt-8">
+            <form
+              onSubmit={handleLogin}
+              className="w-full flex flex-col gap-5 mt-8"
+            >
               <div>
                 <h2
                   className="text-3xl font-extrabold mb-2 text-center"
@@ -637,8 +687,12 @@ const Login = () => {
                 >
                   Log in
                 </h2>
-                <p className="text-sm mt-1 text-center" style={{color: themeColors.text || themeColors.primary}}>
-                  Welcome to Past Lens, enter your credentials to explore history
+                <p
+                  className="text-sm mt-1 text-center"
+                  style={{ color: themeColors.text || themeColors.primary }}
+                >
+                  Welcome to Past Lens, enter your credentials to explore
+                  history
                 </p>
               </div>
 
@@ -662,11 +716,10 @@ const Login = () => {
                   onChange={handleInputChange}
                   className={`p-4 border rounded-md outline-none focus:ring-2`}
                   style={{
-                    borderColor: errors.email
-                      ? themeColors.error
-                      : '#6b4f2a',
+                    borderColor: errors.email ? themeColors.error : "#6b4f2a",
                     boxShadow: `0 0 0 2px ${
-                      errors.email ? themeColors.error : ""}
+                      errors.email ? themeColors.error : ""
+                    }
                     }`,
                   }}
                 />
@@ -698,9 +751,10 @@ const Login = () => {
                   style={{
                     borderColor: errors.password
                       ? themeColors.error
-                      : '#6b4f2a',
+                      : "#6b4f2a",
                     boxShadow: `0 0 0 2px ${
-                      errors.password ? themeColors.error : ""}
+                      errors.password ? themeColors.error : ""
+                    }
                     }`,
                   }}
                 />
@@ -756,14 +810,16 @@ const Login = () => {
                   color: themeColors.buttonText || themeColors.cardBackground,
                   borderColor: themeColors.buttonBg || themeColors.primary,
                   opacity: isLoading ? 0.5 : 1,
-                  boxShadow: themeColors.cardShadow || '0 2px 8px #1b1b1d22',
+                  boxShadow: themeColors.cardShadow || "0 2px 8px #1b1b1d22",
                 }}
               >
                 {isLoading ? "Logging in..." : "Log in"}
               </button>
 
               <div className="flex items-center justify-center text-sm mt-2 font-inter">
-                <span style={{ color: themeColors.text || themeColors.primary }}>
+                <span
+                  style={{ color: themeColors.text || themeColors.primary }}
+                >
                   Don't have an account?{" "}
                 </span>
                 <button

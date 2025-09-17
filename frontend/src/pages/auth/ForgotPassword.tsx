@@ -84,7 +84,7 @@ const ForgotPassword = () => {
           headers: {
             "Content-Type": "application/json",
           },
-        }
+        },
       );
 
       if (response.data.message) {
@@ -97,7 +97,11 @@ const ForgotPassword = () => {
     } catch (error: any) {
       console.error("Forgot password error: ", error);
       let message = "Failed to send password reset email. Please try again.";
-      if (error.response && error.response.data && error.response.data.message) {
+      if (
+        error.response &&
+        error.response.data &&
+        error.response.data.message
+      ) {
         message = error.response.data.message;
       } else if (error.request) {
         message = "Network error. Please check your connection.";
@@ -112,14 +116,24 @@ const ForgotPassword = () => {
   const renderMessage = () => {
     if (successMessage) {
       return (
-        <div className="p-3 rounded-md border text-sm" style={{ borderColor: coffeeColors.primary, color: coffeeColors.primary, backgroundColor: coffeeColors.cardBackground }}>
+        <div
+          className="p-3 rounded-md border text-sm"
+          style={{
+            borderColor: coffeeColors.primary,
+            color: coffeeColors.primary,
+            backgroundColor: coffeeColors.cardBackground,
+          }}
+        >
           <span>{successMessage}</span>
         </div>
       );
     }
     if (errorMessage) {
       return (
-        <div className="p-3 rounded-md border text-sm" style={{ borderColor: coffeeColors.error, color: coffeeColors.error }}>
+        <div
+          className="p-3 rounded-md border text-sm"
+          style={{ borderColor: coffeeColors.error, color: coffeeColors.error }}
+        >
           <span>{errorMessage}</span>
         </div>
       );
@@ -128,23 +142,39 @@ const ForgotPassword = () => {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center p-4" style={{ backgroundColor: coffeeColors.background }}>
-      <div className="w-full max-w-md p-8 rounded-lg shadow-xl" style={{ backgroundColor: coffeeColors.cardBackground }}>
+    <div
+      className="flex min-h-screen items-center justify-center p-4"
+      style={{ backgroundColor: coffeeColors.background }}
+    >
+      <div
+        className="w-full max-w-md p-8 rounded-lg shadow-xl"
+        style={{ backgroundColor: coffeeColors.cardBackground }}
+      >
         <form
           onSubmit={handleForgotPassword}
           className="w-full flex flex-col gap-5"
         >
           <div>
-            <h2 className="text-2xl font-bold font-inter" style={{ color: coffeeColors.primary }}>Forgot Password</h2>
+            <h2
+              className="text-2xl font-bold font-inter"
+              style={{ color: coffeeColors.primary }}
+            >
+              Forgot Password
+            </h2>
             <p className="text-sm mt-1">
-              Enter your email address and we'll send you a link to reset your password.
+              Enter your email address and we'll send you a link to reset your
+              password.
             </p>
           </div>
 
           {renderMessage()}
 
           <div className="flex flex-col gap-1">
-            <label htmlFor="email" className="font-semibold text-sm font-inter" style={{ color: coffeeColors.primary }}>
+            <label
+              htmlFor="email"
+              className="font-semibold text-sm font-inter"
+              style={{ color: coffeeColors.primary }}
+            >
               E-mail
             </label>
             <input
@@ -157,11 +187,18 @@ const ForgotPassword = () => {
               onChange={handleInputChange}
               className={`p-4 border rounded-md outline-none focus:ring-2`}
               style={{
-                borderColor: errors.email ? coffeeColors.error : coffeeColors.border,
-                boxShadow: `0 0 0 2px ${errors.email ? coffeeColors.error : ''}`,
+                borderColor: errors.email
+                  ? coffeeColors.error
+                  : coffeeColors.border,
+                boxShadow: `0 0 0 2px ${errors.email ? coffeeColors.error : ""}`,
               }}
             />
-            <p className="text-xs min-h-[1rem] font-inter" style={{ color: coffeeColors.error }}>{errors.email}</p>
+            <p
+              className="text-xs min-h-[1rem] font-inter"
+              style={{ color: coffeeColors.error }}
+            >
+              {errors.email}
+            </p>
           </div>
 
           <button
@@ -177,9 +214,11 @@ const ForgotPassword = () => {
           >
             {isLoading ? "Sending link..." : "Send Reset Link"}
           </button>
-          
+
           <div className="flex items-center justify-center text-sm mt-2 font-inter">
-            <span style={{ color: coffeeColors.primary }}>Remember your password? </span>
+            <span style={{ color: coffeeColors.primary }}>
+              Remember your password?{" "}
+            </span>
             <button
               type="button"
               className="ml-1 font-semibold hover:underline"

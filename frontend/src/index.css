@@ -118,3 +118,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+.btngroup {
+  @apply h-[100%] font-bold text-lg  flex items-center gap-2 shadow-2xl cursor-pointer text-slate-700;
+}
