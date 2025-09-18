@@ -548,7 +548,7 @@ const Login = () => {
       }
     } catch (error: any) {
       console.error("Login error: ", error);
-      let message = "Login failed. Please try again.";
+      let message = error?.response?.data?.message || "Login failed. Please try again.";
       let showContactSupport = false;
 
       if (error.response) {
