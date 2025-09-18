@@ -6,7 +6,7 @@ function App() {
   return (
     <ThemeProvider>
       <AuthProvider>
-        <AppRouter/>
+        <AppRouter />
       </AuthProvider>
     </ThemeProvider>
   );

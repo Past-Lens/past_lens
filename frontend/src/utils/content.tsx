@@ -49,6 +49,12 @@ const content = {
       img: "",
     },
     {
+      name: "PRUDENCE CHEPKURUI",
+      role: "Community Manager",
+      bio: "Connecting people and stories worldwide.",
+      img: "",
+    },
+    {
       name: "JOY MBUGUA",
       role: "UI/UX Designer",
       bio: "Crafting beautiful, intuitive user experiences.",
@@ -58,12 +64,6 @@ const content = {
       name: "EZEKIEL ERIC NJUGUNA",
       role: "Data Scientist",
       bio: "Turning data into cultural insights.",
-      img: "",
-    },
-    {
-      name: "PRUDENCE CHEPKURUI",
-      role: "Community Manager",
-      bio: "Connecting people and stories worldwide.",
       img: "",
     },
   ],
