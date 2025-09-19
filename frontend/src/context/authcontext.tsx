@@ -1,5 +1,5 @@
 //auth context.tsx
-import React, {
+import {
   createContext,
   useState,
   useContext,

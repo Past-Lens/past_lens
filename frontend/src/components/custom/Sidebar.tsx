@@ -1,10 +1,14 @@
-import { ChevronDown, ChevronUp, HomeIcon, User2 } from "lucide-react"
+import { ChevronDown, ChevronUp, HomeIcon, LogOut, Settings, User2 } from "lucide-react"
 import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarSeparator } from "../ui/sidebar"
 import paths from "@/utils/sideBarPaths"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "../ui/dropdown-menu"
 import { DropdownMenuItem } from "../ui/dropdown-menu"
+import { NavLink, useLocation } from "react-router-dom"
+import { cn } from "@/lib/utils"
 
 function Appsidebar() {
+  const {pathname: currentPath} = useLocation()
+  console.log(currentPath);
   return (
     <>
       <Sidebar collapsible="icon">
@@ -42,12 +46,12 @@ function Appsidebar() {
             <SidebarGroupContent>
               <SidebarMenu>
                 {paths.map((path) => (
-                  <SidebarMenuItem key={path.title}>
+                  <SidebarMenuItem key={path.title} className={cn("rounded-sm hover:!bg-slate-300  bg-slate-100", currentPath === path.url &&  "bg-slate-300")}>
                     <SidebarMenuButton asChild>
-                      <a href={path.url}>
+                      <NavLink to={path.url}>
                         <path.icon />
                         <span>{path.title}</span>
-                      </a>
+                      </NavLink>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                 ))}
@@ -71,12 +75,11 @@ function Appsidebar() {
                   className="w-[--radix-popper-anchor-width]"
                 >
                   <DropdownMenuItem>
-                    <span>Account</span>
+                    <Settings/>
+                    <span>Account Settings</span>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <span>Billing</span>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
+                    <LogOut/>
                     <span>Sign out</span>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
@@ -85,11 +88,7 @@ function Appsidebar() {
           </SidebarMenu>
         </SidebarFooter>
       </Sidebar>
-    
-    
     </>
-
-    
   )
 }
 

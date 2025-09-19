@@ -3,22 +3,22 @@ import { Home, Edit, User2, Settings } from "lucide-react"
 const paths = [
   {
     title: "Overview",
-    url: "/overview",
+    url: "/admin",
     icon: Home,
   },
   {
     title: "Contributions",
-    url: "/contributions",
+    url: "/admin/contributions",
     icon: Edit,
   },
   {
     title: "User Management",
-    url: "/users",
+    url: "/admin/users",
     icon: User2,
   },
   {
     title: "Settings",
-    url: "/settings",
+    url: "/admin/settings",
     icon: Settings,
   },
 ]

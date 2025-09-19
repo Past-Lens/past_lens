@@ -5,6 +5,10 @@ import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import Dashboard from "./pages/admin/dashboard";
 import Protected from "./components/custom/protected";
+import Contributions from "./pages/admin/contributions";
+import UserManagement from "./pages/admin/usermanagement";
+import  Settings  from "./pages/admin/settings.tsx";
+import Overview from "./pages/admin/overview";
 
 const AppRouter = () => {
   return (
@@ -17,7 +21,26 @@ const AppRouter = () => {
         <Route path="/admin" element={
           <Protected>
             <Dashboard/>
-          </Protected>} />
+          </Protected>} 
+        >
+          <Route index path="/admin" element={
+            <Protected>
+              <Overview/>
+            </Protected>} />
+          <Route path="/admin/users" element={
+            <Protected>
+              <UserManagement/>
+            </Protected>} />
+          <Route path="/admin/contributions" element={
+            <Protected>
+              <Contributions/>
+            </Protected>} />
+          <Route path="/admin/settings" element={
+            <Protected>
+              <Settings/>
+            </Protected>} 
+          />
+        </Route>
         {/* Add more routes as needed */}
       </Routes>
     </Router>
