@@ -109,7 +109,8 @@ export const contributionData = [
     "author": { "name": "Muthoni Ndeti", "role": "user" },
     "date": "2025-09-10",
     "files": ["images/kamba_basket1.jpg", "docs/basket_weaving_notes.pdf"],
-    "community": "Kamba"
+    "community": "Kamba",
+    "status": "pending"
   },
   {
     "title": "Kikuyu Origin Story",
@@ -118,7 +119,8 @@ export const contributionData = [
     "author": { "name": "James Mwangi", "role": "admin" },
     "date": "2025-08-30",
     "files": ["images/gikuyu_mumbi.png"],
-    "community": "Kikuyu"
+    "community": "Kikuyu",
+    "status": "approved"
   },
   {
     "title": "Swahili Coastal Songs",
@@ -127,7 +129,8 @@ export const contributionData = [
     "author": { "name": "Aisha Abdalla", "role": "user" },
     "date": "2025-09-05",
     "files": ["audio/taarab_song1.mp3", "audio/taarab_song2.mp3"],
-    "community": "Swahili"
+    "community": "Swahili",
+    "status": "pending"
   },
   {
     "title": "Kamba Proverbs",
@@ -136,7 +139,8 @@ export const contributionData = [
     "author": { "name": "Peter Mutua", "role": "user" },
     "date": "2025-09-12",
     "files": ["docs/kamba_proverbs.pdf"],
-    "community": "Kamba"
+    "community": "Kamba",
+    "status": "pending"
   },
   {
     "title": "Kikuyu Political Structure",
@@ -145,7 +149,8 @@ export const contributionData = [
     "author": { "name": "Wanjiku Kariuki", "role": "admin" },
     "date": "2025-09-01",
     "files": ["images/kikuyu_council.jpg"],
-    "community": "Kikuyu"
+    "community": "Kikuyu",
+    "status": "approved"
   },
   {
     "title": "Swahili Stone Town Architecture",
@@ -154,7 +159,8 @@ export const contributionData = [
     "author": { "name": "Ali Mohamed", "role": "user" },
     "date": "2025-09-11",
     "files": ["images/lamu_house1.jpg", "images/lamu_door.jpg"],
-    "community": "Swahili"
+    "community": "Swahili",
+    "status": "pending"
   },
   {
     "title": "Kamba Origin and Migration",
