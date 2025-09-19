@@ -1,105 +1,67 @@
-import { ChevronDown, ChevronUp, User, User2 } from "lucide-react"
+import { ChevronDown, ChevronUp, HomeIcon, User2 } from "lucide-react"
 import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarSeparator } from "../ui/sidebar"
-
-import { Home, Inbox, Calendar, Search, Settings } from "lucide-react"
+import paths from "@/utils/sideBarPaths"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "../ui/dropdown-menu"
 import { DropdownMenuItem } from "../ui/dropdown-menu"
-
-const items = [
-  {
-    title: "Home",
-    url: "#",
-    icon: Home,
-  },
-  {
-    title: "Inbox",
-    url: "#",
-    icon: Inbox,
-  },
-  {
-    title: "Calendar",
-    url: "#",
-    icon: Calendar,
-  },
-  {
-    title: "Search",
-    url: "#",
-    icon: Search,
-  },
-  {
-    title: "Settings",
-    url: "#",
-    icon: Settings,
-  },
-]
 
 function Appsidebar() {
   return (
     <>
-    
       <Sidebar collapsible="icon">
-          {/* <SidebarHeader>
-            <SidebarGroup>
-              <SidebarGroupLabel>
-                <User className="h-4 w-6 mr-6"/>    
-                Admin Dashboard        
-                </SidebarGroupLabel>
-            </SidebarGroup>
-          </SidebarHeader> */}
-              <SidebarHeader>
-        <SidebarMenu>
-          <SidebarMenuItem>
-          <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <SidebarMenuButton>
-              Select Workspace
-              <ChevronDown className="ml-auto" />
-            </SidebarMenuButton>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-[--radix-popper-anchor-width]">
-            <DropdownMenuItem>
-              <span>Acme Inc</span>
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <span>Acme Corp.</span>
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-      </SidebarMenuItem>
-    </SidebarMenu>
-  </SidebarHeader>
-          <SidebarSeparator/>
-          {/* <SidebarContent>
-              <SidebarGroup>
-
-              </SidebarGroup>
-          </SidebarContent> */}
-           <SidebarContent>
-        <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <a href={item.url}>
-                      <item.icon />
-                      <span>{item.title}</span>
-                    </a>
+        <SidebarHeader>
+          <SidebarMenu>
+            <SidebarMenuItem>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <SidebarMenuButton>
+                    <div className="flex items-center gap-4">
+                      <img src="./PLlogo.jpg" alt="PastLens Logo" width={40} height={20}/>
+                      <span className="font-semibold text-[1rem]">PastLens</span>
+                    </div>
+                    <ChevronDown className="ml-auto" />
                   </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-      </SidebarContent>
-      <SidebarFooter>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-[--radix-popper-anchor-width] ml-auto" side="bottom" align="end">
+                  <DropdownMenuItem>
+                    <SidebarMenuButton asChild>
+                      <a href="/">
+                        <HomeIcon/>
+                        <span>Go to Home</span>
+                      </a>
+                    </SidebarMenuButton>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+          </SidebarMenuItem>
+          </SidebarMenu>
+        </SidebarHeader>
+        <SidebarSeparator className="w-[50%]"/>
+        <SidebarContent>
+          <SidebarGroup>
+            <SidebarGroupLabel>Admin Dashboard</SidebarGroupLabel>
+            <SidebarGroupContent>
+              <SidebarMenu>
+                {paths.map((path) => (
+                  <SidebarMenuItem key={path.title}>
+                    <SidebarMenuButton asChild>
+                      <a href={path.url}>
+                        <path.icon />
+                        <span>{path.title}</span>
+                      </a>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                ))}
+              </SidebarMenu>
+            </SidebarGroupContent>
+          </SidebarGroup>
+        </SidebarContent>
+        <SidebarFooter>
           <SidebarMenu >
             <SidebarMenuItem>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <SidebarMenuButton>
-                    <User2 /> Username
+                    <User2 /> EdenAdmin
                     <ChevronUp className="ml-auto" />
                   </SidebarMenuButton>
                 </DropdownMenuTrigger>
@@ -122,9 +84,6 @@ function Appsidebar() {
             </SidebarMenuItem>
           </SidebarMenu>
         </SidebarFooter>
-          {/* <SidebarFooter>
-
-          </SidebarFooter> */}
       </Sidebar>
     
     

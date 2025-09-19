@@ -7,7 +7,7 @@
 //   { name: "June", value: 350 },
 // ];
 
-export const data = [
+export const barGraphData = [
   { month: "January", desktop: 186, mobile: 80 },
   { month: "February", desktop: 305, mobile: 200 },
   { month: "March", desktop: 237, mobile: 120 },
@@ -16,7 +16,7 @@ export const data = [
   { month: "June", desktop: 214, mobile: 140 },
 ]
 
-export const lineData = [
+export const lineGraphData = [
   { date: "2024-04-01", desktop: 222, mobile: 150 },
   { date: "2024-04-02", desktop: 97, mobile: 180 },
   { date: "2024-04-03", desktop: 167, mobile: 120 },
@@ -110,4 +110,221 @@ export const lineData = [
   { date: "2024-06-30", desktop: 446, mobile: 400 },
 ]
 
-
+export const contributionData = [
+  {
+    "title": "Kamba Basket Weaving",
+    "description": "Showcasing traditional Kamba baskets woven from sisal.",
+    "content": "The Kamba people are known for weaving baskets from sisal fibers, dyed with natural colors. These baskets were used for storage, carrying goods, and as trade items across East Africa.",
+    "author": { "name": "Muthoni Ndeti", "role": "user" },
+    "date": "2025-09-10",
+    "files": ["images/kamba_basket1.jpg", "docs/basket_weaving_notes.pdf"],
+    "community": "Kamba"
+  },
+  {
+    "title": "Kikuyu Origin Story",
+    "description": "Narrative about Gikuyu and Mumbi, the ancestors of the Kikuyu.",
+    "content": "According to Kikuyu mythology, Gikuyu and Mumbi were the first ancestors chosen by God (Ngai) and settled at the base of Mount Kenya, where they raised nine daughters who became the matriarchs of the Kikuyu clans.",
+    "author": { "name": "James Mwangi", "role": "admin" },
+    "date": "2025-08-30",
+    "files": ["images/gikuyu_mumbi.png"],
+    "community": "Kikuyu"
+  },
+  {
+    "title": "Swahili Coastal Songs",
+    "description": "Collection of taarab songs performed during Swahili weddings.",
+    "content": "Taarab is a traditional Swahili music style blending Arabic melodies, African rhythms, and Indian instruments. It is performed during weddings and community celebrations.",
+    "author": { "name": "Aisha Abdalla", "role": "user" },
+    "date": "2025-09-05",
+    "files": ["audio/taarab_song1.mp3", "audio/taarab_song2.mp3"],
+    "community": "Swahili"
+  },
+  {
+    "title": "Kamba Proverbs",
+    "description": "Traditional sayings highlighting wisdom and guidance.",
+    "content": "Kamba proverbs are short sayings passed across generations to guide behavior, promote peace, and teach values such as patience, respect, and hard work.",
+    "author": { "name": "Peter Mutua", "role": "user" },
+    "date": "2025-09-12",
+    "files": ["docs/kamba_proverbs.pdf"],
+    "community": "Kamba"
+  },
+  {
+    "title": "Kikuyu Political Structure",
+    "description": "The Kiama (council of elders) and its role in decision-making.",
+    "content": "The Kikuyu community traditionally relied on the Kiama, a council of respected elders, to resolve disputes, perform rituals, and provide guidance in social and political matters.",
+    "author": { "name": "Wanjiku Kariuki", "role": "admin" },
+    "date": "2025-09-01",
+    "files": ["images/kikuyu_council.jpg"],
+    "community": "Kikuyu"
+  },
+  {
+    "title": "Swahili Stone Town Architecture",
+    "description": "Photos and explanations of Swahili architecture in Lamu.",
+    "content": "Swahili architecture reflects centuries of trade influence. Coral stone houses with carved wooden doors symbolize wealth and cultural fusion from Arab, Persian, and African heritage.",
+    "author": { "name": "Ali Mohamed", "role": "user" },
+    "date": "2025-09-11",
+    "files": ["images/lamu_house1.jpg", "images/lamu_door.jpg"],
+    "community": "Swahili"
+  },
+  {
+    "title": "Kamba Origin and Migration",
+    "description": "Stories of Kamba settlement in Ukambani.",
+    "content": "The Kamba migrated and settled in Ukambani, known for their long-distance trade routes extending to the coast, where they exchanged goods like ivory and crafts.",
+    "author": { "name": "Ndunge Mwanzia", "role": "user" },
+    "date": "2025-09-03",
+    "files": ["docs/kamba_migration.pdf"],
+    "community": "Kamba"
+  },
+  {
+    "title": "Kikuyu Wise Sayings",
+    "description": "Compilation of Kikuyu wise sayings.",
+    "content": "Kikuyu wise sayings are an important cultural tool, often used in family settings and public forums to convey lessons in subtle and respectful ways.",
+    "author": { "name": "Joseph Njenga", "role": "user" },
+    "date": "2025-09-07",
+    "files": ["docs/kikuyu_sayings.pdf"],
+    "community": "Kikuyu"
+  },
+  {
+    "title": "Swahili Religious Practices",
+    "description": "Documentation of Islamic traditions among Swahili.",
+    "content": "The Swahili community follows Islamic practices, with daily prayers, Ramadan fasting, Eid festivals, and mosques as central places for spiritual and social gatherings.",
+    "author": { "name": "Fatma Hassan", "role": "admin" },
+    "date": "2025-09-02",
+    "files": ["images/ramadan_celebration.jpg"],
+    "community": "Swahili"
+  },
+  {
+    "title": "Kamba Music and Drums",
+    "description": "Traditional drum beats during ceremonies.",
+    "content": "The Kamba use drums, lyres, and horns during initiation, weddings, and communal dances. Drumming patterns symbolize communication and celebration.",
+    "author": { "name": "Musyoka Kitavi", "role": "user" },
+    "date": "2025-09-09",
+    "files": ["audio/kamba_drums.mp3", "images/kamba_drummers.jpg"],
+    "community": "Kamba"
+  },
+  {
+    "title": "Kikuyu Marriage Traditions",
+    "description": "Steps in Kikuyu traditional marriage ceremonies.",
+    "content": "Kikuyu marriage involved dowry negotiations, blessings from elders, and rituals ensuring harmony between families.",
+    "author": { "name": "Mary Wairimu", "role": "user" },
+    "date": "2025-09-06",
+    "files": ["images/kikuyu_marriage.jpg"],
+    "community": "Kikuyu"
+  },
+  {
+    "title": "Swahili Proverbs",
+    "description": "Wise sayings in Kiswahili used to teach lessons.",
+    "content": "Swahili proverbs, such as 'Haraka haraka haina baraka' (Haste has no blessings), are widely used in daily speech to convey wisdom.",
+    "author": { "name": "Ahmed Suleiman", "role": "user" },
+    "date": "2025-09-04",
+    "files": ["docs/swahili_proverbs.pdf"],
+    "community": "Swahili"
+  },
+  {
+    "title": "Kamba Initiation Rites",
+    "description": "Documentation of initiation practices.",
+    "content": "Initiation marked the passage from childhood to adulthood, involving circumcision ceremonies, songs, and seclusion where values were taught.",
+    "author": { "name": "Daniel Mutiso", "role": "user" },
+    "date": "2025-08-29",
+    "files": ["images/kamba_initiation.jpg"],
+    "community": "Kamba"
+  },
+  {
+    "title": "Kikuyu Agricultural Practices",
+    "description": "Traditional Kikuyu farming methods.",
+    "content": "The Kikuyu farmed bananas, millet, and beans, with terracing to prevent soil erosion and rituals for blessing harvests.",
+    "author": { "name": "Grace Njeri", "role": "admin" },
+    "date": "2025-09-08",
+    "files": ["images/kikuyu_farm.jpg"],
+    "community": "Kikuyu"
+  },
+  {
+    "title": "Swahili Festivals",
+    "description": "Festivals celebrated on the coast.",
+    "content": "Swahili festivals like Maulid in Lamu attract thousands, combining religious processions, poetry recitals, and cultural displays.",
+    "author": { "name": "Hussein Omar", "role": "user" },
+    "date": "2025-09-13",
+    "files": ["images/lamu_maulid.jpg"],
+    "community": "Swahili"
+  },
+  {
+    "title": "Kamba Pottery",
+    "description": "Clay pots made by Kamba women.",
+    "content": "Women traditionally made clay pots for cooking and water storage, decorated with geometric patterns.",
+    "author": { "name": "Mwikali Syokau", "role": "user" },
+    "date": "2025-09-14",
+    "files": ["images/kamba_pot.jpg"],
+    "community": "Kamba"
+  },
+  {
+    "title": "Kikuyu Clan System",
+    "description": "Nine clans of Kikuyu society.",
+    "content": "Each Kikuyu clan traced lineage to one of Gikuyu and Mumbi’s daughters. Clan affiliation influenced marriage choices and land rights.",
+    "author": { "name": "Samuel Githinji", "role": "user" },
+    "date": "2025-09-15",
+    "files": ["docs/kikuyu_clans.pdf"],
+    "community": "Kikuyu"
+  },
+  {
+    "title": "Swahili Food Culture",
+    "description": "Cuisine from the Swahili coast.",
+    "content": "Swahili food blends African, Arab, and Indian influences with dishes like pilau, biryani, and samosas, usually shared communally.",
+    "author": { "name": "Halima Juma", "role": "admin" },
+    "date": "2025-09-16",
+    "files": ["images/pilau.jpg"],
+    "community": "Swahili"
+  },
+  {
+    "title": "Kamba Jewelry",
+    "description": "Beaded ornaments used in ceremonies.",
+    "content": "Colorful bead necklaces and bracelets are worn during weddings and dances, symbolizing beauty and social status.",
+    "author": { "name": "Veronica Mutheu", "role": "user" },
+    "date": "2025-09-17",
+    "files": ["images/kamba_beads.jpg"],
+    "community": "Kamba"
+  },
+  {
+    "title": "Kikuyu Spiritual Practices",
+    "description": "Worship of Ngai on Mount Kenya.",
+    "content": "The Kikuyu held Mount Kenya sacred, offering sacrifices and prayers to Ngai under sacred fig trees (mugumo).",
+    "author": { "name": "David Kamau", "role": "admin" },
+    "date": "2025-09-18",
+    "files": ["images/mugumo_tree.jpg"],
+    "community": "Kikuyu"
+  },
+  {
+    "title": "Swahili Storytelling",
+    "description": "Oral stories told in Swahili households.",
+    "content": "Elders narrated folktales in the evenings, teaching children values, history, and humor through animal trickster stories.",
+    "author": { "name": "Fatuma Salim", "role": "user" },
+    "date": "2025-09-19",
+    "files": ["audio/swahili_story.mp3"],
+    "community": "Swahili"
+  },
+  {
+    "title": "Kamba Healing Practices",
+    "description": "Traditional herbs and healers.",
+    "content": "Kamba healers used roots and leaves for medicine, combined with prayers and rituals to address physical and spiritual illnesses.",
+    "author": { "name": "Mutinda Kasiva", "role": "user" },
+    "date": "2025-09-20",
+    "files": ["docs/kamba_medicine.pdf"],
+    "community": "Kamba"
+  },
+  {
+    "title": "Kikuyu Naming Ceremonies",
+    "description": "Naming traditions in Kikuyu culture.",
+    "content": "Children were named after grandparents in a strict order, reinforcing lineage and family honor.",
+    "author": { "name": "Jane Nyambura", "role": "user" },
+    "date": "2025-09-21",
+    "files": ["images/naming_ceremony.jpg"],
+    "community": "Kikuyu"
+  },
+  {
+    "title": "Swahili Trade History",
+    "description": "Trade networks along the East African coast.",
+    "content": "The Swahili established trading cities like Mombasa and Lamu, dealing in ivory, gold, and spices with Arabs, Persians, and Indians.",
+    "author": { "name": "Salim Yusuf", "role": "admin" },
+    "date": "2025-09-22",
+    "files": ["docs/swahili_trade.pdf"],
+    "community": "Swahili"
+  }
+]
