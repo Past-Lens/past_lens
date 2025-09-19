@@ -4,11 +4,13 @@ import paths from "@/utils/sideBarPaths"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "../ui/dropdown-menu"
 import { DropdownMenuItem } from "../ui/dropdown-menu"
 import { NavLink, useLocation } from "react-router-dom"
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
+import { useAuth } from "@/context/authcontext"
 
 function Appsidebar() {
-  const {pathname: currentPath} = useLocation()
-  console.log(currentPath);
+  const {pathname: currentPath} = useLocation();
+  const {logout} = useAuth();
+
   return (
     <>
       <Sidebar collapsible="icon">
@@ -72,15 +74,19 @@ function Appsidebar() {
                 <DropdownMenuContent
                   side="top"
                   align="end"
-                  className="w-[--radix-popper-anchor-width]"
+                  className="w-max"
                 >
                   <DropdownMenuItem>
-                    <Settings/>
-                    <span>Account Settings</span>
+                    <NavLink to={"/admin/settings"} className="flex gap-4" >
+                      <Settings/>
+                      <span>Account Settings</span>
+                    </NavLink>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <LogOut/>
-                    <span>Sign out</span>
+                    <SidebarMenuButton onClick={() => logout()}>
+                      <LogOut/>
+                      <span>Sign out</span>
+                    </SidebarMenuButton>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
