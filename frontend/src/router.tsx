@@ -4,6 +4,7 @@ import Homepage from "./pages/homepage";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import Dashboard from "./pages/admin/dashboard";
+import Protected from "./components/custom/protected";
 
 const AppRouter = () => {
   return (
@@ -13,7 +14,10 @@ const AppRouter = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Register />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/admin" element={<Dashboard/>} />
+        <Route path="/admin" element={
+          <Protected>
+            <Dashboard/>
+          </Protected>} />
         {/* Add more routes as needed */}
       </Routes>
     </Router>

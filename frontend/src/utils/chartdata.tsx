@@ -1,12 +1,3 @@
-// export const data = [
-//   { name: "January", value: 400 },
-//   { name: "February", value: 320 },
-//   { name: "March", value: 280 },
-//   { name: "April", value: 500 },
-//   { name: "May", value: 420 },
-//   { name: "June", value: 350 },
-// ];
-
 export const barGraphData = [
   { month: "January", desktop: 186, mobile: 80 },
   { month: "February", desktop: 305, mobile: 200 },
