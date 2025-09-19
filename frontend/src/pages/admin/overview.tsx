@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import Footer from "@/components/custom/Footer";
 import BarChartInteractive from "@/components/custom/charts/barChart";
 import {ChartAreaInteractive} from "@/components/custom/charts/lineChart";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
@@ -15,7 +16,8 @@ export default function Overview() {
     const totalRegularUsers = users.filter(u => u.role === 'user').length;
 
     return (
-        <div className="grid lg:grid-cols-2 bg-slate-800 w-full min-h-screen gap-4 p-4">
+        <div className="flex flex-col min-h-screen gap-8">
+          <div className="grid lg:grid-cols-2 bg-slate-800 w-full gap-4 p-4 flex-1">
             {/* Charts */}
             <ChartAreaInteractive />
             <BarChartInteractive />
@@ -75,6 +77,8 @@ export default function Overview() {
                     <div className="text-muted-foreground text-sm">Contributions made by all users</div>
                 </CardContent>
             </Card>
+          </div>
+          <div><Footer  /></div>
         </div>
     );
 }

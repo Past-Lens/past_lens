@@ -3,13 +3,16 @@ import TopBar from "@/components/custom/topBar"
 import { SidebarProvider} from "@/components/ui/sidebar"
 import { SideBarToogleProvider, useBar } from "@/context/sidebarcontext"
 import { Outlet } from "react-router-dom"
+import { SearchProvider } from "@/context/searchcontext";
 
 function Dashboard() {
   return (
     <SideBarToogleProvider>
-      <SidebarWrapper />
+      <SearchProvider>
+        <SidebarWrapper />
+      </SearchProvider>
     </SideBarToogleProvider>
-  )
+  );
 }
 
 function SidebarWrapper() {

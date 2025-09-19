@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { useSearch } from "@/context/searchcontext";
 import { users } from "@/utils/usersData";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -9,11 +10,18 @@ const USERS_PER_PAGE = 10;
 export default function UserManagement() {
   const [page, setPage] = useState(1);
   const [selectedUser, setSelectedUser] = useState(users[0]);
-  const totalPages = Math.ceil(users.length / USERS_PER_PAGE);
-  const paginatedUsers = users.slice((page - 1) * USERS_PER_PAGE, page * USERS_PER_PAGE);
+  const { query } = useSearch();
+  const filteredUsers = users.filter(u =>
+    u.fullName.toLowerCase().includes(query.toLowerCase()) ||
+    u.email.toLowerCase().includes(query.toLowerCase()) ||
+    u.username.toLowerCase().includes(query.toLowerCase())
+  );
+  const totalPages = Math.ceil(filteredUsers.length / USERS_PER_PAGE);
+  const paginatedUsers = filteredUsers.slice((page - 1) * USERS_PER_PAGE, page * USERS_PER_PAGE);
 
   return (
-    <div className="flex gap-6 h-full p-6">
+    <div className="flex flex-col min-h-screen">
+      <div className="flex gap-6 h-full p-6 flex-1">
       {/* User List */}
       <Card className="w-1/2 min-w-[320px] max-w-lg flex-1">
         <CardHeader>
@@ -68,6 +76,7 @@ export default function UserManagement() {
           <div className="flex items-center justify-center h-full text-muted-foreground">Select a user to view details</div>
         )}
       </Card>
+    </div>
     </div>
   );
 }

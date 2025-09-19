@@ -11,12 +11,14 @@ import { Separator } from "../ui/separator";
 import { useAuth } from "@/context/authcontext";
 import { NavLink } from "react-router-dom";
 import { useTheme } from "../../context/themecontext";
+import { useSearch } from "@/context/searchcontext";
 
 function TopBar() {
   const { toggleSidebar } = useSidebar();
   const { isOpen, setOpen } = useBar();
   const { logout } = useAuth();
   const { themeName, setThemeName, themeColors } = useTheme();
+  const { query, setQuery } = useSearch();
 
   return (
     <header
@@ -51,9 +53,11 @@ function TopBar() {
       </Tooltip>
       <Input
         type="text"
-        placeholder="Search for features"
+        placeholder="Search..."
         className="min-w-[6rem] md:max-w-[50%]"
         style={{ background: themeColors.cardBg || themeColors.cardBackground, color: themeColors.text, border: `1px solid ${themeColors.border}` }}
+        value={query}
+        onChange={e => setQuery(e.target.value)}
       />
       <div className="flex items-center gap-2">
         {/* Account Actions Dropdown */}

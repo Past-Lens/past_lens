@@ -1,5 +1,6 @@
 import { PlusIcon } from "lucide-react";
 import { useState } from "react";
+import { useSearch } from "@/context/searchcontext";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import { contributionData } from "@/utils/chartdata";
@@ -12,8 +13,20 @@ function Contributions() {
   const [community, setCommunity] = useState("All");
   const [title, setTitle] = useState("All");
   const [status, setStatus] = useState("Pending");
+  const { query } = useSearch();
 
-  // Filtering logic will be added in next step
+  // Filter contributions by search query and filters
+  const filteredContributions = contributionData.filter(c =>
+    (community === "All" || c.community === community) &&
+    (title === "All" || c.title === title) &&
+    (status === "Pending") && // All are pending for now
+    (
+      c.title.toLowerCase().includes(query.toLowerCase()) ||
+      c.description.toLowerCase().includes(query.toLowerCase()) ||
+      c.author.name.toLowerCase().includes(query.toLowerCase()) ||
+      c.community.toLowerCase().includes(query.toLowerCase())
+    )
+  );
 
   return (
     <div className="p-6 w-full min-h-screen bg-slate-100 dark:bg-slate-900">
@@ -60,12 +73,7 @@ function Contributions() {
       </div>
       {/* Contributions list */}
       <div className="space-y-4">
-        {contributionData
-          .filter(c =>
-            (community === "All" || c.community === community) &&
-            (title === "All" || c.title === title) &&
-            (status === "Pending") // All are pending for now
-          )
+        {filteredContributions
           .map((c, idx) => (
             <Card key={c.title + c.author.name + idx} className="shadow-md border bg-white dark:bg-slate-900">
               <CardHeader className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b">
