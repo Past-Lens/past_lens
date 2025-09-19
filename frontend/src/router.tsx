@@ -36,7 +36,7 @@ const AppRouter = () => {
             <Protected>
               <Contributions/>
             </Protected>} />
-          <Route path="/admin/aplication" element={
+          <Route path="/admin/application" element={
             <Protected>
               <Application/>
             </Protected>} />
