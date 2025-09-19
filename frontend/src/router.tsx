@@ -41,6 +41,20 @@ const AppRouter = () => {
             </Protected>} 
           />
         </Route>
+
+        {/*antitciapted user routes*/}
+        <Route path="user/profile" element={
+          <Protected>
+            <>{/*Put the name of the userprofilepage component */}</>
+          </Protected>
+        }/>
+        <Route path="user/contribute" element={
+          <Protected>
+            <>{/*Put the name of the userprofilepage component */}</>
+          </Protected>
+        }/>
+        
+        
         {/* Add more routes as needed */}
       </Routes>
     </Router>

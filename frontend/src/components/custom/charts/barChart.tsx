@@ -3,7 +3,7 @@ import type { ChartConfig } from "@/components/ui/chart"
 import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartLegend, ChartLegendContent} from "@/components/ui/chart"
 import { barGraphData } from "@/utils/chartdata"
 import { useMemo, useState } from "react"
-import { BarChart, CartesianGrid, XAxis, Bar } from "recharts"
+import { BarChart, CartesianGrid, XAxis, YAxis, Bar } from "recharts"
 
 
 // configurations for barchart data
@@ -74,6 +74,14 @@ export default function BarChartInteractive() {
                                 tickMargin={12}
                                 minTickGap={32}
                                 tickFormatter={(value) => value.slice(0,3)}
+                            />
+                            {/* Y Axis with calibration */}
+                            <YAxis
+                                tickLine={true}
+                                axisLine={true}
+                                tickMargin={8}
+                                width={40}
+                                label={{ value: 'Sales', angle: -90, position: 'insideLeft', style: { textAnchor: 'middle' } }}
                             />
                             <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4} />
                             <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />

@@ -6,22 +6,33 @@ import { DropdownMenuItem } from "../ui/dropdown-menu"
 import { NavLink, useLocation } from "react-router-dom"
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/context/authcontext"
+import { useTheme } from "@/context/themecontext";
+
 
 function Appsidebar() {
-  const {pathname: currentPath} = useLocation();
-  const {logout} = useAuth();
+  const { pathname: currentPath } = useLocation();
+  const { logout } = useAuth();
+  const { themeColors } = useTheme();
 
   return (
     <>
-      <Sidebar collapsible="icon">
-        <SidebarHeader>
+      <Sidebar
+        collapsible="icon"
+        className="max-w-[15rem]"
+        style={{
+          background: themeColors.background,
+          color: themeColors.text,
+          borderRight: `1px solid ${themeColors.border}`,
+        }}
+      >
+        <SidebarHeader className="p-2">
           <SidebarMenu>
             <SidebarMenuItem>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <SidebarMenuButton>
+                  <SidebarMenuButton style={{ background: 'transparent', color: themeColors.text }}>
                     <div className="flex items-center gap-4">
-                      <img src="./PLlogo.jpg" alt="PastLens Logo" width={40} height={20}/>
+                      <img src="./PLlogo.jpg" alt="PastLens Logo" width={40} height={20} className="rounded-full" />
                       <span className="font-semibold text-[1rem]">PastLens</span>
                     </div>
                     <ChevronDown className="ml-auto" />
@@ -31,60 +42,85 @@ function Appsidebar() {
                   <DropdownMenuItem>
                     <SidebarMenuButton asChild>
                       <a href="/">
-                        <HomeIcon/>
+                        <HomeIcon />
                         <span>Go to Home</span>
                       </a>
                     </SidebarMenuButton>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-          </SidebarMenuItem>
+            </SidebarMenuItem>
           </SidebarMenu>
         </SidebarHeader>
-        <SidebarSeparator className="w-[50%]"/>
+        <SidebarSeparator className="max-w-[90%]" style={{ background: themeColors.border }} />
         <SidebarContent>
           <SidebarGroup>
-            <SidebarGroupLabel>Admin Dashboard</SidebarGroupLabel>
+            <SidebarGroupLabel style={{ color: themeColors.text }}>Admin Dashboard</SidebarGroupLabel>
             <SidebarGroupContent>
-              <SidebarMenu>
-                {paths.map((path) => (
-                  <SidebarMenuItem key={path.title} className={cn("rounded-sm hover:!bg-slate-300  bg-slate-100", currentPath === path.url &&  "bg-slate-300")}>
-                    <SidebarMenuButton asChild>
-                      <NavLink to={path.url}>
-                        <path.icon />
-                        <span>{path.title}</span>
-                      </NavLink>
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                ))}
+              <SidebarMenu className="gap-3">
+                {paths.map((path) => {
+                  const isSelected = currentPath === path.url;
+                  const isDefaultTheme = themeColors.primary === "#64748b";
+                  
+                  let selectedBg = themeColors.hover || themeColors.primary;
+                  if (isSelected && themeColors.primary === "#b83260") {
+                    selectedBg = "#fbb6ce"; // rose-300
+                  } else if (isSelected && isDefaultTheme) {
+                    selectedBg = "#cbd5e1"; // slate-300
+                  }
+                  return (
+                    <SidebarMenuItem
+                      key={path.title}
+                      className={cn(
+                        "rounded-sm py-2 min-w-8",
+                        isSelected ? "font-bold" : ""
+                      )}
+                      style={{
+                        background:
+                          isSelected
+                            ? selectedBg
+                            : themeColors.cardBg || themeColors.cardBackground,
+                        color: themeColors.text,
+                        border: `1px solid ${themeColors.border}`,
+                      }}
+                    >
+                      <SidebarMenuButton asChild style={{ color: themeColors.text }}>
+                        <NavLink
+                          to={path.url}
+                          className="font-semibold text-[1rem] tracking-wide"
+                          style={{ color: themeColors.text }}
+                        >
+                          <path.icon />
+                          <span>{path.title}</span>
+                        </NavLink>
+                      </SidebarMenuButton>
+                    </SidebarMenuItem>
+                  );
+                })}
               </SidebarMenu>
             </SidebarGroupContent>
           </SidebarGroup>
         </SidebarContent>
         <SidebarFooter>
-          <SidebarMenu >
+          <SidebarMenu>
             <SidebarMenuItem>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <SidebarMenuButton>
+                  <SidebarMenuButton style={{ color: themeColors.text }}>
                     <User2 /> EdenAdmin
                     <ChevronUp className="ml-auto" />
                   </SidebarMenuButton>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent
-                  side="top"
-                  align="end"
-                  className="w-max"
-                >
+                <DropdownMenuContent side="top" align="end" className="w-max">
                   <DropdownMenuItem>
-                    <NavLink to={"/admin/settings"} className="flex gap-4" >
-                      <Settings/>
+                    <NavLink to={"/admin/settings"} className="flex gap-4" style={{ color: themeColors.text }}>
+                      <Settings />
                       <span>Account Settings</span>
                     </NavLink>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <SidebarMenuButton onClick={() => logout()}>
-                      <LogOut/>
+                    <SidebarMenuButton onClick={() => logout()} style={{ color: themeColors.text }}>
+                      <LogOut />
                       <span>Sign out</span>
                     </SidebarMenuButton>
                   </DropdownMenuItem>
@@ -95,7 +131,7 @@ function Appsidebar() {
         </SidebarFooter>
       </Sidebar>
     </>
-  )
+  );
 }
 
 export default Appsidebar
