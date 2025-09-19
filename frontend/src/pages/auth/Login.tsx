@@ -542,7 +542,7 @@ const Login = () => {
         });
         setErrors({});
 
-        navigate("/");
+        navigate("/admin");
       } else {
         throw new Error("Access token not received from server.");
       }
