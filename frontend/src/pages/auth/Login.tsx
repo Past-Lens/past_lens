@@ -542,13 +542,13 @@ const Login = () => {
         });
         setErrors({});
 
-        navigate("/");
+        navigate("/admin");
       } else {
         throw new Error("Access token not received from server.");
       }
     } catch (error: any) {
       console.error("Login error: ", error);
-      let message = "Login failed. Please try again.";
+      let message = error?.response?.data?.message || "Login failed. Please try again.";
       let showContactSupport = false;
 
       if (error.response) {
