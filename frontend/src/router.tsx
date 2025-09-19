@@ -9,6 +9,7 @@ import Contributions from "./pages/admin/contributions";
 import UserManagement from "./pages/admin/usermanagement";
 import  Settings  from "./pages/admin/settings.tsx";
 import Overview from "./pages/admin/overview";
+import Application from "./pages/admin/application.tsx";
 
 const AppRouter = () => {
   return (
@@ -35,6 +36,10 @@ const AppRouter = () => {
             <Protected>
               <Contributions/>
             </Protected>} />
+          <Route path="/admin/aplication" element={
+            <Protected>
+              <Application/>
+            </Protected>} />
           <Route path="/admin/settings" element={
             <Protected>
               <Settings/>
@@ -54,7 +59,7 @@ const AppRouter = () => {
           </Protected>
         }/>
         
-        
+
         {/* Add more routes as needed */}
       </Routes>
     </Router>

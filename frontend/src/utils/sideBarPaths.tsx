@@ -1,4 +1,4 @@
-import { Home, Edit, User2, Settings } from "lucide-react"
+import { Home, Edit, User2, Settings, AppWindow } from "lucide-react"
 
 const paths = [
   {
@@ -15,6 +15,11 @@ const paths = [
     title: "User Management",
     url: "/admin/users",
     icon: User2,
+  },
+  {
+    title: "Application",
+    url: "/admin/application",
+    icon: AppWindow,
   },
   {
     title: "Settings",
