@@ -27,14 +27,14 @@ function Appsidebar() {
           borderRight: `1px solid ${themeColors.border}`,
         }}
       >
-        <SidebarHeader className="p-2">
+        <SidebarHeader className="p-1">
           <SidebarMenu>
             <SidebarMenuItem>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <SidebarMenuButton style={{ background: 'transparent', color: themeColors.text }}>
                     <div className="flex items-center gap-4">
-                      <img src="./PLlogo.jpg" alt="PastLens Logo" width={40} height={20} className="rounded-full" />
+                      <img src="../../../public/PLlogo.jpg" alt="PastLens Logo" width={40} height={20} className="rounded-full ml-[-" />
                       <span className="font-semibold text-[1rem]">PastLens</span>
                     </div>
                     <ChevronDown className="ml-auto" />

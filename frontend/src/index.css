@@ -130,6 +130,8 @@
   background: var(--g), var(--g), var(--g);
   background-size: 50% 50%;
   animation: l17 1s infinite;
+  background-color: rgb(236, 175, 128);
+  border: 1px solid antiquewhite
 }
 @keyframes l17 {
    0%   {background-position:0     0, 10px 10px, 20px 20px}

@@ -1,4 +1,3 @@
-
 import { Button } from "../ui/button";
 import { useSidebar } from "../ui/sidebar";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
@@ -6,7 +5,7 @@ import { LogOut, Sidebar, User2, Palette } from "lucide-react";
 import { useBar } from "@/context/sidebarcontext";
 import { Input } from "../ui/input";
 import { DropdownMenu } from "../ui/dropdown-menu";
-import { DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger } from "@radix-ui/react-dropdown-menu";
+import { DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger } from "../ui/dropdown-menu";
 import { Separator } from "../ui/separator";
 import { useAuth } from "@/context/authcontext";
 import { NavLink } from "react-router-dom";
@@ -36,7 +35,7 @@ function TopBar() {
               toggleSidebar();
               setOpen((prev) => !prev);
             }}
-            className="cursor-pointer"
+            className="cursor-pointer border border-[#e6e69d]"
             style={{
               background: themeColors.cardBg || themeColors.cardBackground,
               color:

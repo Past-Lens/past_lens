@@ -13,7 +13,6 @@ export const SideBarToogleProvider = ({children} : {children : ReactNode}) => {
         localStorage.getItem("isOpen") === "true"
     );
 
-
     const setOpen: React.Dispatch<React.SetStateAction<boolean>> = (value) => {
         setIsOpen((prev) => {
             const newValue = typeof value === "function" ? value(prev) : value;
