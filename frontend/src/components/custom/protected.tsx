@@ -3,7 +3,7 @@ import {useEffect, type ReactElement} from "react"
 import { useNavigate } from "react-router-dom"
 
 function Protected({children} : {children: ReactElement }) {
-    const {isAuthenticated, logout, setState} = useAuth()
+    const {isAuthenticated, setState} = useAuth()
     const navigate = useNavigate();
     const loggedInState = localStorage.getItem("isAuthenticated")
     useEffect(()=>{
