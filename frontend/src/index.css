@@ -122,3 +122,20 @@
 .btngroup {
   @apply h-[100%] font-bold text-lg  flex items-center gap-2 shadow-2xl cursor-pointer text-slate-700;
 }
+
+.loader {
+  width: 60px;
+  aspect-ratio: 1;
+  --g: conic-gradient(from -90deg at 10px 10px,#fff 90deg,#0000 0);
+  background: var(--g), var(--g), var(--g);
+  background-size: 50% 50%;
+  animation: l17 1s infinite;
+  background-color: rgb(236, 175, 128);
+  border: 1px solid antiquewhite
+}
+@keyframes l17 {
+   0%   {background-position:0     0, 10px 10px, 20px 20px}
+   33%  {background-position:-30px 0, 10px 10px, 20px 20px}
+   66%  {background-position:-30px 0,-20px 10px, 20px 20px}
+   100% {background-position:-30px 0,-20px 10px,-10px 20px}
+}
