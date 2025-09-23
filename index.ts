@@ -9,8 +9,8 @@ concurrently([
     },
     {
         name: 'Frontend',
-        command: 'bun app.tsx',
-        cwd: 'frontend/src',
+        command: 'bun run dev',
+        cwd: 'frontend',
         prefixColor: 'green',
     },
 ]);
