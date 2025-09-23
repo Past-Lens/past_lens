@@ -1,0 +1,402 @@
+[
+  {
+    "Artifact_ID": "SWA001",
+    "Title": "Swahili Door Carving",
+    "Type": "Image",
+    "Media_Link": "swahili_1.jpg",
+    "Description": "Intricately carved wooden doors symbolizing Swahili artistry.",
+    "Language": "Swahili/English",
+    "Community_Origin": "Swahili - Coastal Kenya",
+    "Contributor": "Lamu Museum"
+  },
+  {
+    "Artifact_ID": "SWA002",
+    "Title": "Taarab Music",
+    "Type": "Audio",
+    "Media_Link": "swahili_2.mp3",
+    "Description": "Traditional music blending Arab, Indian, and African influences.",
+    "Language": "Swahili/English",
+    "Community_Origin": "Swahili - Coastal Kenya",
+    "Contributor": "Community Elder"
+  },
+  {
+    "Artifact_ID": "SWA003",
+    "Title": "Swahili Poetry (Utendi)",
+    "Type": "Text",
+    "Media_Link": "swahili_3.txt",
+    "Description": "Classical Swahili poem narrating historical events.",
+    "Language": "Swahili/English",
+    "Community_Origin": "Swahili - Coastal Kenya",
+    "Contributor": "Researcher"
+  },
+  {
+    "Artifact_ID": "SWA004",
+    "Title": "Swahili Calligraphy",
+    "Type": "Image",
+    "Media_Link": "swahili_4.jpg",
+    "Description": "Decorative Arabic-Swahili calligraphy on manuscripts.",
+    "Language": "Swahili/English",
+    "Community_Origin": "Swahili - Coastal Kenya",
+    "Contributor": "Zanzibar Archives"
+  },
+  {
+    "Artifact_ID": "SWA005",
+    "Title": "Swahili Bridal Dress",
+    "Type": "Image",
+    "Media_Link": "swahili_5.jpg",
+    "Description": "Traditional attire worn during Swahili weddings.",
+    "Language": "Swahili/English",
+    "Community_Origin": "Swahili - Coastal Kenya",
+    "Contributor": "Community Contributor"
+  },
+  {
+    "Artifact_ID": "SWA006",
+    "Title": "Mkokoteni Cart",
+    "Type": "Image",
+    "Media_Link": "swahili_6.jpg",
+    "Description": "Wooden handcarts used in coastal towns for transport.",
+    "Language": "Swahili/English",
+    "Community_Origin": "Swahili - Coastal Kenya",
+    "Contributor": "Local Historian"
+  },
+  {
+    "Artifact_ID": "SWA007",
+    "Title": "Swahili Food Recipes",
+    "Type": "Text",
+    "Media_Link": "swahili_7.txt",
+    "Description": "Traditional recipes such as pilau and biryani.",
+    "Language": "Swahili/English",
+    "Community_Origin": "Swahili - Coastal Kenya",
+    "Contributor": "Cultural Center"
+  },
+  {
+    "Artifact_ID": "SWA008",
+    "Title": "Swahili Henna Art",
+    "Type": "Image",
+    "Media_Link": "swahili_8.jpg",
+    "Description": "Intricate henna designs used in weddings and festivals.",
+    "Language": "Swahili/English",
+    "Community_Origin": "Swahili - Coastal Kenya",
+    "Contributor": "Local Artist"
+  },
+  {
+    "Artifact_ID": "SWA009",
+    "Title": "Swahili Dhow Model",
+    "Type": "Image",
+    "Media_Link": "swahili_9.jpg",
+    "Description": "Miniature model of traditional dhow ships.",
+    "Language": "Swahili/English",
+    "Community_Origin": "Swahili - Coastal Kenya",
+    "Contributor": "Maritime Museum"
+  },
+  {
+    "Artifact_ID": "SWA010",
+    "Title": "Swahili Coral Houses",
+    "Type": "Image",
+    "Media_Link": "swahili_10.jpg",
+    "Description": "Stone coral houses in Lamu and Mombasa.",
+    "Language": "Swahili/English",
+    "Community_Origin": "Swahili - Coastal Kenya",
+    "Contributor": "Heritage Trust"
+  },
+  {
+    "Artifact_ID": "SWA011",
+    "Title": "Swahili Proverbs",
+    "Type": "Text",
+    "Media_Link": "swahili_11.txt",
+    "Description": "Collection of proverbs teaching morals and wisdom.",
+    "Language": "Swahili/English",
+    "Community_Origin": "Swahili - Coastal Kenya",
+    "Contributor": "Oral Literature Project"
+  },
+  {
+    "Artifact_ID": "SWA012",
+    "Title": "Swahili Market Scene",
+    "Type": "Image",
+    "Media_Link": "swahili_12.jpg",
+    "Description": "Depiction of traditional coastal markets.",
+    "Language": "Swahili/English",
+    "Community_Origin": "Swahili - Coastal Kenya",
+    "Contributor": "Photographer"
+  },
+  {
+    "Artifact_ID": "SWA013",
+    "Title": "Swahili Storytelling",
+    "Type": "Audio",
+    "Media_Link": "swahili_13.mp3",
+    "Description": "Recorded folktales narrated in Swahili.",
+    "Language": "Swahili/English",
+    "Community_Origin": "Swahili - Coastal Kenya",
+    "Contributor": "Community Elder"
+  },
+  {
+    "Artifact_ID": "SWA014",
+    "Title": "Swahili Songbook",
+    "Type": "Text",
+    "Media_Link": "swahili_14.txt",
+    "Description": "Compilation of traditional coastal songs.",
+    "Language": "Swahili/English",
+    "Community_Origin": "Swahili - Coastal Kenya",
+    "Contributor": "Music Archivist"
+  },
+  {
+    "Artifact_ID": "SWA015",
+    "Title": "Swahili Pottery",
+    "Type": "Image",
+    "Media_Link": "swahili_15.jpg",
+    "Description": "Clay pottery used in households and ceremonies.",
+    "Language": "Swahili/English",
+    "Community_Origin": "Swahili - Coastal Kenya",
+    "Contributor": "Museum"
+  },
+  {
+    "Artifact_ID": "SWA016",
+    "Title": "Swahili Festival Dance",
+    "Type": "Video",
+    "Media_Link": "swahili_16.mp4",
+    "Description": "Performance during Swahili festivals.",
+    "Language": "Swahili/English",
+    "Community_Origin": "Swahili - Coastal Kenya",
+    "Contributor": "Cultural Center"
+  },
+  {
+    "Artifact_ID": "SWA017",
+    "Title": "Swahili Jewelry",
+    "Type": "Image",
+    "Media_Link": "swahili_17.jpg",
+    "Description": "Beaded and metallic jewelry from coastal Kenya.",
+    "Language": "Swahili/English",
+    "Community_Origin": "Swahili - Coastal Kenya",
+    "Contributor": "Local Craftsmen"
+  },
+  {
+    "Artifact_ID": "SWA018",
+    "Title": "Swahili Drum",
+    "Type": "Audio",
+    "Media_Link": "swahili_18.mp3",
+    "Description": "Traditional drum sounds used in ceremonies.",
+    "Language": "Swahili/English",
+    "Community_Origin": "Swahili - Coastal Kenya",
+    "Contributor": "Community Contributor"
+  },
+  {
+    "Artifact_ID": "SWA019",
+    "Title": "Swahili Architecture Sketches",
+    "Type": "Image",
+    "Media_Link": "swahili_19.jpg",
+    "Description": "Architectural drawings of Swahili towns.",
+    "Language": "Swahili/English",
+    "Community_Origin": "Swahili - Coastal Kenya",
+    "Contributor": "Researcher"
+  },
+  {
+    "Artifact_ID": "SWA020",
+    "Title": "Swahili Manuscripts",
+    "Type": "Text",
+    "Media_Link": "swahili_20.txt",
+    "Description": "Old Arabic-Swahili manuscripts with historical value.",
+    "Language": "Swahili/English",
+    "Community_Origin": "Swahili - Coastal Kenya",
+    "Contributor": "National Archive"
+  },
+  {
+    "Artifact_ID": "KIK001",
+    "Title": "Kikuyu Shield",
+    "Type": "Image",
+    "Media_Link": "kikuyu_1.jpg",
+    "Description": "Traditional war shield made of buffalo hide and wood.",
+    "Language": "Kikuyu/English",
+    "Community_Origin": "Kikuyu - Central Kenya",
+    "Contributor": "National Museums of Kenya"
+  },
+  {
+    "Artifact_ID": "KIK002",
+    "Title": "Kikuyu Proverbs",
+    "Type": "Text",
+    "Media_Link": "kikuyu_2.txt",
+    "Description": "Collection of proverbs conveying wisdom and life lessons.",
+    "Language": "Kikuyu/English",
+    "Community_Origin": "Kikuyu - Central Kenya",
+    "Contributor": "Community Elder"
+  },
+  {
+    "Artifact_ID": "KIK003",
+    "Title": "Kikuyu Traditional Dance",
+    "Type": "Video",
+    "Media_Link": "kikuyu_3.mp4",
+    "Description": "Dance performed during initiation and harvest ceremonies.",
+    "Language": "Kikuyu/English",
+    "Community_Origin": "Kikuyu - Central Kenya",
+    "Contributor": "Cultural Center"
+  },
+  {
+    "Artifact_ID": "KIK004",
+    "Title": "Kikuyu Spear",
+    "Type": "Image",
+    "Media_Link": "kikuyu_4.jpg",
+    "Description": "Traditional spear used for hunting and protection.",
+    "Language": "Kikuyu/English",
+    "Community_Origin": "Kikuyu - Central Kenya",
+    "Contributor": "Local Historian"
+  },
+  {
+    "Artifact_ID": "KIK005",
+    "Title": "Kikuyu Song Recordings",
+    "Type": "Audio",
+    "Media_Link": "kikuyu_5.mp3",
+    "Description": "Folk songs passed down through generations.",
+    "Language": "Kikuyu/English",
+    "Community_Origin": "Kikuyu - Central Kenya",
+    "Contributor": "Community Contributor"
+  },
+  {
+    "Artifact_ID": "KIK006",
+    "Title": "Kikuyu Oral Stories",
+    "Type": "Text",
+    "Media_Link": "kikuyu_6.txt",
+    "Description": "Narratives of myths, legends, and history.",
+    "Language": "Kikuyu/English",
+    "Community_Origin": "Kikuyu - Central Kenya",
+    "Contributor": "Elderly Storyteller"
+  },
+  {
+    "Artifact_ID": "KIK007",
+    "Title": "Kikuyu Beadwork",
+    "Type": "Image",
+    "Media_Link": "kikuyu_7.jpg",
+    "Description": "Colorful bead ornaments worn during ceremonies.",
+    "Language": "Kikuyu/English",
+    "Community_Origin": "Kikuyu - Central Kenya",
+    "Contributor": "Local Craftsmen"
+  },
+  {
+    "Artifact_ID": "KIK008",
+    "Title": "Kikuyu Horn Blowing",
+    "Type": "Audio",
+    "Media_Link": "kikuyu_8.mp3",
+    "Description": "Traditional horn used to call gatherings.",
+    "Language": "Kikuyu/English",
+    "Community_Origin": "Kikuyu - Central Kenya",
+    "Contributor": "Community Contributor"
+  },
+  {
+    "Artifact_ID": "KIK009",
+    "Title": "Kikuyu Drum Dance",
+    "Type": "Video",
+    "Media_Link": "kikuyu_9.mp4",
+    "Description": "Drumming performances at cultural events.",
+    "Language": "Kikuyu/English",
+    "Community_Origin": "Kikuyu - Central Kenya",
+    "Contributor": "Cultural Center"
+  },
+  {
+    "Artifact_ID": "KIK010",
+    "Title": "Kikuyu Clan Symbols",
+    "Type": "Image",
+    "Media_Link": "kikuyu_10.jpg",
+    "Description": "Symbols representing different Kikuyu clans.",
+    "Language": "Kikuyu/English",
+    "Community_Origin": "Kikuyu - Central Kenya",
+    "Contributor": "Researcher"
+  },
+  {
+    "Artifact_ID": "KIK011",
+    "Title": "Kikuyu Basketry",
+    "Type": "Image",
+    "Media_Link": "kikuyu_11.jpg",
+    "Description": "Handwoven baskets used for storage.",
+    "Language": "Kikuyu/English",
+    "Community_Origin": "Kikuyu - Central Kenya",
+    "Contributor": "Local Artisan"
+  },
+  {
+    "Artifact_ID": "KIK012",
+    "Title": "Kikuyu Agricultural Tools",
+    "Type": "Image",
+    "Media_Link": "kikuyu_12.jpg",
+    "Description": "Traditional tools used for farming.",
+    "Language": "Kikuyu/English",
+    "Community_Origin": "Kikuyu - Central Kenya",
+    "Contributor": "Museum"
+  },
+  {
+    "Artifact_ID": "KIK013",
+    "Title": "Kikuyu Riddles",
+    "Type": "Text",
+    "Media_Link": "kikuyu_13.txt",
+    "Description": "Traditional riddles used in teaching children.",
+    "Language": "Kikuyu/English",
+    "Community_Origin": "Kikuyu - Central Kenya",
+    "Contributor": "Oral Literature Project"
+  },
+  {
+    "Artifact_ID": "KIK014",
+    "Title": "Kikuyu Ceremonial Attire",
+    "Type": "Image",
+    "Media_Link": "kikuyu_14.jpg",
+    "Description": "Clothing worn during weddings and initiations.",
+    "Language": "Kikuyu/English",
+    "Community_Origin": "Kikuyu - Central Kenya",
+    "Contributor": "Community Contributor"
+  },
+  {
+    "Artifact_ID": "KIK015",
+    "Title": "Kikuyu Market Scene",
+    "Type": "Image",
+    "Media_Link": "kikuyu_15.jpg",
+    "Description": "Traditional open-air markets.",
+    "Language": "Kikuyu/English",
+    "Community_Origin": "Kikuyu - Central Kenya",
+    "Contributor": "Photographer"
+  },
+  {
+    "Artifact_ID": "KIK016",
+    "Title": "Kikuyu Naming Ceremony",
+    "Type": "Text",
+    "Media_Link": "kikuyu_16.txt",
+    "Description": "Descriptions of the naming ritual.",
+    "Language": "Kikuyu/English",
+    "Community_Origin": "Kikuyu - Central Kenya",
+    "Contributor": "Researcher"
+  },
+  {
+    "Artifact_ID": "KIK017",
+    "Title": "Kikuyu Sacred Trees",
+    "Type": "Image",
+    "Media_Link": "kikuyu_17.jpg",
+    "Description": "Mugumo trees with cultural and spiritual significance.",
+    "Language": "Kikuyu/English",
+    "Community_Origin": "Kikuyu - Central Kenya",
+    "Contributor": "Heritage Trust"
+  },
+  {
+    "Artifact_ID": "KIK018",
+    "Title": "Kikuyu Horn Trumpet",
+    "Type": "Audio",
+    "Media_Link": "kikuyu_18.mp3",
+    "Description": "Horn sounds for ceremonies and communication.",
+    "Language": "Kikuyu/English",
+    "Community_Origin": "Kikuyu - Central Kenya",
+    "Contributor": "Cultural Center"
+  },
+  {
+    "Artifact_ID": "KIK019",
+    "Title": "Kikuyu Herbal Medicine",
+    "Type": "Text",
+    "Media_Link": "kikuyu_19.txt",
+    "Description": "Traditional medicine knowledge and practices.",
+    "Language": "Kikuyu/English",
+    "Community_Origin": "Kikuyu - Central Kenya",
+    "Contributor": "Elder Healer"
+  },
+  {
+    "Artifact_ID": "KIK020",
+    "Title": "Kikuyu Dance Costumes",
+    "Type": "Image",
+    "Media_Link": "kikuyu_20.jpg",
+    "Description": "Colorful costumes used in ritual dances.",
+    "Language": "Kikuyu/English",
+    "Community_Origin": "Kikuyu - Central Kenya",
+    "Contributor": "Community Contributor"
+  }
+]

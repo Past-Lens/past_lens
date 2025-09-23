@@ -1,13 +1,14 @@
 import AppRouter from "./router.tsx";
-import { Toaster } from "react-hot-toast";
 import { AuthProvider } from "./context/authcontext.tsx";
+import { ThemeProvider } from "./context/themecontext";
 
 function App() {
-
   return (
-    <>
-      <AppRouter/>
-    </>
+    <ThemeProvider>
+      <AuthProvider>
+        <AppRouter />
+      </AuthProvider>
+    </ThemeProvider>
   );
 }
 

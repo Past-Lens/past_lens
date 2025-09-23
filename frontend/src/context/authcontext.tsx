@@ -1,36 +1,51 @@
 //auth context.tsx
-import React, { createContext, useState, useContext, type ReactNode } from 'react';
+import {
+  createContext,
+  useState,
+  useContext,
+  type ReactNode,
+} from "react";
 
 interface AuthContextType {
-    isAuthenticated: boolean;
-    login: () => void;
-    logout: () => void;
+  isAuthenticated: boolean | null;
+  login: () => void;
+  logout: () => void;
+  setState: (s:string) => boolean;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(
+    Boolean(localStorage.getItem("isAuthenticated"))
+  );
 
-    const login = () => {
-        setIsAuthenticated(true);
-    };
-    
-    const logout = () => {
-        setIsAuthenticated(false);
-    };
+  const setState = (s: string) : boolean =>
+    s.toLowerCase() === "false"? false : true
+  
 
-    return (
-        <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
-            {children}
-        </AuthContext.Provider>
-    );
-}
+  const login = () => {
+    localStorage.setItem("isAuthenticated", "true")
+    const state = localStorage.getItem("isAuthenticated");
+    setIsAuthenticated(setState(state!));
+  };
+
+  const logout = () => {
+    localStorage.setItem("isAuthenticated", "false")
+    const state = localStorage.getItem("isAuthenticated");
+    setIsAuthenticated(setState(state!));  
+  };
+
+  return (
+    <AuthContext.Provider value={{ isAuthenticated, login, logout, setState }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
 export const useAuth = (): AuthContextType => {
-    const context = useContext(AuthContext);
-    if (!context) {
-        throw new Error('useAuth must be used within an AuthProvider');
-    }
-    return context;
-}
-
+  const context = useContext(AuthContext);
+  if (!context) {
+    throw new Error("useAuth must be used within an AuthProvider");
+  }
+  return context;
+};

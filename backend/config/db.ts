@@ -11,13 +11,11 @@ const connectDB = async (): Promise<void> => {
       useUnifiedTopology: true,
     } as ConnectOptions);
 
-
     console.log(`MongoDB Connected: ${conn.connection.host}`);
     //consolr to show the database name
     console.log(`Database name: ${conn.connection.name}`);
     //console to show DATABASE_URL
     console.log(`DATABASE_URL: ${process.env.DATABASE_URL}`);
-    
   } catch (error: any) {
     console.error(`Error: ${error.message}`);
     process.exit(1);
