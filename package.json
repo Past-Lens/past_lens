@@ -4,7 +4,8 @@
   "description": "A digital Museum",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun index.ts",
+    "format": "prettier --write .",
     "prepare": "husky"
   },
   "repository": {
