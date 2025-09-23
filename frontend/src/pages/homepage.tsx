@@ -330,8 +330,8 @@ export default function Homepage() {
           <ArrowUp size={22} />
         </button>
       )}
-
-      <Footer/>
+      
+      <Footer/> 
     </>
   );
 }

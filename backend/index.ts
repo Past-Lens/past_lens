@@ -1,11 +1,11 @@
 import express, { Application, Request, Response } from "express";
 import { config as configDotenv } from "dotenv";
 import connectDB from "./config/db";
-<<<<<<< HEAD
+
 import authRouter from "./routes/auth.route";
 import cors from "cors";
-=======
->>>>>>> homepage
+
+
 
 configDotenv();
 
