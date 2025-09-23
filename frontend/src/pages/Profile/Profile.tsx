@@ -87,42 +87,85 @@ const Profile: React.FC = () => {
     if (!user) return <div>No user data</div>;
 
     return (
-        <div>
-            <h1>Profile</h1>
-            <img src={user.avatar} alt="Avatar" width={100} height={100} />
-            <p>Username: {user.username}</p>
-            <p>Email: {user.email}</p>
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-300 dark:from-slate-900 dark:to-slate-800 py-12 px-4">
+            <div className="w-full max-w-lg bg-white dark:bg-slate-900 rounded-xl shadow-lg p-8 flex flex-col gap-8">
+                <div className="flex flex-col items-center gap-2">
+                    <img
+                        src={user.avatar}
+                        alt="Avatar"
+                        className="w-24 h-24 rounded-full border-4 border-primary object-cover shadow"
+                    />
+                    <h1 className="text-2xl font-bold mt-2">{user.username}</h1>
+                    <p className="text-muted-foreground">{user.email}</p>
+                </div>
 
-            <div>
-                <h2>Update Avatar</h2>
-                <input type="file" onChange={handleAvatarChange} />
-                <button onClick={handleAvatarUpload} disabled={!avatarFile}>
-                    Upload
-                </button>
-            </div>
+                <div className="border-t pt-6 flex flex-col gap-4">
+                    <h2 className="text-lg font-semibold mb-2">
+                        Update Avatar
+                    </h2>
+                    <div className="flex gap-2 items-center">
+                        <input
+                            type="file"
+                            onChange={handleAvatarChange}
+                            className="file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:bg-primary file:text-white"
+                        />
+                        <button
+                            onClick={handleAvatarUpload}
+                            disabled={!avatarFile}
+                            className="bg-primary text-white px-4 py-2 rounded disabled:opacity-50"
+                        >
+                            Upload
+                        </button>
+                    </div>
+                </div>
 
-            <div>
-                <h2>Change Password</h2>
-                <input
-                    type="password"
-                    placeholder="Old Password"
-                    value={oldPassword}
-                    onChange={(e) => setOldPassword(e.target.value)}
-                />
-                <input
-                    type="password"
-                    placeholder="New Password"
-                    value={newPassword}
-                    onChange={(e) => setNewPassword(e.target.value)}
-                />
-                <button onClick={handlePasswordChange}>Change Password</button>
-                {passwordMessage && <p>{passwordMessage}</p>}
-            </div>
+                <div className="border-t pt-6 flex flex-col gap-4">
+                    <h2 className="text-lg font-semibold mb-2">
+                        Change Password
+                    </h2>
+                    <input
+                        type="password"
+                        placeholder="Old Password"
+                        value={oldPassword}
+                        onChange={(e) => setOldPassword(e.target.value)}
+                        className="border rounded px-3 py-2 w-full"
+                    />
+                    <input
+                        type="password"
+                        placeholder="New Password"
+                        value={newPassword}
+                        onChange={(e) => setNewPassword(e.target.value)}
+                        className="border rounded px-3 py-2 w-full"
+                    />
+                    <button
+                        onClick={handlePasswordChange}
+                        className="bg-primary text-white px-4 py-2 rounded"
+                    >
+                        Change Password
+                    </button>
+                    {passwordMessage && (
+                        <p className="text-sm text-center text-green-600 dark:text-green-400 mt-1">
+                            {passwordMessage}
+                        </p>
+                    )}
+                </div>
 
-            <div>
-                <h2>Delete Profile</h2>
-                <button onClick={handleDeleteProfile}>Delete Profile</button>
-                {deleteMessage && <p>{deleteMessage}</p>}
+                <div className="border-t pt-6 flex flex-col gap-4">
+                    <h2 className="text-lg font-semibold mb-2 text-red-600">
+                        Delete Profile
+                    </h2>
+                    <button
+                        onClick={handleDeleteProfile}
+                        className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700"
+                    >
+                        Delete Profile
+                    </button>
+                    {deleteMessage && (
+                        <p className="text-sm text-center text-red-600 mt-1">
+                            {deleteMessage}
+                        </p>
+                    )}
+                </div>
             </div>
         </div>
     );
