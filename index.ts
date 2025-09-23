@@ -1,16 +1,16 @@
-import concurrently from "concurrently";
+import concurrently from 'concurrently';
 
 concurrently([
     {
-        name: "Backend",
-        command: "bun index.ts",
-        cwd: "backend",
-        prefixColor: "cyan"
+        name: 'Backend',
+        command: 'bun index.ts',
+        cwd: 'backend',
+        prefixColor: 'cyan',
     },
     {
-        name: "Frontend",
-        command: "bun index.ts",
-        cwd: "frontend",
-        prefixColor: "green"
-    }
-])
+        name: 'Frontend',
+        command: 'bun app.tsx',
+        cwd: 'frontend',
+        prefixColor: 'green',
+    },
+]);
