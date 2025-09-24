@@ -72,3 +72,12 @@ bun run dev
  or 
   `bun add -d <package_name>` for development dependecies
 
+changed the backend Hot reload command from 
+```bash
+    "dev": "nodemon --watch index.ts --exec ts-node index.ts"
+```
+to 
+
+```bash
+bun --hot index.ts
+```
