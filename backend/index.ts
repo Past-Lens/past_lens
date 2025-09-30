@@ -3,6 +3,7 @@ import { config as configDotenv } from 'dotenv';
 import connectDB from './config/db';
 import authRouter from './routes/auth.route';
 import userRouter from './routes/user.route';
+import chatRouter from './routes/chat.route';
 import cors from 'cors';
 
 configDotenv();
@@ -22,5 +23,6 @@ app.get('/', (req: Request, res: Response) => {
 
 app.use('/api/auth', authRouter);
 app.use('/api/user', userRouter);
+app.use('/api/chat', chatRouter);
 
 app.listen(port, () => console.log(` Server running on port ${port}`));
