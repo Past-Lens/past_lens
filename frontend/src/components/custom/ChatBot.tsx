@@ -1,3 +1,5 @@
+import { useGetChat } from '@/services/chat.service';
+import { isAxiosError } from 'axios';
 import { useState } from 'react';
 
 function ChatBot() {
@@ -6,17 +8,40 @@ function ChatBot() {
     const [chatInput, setChatInput] = useState('');
     const [chatMessages, setChatMessages] = useState<
         { user: string; text: string }[]
-    >([]);
+    >([
+        {
+            user: 'LensAI',
+            text: 'Welcome to PastLens🫡. How can I help you today',
+        },
+    ]);
 
-    const handleSendChat = (e: React.FormEvent) => {
+    const { mutateAsync: chat, isPending } = useGetChat();
+
+    const handleSendChat = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!chatInput.trim()) return;
-        setChatMessages([
-            ...chatMessages,
-            { user: 'You', text: chatInput },
-            { user: 'LensAI', text: 'Sorry!! LensAI is not active yet' },
-        ]);
-        setChatInput('');
+        try {
+            const botResponse = await chat(chatMessages);
+            if (isPending) {
+                setChatMessages([
+                    ...chatMessages,
+                    { user: 'You', text: chatInput },
+                    { user: 'LensAI', text: 'Thinking...' },
+                ]);
+            }
+            if (botResponse) {
+                setChatMessages([
+                    ...chatMessages,
+                    { user: 'You', text: chatInput },
+                    { user: 'LensAI', text: botResponse.data },
+                ]);
+            }
+        } catch (e) {
+            console.log(e);
+            if (isAxiosError(e)) console.log(e.response?.data.message);
+        } finally {
+            setChatInput('');
+        }
     };
 
     return (
