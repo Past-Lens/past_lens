@@ -5,7 +5,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "ts-node index.ts",
-        "dev": "nodemon --watch index.ts --exec ts-node index.ts"
+        "dev": "bun --hot index.ts"
     },
     "keywords": [],
     "author": "",
@@ -21,6 +21,7 @@
         "typescript": "^5.9.2"
     },
     "dependencies": {
+        "@google/genai": "^1.21.0",
         "@prisma/client": "^6.15.0",
         "@types/express": "^5.0.3",
         "bcryptjs": "^3.0.2",

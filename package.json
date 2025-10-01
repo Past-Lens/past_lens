@@ -29,7 +29,9 @@
     "dependencies": {
         "framer-motion": "^12.23.12",
         "lucide-react": "^0.542.0",
-        "mongoose": "^8.18.0"
+        "mongoose": "^8.18.0",
+        "react-markdown": "^10.1.0",
+        "remark-gfm": "^4.0.1"
     },
     "devDependencies": {
         "@types/bun": "^1.2.22",
