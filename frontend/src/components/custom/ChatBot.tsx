@@ -15,18 +15,25 @@ function ChatBot() {
         },
     ]);
 
-    const { mutateAsync: chat, isPending } = useGetChat();
+    const { mutateAsync: chat, isPending, isError } = useGetChat();
 
     const handleSendChat = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!chatInput.trim()) return;
         try {
-            const botResponse = await chat(chatMessages);
+            const botResponse = await chat(chatInput);
             if (isPending) {
                 setChatMessages([
                     ...chatMessages,
                     { user: 'You', text: chatInput },
                     { user: 'LensAI', text: 'Thinking...' },
+                ]);
+            }
+            if (isError) {
+                setChatMessages([
+                    ...chatMessages,
+                    { user: 'You', text: chatInput },
+                    { user: 'LensAI', text: 'Tsomething went Wrong!!' },
                 ]);
             }
             if (botResponse) {

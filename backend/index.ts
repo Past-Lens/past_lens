@@ -12,10 +12,18 @@ connectDB();
 
 const app: Application = express();
 
-app.use(cors());
+const origins = ['http://localhost:5173'];
+
+app.use(
+    cors({
+        credentials: true,
+        origin: origins,
+    })
+);
+
 app.use(express.json());
 
-const port: number = parseInt(process.env.PORT || '5000', 10);
+const port: number = parseInt(process.env.PORT!);
 
 app.get('/', (req: Request, res: Response) => {
     res.send('API is running...');

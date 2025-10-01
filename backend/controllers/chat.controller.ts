@@ -48,20 +48,8 @@ Sample Welcome Message:
     ],
 };
 
-const contents = [
-    {
-        role: 'user',
-        parts: [
-            {
-                text: `INSERT_INPUT_HERE`,
-            },
-        ],
-    },
-];
-
 const chat = async (req: Request, res: Response) => {
-    const { chatHistory } = req.body;
-
+    const text = req.body.text;
     try {
         const response = await bot.models.generateContent({
             model,
@@ -69,16 +57,12 @@ const chat = async (req: Request, res: Response) => {
             contents: [
                 {
                     role: 'user',
-                    parts: [
-                        {
-                            text: chatHistory,
-                        },
-                    ],
+                    parts: [{ text }],
                 },
             ],
         });
-        if (response)
-            return res.status(200).json({ botResponse: response.text });
+        if (response) console.log(response);
+        return res.status(200).json({ botResponse: response.text });
     } catch (e) {
         console.log(e);
         return res.status(400).json('Something went wrong!');
