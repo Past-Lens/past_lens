@@ -49,7 +49,8 @@ Sample Welcome Message:
 };
 
 const chat = async (req: Request, res: Response) => {
-    const text = req.body.text;
+    const { chatInput } = req.body;
+    console.log(chatInput);
     try {
         const response = await bot.models.generateContent({
             model,
@@ -57,7 +58,7 @@ const chat = async (req: Request, res: Response) => {
             contents: [
                 {
                     role: 'user',
-                    parts: [{ text }],
+                    parts: [{ text: chatInput }],
                 },
             ],
         });
@@ -65,7 +66,7 @@ const chat = async (req: Request, res: Response) => {
         return res.status(200).json({ botResponse: response.text });
     } catch (e) {
         console.log(e);
-        return res.status(400).json('Something went wrong!');
+        return res.status(400).json(e);
     }
 };
 

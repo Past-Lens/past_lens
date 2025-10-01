@@ -33,14 +33,18 @@ function ChatBot() {
                 setChatMessages([
                     ...chatMessages,
                     { user: 'You', text: chatInput },
-                    { user: 'LensAI', text: 'Tsomething went Wrong!!' },
+                    { user: 'LensAI', text: 'Something went Wrong!!' },
                 ]);
             }
-            if (botResponse) {
+            if (
+                botResponse &&
+                botResponse.data &&
+                botResponse.data.botResponse
+            ) {
                 setChatMessages([
                     ...chatMessages,
                     { user: 'You', text: chatInput },
-                    { user: 'LensAI', text: botResponse.data },
+                    { user: 'LensAI', text: botResponse.data.botResponse },
                 ]);
             }
         } catch (e) {
@@ -66,7 +70,7 @@ function ChatBot() {
             </button>
             {/* Chat Box */}
             {showChat && (
-                <div className="fixed bottom-24 left-8 z-50 bg-white rounded-2xl shadow-2xl w-80 max-w-full p-4 flex flex-col">
+                <div className="fixed bottom-24 left-8 z-50 bg-white rounded-2xl shadow-2xl w-40% max-w-full p-4 flex flex-col">
                     <div className="font-bold text-[#1b1b1d] mb-2">
                         LensAI Chat
                     </div>
