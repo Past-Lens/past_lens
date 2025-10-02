@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { ArrowUp, Mic, Square } from 'lucide-react';
+import { speechToText, textToSpeech } from '@/utils/speechText';
 
 function ChatBot() {
     const [listening, setListening] = useState(false);
@@ -20,7 +21,7 @@ function ChatBot() {
         },
     ]);
 
-    const { mutateAsync: chat, isPending, isError } = useGetChat();
+    const { mutateAsync: chat } = useGetChat();
 
     useEffect(() => {
         if (chatContainerRef.current) {
@@ -181,7 +182,10 @@ function ChatBot() {
                                         ? '#e53935'
                                         : '#ff7300',
                                 }}
-                                onClick={() => setListening((v) => !v)}
+                                onClick={() => {
+                                    setListening((v) => !v);
+                                    console.log(speechToText());
+                                }}
                                 tabIndex={-1}
                             >
                                 {listening ? (
