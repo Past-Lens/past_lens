@@ -56,7 +56,6 @@ export default function Homepage() {
     const [showScrollTop, setShowScrollTop] = useState(false);
     // Tooltip state for virtual assistant button
     const [showTooltip, setShowTooltip] = useState(false);
-
     // // Header sticky/hide on scroll logic
     const [showHeader, setShowHeader] = useState(true);
     const lastScrollY = useRef(window.scrollY);
