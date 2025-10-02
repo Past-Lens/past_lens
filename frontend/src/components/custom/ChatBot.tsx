@@ -104,7 +104,7 @@ function ChatBot() {
             {/* Chat Box */}
             {showChat && (
                 <div className="fixed bottom-24 left-8 z-50 bg-white rounded-2xl shadow-2xl w-[35rem] max-w-full p-4 flex flex-col max-h-[32rem] h-[100%]">
-                    <div className="font-bold text-[#1b1b1d] mb-2">
+                    <div className="font-bold text-[#1b1b1d] mb-2 border-b-2 border-b-orange-600">
                         LensAI Chat
                     </div>
                     <div

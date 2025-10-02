@@ -48,9 +48,20 @@ Sample Welcome Message:
     ],
 };
 
+const conversationHistory: { role: string; content: string }[] = [];
+
+function buildPrompt(
+    history: { role: string; content: string }[],
+    latestInput: string
+) {
+    const context = history.map((m) => `${m.role}: ${m.content}`).join('\n');
+    return `Conversation so far:\n${context}\n\nLatest user input: ${latestInput}`;
+}
+
 const chat = async (req: Request, res: Response) => {
     const { chatInput } = req.body;
-    console.log(chatInput);
+    // console.log(chatInput); // output user input from frontend
+    conversationHistory.push({ role: 'user:', content: chatInput });
     try {
         const response = await bot.models.generateContent({
             model,
@@ -58,12 +69,20 @@ const chat = async (req: Request, res: Response) => {
             contents: [
                 {
                     role: 'user',
-                    parts: [{ text: chatInput }],
+                    parts: [
+                        { text: buildPrompt(conversationHistory, chatInput) },
+                    ],
                 },
             ],
         });
-        if (response) console.log(response);
-        return res.status(200).json({ botResponse: response.text });
+        if (response) {
+            // console.log(response.text); // output response of the chatBot
+            conversationHistory.push({
+                role: 'LensAi',
+                content: response.text!,
+            });
+            return res.status(200).json({ botResponse: response.text });
+        }
     } catch (e) {
         console.log(e);
         return res.status(400).json(e);
