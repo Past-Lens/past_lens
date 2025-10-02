@@ -3,6 +3,8 @@ import connectDB from './config/db';
 import authRouter from './routes/auth.route';
 import userRouter from './routes/user.route';
 import chatRouter from './routes/chat.route';
+import datasetRouter from './routes/dataset.route';
+
 import cors from 'cors';
 
 connectDB();
@@ -22,6 +24,7 @@ app.use(express.json());
 
 const port: number = parseInt(process.env.PORT!);
 
+
 app.get('/', (req: Request, res: Response) => {
     res.send('API is running...');
 });
@@ -29,5 +32,7 @@ app.get('/', (req: Request, res: Response) => {
 app.use('/api/auth', authRouter);
 app.use('/api/user', userRouter);
 app.use('/api/chat', chatRouter);
+app.use('/api/dataset', datasetRouter);
+
 
 app.listen(port, () => console.log(` Server running on port ${port}`));
