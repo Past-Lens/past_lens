@@ -1,12 +1,9 @@
 import express, { Application, Request, Response } from 'express';
-import { config as configDotenv } from 'dotenv';
 import connectDB from './config/db';
 import authRouter from './routes/auth.route';
 import userRouter from './routes/user.route';
 import chatRouter from './routes/chat.route';
 import cors from 'cors';
-
-configDotenv();
 
 connectDB();
 

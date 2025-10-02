@@ -3,7 +3,7 @@ import concurrently from 'concurrently';
 concurrently([
     {
         name: 'Backend',
-        command: 'bun index.ts',
+        command: 'bun run dev',
         cwd: 'backend',
         prefixColor: 'cyan',
     },

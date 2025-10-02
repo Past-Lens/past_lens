@@ -14,7 +14,14 @@ npm init -y // add a package.json
 - Bun is an 'All-in-One' stop Shop
 
 To install Bun globally on your machine, Run:
-    for windows
+
+if node is already installed:
+
+```bash
+npm install -g bun
+```
+
+for windows
 
 ```bash
 powershell -c "irm bun.sh/install.ps1 | iex"
@@ -33,6 +40,11 @@ cd backend
 ```
 ```bash
 bun i
+```
+then run this command to generate the prisma client: 
+
+```bash
+bunx prisma generate
 ```
 
 ```bash

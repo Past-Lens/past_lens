@@ -3,8 +3,10 @@ import { isAxiosError } from 'axios';
 import { useState, useRef, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { ArrowUp, Mic, Square } from 'lucide-react';
 
 function ChatBot() {
+    const [listening, setListening] = useState(false);
     const chatContainerRef = useRef<HTMLDivElement>(null);
     // Chat box state
     const [showChat, setShowChat] = useState(false);
@@ -106,7 +108,10 @@ function ChatBot() {
                     </div>
                     <div
                         ref={chatContainerRef}
-                        className="flex-1 overflow-y-auto mb-2 max-h-[90%]"
+                        className="flex-1 mb-2 max-h-[90%] custom-scrollbar-hide"
+                        style={{
+                            overflowY: 'auto',
+                        }}
                     >
                         {chatMessages.map(
                             (
@@ -142,31 +147,63 @@ function ChatBot() {
                     </div>
                     <form
                         onSubmit={handleSendChat}
-                        className="flex gap-2 items-center"
+                        className="w-full flex items-end mt-2"
                     >
-                        <textarea
-                            value={chatInput}
-                            onChange={(e) => {
-                                setChatInput(e.target.value);
-                                e.target.style.height = 'auto';
-                                e.target.style.height =
-                                    Math.min(e.target.scrollHeight, 120) + 'px';
-                            }}
-                            placeholder="Type your message..."
-                            className="flex-1 px-3 py-2 rounded-xl border border-[#eeeff1] focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none"
-                            style={{
-                                minHeight: '2.5rem',
-                                maxHeight: '7.5rem',
-                                overflowY: 'auto',
-                            }}
-                        />
-                        <button
-                            type="submit"
-                            className="bg-orange-600 text-white px-4 py-2 rounded-xl font-bold h-14"
-                        >
-                            Send
-                        </button>
+                        <div className="relative w-full">
+                            <textarea
+                                value={chatInput}
+                                onChange={(e) => {
+                                    setChatInput(e.target.value);
+                                    e.target.style.height = 'auto';
+                                    e.target.style.height =
+                                        Math.min(e.target.scrollHeight, 120) +
+                                        'px';
+                                }}
+                                placeholder={
+                                    listening
+                                        ? 'Listening...'
+                                        : 'Type your message...'
+                                }
+                                className="w-full pr-24 px-3 py-2 rounded-xl border border-[#eeeff1] focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none bg-white custom-scrollbar-hide"
+                                style={{
+                                    minHeight: '2.5rem',
+                                    maxHeight: '7.5rem',
+                                    overflowY: 'hidden',
+                                }}
+                                disabled={listening}
+                            />
+                            {/* Audio Button */}
+                            <button
+                                type="button"
+                                className={`absolute right-14 bottom-2 flex items-center justify-center w-10 h-10 rounded-full bg-orange-600 text-white shadow-md border-2 border-white transition-colors ${listening ? 'bg-red-600' : ''}`}
+                                style={{
+                                    background: listening
+                                        ? '#e53935'
+                                        : '#ff7300',
+                                }}
+                                onClick={() => setListening((v) => !v)}
+                                tabIndex={-1}
+                            >
+                                {listening ? (
+                                    <Square size={22} color="#fff" />
+                                ) : (
+                                    <Mic size={22} color="#fff" />
+                                )}
+                            </button>
+                            {/* Send Button */}
+                            <button
+                                type="submit"
+                                className="absolute right-2 bottom-2 flex items-center justify-center w-10 h-10 rounded-full bg-orange-600 text-white shadow-md border-2 border-white"
+                                style={{ background: '#ff7300' }}
+                            >
+                                <ArrowUp size={22} color="#fff" />
+                            </button>
+                        </div>
                     </form>
+                    <style>{`
+                        .custom-scrollbar-hide::-webkit-scrollbar { display: none; }
+                        .custom-scrollbar-hide { scrollbar-width: none; -ms-overflow-style: none; }
+                    `}</style>
                 </div>
             )}
         </>
