@@ -8,7 +8,7 @@ const model = 'gemini-flash-latest';
 
 const config = {
     thinkingConfig: {
-        thinkingBudget: 4578,
+        thinkingBudget: 579,
     },
     safetySettings: [
         {
