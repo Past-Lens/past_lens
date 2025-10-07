@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import ProfileHeader from '@/components/custom/ProfileHeader';
 import { Button } from '@/components/ui/button';
 import {
@@ -33,7 +33,7 @@ const contributionCards = [
     },
 ];
 
-const Contribute: React.FC = () => {
+const Contribute = () => {
     const [formOpen, setFormOpen] = useState(false);
     const [step, setStep] = useState(1);
     const [form, setForm] = useState({
@@ -64,7 +64,14 @@ const Contribute: React.FC = () => {
         null
     );
     const dialogFileRef = useRef<HTMLInputElement | null>(null);
+    const [archive, setArchive] = useState<any[]>([]);
+    const [deleteCandidate, setDeleteCandidate] = useState<any | null>(null);
+    const [showDeleteDialog, setShowDeleteDialog] = useState(false);
+    const [comment, setComment] = useState<string>('');
+    const [pendingSave, setPendingSave] = useState<any | null>(null);
+    const [showSaveDialog, setShowSaveDialog] = useState(false);
 
+    // ----- Form handlers -----
     function handleFormNext() {
         setStep((s) => Math.min(s + 1, 4));
     }
@@ -76,7 +83,7 @@ const Contribute: React.FC = () => {
             HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
         >
     ) {
-        const { name, value } = e.target;
+        const { name, value } = e.target as HTMLInputElement;
         setForm((f) => ({ ...f, [name]: value }));
     }
     function handleFormFileChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -85,6 +92,7 @@ const Contribute: React.FC = () => {
     }
     function handleFormSubmit(e: React.FormEvent) {
         e.preventDefault();
+        // For now just close and reset the form - actual submit handled elsewhere
         setFormOpen(false);
         setStep(1);
         setForm({
@@ -96,10 +104,9 @@ const Contribute: React.FC = () => {
             content: '',
             files: [],
         });
-        // TODO: send to backend
     }
 
-    // Recording handlers (audio only)
+    // ----- Recording handlers (audio) -----
     const startRecording = async () => {
         try {
             const stream = await navigator.mediaDevices.getUserMedia({
@@ -107,7 +114,8 @@ const Contribute: React.FC = () => {
             });
             const mr = new MediaRecorder(stream);
             audioChunksRef.current = [];
-            mr.ondataavailable = (e) => audioChunksRef.current.push(e.data);
+            mr.ondataavailable = (ev: BlobEvent) =>
+                audioChunksRef.current.push(ev.data);
             mr.onstop = () => {
                 const blob = new Blob(audioChunksRef.current, {
                     type: 'audio/webm',
@@ -121,21 +129,24 @@ const Contribute: React.FC = () => {
             console.error('Recording failed', err);
         }
     };
-
     const stopRecording = () => {
-        if (
-            mediaRecorderRef.current &&
-            mediaRecorderRef.current.state !== 'inactive'
-        ) {
-            mediaRecorderRef.current.stop();
-            mediaRecorderRef.current.stream
-                .getTracks()
-                .forEach((t) => t.stop());
+        try {
+            if (
+                mediaRecorderRef.current &&
+                mediaRecorderRef.current.state !== 'inactive'
+            ) {
+                mediaRecorderRef.current.stop();
+                mediaRecorderRef.current.stream
+                    .getTracks()
+                    .forEach((t) => t.stop());
+            }
+        } catch (err) {
+            console.warn('Stop recording error', err);
         }
         setRecording(false);
     };
 
-    // Camera handlers (photo capture)
+    // ----- Camera handlers (photo capture) -----
     const startCamera = async () => {
         try {
             const stream = await navigator.mediaDevices.getUserMedia({
@@ -144,14 +155,14 @@ const Contribute: React.FC = () => {
             cameraStreamRef.current = stream;
             if (videoRef.current) {
                 videoRef.current.srcObject = stream;
-                await videoRef.current.play();
+                // eslint-disable-next-line @typescript-eslint/no-floating-promises
+                videoRef.current.play();
             }
             setCameraOn(true);
         } catch (err) {
             console.error('Camera failed', err);
         }
     };
-
     const capturePhoto = () => {
         if (!videoRef.current) return;
         const video = videoRef.current;
@@ -169,7 +180,6 @@ const Contribute: React.FC = () => {
             }
         }, 'image/jpeg');
     };
-
     const stopCamera = () => {
         if (cameraStreamRef.current) {
             cameraStreamRef.current.getTracks().forEach((t) => t.stop());
@@ -182,6 +192,81 @@ const Contribute: React.FC = () => {
             videoRef.current.srcObject = null;
         }
         setCameraOn(false);
+    };
+
+    const reloadArchive = async () => {
+        try {
+            const res = await fetch('/api/draft');
+            if (!res.ok) return;
+            const js = await res.json();
+            setArchive(js.drafts || []);
+        } catch (err) {
+            console.error('Failed to reload drafts', err);
+        }
+    };
+
+    const savePendingDraft = async (pending: any) => {
+        if (!pending) return;
+        setSavingDraft(true);
+        try {
+            const fd = new FormData();
+            fd.append('title', pending.title || 'Untitled');
+            fd.append('description', pending.description || '');
+            fd.append('type', pending.type || 'Unknown');
+            fd.append('comment', pending.comment || '');
+            if (pending.audioBlob)
+                fd.append(
+                    'audio',
+                    new File([pending.audioBlob], 'recording.webm', {
+                        type: pending.audioBlob.type || 'audio/webm',
+                    })
+                );
+            if (pending.photoBlob)
+                fd.append(
+                    'photo',
+                    new File([pending.photoBlob], 'photo.jpg', {
+                        type: pending.photoBlob.type || 'image/jpeg',
+                    })
+                );
+            (pending.files || []).forEach((f: File) => fd.append('files', f));
+
+            const res = await fetch('/api/draft', { method: 'POST', body: fd });
+            const data = await res.json();
+            if (!res.ok) throw new Error(data?.message || 'Upload failed');
+            try {
+                (await import('react-hot-toast')).default.success(
+                    'Draft saved'
+                );
+            } catch {}
+            setSavedDraft(data.draft || data);
+            await reloadArchive();
+        } catch (err: any) {
+            console.error('Save draft failed', err);
+            try {
+                (await import('react-hot-toast')).default.error(
+                    err?.message || 'Save failed'
+                );
+            } catch {}
+        } finally {
+            setSavingDraft(false);
+            setShowSaveDialog(false);
+            setPendingSave(null);
+        }
+    };
+
+    const openDraftInForm = (draft: any) => {
+        if (!draft) return;
+        setForm({
+            community: draft.community || '',
+            type: draft.type || '',
+            source: draft.source || '',
+            title: draft.title || draft.name || '',
+            description: draft.description || '',
+            content: draft.content || draft.description || '',
+            files: [],
+        });
+        setStep(4);
+        setFormOpen(true);
     };
 
     // Ask AI - calls /api/chat with a prefilled prompt
@@ -263,7 +348,7 @@ const Contribute: React.FC = () => {
                                 <div className="flex items-start gap-6 flex-col md:flex-row">
                                     <div className="flex-1">
                                         <h4 className="font-semibold">
-                                            Live media
+                                            Open in Form
                                         </h4>
                                         <p className="text-sm text-muted-foreground mb-3">
                                             Record audio, take photos or capture
@@ -271,7 +356,7 @@ const Contribute: React.FC = () => {
                                             After recording you can save a draft
                                             contribution.
                                         </p>
-                                        <div className="flex gap-3 items-center">
+                                        <div className="flex gap-3 items-center flex-wrap">
                                             <select
                                                 name="type"
                                                 onChange={(e) =>
@@ -341,14 +426,18 @@ const Contribute: React.FC = () => {
                                                     className="h-14 ml-2 rounded"
                                                 />
                                             )}
+                                            {/* Comment input for draft */}
+                                            <input
+                                                value={comment}
+                                                onChange={(e) =>
+                                                    setComment(e.target.value)
+                                                }
+                                                placeholder="Add a short note or context for this contribution (optional)"
+                                                className="ml-2 rounded border px-3 py-2 text-sm w-80"
+                                            />
                                             <Button
-                                                onClick={async () => {
-                                                    // Confirm save
-                                                    const ok = window.confirm(
-                                                        'Save this draft to the server?'
-                                                    );
-                                                    if (!ok) return;
-                                                    // construct FormData and POST to /api/draft
+                                                onClick={() => {
+                                                    // Prepare pending draft and open Save dialog
                                                     if (
                                                         !audioBlob &&
                                                         !photoBlob &&
@@ -359,111 +448,23 @@ const Contribute: React.FC = () => {
                                                         );
                                                         return;
                                                     }
-                                                    try {
-                                                        setSavingDraft(true);
-                                                        const fd =
-                                                            new FormData();
-                                                        fd.append(
-                                                            'title',
+                                                    const pending = {
+                                                        title:
                                                             form.title ||
-                                                                'Untitled'
-                                                        );
-                                                        fd.append(
-                                                            'description',
+                                                            'Untitled',
+                                                        description:
                                                             form.description ||
-                                                                ''
-                                                        );
-                                                        fd.append(
-                                                            'type',
+                                                            '',
+                                                        type:
                                                             form.type ||
-                                                                'Unknown'
-                                                        );
-                                                        if (audioBlob) {
-                                                            fd.append(
-                                                                'audio',
-                                                                new File(
-                                                                    [audioBlob],
-                                                                    'recording.webm',
-                                                                    {
-                                                                        type:
-                                                                            audioBlob.type ||
-                                                                            'audio/webm',
-                                                                    }
-                                                                )
-                                                            );
-                                                        }
-                                                        if (photoBlob) {
-                                                            fd.append(
-                                                                'photo',
-                                                                new File(
-                                                                    [photoBlob],
-                                                                    'photo.jpg',
-                                                                    {
-                                                                        type:
-                                                                            photoBlob.type ||
-                                                                            'image/jpeg',
-                                                                    }
-                                                                )
-                                                            );
-                                                        }
-                                                        // append any dialog files
-                                                        form.files.forEach(
-                                                            (f) =>
-                                                                fd.append(
-                                                                    'files',
-                                                                    f
-                                                                )
-                                                        );
-
-                                                        const res = await fetch(
-                                                            '/api/draft',
-                                                            {
-                                                                method: 'POST',
-                                                                body: fd,
-                                                            }
-                                                        );
-                                                        const data =
-                                                            await res.json();
-                                                        if (!res.ok)
-                                                            throw new Error(
-                                                                data?.message ||
-                                                                    'Upload failed'
-                                                            );
-                                                        // show toast and set preview
-                                                        try {
-                                                            (
-                                                                await import(
-                                                                    'react-hot-toast'
-                                                                )
-                                                            ).default.success(
-                                                                'Draft saved'
-                                                            );
-                                                        } catch {
-                                                            /** ignore */
-                                                        }
-                                                        setSavedDraft(
-                                                            data.draft || data
-                                                        );
-                                                    } catch (err: any) {
-                                                        console.error(
-                                                            'Save draft failed',
-                                                            err
-                                                        );
-                                                        try {
-                                                            (
-                                                                await import(
-                                                                    'react-hot-toast'
-                                                                )
-                                                            ).default.error(
-                                                                err?.message ||
-                                                                    'Save failed'
-                                                            );
-                                                        } catch {
-                                                            /** ignore */
-                                                        }
-                                                    } finally {
-                                                        setSavingDraft(false);
-                                                    }
+                                                            'Unknown',
+                                                        comment: comment || '',
+                                                        audioBlob,
+                                                        photoBlob,
+                                                        files: form.files || [],
+                                                    };
+                                                    setPendingSave(pending);
+                                                    setShowSaveDialog(true);
                                                 }}
                                             >
                                                 {savingDraft
@@ -473,54 +474,13 @@ const Contribute: React.FC = () => {
                                             {savedDraft && (
                                                 <Button
                                                     variant="destructive"
-                                                    onClick={async () => {
-                                                        const ok =
-                                                            window.confirm(
-                                                                'Delete this saved draft? This cannot be undone.'
-                                                            );
-                                                        if (!ok) return;
-                                                        try {
-                                                            const id =
-                                                                savedDraft.id ||
-                                                                savedDraft._id ||
-                                                                savedDraft.draftId;
-                                                            if (!id)
-                                                                throw new Error(
-                                                                    'Draft id missing'
-                                                                );
-                                                            const res =
-                                                                await fetch(
-                                                                    `/api/draft/${id}`,
-                                                                    {
-                                                                        method: 'DELETE',
-                                                                    }
-                                                                );
-                                                            if (!res.ok)
-                                                                throw new Error(
-                                                                    'Delete failed'
-                                                                );
-                                                            try {
-                                                                (
-                                                                    await import(
-                                                                        'react-hot-toast'
-                                                                    )
-                                                                ).default.success(
-                                                                    'Draft deleted'
-                                                                );
-                                                            } catch {}
-                                                            setSavedDraft(null);
-                                                        } catch (err) {
-                                                            console.error(err);
-                                                            try {
-                                                                (
-                                                                    await import(
-                                                                        'react-hot-toast'
-                                                                    )
-                                                                ).default.error(
-                                                                    'Delete failed'
-                                                                );
-                                                            } catch {}
-                                                        }
+                                                    onClick={() => {
+                                                        setDeleteCandidate(
+                                                            savedDraft
+                                                        );
+                                                        setShowDeleteDialog(
+                                                            true
+                                                        );
                                                     }}
                                                 >
                                                     Delete Draft
@@ -599,6 +559,96 @@ const Contribute: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                {/* Delete confirmation dialog (Shadcn Dialog) */}
+                <Dialog
+                    open={showDeleteDialog}
+                    onOpenChange={setShowDeleteDialog}
+                >
+                    <DialogContent>
+                        <DialogHeader>
+                            <DialogTitle>Delete draft</DialogTitle>
+                        </DialogHeader>
+                        <div className="py-4">
+                            Are you sure you want to delete this draft? This
+                            action cannot be undone.
+                        </div>
+                        <DialogFooter>
+                            <Button
+                                variant="ghost"
+                                onClick={() => setShowDeleteDialog(false)}
+                            >
+                                Cancel
+                            </Button>
+                            <Button
+                                variant="destructive"
+                                onClick={async () => {
+                                    if (!deleteCandidate) return;
+                                    try {
+                                        const id =
+                                            deleteCandidate.id ||
+                                            deleteCandidate._id ||
+                                            deleteCandidate.draftId;
+                                        const res = await fetch(
+                                            `/api/draft/${id}`,
+                                            { method: 'DELETE' }
+                                        );
+                                        if (!res.ok)
+                                            throw new Error('Delete failed');
+                                        try {
+                                            (
+                                                await import('react-hot-toast')
+                                            ).default.success('Draft deleted');
+                                        } catch {}
+                                        setSavedDraft(null);
+                                        setShowDeleteDialog(false);
+                                        setDeleteCandidate(null);
+                                        reloadArchive();
+                                    } catch (err) {
+                                        console.error(err);
+                                        try {
+                                            (
+                                                await import('react-hot-toast')
+                                            ).default.error('Delete failed');
+                                        } catch {}
+                                    }
+                                }}
+                            >
+                                Delete
+                            </Button>
+                        </DialogFooter>
+                    </DialogContent>
+                </Dialog>
+
+                {/* Save confirmation dialog */}
+                <Dialog open={showSaveDialog} onOpenChange={setShowSaveDialog}>
+                    <DialogContent>
+                        <DialogHeader>
+                            <DialogTitle>Save draft</DialogTitle>
+                        </DialogHeader>
+                        <div className="py-4">
+                            Save this draft to the server?
+                        </div>
+                        <DialogFooter>
+                            <Button
+                                variant="ghost"
+                                onClick={() => {
+                                    setShowSaveDialog(false);
+                                    setPendingSave(null);
+                                }}
+                            >
+                                Cancel
+                            </Button>
+                            <Button
+                                onClick={async () => {
+                                    await savePendingDraft(pendingSave);
+                                }}
+                            >
+                                Save
+                            </Button>
+                        </DialogFooter>
+                    </DialogContent>
+                </Dialog>
 
                 {/* Draft preview area */}
                 {savedDraft && (
@@ -718,13 +768,56 @@ const Contribute: React.FC = () => {
                                         : 'Explain with AI'}
                                 </Button>
                                 <Button
-                                    onClick={() => {
-                                        alert(
-                                            'Open form prefilled with draft — TODO'
-                                        );
-                                    }}
+                                    onClick={() => openDraftInForm(savedDraft)}
                                 >
                                     Open in Form
+                                </Button>
+                                <Button
+                                    onClick={async () => {
+                                        try {
+                                            const id =
+                                                savedDraft.id ||
+                                                savedDraft._id ||
+                                                savedDraft.draftId;
+                                            if (!id)
+                                                throw new Error(
+                                                    'Draft id missing'
+                                                );
+                                            const res = await fetch(
+                                                `/api/draft/${id}/publish`,
+                                                { method: 'POST' }
+                                            );
+                                            if (!res.ok)
+                                                throw new Error(
+                                                    'Publish failed'
+                                                );
+                                            await res.json();
+                                            try {
+                                                (
+                                                    await import(
+                                                        'react-hot-toast'
+                                                    )
+                                                ).default.success(
+                                                    'Draft published'
+                                                );
+                                            } catch {}
+                                            reloadArchive();
+                                            setSavedDraft(null);
+                                        } catch (err) {
+                                            console.error(err);
+                                            try {
+                                                (
+                                                    await import(
+                                                        'react-hot-toast'
+                                                    )
+                                                ).default.error(
+                                                    'Publish failed'
+                                                );
+                                            } catch {}
+                                        }
+                                    }}
+                                >
+                                    Publish
                                 </Button>
                             </div>
 
@@ -775,6 +868,9 @@ const Contribute: React.FC = () => {
                                         <option value="" disabled>
                                             Select community
                                         </option>
+                                        <option value="Kikuyu">Kikuyu</option>
+                                        <option value="Maasai">Maasai</option>
+                                        <option value="Other">Other</option>
                                         <option value="Local">Local</option>
                                         <option value="Regional">
                                             Regional
@@ -922,14 +1018,67 @@ const Contribute: React.FC = () => {
                     </DialogContent>
                 </Dialog>
 
-                {/* Archive placeholder - will add later */}
                 <section className="rounded-2xl p-8 bg-white dark:bg-slate-900 shadow-lg">
-                    <h3 className="text-xl font-semibold mb-2">
-                        Archive (coming soon)
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                        We'll surface previously contributed items here.
+                    <h3 className="text-xl font-semibold mb-2">Archive</h3>
+                    <p className="text-sm text-muted-foreground mb-4">
+                        Previously saved drafts and contributions.
                     </p>
+                    {archive.length === 0 && (
+                        <div className="text-sm text-muted-foreground">
+                            No drafts yet.
+                        </div>
+                    )}
+                    {archive.length > 0 && (
+                        <div className="space-y-3">
+                            {archive.map((d) => (
+                                <div
+                                    key={d.id}
+                                    className="flex items-center justify-between p-3 rounded border bg-slate-50 dark:bg-slate-800"
+                                >
+                                    <div>
+                                        <div className="font-semibold">
+                                            {d.title || 'Untitled'}
+                                        </div>
+                                        <div className="text-xs text-muted-foreground">
+                                            {d.description || ''}
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-2">
+                                        <Button
+                                            onClick={async () => {
+                                                try {
+                                                    const res = await fetch(
+                                                        `/api/draft/${d.id}`
+                                                    );
+                                                    if (!res.ok)
+                                                        throw new Error(
+                                                            'Could not fetch draft'
+                                                        );
+                                                    const js = await res.json();
+                                                    setSavedDraft(
+                                                        js.draft || d
+                                                    );
+                                                } catch (err) {
+                                                    console.error(err);
+                                                }
+                                            }}
+                                        >
+                                            View
+                                        </Button>
+                                        <Button
+                                            variant="destructive"
+                                            onClick={() => {
+                                                setDeleteCandidate(d);
+                                                setShowDeleteDialog(true);
+                                            }}
+                                        >
+                                            Delete
+                                        </Button>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    )}
                 </section>
             </div>
         </div>

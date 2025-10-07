@@ -1,7 +1,13 @@
 import { Router } from 'express';
 import multer from 'multer';
 import { authenticateLogin } from '../middlewares/authenticateLogin';
-import { createDraft, deleteDraft } from '../controllers/draft.controller';
+import {
+    createDraft,
+    deleteDraft,
+    listDrafts,
+    getDraft,
+} from '../controllers/draft.controller';
+import { publishDraft } from '../controllers/draft.controller';
 
 const router = Router();
 
@@ -21,5 +27,10 @@ router.post(
 );
 
 router.delete('/:id', authenticateLogin, deleteDraft);
+
+// read-only list and get (authenticated)
+router.get('/', authenticateLogin, listDrafts);
+router.get('/:id', authenticateLogin, getDraft);
+router.post('/:id/publish', authenticateLogin, publishDraft);
 
 export default router;
