@@ -11,6 +11,7 @@ import Settings from './pages/admin/settings.tsx';
 import Overview from './pages/admin/overview';
 import Application from './pages/admin/application.tsx';
 import Profile from './pages/Profile/Profile.tsx';
+import Contribute from './pages/Contribute/Contribute';
 
 const AppRouter = () => {
     return (
@@ -84,9 +85,15 @@ const AppRouter = () => {
                     path="user/contribute"
                     element={
                         <Protected>
-                            <>
-                                {/*Put the name of the userprofilepage component */}
-                            </>
+                            <Contribute />
+                        </Protected>
+                    }
+                />
+                <Route
+                    path="/contribute"
+                    element={
+                        <Protected>
+                            <Contribute />
                         </Protected>
                     }
                 />
