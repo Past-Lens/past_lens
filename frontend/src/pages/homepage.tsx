@@ -56,19 +56,11 @@ export default function Homepage() {
     const [showScrollTop, setShowScrollTop] = useState(false);
     // Tooltip state for virtual assistant button
     const [showTooltip, setShowTooltip] = useState(false);
-    // // Header sticky/hide on scroll logic
-    const [showHeader, setShowHeader] = useState(true);
+    // Header sticky/hide on scroll logic
     const lastScrollY = useRef(window.scrollY);
     useEffect(() => {
         const handleScroll = () => {
             setShowScrollTop(window.scrollY > window.innerHeight / 2);
-            if (window.scrollY < 40) {
-                setShowHeader(true);
-            } else if (window.scrollY > lastScrollY.current) {
-                setShowHeader(false); // scrolling down
-            } else {
-                setShowHeader(true); // scrolling up
-            }
             lastScrollY.current = window.scrollY;
         };
         window.addEventListener('scroll', handleScroll);
@@ -158,13 +150,15 @@ export default function Homepage() {
                             {content.hero.description}
                         </h2>
                         <motion.div whileHover={{ scale: 1.05 }}>
-                            <Button
-                                size="lg"
-                                variant="default"
-                                className="bg-[#1b1b1d] text-[#eeeff1] rounded-full px-10 py-4 text-2xl h-20 tracking-wider font-bold shadow-lg cursor-pointer"
-                            >
-                                Get Started
-                            </Button>
+                            <a href="/museum">
+                                <Button
+                                    size="lg"
+                                    variant="default"
+                                    className="bg-[#1b1b1d] text-[#eeeff1] rounded-full px-10 py-4 text-2xl h-20 tracking-wider font-bold shadow-lg cursor-pointer"
+                                >
+                                    Get Started
+                                </Button>
+                            </a>
                         </motion.div>
                     </div>
                 </div>
@@ -297,6 +291,16 @@ export default function Homepage() {
                         <p className="max-w-2xl text-[#646464]">
                             {content.mission.desc}
                         </p>
+                        <div className="mt-8">
+                            <a href="/contribute">
+                                <Button
+                                    size="lg"
+                                    className="bg-gradient-to-r from-slate-600 via-orange-500 to-slate-400 text-white px-8 py-4 rounded-3xl text-xl shadow-2xl"
+                                >
+                                    Share your Story
+                                </Button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </motion.section>

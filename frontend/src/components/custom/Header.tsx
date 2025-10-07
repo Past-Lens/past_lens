@@ -91,6 +91,12 @@ export default function Header() {
                         >
                             Home
                         </a>
+                        <a
+                            href="/contribute"
+                            className="block py-2 px-4 rounded hover:bg-[#f3f4f5] font-bold"
+                        >
+                            Contribute
+                        </a>
                         <div>
                             <button
                                 className="block w-full text-left py-2 px-4 rounded hover:bg-[#f3f4f5] font-bold"
@@ -201,7 +207,9 @@ export default function Header() {
                                     className="bg-gray-100 border border-gray-300 text-[#1b1b1d] rounded-full p-0 flex items-center justify-center cursor-pointer"
                                     aria-label="Contribute"
                                 >
-                                    <Plus size={22} />
+                                    <a href="/contribute">
+                                        <Plus size={22} />
+                                    </a>
                                 </Button>
                                 <span className="absolute left-1/2 -translate-x-1/2 top-full mt-2 px-3 py-1 bg-black text-white text-xs rounded shadow-lg whitespace-nowrap opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200 z-50">
                                     Contribute
@@ -293,7 +301,7 @@ export default function Header() {
                 >
                     Home
                 </motion.a>
-                <motion.div
+                {/* <motion.div
                     className="relative group"
                     onMouseEnter={() => handleDropdownEnter('community')}
                     onMouseLeave={() => handleDropdownLeave('community')}
@@ -384,7 +392,7 @@ export default function Header() {
                             </a>
                         </div>
                     )}
-                </motion.div>
+                </motion.div> */}
                 <div className="flex items-center">
                     <div
                         className="inline-flex rounded-2xl shadow 
@@ -396,8 +404,13 @@ export default function Header() {
                             className="rounded-none rounded-bl-2xl rounded-tl-2xl btngroup bg-slate-50 text-[#1b1b1d] hover:bg-[#e0e7ef]"
                             style={{ borderRight: '1px solid #d1d5db' }}
                         >
-                            <Plus size={24} />
-                            Contribute
+                            <a
+                                href="./contribute"
+                                className="inline-flex items-center gap-2"
+                            >
+                                <Plus size={24} />
+                                Contribute
+                            </a>
                         </Button>
                         <Button
                             size="lg"

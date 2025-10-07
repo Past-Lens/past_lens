@@ -44,9 +44,20 @@ export const login = async (req: Request, res: Response) => {
     if (!valid)
         return res.status(400).json({ message: 'Wrong login credentials!' });
 
-    const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET!, {
-        expiresIn: '1d',
-    });
+    const token = jwt.sign(
+        {
+            user_id: user.id,
+            role: user.role,
+            user_name: user.username,
+            user_email: user.email,
+            first: user.firstName,
+            last: user.lastName,
+        },
+        process.env.JWT_SECRET!,
+        {
+            expiresIn: '1d',
+        }
+    );
 
     res.json({ token });
 };

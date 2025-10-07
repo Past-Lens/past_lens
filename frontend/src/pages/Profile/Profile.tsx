@@ -1,18 +1,28 @@
 import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import ProfileHeader from '@/components/custom/ProfileHeader';
+import useUserStore from '@/stores/userStore';
 
 const Profile = () => {
     // --- All hooks declared unconditionally at the top level ---
+    const storeUser = useUserStore((s) => s.user);
     const [user, setUser] = useState<{
         id: string;
         username: string;
         email: string;
-        avatar: string;
-    } | null>(null);
+        avatar?: string;
+    } | null>(
+        storeUser
+            ? {
+                  id: storeUser.id || '',
+                  username: storeUser.user_name || '',
+                  email: storeUser.user_email || '',
+                  avatar: (storeUser as any).avatar,
+              }
+            : null
+    );
 
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
+    // local UI state
     const [avatarFile, setAvatarFile] = useState<File | null>(null);
 
     const [oldPassword, setOldPassword] = useState('');
@@ -55,6 +65,28 @@ const Profile = () => {
 
     // Initialize local edit fields when user data becomes available
     useEffect(() => {
+        // initialize from Zustand store if available
+        if (storeUser) {
+            const first = (storeUser as any).first_name ?? '';
+            const last = (storeUser as any).last_name ?? '';
+            setEditFirst(first);
+            setEditLast(last);
+            setEditUsername(storeUser.user_name ?? '');
+            setEditEmail(storeUser.user_email ?? '');
+            setAvatarPreview((storeUser as any).avatar ?? null);
+            setCurrentPlan((storeUser as any).plan ?? 'Free');
+            setUser(
+                (prev) =>
+                    prev ?? {
+                        id: storeUser.id || '',
+                        username: storeUser.user_name || '',
+                        email: storeUser.user_email || '',
+                        avatar: (storeUser as any).avatar,
+                    }
+            );
+            return;
+        }
+
         if (user) {
             // some users may have a `name` and `plan` fields
             const fullName = (user as any).name ?? '';
@@ -65,9 +97,8 @@ const Profile = () => {
             setEditEmail(user.email);
             setAvatarPreview((user as any).avatar ?? null);
             setCurrentPlan((user as any).plan ?? 'Free');
-            setLoading(false);
         }
-    }, [user]);
+    }, [storeUser, user]);
 
     // cleanup for object URL previews
     useEffect(() => {
@@ -201,23 +232,7 @@ const Profile = () => {
         }
     };
 
-    // Contribution form migrated to /contribute
-
-    if (loading) {
-        return (
-            <div className="min-h-screen flex items-center justify-center">
-                <p className="text-sm">Loading profile...</p>
-            </div>
-        );
-    }
-
-    if (error) {
-        return (
-            <div className="min-h-screen flex items-center justify-center">
-                <p className="text-sm text-red-600">{error}</p>
-            </div>
-        );
-    }
+    // (error handling UI removed - errors surfaced inline where needed)
 
     // --- Render guards AFTER all hooks are declared ---
 

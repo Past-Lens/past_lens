@@ -74,7 +74,7 @@ const AppRouter = () => {
 
                 {/*antitciapted user routes*/}
                 <Route
-                    path="/profile"
+                    path="user/profile"
                     element={
                         <Protected>
                             <Profile />
@@ -82,7 +82,7 @@ const AppRouter = () => {
                     }
                 />
                 <Route
-                    path="user/contribute"
+                    path="/contribute"
                     element={
                         <Protected>
                             <Contribute />
@@ -90,7 +90,7 @@ const AppRouter = () => {
                     }
                 />
                 <Route
-                    path="/contribute"
+                    path="/museum"
                     element={
                         <Protected>
                             <Contribute />

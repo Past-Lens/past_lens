@@ -289,7 +289,7 @@ const Contribute = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-200 dark:from-slate-900 dark:to-slate-800 py-12">
+        <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-200 dark:from-slate-900 dark:to-slate-800">
             <ProfileHeader username={'You'} />
 
             <div className="max-w-6xl mx-auto px-6">

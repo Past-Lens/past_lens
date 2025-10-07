@@ -8,18 +8,30 @@ import {
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useAuth } from '@/context/authcontext';
+import useUserStore from '@/stores/userStore';
 
 export default function ProfileHeader({
-    username = 'EA',
+    username = undefined,
 }: {
-    username?: string;
+    username?: string | undefined;
 }) {
-    const initials = username
-        .split('')
+    const storeUser = useUserStore((s) => s.user);
+    const displayName =
+        (username ??
+            (storeUser
+                ? `${(storeUser as any).first_name ?? ''} ${(storeUser as any).last_name ?? ''}`.trim()
+                : '')) ||
+        storeUser?.user_name ||
+        'EA';
+    const initials = (displayName || 'EA')
+        .split(' ')
         .map((n) => n[0])
         .slice(0, 2)
         .join('')
         .toUpperCase();
+
+    const { logout } = useAuth();
 
     return (
         <header className="w-[100%] flex items-center p-4 justify-between bg-slate-800 border-b sticky top-0">
@@ -53,7 +65,14 @@ export default function ProfileHeader({
                 <DropdownMenuTrigger asChild>
                     <button className="flex items-center gap-2 focus:outline-none cursor-pointer">
                         <Avatar>
-                            <AvatarFallback>{initials}</AvatarFallback>
+                            {storeUser && (storeUser as any).avatar ? (
+                                <img
+                                    src={(storeUser as any).avatar}
+                                    alt="avatar"
+                                />
+                            ) : (
+                                <AvatarFallback>{initials}</AvatarFallback>
+                            )}
                         </Avatar>
                     </button>
                 </DropdownMenuTrigger>
@@ -62,7 +81,7 @@ export default function ProfileHeader({
                         <Link to="/profile">Profile</Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
-                        <Link to="/logout">Sign Out</Link>
+                        <Button onClick={logout}>Sign Out</Button>
                     </DropdownMenuItem>
                 </DropdownMenuContent>
             </DropdownMenu>

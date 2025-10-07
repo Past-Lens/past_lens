@@ -4,7 +4,6 @@ import {
     HomeIcon,
     LogOut,
     Settings,
-    User2,
 } from 'lucide-react';
 import {
     Sidebar,
@@ -31,6 +30,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { useAuth } from '@/context/authcontext';
 import { useTheme } from '@/context/themecontext';
+import useUserStore from '@/stores/userStore';
 
 const pendingCount = contributionData.filter(
     (c) => c.status === 'pending'
@@ -39,6 +39,7 @@ const pendingCount = contributionData.filter(
 function Appsidebar() {
     const { pathname: currentPath } = useLocation();
     const { logout } = useAuth();
+    const storeUser = useUserStore((s) => s.user);
     const { themeColors } = useTheme();
 
     return (
@@ -188,7 +189,37 @@ function Appsidebar() {
                                     <SidebarMenuButton
                                         style={{ color: themeColors.text }}
                                     >
-                                        <User2 /> EdenAdmin
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-xs">
+                                                {storeUser
+                                                    ? (storeUser as any)
+                                                          .first_name ||
+                                                      (storeUser as any)
+                                                          .last_name
+                                                        ? `${(storeUser as any).first_name ?? ''} ${(storeUser as any).last_name ?? ''}`
+                                                              .trim()
+                                                              .split(' ')
+                                                              .map(
+                                                                  (n: string) =>
+                                                                      n[0]
+                                                              )
+                                                              .slice(0, 2)
+                                                              .join('')
+                                                        : storeUser.user_name ||
+                                                          'EA'
+                                                    : 'EA'}
+                                            </div>
+                                            <span>
+                                                {storeUser
+                                                    ? (storeUser as any)
+                                                          .first_name ||
+                                                      (storeUser as any)
+                                                          .last_name
+                                                        ? `${(storeUser as any).first_name ?? ''} ${(storeUser as any).last_name ?? ''}`.trim()
+                                                        : storeUser.user_name
+                                                    : 'EdenAdmin'}
+                                            </span>
+                                        </div>
                                         <ChevronUp className="ml-auto" />
                                     </SidebarMenuButton>
                                 </DropdownMenuTrigger>
