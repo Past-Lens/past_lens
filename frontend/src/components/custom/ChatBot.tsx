@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { ArrowUp, Mic, Square } from 'lucide-react';
+import { speechToText, textToSpeech } from '@/utils/speechText';
 
 function ChatBot() {
     const [listening, setListening] = useState(false);
@@ -20,7 +21,7 @@ function ChatBot() {
         },
     ]);
 
-    const { mutateAsync: chat, isPending, isError } = useGetChat();
+    const { mutateAsync: chat } = useGetChat();
 
     useEffect(() => {
         if (chatContainerRef.current) {
@@ -102,13 +103,16 @@ function ChatBot() {
             </button>
             {/* Chat Box */}
             {showChat && (
-                <div className="fixed bottom-24 left-8 z-50 bg-white rounded-2xl shadow-2xl w-[35rem] max-w-full p-4 flex flex-col max-h-[32rem] h-[100%]">
-                    <div className="font-bold text-[#1b1b1d] mb-2">
-                        LensAI Chat
+                <div
+                    className="fixed bottom-24 left-8 z-50 bg-slate-50 rounded-2xl shadow-2xl w-[35rem] 
+                max-w-full flex flex-col max-h-[32rem] h-[100%] p-4 border border-orange-800"
+                >
+                    <div className="font-bold text-[#c05509] mb-2 flex items-center h-16 border border-slate-300 rounded-lg shadow-md">
+                        <img src="./PLTransparent.png" width={80} /> LensAI Chat
                     </div>
                     <div
                         ref={chatContainerRef}
-                        className="flex-1 mb-2 max-h-[90%] custom-scrollbar-hide"
+                        className="flex-1 max-h-[90%] custom-scrollbar-hide"
                         style={{
                             overflowY: 'auto',
                         }}
@@ -124,7 +128,7 @@ function ChatBot() {
                                 >
                                     {msg.user === 'LensAI' ? (
                                         <span
-                                            className="inline-block px-3 py-2 rounded-xl bg-orange-100 text-orange-700 mr-8 prose prose-sm max-w-[90%] text-left"
+                                            className="inline-block px-3 py-2 rounded-xl bg-orange-100 text-orange-900 mr-8 prose prose-sm max-w-[90%] text-left"
                                             style={{
                                                 wordBreak: 'break-word',
                                                 whiteSpace: 'pre-line',
@@ -147,9 +151,9 @@ function ChatBot() {
                     </div>
                     <form
                         onSubmit={handleSendChat}
-                        className="w-full flex items-end mt-2"
+                        className="w-full flex items-end rounded-b-2xl border-t border-slate-300 pt-2"
                     >
-                        <div className="relative w-full">
+                        <div className="relative w-full ">
                             <textarea
                                 value={chatInput}
                                 onChange={(e) => {
@@ -164,7 +168,8 @@ function ChatBot() {
                                         ? 'Listening...'
                                         : 'Type your message...'
                                 }
-                                className="w-full pr-24 px-3 py-2 rounded-xl border border-[#eeeff1] focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none bg-white custom-scrollbar-hide"
+                                className="w-full pr-24 px-3 py-2 rounded-xl border border-[#eeeff1] shadow-md
+                                 focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none bg-white custom-scrollbar-hide"
                                 style={{
                                     minHeight: '2.5rem',
                                     maxHeight: '7.5rem',
@@ -175,13 +180,27 @@ function ChatBot() {
                             {/* Audio Button */}
                             <button
                                 type="button"
-                                className={`absolute right-14 bottom-2 flex items-center justify-center w-10 h-10 rounded-full bg-orange-600 text-white shadow-md border-2 border-white transition-colors ${listening ? 'bg-red-600' : ''}`}
+                                title={
+                                    listening
+                                        ? 'Stop recording'
+                                        : 'Dictate your prompt'
+                                }
+                                aria-label={
+                                    listening
+                                        ? 'Stop recording'
+                                        : 'Dictate your prompt'
+                                }
+                                className={`absolute right-14 bottom-5 flex items-center justify-center cursor-pointer
+                                     w-10 h-10 rounded-full bg-orange-600 text-white shadow-md border-2 border-white transition-colors ${listening ? 'bg-red-600' : ''}`}
                                 style={{
                                     background: listening
                                         ? '#e53935'
                                         : '#ff7300',
                                 }}
-                                onClick={() => setListening((v) => !v)}
+                                onClick={() => {
+                                    setListening((v) => !v);
+                                    // console.log(speechToText());
+                                }}
                                 tabIndex={-1}
                             >
                                 {listening ? (
@@ -193,7 +212,10 @@ function ChatBot() {
                             {/* Send Button */}
                             <button
                                 type="submit"
-                                className="absolute right-2 bottom-2 flex items-center justify-center w-10 h-10 rounded-full bg-orange-600 text-white shadow-md border-2 border-white"
+                                title="Send Chat"
+                                aria-label="Send Chat"
+                                className="absolute right-2 bottom-5 flex items-center justify-center cursor-pointer
+                                 w-10 h-10 rounded-full bg-orange-600 text-white shadow-md border-2 border-white"
                                 style={{ background: '#ff7300' }}
                             >
                                 <ArrowUp size={22} color="#fff" />
