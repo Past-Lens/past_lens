@@ -3,8 +3,9 @@ import { isAxiosError } from 'axios';
 import { useState, useRef, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { ArrowUp, Mic, Square } from 'lucide-react';
+import { ArrowUp, DoorClosed, Mic, Square, X } from 'lucide-react';
 import { speechToText, textToSpeech } from '@/utils/speechText';
+import { Button } from '../ui/button';
 
 function ChatBot() {
     const [listening, setListening] = useState(false);
@@ -105,10 +106,22 @@ function ChatBot() {
             {showChat && (
                 <div
                     className="fixed bottom-24 left-8 z-50 bg-slate-50 rounded-2xl shadow-2xl w-[35rem] 
-                max-w-full flex flex-col max-h-[32rem] h-[100%] p-4 border border-orange-800"
+                max-w-full flex flex-col max-h-[40rem] h-[100%] p-4 border border-orange-800"
                 >
-                    <div className="font-bold text-[#c05509] mb-2 flex items-center h-16 border border-slate-300 rounded-lg shadow-md">
-                        <img src="./PLTransparent.png" width={80} /> LensAI Chat
+                    <div
+                        className="font-bold text-[#c05509] mb-2 flex items-center justify-between
+                    h-16 border border-slate-300 rounded-lg shadow-md"
+                    >
+                        <div className="flex items-center">
+                            <img src="./PLTransparent.png" width={80} />
+                            LensAI Chat
+                        </div>
+                        <Button
+                            onClick={() => setShowChat(false)}
+                            className="bg-orange-700 m-2 cursor-pointer"
+                        >
+                            <X />
+                        </Button>
                     </div>
                     <div
                         ref={chatContainerRef}

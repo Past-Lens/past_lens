@@ -1,6 +1,7 @@
-import { Request, Response, NextFunction } from 'express';
+import { NextFunction, Request, Response } from 'express';
 import jwt from 'jsonwebtoken';
 
+// use untyped params to avoid conflicting express type packages across the workspace
 export const authenticateLogin = (
     req: Request,
     res: Response,
