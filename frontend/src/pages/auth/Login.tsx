@@ -8,6 +8,7 @@ import axios from 'axios';
 import { useAuth } from '../../context/authcontext';
 import useUserStore from '../../stores/userStore';
 import { z } from 'zod';
+import axInstance from '@/utils/axiosInstance';
 
 // Theme selection (default to roseFlower)
 const homepageGradients = {
@@ -68,7 +69,7 @@ const MicroAnimation = () => (
 );
 
 // Simple JWT decode function to replace the external library
-const jwtDecode = (token: string) => {
+export const jwtDecode = (token: string) => {
     try {
         const base64Url = token.split('.')[1];
         const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
@@ -89,11 +90,14 @@ const jwtDecode = (token: string) => {
 };
 
 const loginSchema = z.object({
-    email: z
+    login_identifier: z
         .string()
         .trim()
-        .min(1, 'Email is required.')
-        .email('Please enter a valid email address.'),
+        .min(3, 'Username or Email is required')
+        .refine(
+            (val) => val.includes('@') || /^[a-zA-Z0-9_]+$/.test(val),
+            'Invalid username or Email'
+        ),
     password: z.string().min(1, 'Password is required.'),
 });
 
@@ -451,7 +455,7 @@ const ForegroundAnimations = () => (
 
 const Login = () => {
     const [formData, setFormData] = useState<LoginSchema>({
-        email: '',
+        login_identifier: '',
         password: '',
     });
     const [rememberMe, setRememberMe] = useState<boolean>(false);
@@ -469,8 +473,8 @@ const Login = () => {
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         const field =
-            name === 'login_email'
-                ? 'email'
+            name === 'login_identifier'
+                ? 'login_identifier'
                 : name === 'login_password'
                   ? 'password'
                   : name;
@@ -502,6 +506,7 @@ const Login = () => {
                 }
             });
             setErrors(newErrors);
+            console.log(newErrors);
             toast.error('Please fix the highlighted fields.');
             return;
         }
@@ -510,21 +515,13 @@ const Login = () => {
         setIsLoading(true);
 
         try {
-            const { email, password } = validationResult.data;
+            const { login_identifier, password } = validationResult.data;
 
-            const response = await axios.post(
-                'http://localhost:5000/api/auth/login',
-                {
-                    emailOrUsername: email,
-                    password,
-                    remember_me: rememberMe,
-                },
-                {
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                }
-            );
+            const response = await axInstance.post('/auth/login', {
+                emailOrUsername: login_identifier,
+                password,
+                remember_me: rememberMe,
+            });
 
             // Destructure 'token' from the response data and rename it to 'access_token'
             const { token: access_token, refresh_token } = response.data;
@@ -541,11 +538,9 @@ const Login = () => {
                     role: decodedToken.role,
                     first_name: decodedToken.first,
                     last_name: decodedToken.last,
-                    accessToken: access_token,
+                    // accessToken: access_token,
                     refreshToken: refresh_token,
                 };
-
-                console.log('Decoded user data from token:', userData);
 
                 // Persist user into Zustand store
                 useUserStore.getState().login(userData, rememberMe);
@@ -555,7 +550,7 @@ const Login = () => {
 
                 toast.success('Login successful!');
                 setFormData({
-                    email: '',
+                    login_identifier: '',
                     password: '',
                 });
                 setErrors({});
@@ -665,7 +660,7 @@ const Login = () => {
                     }}
                 >
                     <BackgroundPattern />
-                    {/* <ForegroundAnimations /> */}
+                    <ForegroundAnimations />
 
                     <div className="text-center relative z-10">
                         <div className="flex items-center">
@@ -749,13 +744,13 @@ const Login = () => {
                                             themeColors.primary,
                                     }}
                                 >
-                                    E-mail
+                                    E-mail or Username
                                 </label>
                                 <input
-                                    id="email"
-                                    type="email"
-                                    name="login_email"
-                                    value={formData.email}
+                                    id="login_identifier"
+                                    type="text"
+                                    name="login_identifier"
+                                    value={formData.login_identifier}
                                     autoComplete="off"
                                     placeholder="e.g. you@example.com"
                                     onChange={handleInputChange}

@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import ProfileHeader from '@/components/custom/ProfileHeader';
 import useUserStore from '@/stores/userStore';
+import useUpdateProfile from '@/services/update.service';
+import { jwtDecode } from '../auth/Login';
 
 const Profile = () => {
     // --- All hooks declared unconditionally at the top level ---
@@ -86,7 +88,13 @@ const Profile = () => {
             );
             return;
         }
-
+        if (!user) {
+            setUser(jwtDecode(localStorage.getItem('user-store')!));
+            console.log(
+                jwtDecode(localStorage.getItem('user-store')!),
+                localStorage.getItem('user-store')!
+            );
+        }
         if (user) {
             // some users may have a `name` and `plan` fields
             const fullName = (user as any).name ?? '';
@@ -141,9 +149,8 @@ const Profile = () => {
                 username: editUsername,
                 email: editEmail,
             };
-            const res = await axios.put('/api/user/profile', payload, {
-                withCredentials: true,
-            });
+            const { mutateAsync } = useUpdateProfile();
+            const res = await mutateAsync(payload);
             // Update local user copy optimistically
             setUser((prev) =>
                 prev

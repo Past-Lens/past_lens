@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { persist } from 'zustand/middleware';
+import { createJSONStorage, persist } from 'zustand/middleware';
 
 export type User = {
     id?: string;
@@ -22,28 +22,14 @@ interface UserState {
     logout: () => void;
 }
 
-function isTrue(state: string) {
-    return state?.trim().toLowerCase() === 'false' ? false : true;
-}
-
 const useUserStore = create<UserState>()(
-    (persist as any)(
-        (set: any) => ({
+    persist(
+        (set: any, get: any) => ({
             user: null,
             // compute initial auth from persisted Zustand snapshot if present
             isAuthenticated: (() => {
-                try {
-                    const raw = localStorage.getItem('user-store');
-                    if (!raw)
-                        return isTrue(localStorage.getItem('isAuthenticated')!);
-                    const parsed = JSON.parse(raw);
-                    const state = parsed?.state ?? parsed;
-                    if (!state)
-                        return isTrue(localStorage.getItem('isAuthenticated')!);
-                    return isTrue(state.isAuthenticated || state.user != null);
-                } catch (e) {
-                    return isTrue(localStorage.getItem('isAuthenticated')!);
-                }
+                const user = get()?.user;
+                return !!user;
             })(),
             setUser: (u: User | null) => set({ user: u, isAuthenticated: !!u }),
             setTokens: (accessToken?: string, refreshToken?: string) =>
@@ -76,7 +62,7 @@ const useUserStore = create<UserState>()(
         {
             name: 'user-store',
             // use a simple any-typed storage wrapper to satisfy persist generics
-            storage: localStorage as any,
+            storage: createJSONStorage(() => localStorage),
         }
     ) as any
 );
