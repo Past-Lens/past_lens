@@ -2,7 +2,8 @@ import axInstance from '@/utils/axiosInstance';
 import { useMutation } from '@tanstack/react-query';
 
 type Payload = {
-    name: string;
+    firstName: string;
+    lastName: string;
     username: string;
     email: string;
 };

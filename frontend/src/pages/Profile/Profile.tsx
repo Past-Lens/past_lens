@@ -3,7 +3,6 @@ import axios from 'axios';
 import ProfileHeader from '@/components/custom/ProfileHeader';
 import useUserStore from '@/stores/userStore';
 import useUpdateProfile from '@/services/update.service';
-import { jwtDecode } from '../auth/Login';
 
 const Profile = () => {
     // --- All hooks declared unconditionally at the top level ---
@@ -88,16 +87,9 @@ const Profile = () => {
             );
             return;
         }
-        if (!user) {
-            setUser(jwtDecode(localStorage.getItem('user-store')!));
-            console.log(
-                jwtDecode(localStorage.getItem('user-store')!),
-                localStorage.getItem('user-store')!
-            );
-        }
         if (user) {
             // some users may have a `name` and `plan` fields
-            const fullName = (user as any).name ?? '';
+            const fullName = user?.username || '';
             const parts = fullName.split(' ').filter(Boolean);
             setEditFirst(parts[0] ?? '');
             setEditLast(parts.slice(1).join(' ') ?? '');
@@ -145,13 +137,13 @@ const Profile = () => {
     const handleUpdateBasicInfo = async () => {
         try {
             const payload = {
-                name: `${editFirst} ${editLast}`.trim(),
+                firstName: editFirst,
+                lastName: editLast,
                 username: editUsername,
                 email: editEmail,
             };
             const { mutateAsync } = useUpdateProfile();
             const res = await mutateAsync(payload);
-            // Update local user copy optimistically
             setUser((prev) =>
                 prev
                     ? {
@@ -573,8 +565,6 @@ const Profile = () => {
                     )}
                 </div>
             </div>
-
-            {/* contribution dialog moved to Contribute page */}
         </div>
     );
 };

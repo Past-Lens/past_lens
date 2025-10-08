@@ -1,6 +1,8 @@
 import { NextFunction, Request, Response } from 'express';
 import jwt from 'jsonwebtoken';
 
+type User = {};
+
 // use untyped params to avoid conflicting express type packages across the workspace
 export const authenticateLogin = (
     req: Request,
@@ -8,7 +10,6 @@ export const authenticateLogin = (
     next: NextFunction
 ) => {
     const authHeader = req.headers['authorization'];
-
     if (!authHeader) {
         return res
             .status(401)
@@ -20,10 +21,11 @@ export const authenticateLogin = (
 
     try {
         const secret = process.env.JWT_SECRET!;
-        const decoded = jwt.verify(token, secret) as { userId: string };
-
+        const { user_id } = jwt.verify(token, secret) as {
+            [key: string]: string | number;
+        };
         //attach userId to request object
-        (req as any).userId = decoded.userId;
+        (req as any).userId = user_id;
         next();
     } catch (e) {
         return res.status(401).json({ message: 'Invalid or expired token' });

@@ -189,8 +189,8 @@ function Appsidebar() {
                                     <SidebarMenuButton
                                         style={{ color: themeColors.text }}
                                     >
-                                        <div className="flex items-center gap-3">
-                                            <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-xs">
+                                        <div className="flex items-center gap-4">
+                                            <div className="w-7 h-7 min-w-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-xs">
                                                 {storeUser
                                                     ? (storeUser as any)
                                                           .first_name ||

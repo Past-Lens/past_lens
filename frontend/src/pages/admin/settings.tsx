@@ -5,10 +5,22 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 import useUserStore from '@/stores/userStore';
+import useUpdateProfile from '@/services/update.service';
+import { isAxiosError } from 'axios';
+import toast from 'react-hot-toast';
+
+function compare(obj1: {}, obj2: {}) {
+    let isSame = false;
+    const vals = Object.values(obj1);
+    if (vals.length !== Object.values(obj2).length)
+        return { d: false, gg: 'ertyu' };
+    for (let i = 0; i < Object.values(obj2).length; i++)
+        if (vals[i] === Object.values(obj2)[i]) isSame = true;
+    return isSame;
+}
 
 export default function Settings() {
-    const { user, isAuthenticated } = useUserStore();
-    console.log(isAuthenticated);
+    const { user } = useUserStore();
     const [form, setForm] = useState({
         fullName: `${user?.first_name} ${user?.last_name}` || 'Admin One',
         email: user?.user_email || 'admin@example.com',
@@ -17,18 +29,42 @@ export default function Settings() {
     const [saving, setSaving] = useState(false);
     const [saved, setSaved] = useState(false);
 
+    const { mutateAsync: updateAdminProfile } = useUpdateProfile();
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setForm({ ...form, [e.target.name]: e.target.value });
         setSaved(false);
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        // confirm that user has made some change
+        const splitNames = form.fullName.trim().split(' ');
+        const profileData = {
+            firstName: splitNames[0],
+            lastName: splitNames[1],
+            email: form.email,
+            username: form.username,
+        };
+        if (!compare(profileData, user!)) {
+            console.log('go to hell');
+            return;
+        }
+
         setSaving(true);
-        setTimeout(() => {
-            setSaving(false);
-            setSaved(true);
-        }, 1200);
+        try {
+            const newProfile = await updateAdminProfile(profileData);
+            if (newProfile) {
+                setSaving(false);
+                setForm(newProfile.data);
+            }
+        } catch (err) {
+            console.log(err);
+            if (isAxiosError(err)) {
+                console.log(err.response?.data.message);
+            }
+        }
     };
 
     return (
