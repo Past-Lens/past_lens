@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: past-lens-backend
+    runtime: node
+    plan: free
+    buildCommand: |
+      curl -fsSL https://bun.sh/install | bash
+      export PATH="$HOME/.bun/bin:$PATH"
+      bun install
+      bunx prisma generate
+    startCommand: ~/.bun/bin/bun index.ts
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: PORT
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
