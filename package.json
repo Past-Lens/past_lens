@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "bun index.ts",
         "format": "prettier --write .",
-        "prepare": "is-ci || husky",
+        "prepare": "if [ \"$HUSKY\" != \"0\" ]; then husky install; fi",
         "build": "tsc -b && vite build",
         "lint": "eslint .",
         "preview": "vite preview"
@@ -38,7 +38,6 @@
         "@types/bun": "^1.2.22",
         "concurrently": "^9.2.1",
         "husky": "^9.1.7",
-        "is-ci": "^4.1.0",
         "lint-staged": "^16.2.0",
         "prettier": "^3.6.2"
     },
