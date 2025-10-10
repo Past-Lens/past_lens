@@ -10,7 +10,7 @@ import { isAxiosError } from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
 
 export default function Settings() {
-    const { user, setUser } = useUserStore();
+    const { user } = useUserStore();
     const [form, setForm] = useState({
         fullName: `${user?.first_name} ${user?.last_name}` || 'Admin One',
         email: user?.user_email || 'admin@example.com',
