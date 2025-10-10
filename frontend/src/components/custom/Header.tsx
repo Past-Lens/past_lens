@@ -10,8 +10,7 @@ export default function Header() {
         useState(false);
     // Header sticky/hide on scroll logic
     const [showHeader, setShowHeader] = useState(true);
-    // Dropdown menu logic
-    const [showDropdown, setShowDropdown] = useState<string | null>(null);
+    // Dropdown menu logic (currently disabled)
     const lastScrollY = useRef(window.scrollY);
     useEffect(() => {
         const handleScroll = () => {
@@ -27,16 +26,7 @@ export default function Header() {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-    // Dropdown menu hover fix
-    const handleDropdownEnter = (menu: string) => setShowDropdown(menu);
-    const handleDropdownLeave = (menu: string) => {
-        setTimeout(() => {
-            const dropdown = document.getElementById(`dropdown-${menu}`);
-            if (dropdown && !dropdown.matches(':hover')) {
-                setShowDropdown(null);
-            }
-        }, 100);
-    };
+    // Dropdown menu hover logic was removed because dropdowns are currently disabled
 
     // Mobile menu state
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

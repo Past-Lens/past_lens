@@ -3,8 +3,8 @@ import { isAxiosError } from 'axios';
 import { useState, useRef, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { ArrowUp, DoorClosed, Mic, Square, X } from 'lucide-react';
-import { speechToText, textToSpeech } from '@/utils/speechText';
+import { ArrowUp, Mic, Square, X } from 'lucide-react';
+// import { speechToText, textToSpeech } from '@/utils/speechText';
 import { Button } from '../ui/button';
 
 function ChatBot() {
