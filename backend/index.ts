@@ -11,7 +11,7 @@ connectDB();
 
 const app: Application = express();
 
-const origins = ['http://localhost:5173'];
+const origins = ['http://localhost:5173', 'https://pastlens.vercel.app'];
 
 app.use(
     cors({
