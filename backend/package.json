@@ -4,8 +4,9 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "bun index.ts",
+        "start": "bun run prisma-gen && bun index.ts",
         "dev": "bun --watch index.ts",
+        "build": "bunx prisma generate && bun index.ts",
         "prisma-gen": "bunx prisma generate"
     },
     "keywords": [],

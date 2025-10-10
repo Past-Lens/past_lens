@@ -105,8 +105,8 @@ function ChatBot() {
             {/* Chat Box */}
             {showChat && (
                 <div
-                    className="fixed bottom-24 left-8 z-50 bg-slate-50 rounded-2xl shadow-2xl w-[35rem] 
-                max-w-full flex flex-col max-h-[40rem] h-[100%] p-4 border border-orange-800"
+                    className="fixed bottom-24 left-8 z-50 bg-slate-50 rounded-2xl shadow-2xl w-[32rem] 
+                max-w-full flex flex-col max-h-[35rem] h-[100%] p-4 border border-orange-800"
                 >
                     <div
                         className="font-bold text-[#c05509] mb-2 flex items-center justify-between
