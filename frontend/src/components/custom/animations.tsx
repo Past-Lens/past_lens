@@ -352,3 +352,49 @@ export const ForegroundAnimations = () => (
         </svg>
     </div>
 );
+
+// Micro Animation (emoji sparkles)
+export const MicroAnimation = () => (
+    <>
+        <span
+            style={{
+                position: 'absolute',
+                left: 24,
+                top: 24,
+                fontSize: '1.5rem',
+                opacity: 0.18,
+                pointerEvents: 'none',
+                zIndex: 0,
+            }}
+        >
+            ✨
+        </span>
+        <span
+            style={{
+                position: 'absolute',
+                right: 32,
+                top: 32,
+                fontSize: '1.2rem',
+                opacity: 0.18,
+                pointerEvents: 'none',
+                zIndex: 0,
+            }}
+        >
+            💡
+        </span>
+        <span
+            style={{
+                position: 'absolute',
+                left: '50%',
+                top: 80,
+                transform: 'translateX(-50%)',
+                fontSize: '4rem',
+                opacity: 0.12,
+                pointerEvents: 'none',
+                zIndex: 0,
+            }}
+        >
+            ❤️
+        </span>
+    </>
+);

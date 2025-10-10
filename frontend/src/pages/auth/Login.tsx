@@ -11,6 +11,7 @@ import axInstance from '@/utils/axiosInstance';
 import {
     BackgroundPattern,
     ForegroundAnimations,
+    MicroAnimation,
 } from '@/components/custom/animations';
 
 // Theme selection (default to roseFlower)
@@ -24,52 +25,6 @@ const cardGradients = {
         'linear-gradient(135deg, #e0e7ef 0%, #f3f4f5 60%, #ffe5d0 100%)',
     coffee: 'linear-gradient(135deg, #F5F5E9 0%, #B39885 60%, #D1C6BB 100%)',
 };
-
-// Micro Animation (emoji sparkles)
-const MicroAnimation = () => (
-    <>
-        <span
-            style={{
-                position: 'absolute',
-                left: 24,
-                top: 24,
-                fontSize: '1.5rem',
-                opacity: 0.18,
-                pointerEvents: 'none',
-                zIndex: 0,
-            }}
-        >
-            ✨
-        </span>
-        <span
-            style={{
-                position: 'absolute',
-                right: 32,
-                top: 32,
-                fontSize: '1.2rem',
-                opacity: 0.18,
-                pointerEvents: 'none',
-                zIndex: 0,
-            }}
-        >
-            💡
-        </span>
-        <span
-            style={{
-                position: 'absolute',
-                left: '50%',
-                top: 80,
-                transform: 'translateX(-50%)',
-                fontSize: '4rem',
-                opacity: 0.12,
-                pointerEvents: 'none',
-                zIndex: 0,
-            }}
-        >
-            ❤️
-        </span>
-    </>
-);
 
 // Simple JWT decode function to replace the external library
 export const jwtDecode = (token: string) => {

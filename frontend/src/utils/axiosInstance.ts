@@ -13,6 +13,4 @@ axInstance.interceptors.request.use(
     },
     (error) => Promise.reject(error)
 );
-
-console.log(useUserStore.getState().user?.accessToken);
 export default axInstance;

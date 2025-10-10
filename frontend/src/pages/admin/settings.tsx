@@ -7,20 +7,10 @@ import { Button } from '@/components/ui/button';
 import useUserStore from '@/stores/userStore';
 import useUpdateProfile from '@/services/update.service';
 import { isAxiosError } from 'axios';
-import toast from 'react-hot-toast';
-
-function compare(obj1: {}, obj2: {}) {
-    let isSame = false;
-    const vals = Object.values(obj1);
-    if (vals.length !== Object.values(obj2).length)
-        return { d: false, gg: 'ertyu' };
-    for (let i = 0; i < Object.values(obj2).length; i++)
-        if (vals[i] === Object.values(obj2)[i]) isSame = true;
-    return isSame;
-}
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function Settings() {
-    const { user } = useUserStore();
+    const { user, setUser } = useUserStore();
     const [form, setForm] = useState({
         fullName: `${user?.first_name} ${user?.last_name}` || 'Admin One',
         email: user?.user_email || 'admin@example.com',
@@ -47,8 +37,13 @@ export default function Settings() {
             email: form.email,
             username: form.username,
         };
-        if (!compare(profileData, user!)) {
-            console.log('go to hell');
+        if (
+            user?.first_name === profileData.firstName &&
+            user.last_name === profileData.lastName &&
+            user.user_email === profileData.email &&
+            user.user_name === profileData.username
+        ) {
+            toast.error('Update fialed: No changes were made to your profile');
             return;
         }
 
@@ -57,6 +52,8 @@ export default function Settings() {
             const newProfile = await updateAdminProfile(profileData);
             if (newProfile) {
                 setSaving(false);
+                console.log(newProfile.data);
+                // setUser()
                 setForm(newProfile.data);
             }
         } catch (err) {
@@ -66,7 +63,6 @@ export default function Settings() {
             }
         }
     };
-
     return (
         <div className="flex flex-col min-h-screen bg-background">
             <div className="flex justify-center items-center flex-1 min-h-[80vh]">
@@ -74,7 +70,7 @@ export default function Settings() {
                     <CardHeader className="items-center">
                         <div className="w-20 h-20 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-3xl mb-2">
                             {form.fullName
-                                .split(' ')
+                                ?.split(' ')
                                 .map((n) => n[0])
                                 .join('')}
                         </div>
@@ -133,6 +129,7 @@ export default function Settings() {
                 </Card>
             </div>
             <Footer />
+            <Toaster position="top-center" reverseOrder={false} />
         </div>
     );
 }
