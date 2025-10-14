@@ -1,11 +1,11 @@
 import useUserStore from '@/stores/userStore';
 import axios from 'axios';
 
-// const baseURLLocal = 'http://localhost:5000/api'
-const baseURLRemote = 'https://past-lens-backend.vercel.app/';
+// const baseURL = 'http://localhost:5000/api'
+const baseURL = 'https://past-lensbackend.onrender.com';
 
 const axInstance = axios.create({
-    baseURL: baseURLRemote,
+    baseURL: baseURL,
     withCredentials: true,
 });
 
