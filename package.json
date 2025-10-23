@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "bun index.ts",
         "format": "prettier --write .",
-        "prepare": "husky",
+        "prepare": "if [ \"$HUSKY\" != \"0\" ]; then husky install; fi",
         "build": "tsc -b && vite build",
         "lint": "eslint .",
         "preview": "vite preview"
@@ -27,13 +27,15 @@
         "frontend"
     ],
     "dependencies": {
+        "@google/genai": "^1.21.0",
         "framer-motion": "^12.23.12",
         "lucide-react": "^0.542.0",
-        "mongoose": "^8.18.0"
+        "mongoose": "^8.18.0",
+        "react-markdown": "^10.1.0",
+        "remark-gfm": "^4.0.1"
     },
     "devDependencies": {
         "@types/bun": "^1.2.22",
-        "@types/node": "^24.3.0",
         "concurrently": "^9.2.1",
         "husky": "^9.1.7",
         "lint-staged": "^16.2.0",

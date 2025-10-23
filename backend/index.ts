@@ -1,26 +1,37 @@
-import express, { Application, Request, Response } from "express";
-import { config as configDotenv } from "dotenv";
-import connectDB from "./config/db";
-import authRouter from "./routes/auth.route";
-import userRouter from "./routes/user.route"
-import cors from "cors";
-
-configDotenv();
+import express, { Application, Request, Response } from 'express';
+import connectDB from './config/db';
+import authRouter from './routes/auth.route';
+import userRouter from './routes/user.route';
+import chatRouter from './routes/chat.route';
+import datasetRouter from './routes/dataset.route';
+import draftRouter from './routes/draft.route';
+import cors from 'cors';
 
 connectDB();
 
 const app: Application = express();
 
-app.use(cors());
+const origins = ['http://localhost:5173', 'https://pastlens.vercel.app'];
+
+app.use(
+    cors({
+        credentials: true,
+        origin: origins,
+    })
+);
+
 app.use(express.json());
 
-const port: number = parseInt(process.env.PORT || "5000", 10);
+const port: number = parseInt(process.env.PORT!);
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("API is running...");
+app.get('/', (_req: Request, res: Response) => {
+    res.send('API is running...');
 });
 
-app.use("/api/auth", authRouter);
-app.use("/api/user", userRouter);
+app.use('/api/auth', authRouter);
+app.use('/api/user', userRouter);
+app.use('/api/chat', chatRouter);
+app.use('/api/dataset', datasetRouter);
+app.use('/api/draft', draftRouter);
 
 app.listen(port, () => console.log(` Server running on port ${port}`));

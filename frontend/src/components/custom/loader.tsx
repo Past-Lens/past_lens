@@ -2,10 +2,10 @@ function Loader() {
     return (
         <>
             <div className="flex-col flex justify-center items-center">
-                <div className="loader"></div> 
+                <div className="loader border border-red-300"></div>
                 <span>Just a second...</span>
-            </div> 
+            </div>
         </>
-    )
+    );
 }
 export default Loader;

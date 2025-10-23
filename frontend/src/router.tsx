@@ -7,10 +7,11 @@ import Dashboard from './pages/admin/dashboard';
 import Protected from './components/custom/protected';
 import Contributions from './pages/admin/contributions';
 import UserManagement from './pages/admin/usermanagement';
-import Settings from './pages/admin/settings.tsx';
+import Settings from './pages/admin/settings';
 import Overview from './pages/admin/overview';
-import Application from './pages/admin/application.tsx';
-import Profile from './pages/Profile/Profile.tsx';
+import Application from './pages/admin/application';
+import Profile from './pages/Profile/Profile';
+import Contribute from './pages/Contribute/Contribute';
 
 const AppRouter = () => {
     return (
@@ -73,7 +74,7 @@ const AppRouter = () => {
 
                 {/*antitciapted user routes*/}
                 <Route
-                    path="/profile"
+                    path="user/profile"
                     element={
                         <Protected>
                             <Profile />
@@ -81,12 +82,18 @@ const AppRouter = () => {
                     }
                 />
                 <Route
-                    path="user/contribute"
+                    path="/contribute"
                     element={
                         <Protected>
-                            <>
-                                {/*Put the name of the userprofilepage component */}
-                            </>
+                            <Contribute />
+                        </Protected>
+                    }
+                />
+                <Route
+                    path="/museum"
+                    element={
+                        <Protected>
+                            <Contribute />
                         </Protected>
                     }
                 />
