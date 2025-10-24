@@ -31,6 +31,7 @@
         "framer-motion": "^12.23.12",
         "lucide-react": "^0.542.0",
         "mongoose": "^8.18.0",
+        "past_lens": ".",
         "react-markdown": "^10.1.0",
         "remark-gfm": "^4.0.1"
     },
