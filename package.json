@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "bun index.ts",
         "format": "prettier --write .",
-        "prepare": "if [ \"$HUSKY\" != \"0\" ]; then husky install; fi",
+        "prepare": "if [ \"$HUSKY\" != \"0\" ]; then husky install; fi || exit 0",
         "build": "tsc -b && vite build",
         "lint": "eslint .",
         "preview": "vite preview"
