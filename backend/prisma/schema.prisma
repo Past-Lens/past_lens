@@ -72,6 +72,7 @@ model Artifact {
   transcripts Transcript[]
   accessLogs AccessLog[]
   downloads DownloadLog[]
+  aiInsights AIInsight[]
 }
 
 model MediaAsset {
@@ -133,4 +134,40 @@ model DownloadLog {
   format String // Original, compressed, etc.
   success Boolean
   error String?
+}
+
+enum AIMode {
+  SHORT
+  DETAILED
+  COMPARE
+}
+
+model AIInsight {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  artifactId String @db.ObjectId
+  artifact Artifact @relation(fields: [artifactId], references: [id])
+  promptSummary String
+  response String @db.String // Long text response
+  model String // Model used (e.g., "gemini-pro")
+  tokensUsed Int
+  mode AIMode @default(SHORT)
+  cachedUntil DateTime
+  sources Json? // Array of reference links/sources
+  confidence Float // Confidence score 0-1
+  createdAt DateTime @default(now())
+  metadata Json? // Additional response metadata
+}
+
+model PromptTemplate {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  name String @unique
+  description String
+  template String // Template with placeholders
+  community String? // Optional community-specific template
+  category ArtifactCategory? // Optional category-specific template
+  mode AIMode
+  active Boolean @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  metadata Json? // Additional template configuration
 }
