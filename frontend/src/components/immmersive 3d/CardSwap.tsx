@@ -5,7 +5,7 @@ import React, {
     isValidElement,
     type ReactElement,
     type ReactNode,
-    type RefObject,
+    // type RefObject,
     useEffect,
     useMemo,
     useRef,
@@ -40,7 +40,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
 );
 Card.displayName = 'Card';
 
-type CardRef = RefObject<HTMLDivElement>;
+// type CardRef = RefObject<HTMLDivElement>;
 interface Slot {
     x: number;
     y: number;

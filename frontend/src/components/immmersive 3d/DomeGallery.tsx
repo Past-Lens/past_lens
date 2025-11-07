@@ -21,6 +21,7 @@ type DomeGalleryProps = {
     imageBorderRadius?: string;
     openedImageBorderRadius?: string;
     grayscale?: boolean;
+    onImageClick?: (index: number) => void;
 };
 
 type ItemDef = {
