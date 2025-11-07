@@ -181,7 +181,6 @@ export default function ArtifactsHall() {
                                                     modelUrl={
                                                         selectedArtifact.model3dUrl
                                                     }
-                                                    className="w-full h-full"
                                                 />
                                             </div>
                                         </div>
