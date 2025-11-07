@@ -24,7 +24,7 @@ export default function Museum() {
         <div className="min-h-screen flex flex-col bg-black overflow-hidden">
             <MuseumHeader />
             {/* Main content */}
-            <main className="flex-1 relative">
+            <main className="flex-1 relative pt-18">
                 {/* Light Rays Background */}
                 <div className="absolute inset-0 z-0">
                     <LightRaysBackground
