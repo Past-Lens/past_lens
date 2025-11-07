@@ -1,4 +1,4 @@
-import { GoogleGenerativeAI } from '@google/generai';
+import { GoogleGenerativeAI } from '@google/genai';
 import { PrismaClient, AIMode, Artifact, PromptTemplate } from '@prisma/client';
 import { Redis } from 'ioredis';
 

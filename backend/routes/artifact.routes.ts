@@ -12,13 +12,15 @@ const router = Router();
 const artifactController = new ArtifactController();
 
 // Public routes
-router.get('/', (req, res) => artifactController.listArtifacts(req, res));
-router.get('/:id', (req, res) => artifactController.getArtifact(req, res));
-router.get('/:id/similar', (req, res) =>
-    artifactController.getSimilarArtifacts(req, res)
+router.get('/', artifactController.listArtifacts.bind(artifactController));
+router.get('/:id', artifactController.getArtifact.bind(artifactController));
+router.get(
+    '/:id/similar',
+    artifactController.getSimilarArtifacts.bind(artifactController)
 );
-router.get('/:id/media/:assetId', (req, res) =>
-    artifactController.getMediaAsset(req, res)
+router.get(
+    '/:id/media/:assetId',
+    artifactController.getMediaAsset.bind(artifactController)
 );
 
 // Protected routes
