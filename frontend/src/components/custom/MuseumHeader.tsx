@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-import { useTheme } from '@/context/themecontext';
+// import { useTheme } from '@/context/themecontext';
 import { Button } from '@/components/ui/button';
 import {
     BookOpen,
@@ -11,7 +11,6 @@ import {
     Globe,
     Menu,
     X,
-    Search,
     SearchIcon,
 } from 'lucide-react';
 
@@ -50,7 +49,7 @@ const navigation: NavItem[] = [
 ];
 
 export default function MuseumHeader() {
-    const { themeColors } = useTheme();
+    // const { themeColors } = useTheme();
     const location = useLocation();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
