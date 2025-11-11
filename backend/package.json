@@ -24,6 +24,7 @@
     "dependencies": {
         "@google/genai": "^1.21.0",
         "@prisma/client": "^6.15.0",
+        "backend": "workspace:*",
         "bcryptjs": "^3.0.2",
         "cloudinary": "^2.7.0",
         "cors": "^2.8.5",
