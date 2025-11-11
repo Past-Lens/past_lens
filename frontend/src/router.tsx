@@ -12,6 +12,12 @@ import Overview from './pages/admin/overview';
 import Application from './pages/admin/application';
 import Profile from './pages/Profile/Profile';
 import Contribute from './pages/Contribute/Contribute';
+import Museum from './pages/museum/halls/museum';
+import Artifacts from './pages/museum/halls/artifacts';
+import Stories from './pages/museum/halls/stories';
+import Library from './pages/museum/halls/library';
+import Guide from './pages/museum/guide';
+import Discover from './pages/museum/halls/discover';
 
 const AppRouter = () => {
     return (
@@ -21,6 +27,14 @@ const AppRouter = () => {
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Register />} />
                 <Route path="/forgot-password" element={<ForgotPassword />} />
+
+                {/* Museum Routes */}
+                <Route path="/museum" element={<Museum />} />
+                <Route path="/museum/halls/artifacts" element={<Artifacts />} />
+                <Route path="/museum/halls/stories" element={<Stories />} />
+                <Route path="/museum/halls/library" element={<Library />} />
+                <Route path="/museum/halls/discover" element={<Discover />} />
+                <Route path="/museum/guide" element={<Guide />} />
                 <Route
                     path="/admin"
                     element={
@@ -93,7 +107,7 @@ const AppRouter = () => {
                     path="/museum"
                     element={
                         <Protected>
-                            <Contribute />
+                            <Museum />
                         </Protected>
                     }
                 />

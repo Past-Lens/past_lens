@@ -19,4 +19,155 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   isDeleted Boolean @default(false) @map("is_deleted")
+  artifacts Artifact[] @relation("CreatedBy")
+}
+
+enum ArtifactCategory {
+  SONG
+  STORY
+  VIDEO
+  OBJECT
+}
+
+enum MediaType {
+  IMAGE
+  AUDIO
+  VIDEO
+  MODEL_3D
+}
+
+enum MediaStatus {
+  PENDING
+  PROCESSING
+  READY
+  FAILED
+}
+
+model Artifact {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  slug String @unique
+  title String
+  community String
+  category ArtifactCategory
+  shortDescription String
+  longDescription String
+  dateCollected DateTime
+  provenance String
+  tags String[]
+  visibility String @default("public") // public or restricted
+  
+  media MediaAsset[]
+  embeddingsId String? // Vector DB reference
+  related String[] @db.ObjectId // Related artifact IDs
+  layoutPos Json // { x: number, y: number, z: number, sceneId: string }
+  
+  consentDocs Json? // Metadata about consent documents
+  licenses String[]
+  
+  createdBy User @relation("CreatedBy", fields: [createdById], references: [id])
+  createdById String @db.ObjectId
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  transcripts Transcript[]
+  accessLogs AccessLog[]
+  downloads DownloadLog[]
+  aiInsights AIInsight[]
+}
+
+model MediaAsset {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  artifactId String @db.ObjectId
+  artifact Artifact @relation(fields: [artifactId], references: [id])
+  type MediaType
+  sourceUrl String
+  processedUrls Json // { mp4?, hls?, thumbnails?: string[], webp?: string, glb?: string, ktx2?: string }
+  status MediaStatus @default(PENDING)
+  duration Int? // Duration in seconds for audio/video
+  size Int // Size in bytes
+  checksum String
+  metadata Json? // Additional metadata specific to media type
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Transcript {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  artifactId String @db.ObjectId
+  artifact Artifact @relation(fields: [artifactId], references: [id])
+  text String
+  segments Json[] // Array of { start: number, end: number, text: string }
+  language String
+  generatedBy String // Service or person that generated the transcript
+  createdAt DateTime @default(now())
+}
+
+model ArtifactIndex {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  artifactId String @unique @db.ObjectId
+  title String
+  community String
+  tags String[]
+  shortDescription String
+  embeddingVectorId String // Reference to vector in Pinecone/Weaviate
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model AccessLog {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  artifactId String @db.ObjectId
+  artifact Artifact @relation(fields: [artifactId], references: [id])
+  userId String? @db.ObjectId // Optional, for anonymous access
+  accessType String // view, download, etc.
+  timestamp DateTime @default(now())
+  ipAddress String?
+  userAgent String?
+}
+
+model DownloadLog {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  artifactId String @db.ObjectId
+  artifact Artifact @relation(fields: [artifactId], references: [id])
+  userId String? @db.ObjectId
+  timestamp DateTime @default(now())
+  format String // Original, compressed, etc.
+  success Boolean
+  error String?
+}
+
+enum AIMode {
+  SHORT
+  DETAILED
+  COMPARE
+}
+
+model AIInsight {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  artifactId String @db.ObjectId
+  artifact Artifact @relation(fields: [artifactId], references: [id])
+  promptSummary String
+  response String @db.String // Long text response
+  model String // Model used (e.g., "gemini-pro")
+  tokensUsed Int
+  mode AIMode @default(SHORT)
+  cachedUntil DateTime
+  sources Json? // Array of reference links/sources
+  confidence Float // Confidence score 0-1
+  createdAt DateTime @default(now())
+  metadata Json? // Additional response metadata
+}
+
+model PromptTemplate {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  name String @unique
+  description String
+  template String // Template with placeholders
+  community String? // Optional community-specific template
+  category ArtifactCategory? // Optional category-specific template
+  mode AIMode
+  active Boolean @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  metadata Json? // Additional template configuration
 }

@@ -27,9 +27,9 @@ function Protected({ children }: { children: ReactElement }) {
 
     useEffect(() => {
         // only redirect to /login when we are sure the user is not authenticated
-        if (!isAuthenticated && !persistedAuth) {
-            navigate('/login');
-        }
+        // if (!isAuthenticated && !persistedAuth) {
+        //     navigate('/login');
+        // }
     }, [isAuthenticated, persistedAuth, navigate]);
 
     return <>{children}</>;

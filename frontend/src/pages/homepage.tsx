@@ -1,11 +1,15 @@
 import { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import {
-    Card,
     CardHeader,
+    Card,
     CardTitle,
     CardDescription,
 } from '@/components/ui/card';
+import Particles from '@/components/immmersive 3d/ParticlesBackground';
+import CardSwap, {
+    Card as SwapCard,
+} from '@/components/immmersive 3d/CardSwap';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { motion } from 'framer-motion';
 import {
@@ -80,14 +84,34 @@ export default function Homepage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
                 viewport={{ once: true }}
-                className="py-36 px-4 flex flex-col items-center justify-center relative overflow-hidden"
-                style={{
-                    background:
-                        themeName === 'coffee'
-                            ? themeColors.background
-                            : 'linear-gradient(120deg, #f3f4f5 0%, #ffe5d0 40%, #ffd6e0 80%, #eeeff1 100%)',
-                }}
+                className="pt-30 px-4 flex flex-col items-center justify-center relative overflow-hidden"
+                //     style={{
+                //         background:
+                //             themeName === 'coffee'
+                //                 ? themeColors.background : ""
+                //                 //  :'linear-gradient(120deg, #f3f4f5 0%, #ffe5d0 40%, #ffd6e0 80%, #eeeff1 100%)',
+                //     }}
             >
+                <div className="absolute inset-0 z-0 bg-orange-900">
+                    <Particles
+                        particleColors={
+                            themeName === 'coffee'
+                                ? [
+                                      themeColors.primary ?? '#000000',
+                                      themeColors.accent ?? '#ffffff',
+                                  ]
+                                : ['#ffe5d0', '#ffd6e0', '#f3f4f5']
+                        }
+                        particleCount={200}
+                        particleSpread={10}
+                        speed={0.1}
+                        particleBaseSize={170}
+                        moveParticlesOnHover={true}
+                        alphaParticles={false}
+                        cameraDistance={40}
+                        disableRotation={false}
+                    />
+                </div>
                 {/* Rotating heart emoji background animation */}
                 <motion.span
                     initial={{ rotate: 0 }}
@@ -108,59 +132,198 @@ export default function Homepage() {
                             'radial-gradient(circle at 60% 20%, #ffb86c33 0%, #ff61a633 60%, #eeeff1 100%)',
                     }}
                 ></div>
-                <div className="relative z-10 max-w-6xl w-full flex flex-col md:flex-row items-center gap-16">
-                    <motion.div
-                        whileHover={{ scale: 1.05, rotate: 5 }}
-                        className="w-80 h-80 rounded-[2.5rem]"
-                        style={{ border: `4px solid ${themeColors.border}` }}
-                    >
-                        <img
-                            src="/PLlogo.jpg"
-                            alt=""
-                            className="h-[95% w-[100%] place-self-center rounded-4xl"
-                        />
-                    </motion.div>
-                    <div className="flex-1 text-left">
-                        <h1
-                            className="text-6xl font-extrabold mb-6"
+                <div className="relative z-10 max-w-6xl w-full flex flex-col gap-8">
+                    {/* Logo and Title Section */}
+                    <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+                        <motion.div
+                            whileHover={{ scale: 1.05, rotate: 5 }}
+                            className="w-64 h-64 md:w-80 md:h-80 rounded-[2.5rem] shrink-0"
                             style={{
-                                color: themeColors.text || themeColors.primary,
+                                border: `4px solid ${themeColors.border}`,
                             }}
                         >
-                            {content.hero.title}: {content.hero.subtitle}
-                        </h1>
-                        <div className="flex items-center gap-2 mb-4">
-                            {[...Array(5)].map((_, i) => (
-                                <Star
-                                    key={i}
-                                    size={28}
-                                    color={themeColors.accent || '#FFD700'}
-                                    fill={themeColors.accent || '#FFD700'}
-                                    className="drop-shadow"
-                                />
-                            ))}
-                            <span
-                                className="ml-2 text-lg font-semibold"
-                                style={{ color: themeColors.text || '#646464' }}
-                            >
-                                AI-powered, trusted by thousands
-                            </span>
-                        </div>
-                        <h2 className="text-2xl font-semibold mb-4 text-[#646464]">
-                            {content.hero.description}
-                        </h2>
-                        <motion.div whileHover={{ scale: 1.05 }}>
-                            <a href="/museum">
-                                <Button
-                                    size="lg"
-                                    variant="default"
-                                    className="bg-[#1b1b1d] text-[#eeeff1] rounded-full px-10 py-4 text-2xl h-20 tracking-wider font-bold shadow-lg cursor-pointer"
-                                >
-                                    Get Started
-                                </Button>
-                            </a>
+                            <img
+                                src="/PLlogo.jpg"
+                                alt=""
+                                className="h-[99.9%] w-[100%] place-self-center rounded-4xl"
+                            />
                         </motion.div>
+                        <div className="flex-1 text-center md:text-left">
+                            <h1
+                                className="text-4xl md:text-6xl font-extrabold mb-6"
+                                style={{
+                                    color:
+                                        themeColors.text || themeColors.primary,
+                                }}
+                            >
+                                {content.hero.title}: {content.hero.subtitle}
+                            </h1>
+                            <div className="flex items-center justify-center md:justify-start gap-4 mb-8">
+                                <div className="flex items-center gap-1">
+                                    {[...Array(5)].map((_, i) => (
+                                        <Star
+                                            key={i}
+                                            size={28}
+                                            color={
+                                                themeColors.accent || '#FFD700'
+                                            }
+                                            fill={
+                                                themeColors.accent || '#FFD700'
+                                            }
+                                            className="drop-shadow"
+                                        />
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    {/* <motion.div whileHover={{ scale: 1.05 }}>
+                        <a href="/museum">
+                            <Button
+                                size="lg"
+                                variant="default"
+                                className="bg-[#1b1b1d] text-[#eeeff1] rounded-full px-10 py-4 text-2xl h-20 tracking-wider font-bold shadow-lg cursor-pointer"
+                            >
+                                Get Started
+                            </Button>
+                        </a>
+                    </motion.div>
+                    <div className="relative h-[400px] w-full mb-8">
+                        <CardSwap
+                            width={400}
+                            height={300}
+                            cardDistance={50}
+                            verticalDistance={35}
+                            delay={3500}
+                            pauseOnHover={true}
+                            easing="elastic"
+                            skewAmount={4}
+                        >
+                            <SwapCard className="bg-gradient-to-r from-orange-600 to-orange-800 text-white p-6 flex items-center justify-center shadow-lg">
+                                <div className="text-center">
+                                    <Bot className="w-10 h-10 mx-auto mb-3" />
+                                    <p className="text-lg font-semibold mb-2">AI-Powered Recognition</p>
+                                    <p className="text-sm opacity-90">Advanced technology for intelligent preservation</p>
+                                </div>
+                            </SwapCard>
+                            <SwapCard className="bg-gradient-to-r from-slate-700 to-slate-900 text-white p-6 flex items-center justify-center shadow-lg">
+                                <div className="text-center">
+                                    <Globe className="w-10 h-10 mx-auto mb-3" />
+                                    <p className="text-lg font-semibold mb-2">Digital Museum Experience</p>
+                                    <p className="text-sm opacity-90">Immersive cultural heritage exploration</p>
+                                </div>
+                            </SwapCard>
+                            <SwapCard className="bg-gradient-to-r from-orange-700 to-orange-900 text-white p-6 flex items-center justify-center shadow-lg">
+                                <div className="text-center">
+                                    <BookOpen className="w-10 h-10 mx-auto mb-3" />
+                                    <p className="text-lg font-semibold mb-2">Cultural Identity Protection</p>
+                                    <p className="text-sm opacity-90">Preserving heritage for future generations</p>
+                                </div>
+                            </SwapCard>
+                            <SwapCard className="bg-gradient-to-r from-slate-800 to-slate-950 text-white p-6 flex items-center justify-center shadow-lg">
+                                <div className="text-center">
+                                    <Languages className="w-10 h-10 mx-auto mb-3" />
+                                    <p className="text-lg font-semibold mb-2">Global Cultural Exchange</p>
+                                    <p className="text-sm opacity-90">Connecting communities worldwide</p>
+                                </div>
+                            </SwapCard>
+                        </CardSwap>
+                    </div> */}
+                    <motion.section
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7 }}
+                        viewport={{ once: true }}
+                        className="py-16 px-4"
+                    >
+                        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+                            {/* Left side: Get Started button */}
+                            <motion.div
+                                whileHover={{ scale: 1.05 }}
+                                className="flex justify-center md:justify-start"
+                                style={{ maxHeight: '300px' }}
+                            >
+                                <a href="/museum">
+                                    <Button
+                                        size="lg"
+                                        variant="default"
+                                        className="bg-[#1b1b1d] text-[#eeeff1] rounded-full px-10 py-4 text-2xl h-20 tracking-widest font-bold shadow-lg cursor-pointer w-72"
+                                    >
+                                        Get Started
+                                    </Button>
+                                </a>
+                            </motion.div>
+
+                            {/* Right side: CardSwap */}
+                            <div
+                                className="relative w-full md:w-[400px] flex justify-center"
+                                style={{ maxHeight: '300px' }}
+                            >
+                                <CardSwap
+                                    width={400}
+                                    height={300}
+                                    cardDistance={50}
+                                    verticalDistance={35}
+                                    delay={3500}
+                                    pauseOnHover={true}
+                                    easing="elastic"
+                                    skewAmount={4}
+                                >
+                                    <SwapCard className="bg-gradient-to-r from-orange-600 to-orange-800 text-white p-6 flex items-center justify-center shadow-lg">
+                                        <div className="text-center">
+                                            <Bot className="w-10 h-10 mx-auto mb-3" />
+                                            <p className="text-lg font-semibold mb-2">
+                                                AI-Powered Recognition
+                                            </p>
+                                            <p className="text-sm opacity-90">
+                                                Advanced technology for
+                                                intelligent preservation
+                                            </p>
+                                        </div>
+                                    </SwapCard>
+
+                                    <SwapCard className="bg-gradient-to-r from-slate-700 to-slate-900 text-white p-6 flex items-center justify-center shadow-lg">
+                                        <div className="text-center">
+                                            <Globe className="w-10 h-10 mx-auto mb-3" />
+                                            <p className="text-lg font-semibold mb-2">
+                                                Digital Museum Experience
+                                            </p>
+                                            <p className="text-sm opacity-90">
+                                                Immersive cultural heritage
+                                                exploration
+                                            </p>
+                                        </div>
+                                    </SwapCard>
+
+                                    <SwapCard className="bg-gradient-to-r from-orange-700 to-orange-900 text-white p-6 flex items-center justify-center shadow-lg">
+                                        <div className="text-center">
+                                            <BookOpen className="w-10 h-10 mx-auto mb-3" />
+                                            <p className="text-lg font-semibold mb-2">
+                                                Cultural Identity Protection
+                                            </p>
+                                            <p className="text-sm opacity-90">
+                                                Preserving heritage for future
+                                                generations
+                                            </p>
+                                        </div>
+                                    </SwapCard>
+
+                                    <SwapCard className="bg-gradient-to-r from-slate-800 to-slate-950 text-white p-6 flex items-center justify-center shadow-lg">
+                                        <div className="text-center">
+                                            <Languages className="w-10 h-10 mx-auto mb-3" />
+                                            <p className="text-lg font-semibold mb-2">
+                                                Global Cultural Exchange
+                                            </p>
+                                            <p className="text-sm opacity-90">
+                                                Connecting communities worldwide
+                                            </p>
+                                        </div>
+                                    </SwapCard>
+                                </CardSwap>
+                            </div>
+                        </div>
+                    </motion.section>
                 </div>
             </motion.section>
 

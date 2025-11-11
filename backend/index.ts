@@ -5,6 +5,7 @@ import userRouter from './routes/user.route';
 import chatRouter from './routes/chat.route';
 import datasetRouter from './routes/dataset.route';
 import draftRouter from './routes/draft.route';
+import artifactRouter from './routes/artifact.routes';
 import cors from 'cors';
 
 connectDB();
@@ -33,5 +34,6 @@ app.use('/api/user', userRouter);
 app.use('/api/chat', chatRouter);
 app.use('/api/dataset', datasetRouter);
 app.use('/api/draft', draftRouter);
+app.use('/api/artifacts', artifactRouter);
 
 app.listen(port, () => console.log(` Server running on port ${port}`));
