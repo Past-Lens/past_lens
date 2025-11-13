@@ -233,7 +233,7 @@
         "Artifact_ID": "KIK004",
         "Title": "Kikuyu Spear",
         "Type": "Image",
-        "Media_Link": "kikuyu_4.jpg",
+        "Media_Link": "https://s1.img.bidsquare.com/item/xl/1493/1493818.jpeg",
         "Description": "Traditional spear used for hunting and protection.",
         "Language": "Kikuyu/English",
         "Community_Origin": "Kikuyu - Central Kenya",
@@ -263,7 +263,7 @@
         "Artifact_ID": "KIK007",
         "Title": "Kikuyu Beadwork",
         "Type": "Image",
-        "Media_Link": "kikuyu_7.jpg",
+        "Media_Link": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.craiyon.com%2Fpt%2Fimage%2Fwcq0hX29QGe2Ehym6t-QYQ&psig=AOvVaw3_oYIi5ryuDwd72PKV1F56&ust=1763142534041000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCIjnlvjX75ADFQAAAAAdAAAAABAE",
         "Description": "Colorful bead ornaments worn during ceremonies.",
         "Language": "Kikuyu/English",
         "Community_Origin": "Kikuyu - Central Kenya",
@@ -272,8 +272,8 @@
     {
         "Artifact_ID": "KIK008",
         "Title": "Kikuyu Horn Blowing",
-        "Type": "Audio",
-        "Media_Link": "kikuyu_8.mp3",
+        "Type": "Image",
+        "Media_Link": "https://wiki.ubc.ca/images/4/4a/Samburu_boy_playing_kudu_horn.jpg",
         "Description": "Traditional horn used to call gatherings.",
         "Language": "Kikuyu/English",
         "Community_Origin": "Kikuyu - Central Kenya",
@@ -352,8 +352,8 @@
     {
         "Artifact_ID": "KIK016",
         "Title": "Kikuyu Naming Ceremony",
-        "Type": "Text",
-        "Media_Link": "kikuyu_16.txt",
+        "Type": "Image",
+        "Media_Link": "https://mukuyu.wordpress.com/wp-content/uploads/2018/09/img_20180902_210441-1.jpg?w=700",
         "Description": "Descriptions of the naming ritual.",
         "Language": "Kikuyu/English",
         "Community_Origin": "Kikuyu - Central Kenya",
@@ -398,5 +398,15 @@
         "Language": "Kikuyu/English",
         "Community_Origin": "Kikuyu - Central Kenya",
         "Contributor": "Community Contributor"
+    },
+    {
+        "Artifact_ID": "KIK021",
+        "Title": "Kikuyu Calabash",
+        "Type": "Image",
+        "Media_Link": "https://media.istockphoto.com/id/1490559506/photo/a-set-of-gourd-or-calabash-on-an-isolated-background.jpg?s=612x612&w=0&k=20&c=QZlPvY0bTE793f4o3cPYn79bEg8A41e46NCVR3EjaOg=",
+        "Description": "hello",
+        "Language": "Kikuyu/English",
+        "Community_Origin": "Kikuyu - Central Kenya",
+        "Contributor": "Local Fisherman"
     }
 ]
