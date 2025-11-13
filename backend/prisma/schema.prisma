@@ -27,6 +27,7 @@ enum ArtifactCategory {
   STORY
   VIDEO
   OBJECT
+  AIMode
 }
 
 enum MediaType {

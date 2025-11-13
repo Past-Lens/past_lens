@@ -151,26 +151,44 @@ const Discover = () => {
                                 {result && (
                                     <div className="bg-white/6 rounded-lg p-4 text-white/90">
                                         <h3 className="text-lg font-semibold">
-                                            Result
+                                            Artifact Details
                                         </h3>
-                                        <div className="text-sm mt-2 text-white/70">
+                                        <div className="text-sm mt-2 text-white/70 space-y-2">
                                             <div>
-                                                <strong>Classification:</strong>{' '}
-                                                {result?.data?.classification ??
-                                                    result?.classification}
+                                                <strong>Name:</strong>{' '}
+                                                {result?.name}
                                             </div>
                                             <div>
-                                                <strong>Confidence:</strong>{' '}
-                                                {result?.data?.confidence ??
-                                                    result?.confidence}
+                                                <strong>Community:</strong>{' '}
+                                                {result?.community}
                                             </div>
-                                            <div className="mt-2">
-                                                <strong>Description:</strong>
-                                                <p className="text-white/60 text-sm mt-1">
-                                                    {result?.data
-                                                        ?.description ??
-                                                        result?.description}
-                                                </p>
+                                            <div>
+                                                <strong>
+                                                    Short Description:
+                                                </strong>{' '}
+                                                {result?.short_description}
+                                            </div>
+                                            <div>
+                                                <strong>
+                                                    Detailed Description:
+                                                </strong>{' '}
+                                                {result?.detailed_description}
+                                            </div>
+                                            <div>
+                                                <strong>Uses:</strong>{' '}
+                                                {result?.uses?.join(', ')}
+                                            </div>
+                                            <div>
+                                                <strong>
+                                                    Cultural Significance:
+                                                </strong>{' '}
+                                                {result?.cultural_significance}
+                                            </div>
+                                            <div>
+                                                <strong>Event Context:</strong>{' '}
+                                                {result?.event_context?.join(
+                                                    ', '
+                                                )}
                                             </div>
                                         </div>
                                     </div>

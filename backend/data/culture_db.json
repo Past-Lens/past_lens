@@ -1,0 +1,411 @@
+{
+    "kikuyu": {
+        "beads": {
+            "name": "Kikuyu Beads",
+            "community": "Kikuyu",
+            "short_description": "Traditional decorative beads.",
+            "detailed_description": "Beads worn during ceremonies and rites of passage.",
+            "uses": ["Adornment", "Ceremonial purposes"],
+            "cultural_significance": "Symbol of beauty and status.",
+            "event_context": ["Initiation", "Marriage ceremonies"]
+        },
+        "calabash": {
+            "name": "Kikuyu Calabash",
+            "community": "Kikuyu",
+            "short_description": "Gourd used for storing food and drinks.",
+            "detailed_description": "Calabashes served milk, water, or traditional brews.",
+            "uses": ["Storage", "Serving drinks"],
+            "cultural_significance": "Important for hospitality and ceremonies.",
+            "event_context": ["Festivals", "Rituals"]
+        },
+        "granary": {
+            "name": "Kikuyu Granary",
+            "community": "Kikuyu",
+            "short_description": "Traditional storage for grains.",
+            "detailed_description": "Used to store harvested maize, millet, and other crops.",
+            "uses": ["Food storage"],
+            "cultural_significance": "Ensures food security for the community.",
+            "event_context": ["Harvest season"]
+        },
+        "headgear": {
+            "name": "Kikuyu Headgear",
+            "community": "Kikuyu",
+            "short_description": "Traditional ceremonial headgear.",
+            "detailed_description": "Worn during initiation and marriage ceremonies.",
+            "uses": ["Ceremonial attire"],
+            "cultural_significance": "Marks social or ceremonial status.",
+            "event_context": ["Initiation", "Marriage"]
+        },
+        "initiation_ceremony": {
+            "name": "Kikuyu Initiation Ceremony",
+            "community": "Kikuyu",
+            "short_description": "Rites of passage for young members.",
+            "detailed_description": "Traditional ceremonies marking the transition to adulthood.",
+            "uses": ["Rite of passage"],
+            "cultural_significance": "Cultural continuity and teaching of values.",
+            "event_context": ["Initiation ceremonies"]
+        },
+        "kiondo_basket": {
+            "name": "Kikuyu Kiondo Basket",
+            "community": "Kikuyu",
+            "short_description": "Handwoven basket for carrying goods.",
+            "detailed_description": "Used in markets, daily chores, and storage.",
+            "uses": ["Storage", "Market goods"],
+            "cultural_significance": "Represents Kikuyu craftsmanship.",
+            "event_context": ["Daily life", "Markets"]
+        },
+        "mugumo_tree": {
+            "name": "Kikuyu Mugumo Tree",
+            "community": "Kikuyu",
+            "short_description": "Sacred tree in Kikuyu culture.",
+            "detailed_description": "Worshipped during rituals and gatherings.",
+            "uses": ["Rituals", "Cultural gatherings"],
+            "cultural_significance": "Symbol of spirituality and community unity.",
+            "event_context": ["Rituals", "Community meetings"]
+        },
+        "spears": {
+            "name": "Kikuyu Spears",
+            "community": "Kikuyu",
+            "short_description": "Traditional weapon and ceremonial item.",
+            "detailed_description": "Used in hunting and as part of ceremonial attire.",
+            "uses": ["Hunting", "Ceremonial purposes"],
+            "cultural_significance": "Represents courage and protection.",
+            "event_context": ["Hunting", "Ceremonies"]
+        },
+        "stool": {
+            "name": "Kikuyu Stool",
+            "community": "Kikuyu",
+            "short_description": "Traditional wooden stool.",
+            "detailed_description": "Used in homes, especially by elders.",
+            "uses": ["Seating"],
+            "cultural_significance": "Represents authority and respect.",
+            "event_context": ["Daily life", "Ceremonies"]
+        },
+        "hair_comb_kikuyu_culture_combs": {
+            "name": "Kikuyu Hair Combs",
+            "community": "Kikuyu",
+            "short_description": "Combs used for traditional hairstyles.",
+            "detailed_description": "Carved wooden combs used in grooming and decoration.",
+            "uses": ["Hair grooming", "Adornment"],
+            "cultural_significance": "Cultural identity and beauty.",
+            "event_context": ["Daily life", "Festivals"]
+        },
+        "attire": {
+            "name": "Kikuyu Attire",
+            "community": "Kikuyu",
+            "short_description": "Traditional clothing worn by Kikuyu people.",
+            "detailed_description": "Includes wraps, skirts, and ceremonial dresses.",
+            "uses": ["Daily wear", "Ceremonial dress"],
+            "cultural_significance": "Represents Kikuyu identity and tradition.",
+            "event_context": ["Festivals", "Rites of passage"]
+        },
+        "culture_calabash": {
+            "name": "Kikuyu Calabash (Cultural)",
+            "community": "Kikuyu",
+            "short_description": "Cultural calabash used in rituals.",
+            "detailed_description": "Used to serve offerings during rituals.",
+            "uses": ["Ritual offerings"],
+            "cultural_significance": "Spiritual and cultural significance.",
+            "event_context": ["Ritual ceremonies"]
+        },
+        "culture_granary": {
+            "name": "Kikuyu Granary (Cultural)",
+            "community": "Kikuyu",
+            "short_description": "Used for sacred storage rituals.",
+            "detailed_description": "Granaries used in spiritual or ceremonial contexts.",
+            "uses": ["Ceremonial storage"],
+            "cultural_significance": "Symbolizes wealth and sustenance.",
+            "event_context": ["Ceremonies"]
+        },
+        "culture_huts": {
+            "name": "Kikuyu Huts",
+            "community": "Kikuyu",
+            "short_description": "Traditional Kikuyu dwellings.",
+            "detailed_description": "Used historically for living and community gathering.",
+            "uses": ["Housing"],
+            "cultural_significance": "Represents traditional lifestyle.",
+            "event_context": ["Daily life"]
+        },
+        "culture_marriage": {
+            "name": "Kikuyu Marriage Traditions",
+            "community": "Kikuyu",
+            "short_description": "Customs around marriage.",
+            "detailed_description": "Traditional practices during weddings.",
+            "uses": ["Ceremonial purposes"],
+            "cultural_significance": "Preserves cultural identity.",
+            "event_context": ["Marriage ceremonies"]
+        },
+        "culture_mwiko": {
+            "name": "Kikuyu Mwiko",
+            "community": "Kikuyu",
+            "short_description": "Ceremonial object or tradition.",
+            "detailed_description": "Used in special ceremonies.",
+            "uses": ["Ceremony"],
+            "cultural_significance": "Important cultural ritual.",
+            "event_context": ["Ritual ceremonies"]
+        },
+        "culture_pots": {
+            "name": "Kikuyu Cultural Pots",
+            "community": "Kikuyu",
+            "short_description": "Used for cooking and rituals.",
+            "detailed_description": "Traditional pots used in daily life and ceremonies.",
+            "uses": ["Cooking", "Ceremonial purposes"],
+            "cultural_significance": "Represents tradition and daily life.",
+            "event_context": ["Daily life", "Rituals"]
+        },
+        "drums": {
+            "name": "Kikuyu Drums",
+            "community": "Kikuyu",
+            "short_description": "Musical instruments used in ceremonies.",
+            "detailed_description": "Played during festivals and dances.",
+            "uses": ["Music", "Ceremonies"],
+            "cultural_significance": "Entertainment and cultural expression.",
+            "event_context": ["Festivals", "Dances"]
+        },
+        "hats": {
+            "name": "Kikuyu Hats",
+            "community": "Kikuyu",
+            "short_description": "Traditional headwear.",
+            "detailed_description": "Worn during ceremonies or daily life.",
+            "uses": ["Adornment", "Ceremonial"],
+            "cultural_significance": "Cultural identity.",
+            "event_context": ["Daily life", "Festivals"]
+        },
+        "muratina": {
+            "name": "Kikuyu Muratina",
+            "community": "Kikuyu",
+            "short_description": "Traditional fermented drink.",
+            "detailed_description": "Served during ceremonies and gatherings.",
+            "uses": ["Beverage"],
+            "cultural_significance": "Hospitality and celebration.",
+            "event_context": ["Festivals", "Rituals"]
+        },
+        "serving_spoon": {
+            "name": "Kikuyu Serving Spoon",
+            "community": "Kikuyu",
+            "short_description": "Used for serving food.",
+            "detailed_description": "Wooden spoons used in communal meals.",
+            "uses": ["Serving food"],
+            "cultural_significance": "Represents hospitality.",
+            "event_context": ["Daily life", "Festivals"]
+        },
+        "shield": {
+            "name": "Kikuyu Shield",
+            "community": "Kikuyu",
+            "short_description": "Used historically in defense.",
+            "detailed_description": "Carved wooden shields for protection.",
+            "uses": ["Defense", "Ceremonial"],
+            "cultural_significance": "Represents courage.",
+            "event_context": ["Historical warfare", "Ceremonies"]
+        },
+        "traditional_food": {
+            "name": "Kikuyu Traditional Food",
+            "community": "Kikuyu",
+            "short_description": "Meals traditionally prepared by Kikuyu.",
+            "detailed_description": "Includes ugali, vegetables, and roasted meats.",
+            "uses": ["Consumption", "Ceremonial meals"],
+            "cultural_significance": "Maintains culinary heritage.",
+            "event_context": ["Daily life", "Festivals"]
+        }
+    },
+    "maasai": {
+        "belts": {
+            "name": "Maasai Belts",
+            "community": "Maasai",
+            "short_description": "Leather belts worn as part of Maasai attire.",
+            "detailed_description": "Belts decorated with beads, worn by men.",
+            "uses": ["Attire"],
+            "cultural_significance": "Indicates age-set",
+            "event_context": ["Dances", "Rites of passage"]
+        },
+        "bracelets": {
+            "name": "Maasai Bracelets",
+            "community": "Maasai",
+            "short_description": "Beaded bracelets worn by men and women.",
+            "detailed_description": "Patterns indicate age and status.",
+            "uses": ["Adornment"],
+            "cultural_significance": "Represents identity.",
+            "event_context": ["Ceremonies"]
+        },
+        "calabashes": {
+            "name": "Maasai Calabashes",
+            "community": "Maasai",
+            "short_description": "Used for milk and storage.",
+            "detailed_description": "Gourds used daily and in ceremonies.",
+            "uses": ["Storage", "Serving"],
+            "cultural_significance": "Tradition and hospitality.",
+            "event_context": ["Daily life", "Ceremonies"]
+        },
+        "cattle": {
+            "name": "Maasai Cattle",
+            "community": "Maasai",
+            "short_description": "Livestock central to Maasai life.",
+            "detailed_description": "Used for milk, meat, and bride price.",
+            "uses": ["Food", "Ceremonial"],
+            "cultural_significance": "Wealth and status.",
+            "event_context": ["Daily life", "Rituals"]
+        },
+        "circumcision": {
+            "name": "Maasai Circumcision",
+            "community": "Maasai",
+            "short_description": "Rite of passage.",
+            "detailed_description": "Marks transition to adulthood.",
+            "uses": ["Ceremony"],
+            "cultural_significance": "Cultural continuity.",
+            "event_context": ["Initiation"]
+        },
+        "dance": {
+            "name": "Maasai Dance",
+            "community": "Maasai",
+            "short_description": "Traditional dances.",
+            "detailed_description": "Performed during ceremonies.",
+            "uses": ["Entertainment"],
+            "cultural_significance": "Cultural expression.",
+            "event_context": ["Festivals"]
+        },
+        "earrings": {
+            "name": "Maasai Earrings",
+            "community": "Maasai",
+            "short_description": "Worn as adornment.",
+            "detailed_description": "Indicates status and beauty.",
+            "uses": ["Adornment"],
+            "cultural_significance": "Identity and aesthetics.",
+            "event_context": ["Daily life", "Ceremonies"]
+        },
+        "hairstyles": {
+            "name": "Maasai Hairstyles",
+            "community": "Maasai",
+            "short_description": "Traditional hairstyles.",
+            "detailed_description": "Patterns indicate age and clan.",
+            "uses": ["Adornment"],
+            "cultural_significance": "Identity and tradition.",
+            "event_context": ["Daily life", "Ceremonies"]
+        },
+        "headpieces": {
+            "name": "Maasai Headpieces",
+            "community": "Maasai",
+            "short_description": "Decorative headwear.",
+            "detailed_description": "Used in ceremonies.",
+            "uses": ["Adornment"],
+            "cultural_significance": "Tradition.",
+            "event_context": ["Ceremonies"]
+        },
+        "knives": {
+            "name": "Maasai Knives",
+            "community": "Maasai",
+            "short_description": "Utility and ceremonial knives.",
+            "detailed_description": "Used for daily tasks and rituals.",
+            "uses": ["Utility", "Ceremonial"],
+            "cultural_significance": "Practical and traditional.",
+            "event_context": ["Daily life", "Ceremonies"]
+        },
+        "manyatta_huts": {
+            "name": "Maasai Manyatta Huts",
+            "community": "Maasai",
+            "short_description": "Traditional dwellings.",
+            "detailed_description": "Homes for Maasai families.",
+            "uses": ["Housing"],
+            "cultural_significance": "Represents community and tradition.",
+            "event_context": ["Daily life"]
+        },
+        "milk_gourds": {
+            "name": "Maasai Milk Gourds",
+            "community": "Maasai",
+            "short_description": "Used for storing milk.",
+            "detailed_description": "Gourds for daily use and ceremonies.",
+            "uses": ["Storage"],
+            "cultural_significance": "Part of daily life and rituals.",
+            "event_context": ["Daily life", "Ceremonies"]
+        },
+        "necklaces": {
+            "name": "Maasai Necklaces",
+            "community": "Maasai",
+            "short_description": "Beaded necklaces.",
+            "detailed_description": "Indicate status and age set.",
+            "uses": ["Adornment"],
+            "cultural_significance": "Identity and beauty.",
+            "event_context": ["Ceremonies"]
+        },
+        "pots": {
+            "name": "Maasai Pots",
+            "community": "Maasai",
+            "short_description": "Used for cooking.",
+            "detailed_description": "Traditional pots for daily use.",
+            "uses": ["Cooking"],
+            "cultural_significance": "Daily life and tradition.",
+            "event_context": ["Daily life", "Ceremonies"]
+        },
+        "sandals": {
+            "name": "Maasai Sandals",
+            "community": "Maasai",
+            "short_description": "Footwear made from leather or recycled tires.",
+            "detailed_description": "Worn daily.",
+            "uses": ["Protection"],
+            "cultural_significance": "Part of daily attire.",
+            "event_context": ["Daily life"]
+        },
+        "shields": {
+            "name": "Maasai Shields",
+            "community": "Maasai",
+            "short_description": "Used for protection.",
+            "detailed_description": "Traditional warrior shields.",
+            "uses": ["Defense"],
+            "cultural_significance": "Protection and bravery.",
+            "event_context": ["Ceremonies", "Historical warfare"]
+        },
+        "shuka": {
+            "name": "Maasai Shuka",
+            "community": "Maasai",
+            "short_description": "Colorful cloth worn by Maasai.",
+            "detailed_description": "Used for daily attire and ceremonies.",
+            "uses": ["Attire"],
+            "cultural_significance": "Cultural identity.",
+            "event_context": ["Daily life", "Ceremonies"]
+        },
+        "spears": {
+            "name": "Maasai Spears",
+            "community": "Maasai",
+            "short_description": "Used for hunting and defense.",
+            "detailed_description": "Traditional spears.",
+            "uses": ["Hunting", "Ceremonial"],
+            "cultural_significance": "Protection and tradition.",
+            "event_context": ["Hunting", "Ceremonies"]
+        },
+        "weddings": {
+            "name": "Maasai Weddings",
+            "community": "Maasai",
+            "short_description": "Marriage traditions.",
+            "detailed_description": "Ceremonies and rituals.",
+            "uses": ["Ceremonial"],
+            "cultural_significance": "Cultural continuity.",
+            "event_context": ["Marriage"]
+        },
+        "rungus": {
+            "name": "Maasai Rungus",
+            "community": "Maasai",
+            "short_description": "Ceremonial item.",
+            "detailed_description": "Used in rituals.",
+            "uses": ["Ceremony"],
+            "cultural_significance": "Cultural practice.",
+            "event_context": ["Ceremonies"]
+        },
+        "trash": {
+            "name": "Trash",
+            "community": "Maasai",
+            "short_description": "Uncategorized item.",
+            "detailed_description": "Miscellaneous.",
+            "uses": ["N/A"],
+            "cultural_significance": "N/A",
+            "event_context": ["N/A"]
+        },
+        "trash_2": {
+            "name": "Trash 2",
+            "community": "Maasai",
+            "short_description": "Uncategorized item.",
+            "detailed_description": "Miscellaneous.",
+            "uses": ["N/A"],
+            "cultural_significance": "N/A",
+            "event_context": ["N/A"]
+        }
+    }
+}

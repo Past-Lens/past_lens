@@ -1,0 +1,1385 @@
+[
+    {
+        "number": 1,
+        "maasai": "Eelaenkishui nkatitin",
+        "english": "Life has seasons",
+        "swahili": "Maisha yana majira",
+        "theme": "Change/Time"
+    },
+    {
+        "number": 2,
+        "maasai": "Eisapuk eukongu enkai",
+        "english": "The eye of God is big (large)",
+        "swahili": "jicho la Mungu ni kubwa",
+        "theme": "God's Providence/Omniscience"
+    },
+    {
+        "number": 3,
+        "maasai": "Emunyak olayioni oinepua menye",
+        "english": "The words of the elders are blessed",
+        "swahili": "Maneno ya wazee yanabaraka",
+        "theme": "Wisdom/Respect for Elders"
+    },
+    {
+        "number": 4,
+        "maasai": "Ikingas ake olemaii nikitoki olengeno",
+        "english": "We start by being foolish and we eventually become wise",
+        "swahili": "Tunaanza kwa kuwa wajinga na hatimaye tunakuwa wenye hekima",
+        "theme": "Growth/Learning"
+    },
+    {
+        "number": 5,
+        "maasai": "Imemurut emurt elukunya",
+        "english": "The neck cannot become the head",
+        "swahili": "Shingo haiwezi kuwa kichwa",
+        "theme": "Hierarchy/Authority"
+    },
+    {
+        "number": 6,
+        "maasai": "Imewal endunget erasha kewan",
+        "english": "A proverb does not answer itself",
+        "swahili": "Methali haijijibu yenyewe",
+        "note": "It is easier to see someone else's evil than it is to see one's own.",
+        "theme": "Self-Reflection/Judgment"
+    },
+    {
+        "number": 7,
+        "maasai": "Keeku nameni eriroi",
+        "english": "Even that which is despised can triumph",
+        "swahili": "Hata kile kinachodharauliwa kinaweza kushinda",
+        "theme": "Hope/Vindication"
+    },
+    {
+        "number": 8,
+        "maasai": "Keshoroo olchata eurori kulikae",
+        "english": "A falling tree will cause others to fall",
+        "swahili": "Mti unaoanguka utasababisha mingine kuanguka",
+        "theme": "Influence/Contagion"
+    },
+    {
+        "number": 9,
+        "maasai": "Iyiolo ake eningua kake imiyiola eniloto",
+        "english": "You know where you come from but you don't know where you are going",
+        "swahili": "Unajua unakotoka lakini hujui uendako",
+        "theme": "Uncertainty of Future/Destiny"
+    },
+    {
+        "number": 10,
+        "maasai": "Medany orkimojino oboelashei",
+        "english": "One finger does not (cannot) kill a louse",
+        "swahili": "Kidole kimoja hakiwezi kuua chawa",
+        "theme": "Unity/Cooperation"
+    },
+    {
+        "number": 11,
+        "maasai": "Menya enkoshoke enyamu",
+        "english": "The stomach cannot steal and if it did, it would show itself",
+        "swahili": "Tumbo haliwezi kuiba na kama lingeiba lingejionyesha lenyewe",
+        "theme": "Consequences/Truth"
+    },
+    {
+        "number": 12,
+        "maasai": "Miarie orngatuny engudi",
+        "english": "Don't fight a lion with a stick",
+        "swahili": "Usipigane na simba kwa fimbo",
+        "theme": "Strategy/Caution"
+    },
+    {
+        "number": 13,
+        "maasai": "Mikiar eitukiliki",
+        "english": "You will not be punished when you think before acting",
+        "swahili": "Hutaadhibiwa ikiwa unafikiri kabla ya kutenda",
+        "theme": "Prudence/Forethought"
+    },
+    {
+        "number": 14,
+        "maasai": "Usuja imbaa anaaainkolongi",
+        "english": "Events follow one another like days",
+        "swahili": "Matukio hufuatana kama siku",
+        "theme": "Planning/Process"
+    },
+    {
+        "number": 15,
+        "maasai": "Meiguanaa iyie nepou",
+        "english": "Life and death are not the same",
+        "swahili": "Maisha na kifo si sawa",
+        "note": "Jesus went through and suffered on our behalf. He was raised to life (1Peter 3:18)",
+        "theme": "Existence/Mortality"
+    },
+    {
+        "number": 16,
+        "maasai": "Imelakua ang inchu",
+        "english": "Home is not far away when you are alive",
+        "swahili": "Nyumbani sio mbali ukiwa hai",
+        "theme": "Hope/Belonging"
+    },
+    {
+        "number": 17,
+        "maasai": "Iyiolo ake enigua kake imiyiola enilo",
+        "english": "Be as familiar with observation as you are with the place you live",
+        "swahili": "Fahamu uchunguzi kama vile unavyofahamu mahali unapoishi",
+        "theme": "Observation/Awareness"
+    },
+    {
+        "number": 18,
+        "maasai": "Oitimmurua ake otii, meetai oidipakiene",
+        "english": "In life the assured time of good life if today, tomorrow might be a different story",
+        "theme": "Living in the Present/Uncertainty"
+    },
+    {
+        "number": 19,
+        "maasai": "Eiloikino motio kima",
+        "english": "Pans (pancakes) take shift on fire",
+        "theme": "Patience/Turn Taking"
+    },
+    {
+        "number": 20,
+        "maasai": "Ondatata ondataishiri",
+        "english": "Sometimes you have, other times you don't have",
+        "theme": "Fluctuation/Provision"
+    },
+    {
+        "number": 21,
+        "maasai": "Edol enkerai ilainyamoke eituedol menye",
+        "english": "The child may see thieves before the father does",
+        "theme": "Vigilance/Unexpected Wisdom"
+    },
+    {
+        "number": 22,
+        "maasai": "Eikasha aisinanisho nibikoo along karsisisho nie irakiti",
+        "english": "It is better to be poor and live long than rich and die young",
+        "theme": "Value/Priorities (Life over Wealth)"
+    },
+    {
+        "number": 23,
+        "maasai": "Ainyoo pee iton enaa enkitok nayamishe?",
+        "english": "Why do you behave like a woman whose son has just married?",
+        "theme": "Humility/Pride"
+    },
+    {
+        "number": 24,
+        "maasai": "Engai tajapaki tooinaipuko inona",
+        "english": "God, shield me with your wings (Prayer)",
+        "theme": "Prayer/Seeking Protection"
+    },
+    {
+        "number": 25,
+        "maasai": "Esuj erashe ng'ejuk emusana",
+        "english": "A new idea follows an old one",
+        "theme": "Continuity/Innovation"
+    },
+    {
+        "number": 26,
+        "maasai": "Imawal olbuket torono olikai",
+        "english": "Don't reply one wrong with another",
+        "theme": "Retaliation/Forgiveness"
+    },
+    {
+        "number": 27,
+        "maasai": "Imikinya orkikue lolikai",
+        "english": "A person does not itch from a thorn that is not his",
+        "note": "This is about compassion",
+        "theme": "Compassion/Empathy"
+    },
+    {
+        "number": 28,
+        "maasai": "Meek olekaina ilala lenyanak",
+        "english": "The elephant does not get tired of his tusks",
+        "note": "Despite our sinfulness, God is with us all the time",
+        "theme": "Constancy/Endurance"
+    },
+    {
+        "number": 29,
+        "maasai": "Meetai osina lenkolong Nabo",
+        "english": "There is no poverty of a single day",
+        "note": "Readiness",
+        "interpretation": "Readiness for God means that we are prepared to do the smallest things or the largest things – to make a difference.",
+        "theme": "Readiness/Diligence"
+    },
+    {
+        "number": 30,
+        "maasai": "Meishaa elukunya nabo engeno",
+        "english": "One head cannot contain all knowledge",
+        "theme": "Shared Wisdom/Humility"
+    },
+    {
+        "number": 31,
+        "maasai": "Meraakinoo enkare oloipangi",
+        "english": "You cannot force water up a hill",
+        "interpretation": "it's not possible to do the impossible. You cannot serve two masters. You cannot serve God and devil. You will only be able to serve one",
+        "theme": "Impossibility/Focus"
+    },
+    {
+        "number": 32,
+        "maasai": "Atejo apa oledukuya mongoi mpira Enkai niarr olaisimani",
+        "english": "The elders said that lies go up and kills a robber",
+        "theme": "Justice/Consequences of Lies"
+    },
+    {
+        "number": 33,
+        "maasai": "Ayia amu ayia nalelek",
+        "english": "Alright! Is it so easy to say!",
+        "note": "The fear of failure",
+        "interpretation": "Fear says, There is a lion in the way.",
+        "theme": "Discernment/Action vs. Talk"
+    },
+    {
+        "number": 34,
+        "maasai": "Meetai tonyoraki maibai",
+        "english": "There is no friendship which is one way",
+        "interpretation": "Friendship is mutual",
+        "theme": "Mutuality/Friendship"
+    },
+    {
+        "number": 35,
+        "maasai": "Esulaa olchani otuurorori oioitashe",
+        "english": "The withered tree will destroy the healthy tree when it falls down",
+        "theme": "Vulnerability/Peril"
+    },
+    {
+        "number": 36,
+        "maasai": "Eukoshoke naitau enashe",
+        "english": "It is the belly which daily gives thanks",
+        "theme": "Gratitude/Sustenance"
+    },
+    {
+        "number": 37,
+        "maasai": "Imeipul elejara endap enkaina",
+        "english": "A lie cannot fill the palm",
+        "theme": "Honesty/Futility of Deceit"
+    },
+    {
+        "number": 38,
+        "maasai": "Kurro milau eninang",
+        "english": "Trouble comes to those who look for it",
+        "theme": "Recklessness/Consequences"
+    },
+    {
+        "number": 39,
+        "maasai": "Imesarisara nyayie, bara kino",
+        "english": "Do not jump about, for there is no use in jumping about",
+        "theme": "Focus/Purpose"
+    },
+    {
+        "number": 40,
+        "maasai": "Inkinter emodai peisuj engeno",
+        "english": "Foolishness first, then wisdom",
+        "note": "Compare this with No. 21",
+        "theme": "Experience/Wisdom"
+    },
+    {
+        "number": 41,
+        "maasai": "Iyiolo ake enijo kake miyiolo enikijokini",
+        "english": "You only know what you say but you don't know what you will be told",
+        "theme": "Communication/Listening"
+    },
+    {
+        "number": 42,
+        "maasai": "Keidurr iltung'anak kake meidur ildonyo",
+        "english": "Nobody can say he is settled anywhere forever: it is only the mountains which do not move from their places",
+        "theme": "Permanence/Mortality"
+    },
+    {
+        "number": 43,
+        "maasai": "Meidim enkang'u enaimin",
+        "english": "The eye cannot penetrate darkness",
+        "theme": "Limitation/Depth of Sight"
+    },
+    {
+        "number": 44,
+        "maasai": "Medol ilala osina",
+        "english": "The teeth do see poverty",
+        "theme": "Greed/Insatiable Desire"
+    },
+    {
+        "number": 45,
+        "maasai": "Meeta empur nemejo nanu eedo kidong'oe",
+        "english": "There is no lizard that does not claim to possess the longest tail",
+        "note": "This is about boasting or showing off",
+        "theme": "Humility/Boasting"
+    },
+    {
+        "number": 46,
+        "maasai": "Meeta enkiteng olopeny",
+        "english": "The cow has no owner",
+        "note": "According to Maasai myth cows are gift from God to Maasai as he (Maasai exclaimed; 'Ayie! Yie... Nkumok oleng – There are so many') 'Inkishu' – Cows are sent from heaven.",
+        "theme": "Ownership/Divine Gift"
+    },
+    {
+        "number": 47,
+        "maasai": "Meeta orengejep erubata",
+        "english": "The tongue has no joint",
+        "interpretation": "The tongue is flexible and can say anything. There is no control.",
+        "theme": "Speech/Lack of Control"
+    },
+    {
+        "number": 48,
+        "maasai": "Meetai enkerr sampu",
+        "english": "There is not such a thing in the world as a sheep of many colours",
+        "interpretation": "You are either hot or cold; you cannot be both.",
+        "theme": "Consistency/Purity"
+    },
+    {
+        "number": 49,
+        "maasai": "Meetai oidipakine oitumurua akeetae",
+        "english": "There is no one who has finished, there is only who is still at it",
+        "interpretation": "we are all on the race, no one has finished",
+        "theme": "Perseverance/Journey of Life"
+    },
+    {
+        "number": 50,
+        "maasai": "Meetai tonyoraki maaibai",
+        "english": "There is no one way friendship",
+        "interpretation": "friendship is mutual",
+        "theme": "Mutuality/Friendship"
+    },
+    {
+        "number": 51,
+        "maasai": "Mekintalang' olwuasa enabelibel",
+        "english": "The boaster (the proud) will not cross the valley",
+        "interpretation": "God rejects the proud",
+        "theme": "Humility/Consequences of Pride"
+    },
+    {
+        "number": 52,
+        "maasai": "Memurut emurt endukuya",
+        "english": "The neck does not go beyond the head",
+        "note": "Compare with No. 5",
+        "theme": "Hierarchy/Subordination"
+    },
+    {
+        "number": 53,
+        "maasai": "Merumayu ne nkai tentakule",
+        "english": "That which is Godly cannot be pushed away with the fore arm",
+        "note": "Compare with No. 42",
+        "theme": "Divine Power/Irresistibility"
+    },
+    {
+        "number": 54,
+        "maasai": "Otanapa nolaiki meturua enapita",
+        "english": "One cane devour incredible loads of meat",
+        "theme": "Gluttony/Excessive Appetite"
+    },
+    {
+        "number": 55,
+        "maasai": "Enjipati olalae ntare tikitau",
+        "english": "Twenty sheep to him is just a taste",
+        "theme": "Greed/Insatiable Appetite"
+    },
+    {
+        "number": 56,
+        "maasai": "Oosho!! Meuputayu emala naudo kuruu",
+        "english": "Ooh! This man is like a leaking gourd that cannot be filled",
+        "note": "This proverb talks about a man who had a big appetite for meat. It is a warning not to be greedy.",
+        "theme": "Greed/Dissatisfaction"
+    },
+    {
+        "number": 57,
+        "maasai": "Milo ongata miata olikitaiu entubuloi",
+        "english": "Do not go to the plains without somebody to take the dust out of your eye",
+        "theme": "Need for Help/Community"
+    },
+    {
+        "number": 58,
+        "maasai": "Meibung'ayu esiere embulati",
+        "english": "It is not possible to hold a walking stick as well as the stomach",
+        "theme": "Prioritization/Incompatibility"
+    },
+    {
+        "number": 59,
+        "maasai": "Meituraa oloitiko isirat",
+        "english": "The zebra cannot do away with its stripes",
+        "interpretation": "One cannot give up one's habits that were developed in childhood",
+        "theme": "Nature/Habits"
+    },
+    {
+        "number": 60,
+        "maasai": "Naloikino imotiok enkima",
+        "english": "Cooking pots exchange places on the fire",
+        "interpretation": "Things come at different times",
+        "theme": "Patience/Turn Taking"
+    },
+    {
+        "number": 61,
+        "maasai": "Ore enchipai na endaa",
+        "english": "Happiness is as good as food",
+        "interpretation": "Good company can be better than good food",
+        "theme": "Value of Happiness/Company"
+    },
+    {
+        "number": 62,
+        "maasai": "Ore lukera naa olaba oibor",
+        "english": "The children are the bright moon",
+        "interpretation": "Take care of the little that you have",
+        "theme": "Value of Children/Care"
+    },
+    {
+        "number": 63,
+        "maasai": "Miutaki olmang'atinta masaa",
+        "english": "Do not show the hawk how to fly (Or do not show a wild hog a bow)",
+        "interpretation": "Do not be over-confident of yourself. Take one step at a time",
+        "theme": "Humility/Over-confidence"
+    },
+    {
+        "number": 64,
+        "maasai": "Meidim olenkaina enkingara",
+        "english": "An elephant is not able to endure beating from many (Or an elephant fears attack from several sides)",
+        "interpretation": "One man or a small group of men can attack many more",
+        "theme": "Unity in Attack/Vulnerability"
+    },
+    {
+        "number": 65,
+        "maasai": "Meituku olkine ng'iro",
+        "english": "Even a brown he-goat cannot cleanse him",
+        "interpretation": "it has gone beyond repair",
+        "theme": "Irreversible Damage/Consequence"
+    },
+    {
+        "number": 66,
+        "maasai": "Melam iyekenyi enetoikitio",
+        "english": "Baboons (or certain animals) do not go far from the place of their birth",
+        "interpretation": "A man never forgets his original home",
+        "theme": "Roots/Homeland"
+    },
+    {
+        "number": 67,
+        "maasai": "Memut elukunya nabo eng'eno",
+        "english": "One head cannot consume all knowledge",
+        "interpretation": "There are others as wise as you, one needs advice from other people",
+        "theme": "Shared Wisdom/Collaboration"
+    },
+    {
+        "number": 68,
+        "maasai": "Mme taa tumoto nagol barata",
+        "english": "It is not acquisition that is difficult, it is retention (Obtaining something is easier than looking after it properly)",
+        "interpretation": "Take care of that which you have; a bird in the hand is worth two in the bush",
+        "theme": "Stewardship/Retention"
+    },
+    {
+        "number": 69,
+        "maasai": "Minkar orpashe lolokai ompaka niduaki kewan",
+        "english": "Do not repair another man's fence until you have seen your own",
+        "interpretation": "Help yourself first in order to be able to be of use to others",
+        "theme": "Self-Care/Prioritization"
+    },
+    {
+        "number": 70,
+        "maasai": "Noosa taakeyie emolok omikitaduariki",
+        "english": "Eat a sweet until it becomes bitter (Or A mouth that has eaten a good thing will eat a bad one)",
+        "interpretation": "Things change/life can change",
+        "theme": "Change/Experience"
+    },
+    {
+        "number": 71,
+        "maasai": "Shorelai kishoriki enapiak",
+        "english": "My friend, you bring me evil (Or A constant complain can lead you to bad ways)",
+        "interpretation": "A friend can bring you evil",
+        "theme": "Bad Company/Caution in Friendship"
+    },
+    {
+        "number": 72,
+        "maasai": "Ore sininye esidai oneyado olgos nepi inkonyek, nemedol entaisere",
+        "english": "Even the ostrich, with its long neck and sharp eyes, cannot see what will happen in the future",
+        "swahili": "Hata mbuni, mwenye shingo ndefu na macho makali, hawezi kuona kitakachotokea wakati ujao",
+        "note": "No one knows day or hour... Be prepared all the time",
+        "theme": "Uncertainty of Future/Limitations"
+    },
+    {
+        "number": 73,
+        "maasai": "Menang' silig kewan",
+        "english": "Facing backwards does not perform itself.",
+        "swahili": "Kugeuka nyuma hakujifanyi chenyewe.",
+        "theme": "Initiative/Action"
+    },
+    {
+        "number": 74,
+        "maasai": "Edoorie enker modooni nkuta",
+        "english": "A blind sheep might chance across rain water.",
+        "swahili": "Kondoo asiyeona anaweza kupata maji ya mvua kwa bahati.",
+        "theme": "Fortune/Luck"
+    },
+    {
+        "number": 75,
+        "maasai": "Elong enchikat enkutuk enosiadi/olkurum",
+        "english": "The bad words coming from the mouth are worse than a fart.",
+        "swahili": "Maneno mabaya kutoka mdomoni ni mabaya kuliko mshuzi.",
+        "theme": "Speech/Reputation"
+    },
+    {
+        "number": 76,
+        "maasai": "Merrip oldia inkang'tie are",
+        "english": "A dog cannot guard two homes.",
+        "swahili": "Mbwa hawezi kulinda nyumba mbili.",
+        "theme": "Focus/Loyalty"
+    },
+    {
+        "number": 77,
+        "maasai": "Meing'ua oloitiko isirat lenyena",
+        "english": "A zebra takes its stripes wherever it goes.",
+        "swahili": "Punda milia hupeleka milia yake popote iendapo.",
+        "theme": "Identity/Inherent Nature"
+    },
+    {
+        "number": 78,
+        "maasai": "Metii ng'en eleji",
+        "english": "No one is wise that has been fooled (or lied to).",
+        "swahili": "Hakuna mwenye hekima ambaye amedanganywa.",
+        "theme": "Deception/Trust"
+    },
+    {
+        "number": 79,
+        "maasai": "Meituruk enkume",
+        "english": "The nose can never lead.",
+        "swahili": "Pua haiwezi kuongoza kamwe.",
+        "theme": "Leadership/Role"
+    },
+    {
+        "number": 80,
+        "maasai": "Memurata olayioni oota menye",
+        "english": "He who has a father is still not circumcised (subordinate).",
+        "swahili": "Yule aliye na baba bado hajatahiriwa.",
+        "theme": "Hierarchy/Respect for Authority"
+    },
+    {
+        "number": 81,
+        "maasai": "Enkongu naipang'a engen",
+        "english": "Clever is the eye that has traveled (Experience is the best teacher).",
+        "swahili": "Jicho lililosafiri ndilo lenye busara (Uzoefu ni mwalimu bora).",
+        "theme": "Experience/Wisdom"
+    },
+    {
+        "number": 82,
+        "maasai": "Epaash keeya wenkishui",
+        "english": "Life and death are not alike.",
+        "swahili": "Uhai na kifo sio jambo moja.",
+        "theme": "Mortality/Distinction"
+    },
+    {
+        "number": 83,
+        "maasai": "Eoroo keon aitalam ilchoreta lenyenak enaa osikiria omwuoi",
+        "english": "He separates himself from his friends like a sick donkey.",
+        "swahili": "Anajitenga na marafiki zake kama punda mgonjwa.",
+        "theme": "Isolation/Consequence of Sickness"
+    },
+    {
+        "number": 84,
+        "maasai": "Mamoda amu mashulare olenkaputi",
+        "english": "I'm not a fool because I don't live in the same homestead as my in-law.",
+        "swahili": "Mimi si mjinga kwa sababu sikaa kwenye boma moja na shemeji yangu.",
+        "note": "Implies that close proximity can lead to conflict.",
+        "theme": "Boundaries/Conflict Avoidance"
+    },
+    {
+        "number": 85,
+        "maasai": "Ebaiki ninyor, nimiret",
+        "english": "Perhaps you love him/her, yet you don't help him/her (Actions speak louder than words).",
+        "swahili": "Labda unampenda, lakini humsaidii.",
+        "theme": "Love/Action"
+    },
+    {
+        "number": 86,
+        "maasai": "Mebaiki ninyor, nimiret",
+        "english": "It cannot happen that you love him/her and you don't help him/her (Love must be demonstrated).",
+        "swahili": "Haiwezi kutokea kwamba unampenda na humsaidii.",
+        "theme": "Love/Demonstration"
+    },
+    {
+        "number": 87,
+        "maasai": "Ekébikóo intókitin póoki náaramát ilóopêny",
+        "english": "All things which their owners carefully tend last a long time.",
+        "swahili": "Vitu vyote ambavyo wamiliki wao huvitunza kwa uangalifu hudumu kwa muda mrefu.",
+        "theme": "Stewardship/Care"
+    },
+    {
+        "number": 88,
+        "maasai": "Enap oloitiko isirat enelo",
+        "english": "A zebra takes its stripes wherever it goes.",
+        "swahili": "Punda milia hupeleka milia yake popote iendapo.",
+        "note": "Similar to No. 77, emphasizing inescapable nature.",
+        "theme": "Inescapable Nature/Habit"
+    },
+    {
+        "number": 89,
+        "maasai": "Meraa enkare oloipangi",
+        "english": "Don't force water up a hill.",
+        "swahili": "Usilazimishe maji kupanda mlima.",
+        "theme": "Impossibility/Acceptance"
+    },
+    {
+        "number": 90,
+        "maasai": "Eitobiraki enkima eñger",
+        "english": "Fire makes the cooking stick straight.",
+        "swahili": "Moto hunyoosha kijiti cha kupikia.",
+        "theme": "Discipline/Refinement"
+    },
+    {
+        "number": 91,
+        "maasai": "Menyamala olkine naibor",
+        "english": "A white goat does not spoil (a herd).",
+        "swahili": "Mbuzi mweupe haharibu (kundi).",
+        "theme": "Innocence/Purity"
+    },
+    {
+        "number": 92,
+        "maasai": "Keidurraki neini nanyokie",
+        "english": "They moved homes and the red one was born (The fire remains after the move).",
+        "swahili": "Walihama nyumba na mwekundu akazaliwa.",
+        "theme": "Continuity/Legacy (often referring to fire/home)"
+    },
+    {
+        "number": 93,
+        "maasai": "Tamanai teidia alo oldoinyio matamanu tena nimikitumo aikata",
+        "english": "Go round one side of the mountain while I go round the other side, but we shall never meet.",
+        "note": "Refers to the ears (Nkiyiaa).",
+        "theme": "Separation/Proximity without Contact"
+    },
+    {
+        "number": 94,
+        "maasai": "Olkiteng' lai otii erishata oolmang'ati",
+        "english": "I have an ox who lives in the midst of enemies (The tongue).",
+        "swahili": "Nina ng'ombe wangu anayeishi katikati ya maadui.",
+        "theme": "Vulnerability/Speech"
+    },
+    {
+        "number": 95,
+        "maasai": "Angeta ilale naajur",
+        "english": "If the teeth were as clean, it would be difficult to eat sour milk.",
+        "swahili": "Kama meno yangekuwa safi sana, ingekuwa vigumu kula maziwa ya siki.",
+        "theme": "Realism/Practicality"
+    },
+    {
+        "number": 96,
+        "maasai": "Osina lenkolong naado",
+        "english": "The trouble is only for one day.",
+        "swahili": "Shida ni ya siku moja tu.",
+        "theme": "Temporary Hardship/Hope"
+    },
+    {
+        "number": 97,
+        "maasai": "Meitu olkine naibor olkiporo",
+        "english": "A white goat does not bring a disaster.",
+        "swahili": "Mbuzi mweupe haleti maafa.",
+        "theme": "Purity/Auspice"
+    },
+    {
+        "number": 98,
+        "maasai": "Kipiki nenaa enker",
+        "english": "When you talk, be like a sheep (soft and gentle).",
+        "swahili": "Unapoongea, uwe kama kondoo.",
+        "theme": "Communication/Gentleness"
+    },
+    {
+        "number": 99,
+        "maasai": "Aitobiraki esumash",
+        "english": "Hunger makes the mind clear.",
+        "swahili": "Njaa hufanya akili kuwa safi.",
+        "theme": "Motivation/Necessity"
+    },
+    {
+        "number": 100,
+        "maasai": "Meidim enkaji orpaasha",
+        "english": "A homestead cannot refuse its inhabitants.",
+        "swahili": "Boma haliwezi kuwakataa wakaazi wake.",
+        "theme": "Belonging/Community"
+    },
+    {
+        "number": 101,
+        "maasai": "Olooláyi metóó enkímá",
+        "english": "A stick does not reject the fire.",
+        "swahili": "Kijiti hakikatai moto.",
+        "theme": "Destiny/Acceptance of Hardship"
+    },
+    {
+        "number": 102,
+        "maasai": "Meyioló nkerai elámát",
+        "english": "A child does not know what is beneficial.",
+        "swahili": "Mtoto hajui kinachofaa.",
+        "theme": "Inexperience/Guidance"
+    },
+    {
+        "number": 103,
+        "maasai": "Eitobiraki enkutuk elukunya",
+        "english": "The mouth makes the head shine (Your words reflect your character).",
+        "swahili": "Mdomo huufanya kichwa kung'aa.",
+        "theme": "Speech/Character"
+    },
+    {
+        "number": 104,
+        "maasai": "Mekiárr enkái némekílátátá",
+        "english": "You cannot fight God nor refuse to pay debt.",
+        "swahili": "Huwezi kupigana na Mungu wala kukataa kulipa deni.",
+        "theme": "Accountability/Divine Power"
+    },
+    {
+        "number": 105,
+        "maasai": "Enkají náaláng’ mééjo ólkítêng’ nééñgét",
+        "english": "A long-gone home cannot refuse its ox to graze.",
+        "swahili": "Boma lililohama haliwezi kukataa ng’ombe wake kulisha.",
+        "theme": "Belonging/Community"
+    },
+    {
+        "number": 106,
+        "maasai": "Éésho émbárátá náaláng’ níngúna",
+        "english": "The long-gone road is easy to return to.",
+        "swahili": "Njia ya mbali ni rahisi kurudi.",
+        "theme": "Familiarity/Memory"
+    },
+    {
+        "number": 107,
+        "maasai": "Mékúñá olng’átúny engúdi",
+        "english": "A lion cannot be driven away with a stick.",
+        "swahili": "Simba hawezi kufukuzwa kwa fimbo.",
+        "theme": "Power/Wisdom in Conflict"
+    },
+    {
+        "number": 108,
+        "maasai": "Iñgúna naitóbirákí enkutuk",
+        "english": "It is the mouth that makes the head straight (Clear communication avoids trouble).",
+        "swahili": "Ni mdomo unaonyoosha kichwa.",
+        "theme": "Communication/Clarity"
+    },
+    {
+        "number": 109,
+        "maasai": "Éélaá enkóshóké ólóipáñí",
+        "english": "The stomach never forgets what it ate.",
+        "swahili": "Tumbo halisahau kile kilichokula.",
+        "theme": "Memory/Experience"
+    },
+    {
+        "number": 110,
+        "maasai": "Mékísháá énkíténg’ néémurátá",
+        "english": "A cow is not finished while still being milked.",
+        "swahili": "Ng’ombe haishiwi maziwa akiwa anagota.",
+        "theme": "Resourcefulness/Endurance"
+    },
+    {
+        "number": 111,
+        "maasai": "Éíníkíñó olkitêng’ áatáá olóidámi",
+        "english": "The ox follows the one who leads it.",
+        "swahili": "Ng’ombe humfuata anayemwongoza.",
+        "theme": "Leadership/Following"
+    },
+    {
+        "number": 112,
+        "maasai": "Mékíítárákí enkái íláalà áré",
+        "english": "God does not make a person born with two tongues (Cannot speak two truths).",
+        "swahili": "Mungu hamzali mtu na ndimi mbili.",
+        "theme": "Integrity/Truth"
+    },
+    {
+        "number": 113,
+        "maasai": "Órkilálá ááké óñíróíkíñó enkutuk",
+        "english": "The one who eats alone keeps his mouth shut (Secrecy when eating is good).",
+        "swahili": "Anayekula peke yake hufunga mdomo.",
+        "theme": "Secrecy/Self-Reliance"
+    },
+    {
+        "number": 114,
+        "maasai": "Eñgátá enímáálá íñáí",
+        "english": "The shield is worn on the field.",
+        "swahili": "Ngao huvaliwa uwanjani.",
+        "theme": "Readiness/Preparation"
+    },
+    {
+        "number": 115,
+        "maasai": "Éítobirákí enkíténg’ ólkátá",
+        "english": "The cow makes the owner straight (Wealth gives confidence).",
+        "swahili": "Ng’ombe humnyoosha mmiliki.",
+        "theme": "Wealth/Confidence"
+    },
+    {
+        "number": 116,
+        "maasai": "Ólkítéñg’ óokílééí éétámá enkitêng’ áásírá",
+        "english": "The ox of the women waits for the sick cow (Women's cattle are less valuable).",
+        "swahili": "Ng’ombe wa wanawake husubiri ng’ombe mgonjwa.",
+        "theme": "Gender Roles/Value"
+    },
+    {
+        "number": 117,
+        "maasai": "Mímúnyít éñgátá néínkóí",
+        "english": "Do not despise a shield because it is torn.",
+        "swahili": "Usidharau ngao kwa sababu imechanika.",
+        "theme": "Respect/Perseverance"
+    },
+    {
+        "number": 118,
+        "maasai": "Éídolú enkónó áatáá éñgátá",
+        "english": "The hand that carries the shield is visible (Actions are seen).",
+        "swahili": "Mkono uliobeba ngao huonekana.",
+        "theme": "Visibility/Consequence"
+    },
+    {
+        "number": 119,
+        "maasai": "Ééñgét énkítéñg’ éñkájí óó olóipáñí",
+        "english": "The cow grazes at the homestead of the one who herds it.",
+        "swahili": "Ng’ombe hula katika boma la yule anayemchunga.",
+        "theme": "Reward/Ownership"
+    },
+    {
+        "number": 120,
+        "maasai": "Imelakua ang inchu",
+        "english": "Home is not far away when you are alive.",
+        "swahili": "Nyumbani sio mbali ukiwa hai.",
+        "theme": "Hope/Proximity"
+    },
+    {
+        "number": 121,
+        "maasai": "Éíkú enkútúk ólkítêng’ ólkátá",
+        "english": "The mouth of the ox is the owner (The one who feeds you controls you).",
+        "swahili": "Mdomo wa ng'ombe ndiye mmiliki.",
+        "theme": "Dependency/Control"
+    },
+    {
+        "number": 122,
+        "maasai": "Ólkítéñg’ óóléé níkédúrú",
+        "english": "The cattle of the man are many.",
+        "swahili": "Ng'ombe za mwanamume ni nyingi.",
+        "theme": "Wealth/Status"
+    },
+    {
+        "number": 123,
+        "maasai": "Éñgátá áápáñá nééndóré",
+        "english": "The broken shield is still visible.",
+        "swahili": "Ngao iliyovunjika bado inaonekana.",
+        "theme": "Honor/Enduring Legacy"
+    },
+    {
+        "number": 124,
+        "maasai": "Méígúñá ólkítéñg’ óóíñg’ékíéñé",
+        "english": "You cannot hate a cow that gave you milk.",
+        "swahili": "Huwezi kuchukia ng’ombe aliyekupa maziwa.",
+        "theme": "Gratitude/Value"
+    },
+    {
+        "number": 125,
+        "maasai": "Éíyóló enkítéñg’ áátáá olkátá",
+        "english": "A cow knows the one who owns it.",
+        "swahili": "Ng’ombe anamjua yule ambaye anamiliki.",
+        "theme": "Recognition/Allegiance"
+    },
+    {
+        "number": 126,
+        "maasai": "Édólú nkítúk nábó",
+        "english": "One mouth sees (One person observes).",
+        "swahili": "Mdomo mmoja huona.",
+        "theme": "Observation/Individual Insight"
+    },
+    {
+        "number": 127,
+        "maasai": "Mékédíñí enkítéñg’ énkéérét éñkájí",
+        "english": "A cow cannot refuse to be tied in the homestead.",
+        "swahili": "Ng’ombe hawezi kukataa kufungwa ndani ya boma.",
+        "theme": "Obedience/Social Order"
+    },
+    {
+        "number": 128,
+        "maasai": "Éítobirákí íñáí ílálá",
+        "english": "The shield straightens the teeth (Danger compels discipline).",
+        "swahili": "Ngao huinyoosha meno.",
+        "theme": "Discipline/Necessity"
+    },
+    {
+        "number": 129,
+        "maasai": "Mémésín áátáá áíkátá",
+        "english": "He who is successful never goes to waste.",
+        "swahili": "Aliyefanikiwa haendi ovyo.",
+        "theme": "Success/Longevity"
+    },
+    {
+        "number": 130,
+        "maasai": "Ékétáá ólñgóróí enkítéñg’",
+        "english": "The rich man has a cow.",
+        "swahili": "Tajiri ana ng’ombe.",
+        "theme": "Wealth/Indicator of Status"
+    },
+    {
+        "number": 131,
+        "maasai": "Mémésín ílálá áátáá ólkítéñg’",
+        "english": "The teeth of the one who has a cow never go to waste (You always have something to eat).",
+        "swahili": "Meno ya aliye na ng'ombe haipotei.",
+        "theme": "Security/Provision"
+    },
+    {
+        "number": 132,
+        "maasai": "Eitobiraki enkutuk elukunya",
+        "english": "The mouth makes the head straight.",
+        "swahili": "Mdomo unanyoosha kichwa.",
+        "theme": "Speech/Consequences"
+    },
+    {
+        "number": 133,
+        "maasai": "Mérét áátáá ólkítéñg’ enámá",
+        "english": "The cow cannot lick itself (Need for external help).",
+        "swahili": "Ng'ombe hawezi kujilamba.",
+        "theme": "Interdependence/Mutual Aid"
+    },
+    {
+        "number": 134,
+        "maasai": "Ééshoo enkítéñg’ ólkátá éñgítímé",
+        "english": "The cow gives the owner a small piece of meat (A return on investment).",
+        "swahili": "Ng’ombe humpa mmiliki kipande kidogo cha nyama.",
+        "theme": "Reward/Return on Effort"
+    },
+    {
+        "number": 135,
+        "maasai": "Ólkítéñg’ óólñgóróí mékédíñí áá ílálá",
+        "english": "The cow of the rich man cannot refuse its own teeth.",
+        "swahili": "Ng’ombe wa tajiri hawezi kukataa meno yake.",
+        "theme": "Ownership/Claim"
+    },
+    {
+        "number": 136,
+        "maasai": "Édólú nkónó áátáá ólñgóróí ílálá",
+        "english": "The hand of the rich man sees the teeth (The rich are always well-fed).",
+        "swahili": "Mkono wa tajiri huona meno.",
+        "theme": "Prosperity/Observation"
+    },
+    {
+        "number": 137,
+        "maasai": "Éítobirákí enkítéñg’ ólkátá óóíbírá",
+        "english": "The cow makes the owner honest.",
+        "swahili": "Ng'ombe humfanya mmiliki kuwa mkweli.",
+        "theme": "Honesty/Wealth"
+    },
+    {
+        "number": 138,
+        "maasai": "Mékédíñí ólkítéñg’ ílálá",
+        "english": "A cow cannot refuse its teeth.",
+        "swahili": "Ng'ombe hawezi kukataa meno yake.",
+        "theme": "Acceptance/Inevitability"
+    },
+    {
+        "number": 139,
+        "maasai": "Mémésín áátáá áíkátá éñgítímé",
+        "english": "The successful man never wastes a piece of meat.",
+        "swahili": "Aliyefanikiwa haipotezi kipande cha nyama.",
+        "theme": "Efficiency/Frugality"
+    },
+    {
+        "number": 140,
+        "maasai": "Éétámá enkítéñg’ áátáá ílálá",
+        "english": "The cow waits for its teeth (The cow waits for its owner to eat).",
+        "swahili": "Ng’ombe husubiri meno yake.",
+        "theme": "Dependence/Patience"
+    },
+    {
+        "number": 141,
+        "maasai": "Méélámá áátáá ólkítéñg’ óóléé ílálá",
+        "english": "The cow of the man does not lick its teeth (A man's worth is known).",
+        "swahili": "Ng’ombe wa mwanamume hajilambi meno yake.",
+        "theme": "Dignity/Self-Reliance"
+    },
+    {
+        "number": 142,
+        "maasai": "Mékékítíñ áátáá ólkítéñg’ éñkájí",
+        "english": "The cow cannot refuse the house it was born in.",
+        "swahili": "Ng’ombe hawezi kukataa nyumba aliyozaliwa.",
+        "theme": "Roots/Homeland"
+    },
+    {
+        "number": 143,
+        "maasai": "Éídólú enkítéñg’ éñgítímé óólñgóróí",
+        "english": "The cow sees the meat of the rich man (The rich man shares his wealth).",
+        "swahili": "Ng'ombe huona nyama ya tajiri.",
+        "theme": "Generosity/Sharing"
+    },
+    {
+        "number": 144,
+        "maasai": "Mélákúá áátáá ólkítéñg’ óóléé éñkájí",
+        "english": "The cow of the man is not far from home.",
+        "swahili": "Ng’ombe wa mwanamume hayuko mbali na nyumbani.",
+        "theme": "Security/Presence"
+    },
+    {
+        "number": 145,
+        "maasai": "Éétámá ólkítéñg’ áátáá éñgítímé",
+        "english": "The cow waits for the meat.",
+        "swahili": "Ng’ombe anasubiri nyama.",
+        "theme": "Patience/Expectation"
+    },
+    {
+        "number": 146,
+        "maasai": "Éítobirákí ílálá enkítéñg’",
+        "english": "The teeth make the cow straight (Eating makes the cow healthy).",
+        "swahili": "Meno hufanya ng'ombe kuwa sawa.",
+        "theme": "Health/Sustenance"
+    },
+    {
+        "number": 147,
+        "maasai": "Mérét ólkítéñg’ éñgítímé",
+        "english": "A cow does not lick meat (Focus on what is appropriate).",
+        "swahili": "Ng’ombe halambi nyama.",
+        "theme": "Appropriateness/Nature"
+    },
+    {
+        "number": 148,
+        "maasai": "Éélám enkítéñg’ áátáá ólkátá",
+        "english": "The cow licks its owner (Affection or recognition).",
+        "swahili": "Ng'ombe humlamba mmiliki wake.",
+        "theme": "Affection/Loyalty"
+    },
+    {
+        "number": 149,
+        "maasai": "Éétámá ólñgóróí éñgítímé",
+        "english": "The rich man waits for the meat (His effort guarantees food).",
+        "swahili": "Tajiri anasubiri nyama.",
+        "theme": "Security/Anticipation of Reward"
+    },
+    {
+        "number": 150,
+        "maasai": "Édólú enkítéñg’ éñkájí óóítóbirákí",
+        "english": "The cow sees the home that is being built (The cow understands preparation).",
+        "swahili": "Ng'ombe huona nyumba inayojengwa.",
+        "theme": "Foresight/Preparation"
+    },
+    {
+        "number": 151,
+        "maasai": "Mékédíñí ílálá éñgítímé",
+        "english": "The teeth cannot refuse the meat.",
+        "swahili": "Meno hayawezi kukataa nyama.",
+        "theme": "Desire/Natural Instinct"
+    },
+    {
+        "number": 152,
+        "maasai": "Éítobirákí ólkátá enkítéñg’",
+        "english": "The owner makes the cow straight (The owner takes care of the cow).",
+        "swahili": "Mmiliki humnyoosha ng'ombe.",
+        "theme": "Stewardship/Responsibility"
+    },
+    {
+        "number": 153,
+        "maasai": "Ééshoo ílálá éñgítímé enkítéñg’",
+        "english": "The teeth give the cow meat.",
+        "swahili": "Meno humpa ng'ombe nyama.",
+        "theme": "Utility/Function"
+    },
+    {
+        "number": 154,
+        "maasai": "Éítobirákí enkítéñg’ ílálá óólñgóróí",
+        "english": "The cow makes the rich man's teeth straight (The cow sustains him).",
+        "swahili": "Ng'ombe hufanya meno ya tajiri kuwa sawa.",
+        "theme": "Sustenance/Wealth"
+    },
+    {
+        "number": 155,
+        "maasai": "Mékídúpá áátáá enkítéñg’ óóléé",
+        "english": "The cow of the man is not finished (A man’s resources are lasting).",
+        "swahili": "Ng’ombe wa mwanamume haishi.",
+        "theme": "Endurance/Resourcefulness"
+    },
+    {
+        "number": 156,
+        "maasai": "Éétámá éñgítímé enkítéñg’ áátáá ílálá",
+        "english": "The meat waits for the cow to have teeth.",
+        "swahili": "Nyama inasubiri ng'ombe awe na meno.",
+        "theme": "Preparation/Timing"
+    },
+    {
+        "number": 157,
+        "maasai": "Éélám ílálá enkítéñg’ éñgítímé",
+        "english": "The teeth lick the cow's meat (Eating is enjoyable).",
+        "swahili": "Meno hulamba nyama ya ng'ombe.",
+        "theme": "Enjoyment/Reward"
+    },
+    {
+        "number": 158,
+        "maasai": "Mékídúpá ólñgóróí éñgítímé",
+        "english": "The rich man’s meat is not finished.",
+        "swahili": "Nyama ya tajiri haiishi.",
+        "theme": "Abundance/Security"
+    },
+    {
+        "number": 159,
+        "maasai": "Éítobirákí enkítéñg’ ólkátá éñgítímé",
+        "english": "The cow makes the owner’s meat straight.",
+        "swahili": "Ng’ombe humnyoosha mmiliki wake nyama.",
+        "theme": "Benefit/Tangible Reward"
+    },
+    {
+        "number": 160,
+        "maasai": "Mélákúá áátáá ólkítéñg’ éñgítímé",
+        "english": "The cow’s meat is not far away.",
+        "swahili": "Nyama ya ng’ombe si mbali.",
+        "theme": "Access/Proximity of Resources"
+    },
+    {
+        "number": 161,
+        "maasai": "Éélám ólkítéñg’ óólñgóróí éñgítímé",
+        "english": "The cow of the rich man licks the meat.",
+        "swahili": "Ng’ombe wa tajiri hulamba nyama.",
+        "theme": "Affluence/Indulgence"
+    },
+    {
+        "number": 162,
+        "maasai": "Mékédíñí ólñgóróí ílálá",
+        "english": "The rich man cannot refuse his teeth.",
+        "swahili": "Tajiri hawezi kukataa meno yake.",
+        "theme": "Self-Acceptance/Nature"
+    },
+    {
+        "number": 163,
+        "maasai": "Éítobirákí ílálá ólñgóróí",
+        "english": "The teeth make the rich man straight.",
+        "swahili": "Meno humnyoosha tajiri.",
+        "theme": "Health/Confidence"
+    },
+    {
+        "number": 164,
+        "maasai": "Éédól enkítéñg’ áátáá ólkátá",
+        "english": "The cow sees its owner.",
+        "swahili": "Ng’ombe anamwona mmiliki wake.",
+        "theme": "Recognition/Bond"
+    },
+    {
+        "number": 165,
+        "maasai": "Mékídúpá ílálá óólñgóróí",
+        "english": "The teeth of the rich man are not finished.",
+        "swahili": "Meno ya tajiri hayamaliziki.",
+        "theme": "Longevity/Enduring Status"
+    },
+    {
+        "number": 166,
+        "maasai": "Éétámá enkítéñg’ áátáá ílálá éñkájí",
+        "english": "The cow waits for its teeth at home.",
+        "swahili": "Ng’ombe anasubiri meno yake nyumbani.",
+        "theme": "Order/Patience"
+    },
+    {
+        "number": 167,
+        "maasai": "Éélám ólñgóróí éñgítímé",
+        "english": "The rich man licks the meat.",
+        "swahili": "Tajiri hulamba nyama.",
+        "theme": "Enjoyment/Satisfaction"
+    },
+    {
+        "number": 168,
+        "maasai": "Mékédíñí ólkítéñg’ óóléé ílálá",
+        "english": "The cow of the man cannot refuse its teeth.",
+        "swahili": "Ng’ombe wa mwanamume hawezi kukataa meno yake.",
+        "theme": "Inevitability/Usefulness"
+    },
+    {
+        "number": 169,
+        "maasai": "Éítobirákí ólkátá ílálá",
+        "english": "The owner makes the teeth straight (The owner ensures sustenance).",
+        "swahili": "Mmiliki hufanya meno kuwa sawa.",
+        "theme": "Provision/Maintenance"
+    },
+    {
+        "number": 170,
+        "maasai": "Ééshoo ílálá ólkítéñg’ éñgítímé",
+        "english": "The teeth give the cow meat.",
+        "swahili": "Meno humpa ng’ombe nyama.",
+        "theme": "Function/Role"
+    },
+    {
+        "number": 171,
+        "maasai": "Mélákúá ólñgóróí éñgítímé",
+        "english": "The rich man’s meat is not far away.",
+        "swahili": "Nyama ya tajiri si mbali.",
+        "theme": "Accessibility/Security"
+    },
+    {
+        "number": 172,
+        "maasai": "Éédól ólkítéñg’ ílálá óólñgóróí",
+        "english": "The cow sees the teeth of the rich man.",
+        "swahili": "Ng’ombe huona meno ya tajiri.",
+        "theme": "Observation/Circumstance"
+    },
+    {
+        "number": 173,
+        "maasai": "Mékídúpá enkítéñg’ áátáá ólkátá éñgítímé",
+        "english": "The cow's meat of the owner is not finished.",
+        "swahili": "Nyama ya ng'ombe ya mmiliki haiishi.",
+        "theme": "Sustainability/Resource"
+    },
+    {
+        "number": 174,
+        "maasai": "Éétámá ílálá ólñgóróí enkítéñg’",
+        "english": "The teeth of the rich man wait for the cow.",
+        "swahili": "Meno ya tajiri yanasubiri ng’ombe.",
+        "theme": "Expectation/Patience"
+    },
+    {
+        "number": 175,
+        "maasai": "Éélám enkítéñg’ óóléé ílálá éñgítímé",
+        "english": "The cow of the man licks the meat's teeth.",
+        "swahili": "Ng’ombe wa mwanamume hulamba meno ya nyama.",
+        "theme": "Satisfaction/Reward"
+    },
+    {
+        "number": 176,
+        "maasai": "Mékédíñí ólñgóróí éñgítímé áátáá ílálá",
+        "english": "The rich man cannot refuse meat to have teeth.",
+        "swahili": "Tajiri hawezi kukataa nyama ili awe na meno.",
+        "theme": "Survival/Priorities"
+    },
+    {
+        "number": 177,
+        "maasai": "Éítobirákí ílálá ólkítéñg’ éñgítímé",
+        "english": "The teeth make the cow's meat straight (Easy to eat).",
+        "swahili": "Meno hufanya nyama ya ng'ombe kuwa sawa.",
+        "theme": "Efficacy/Preparation"
+    },
+    {
+        "number": 178,
+        "maasai": "Éédól éñgítímé ólkítéñg’ áátáá ólkátá",
+        "english": "The meat sees the cow of the owner.",
+        "swahili": "Nyama huona ng'ombe wa mmiliki.",
+        "theme": "Predetermination/Connection"
+    },
+    {
+        "number": 179,
+        "maasai": "Mélákúá ólkítéñg’ ílálá éñgítímé",
+        "english": "The cow's teeth meat is not far away.",
+        "swahili": "Nyama ya meno ya ng’ombe si mbali.",
+        "theme": "Close Ties/Interconnection"
+    },
+    {
+        "number": 180,
+        "maasai": "Éétámá ólkátá ílálá enkítéñg’",
+        "english": "The owner waits for the teeth of the cow.",
+        "swahili": "Mmiliki anasubiri meno ya ng'ombe.",
+        "theme": "Investment/Harvest"
+    },
+    {
+        "number": 181,
+        "maasai": "Éélám ílálá ólñgóróí enkítéñg’",
+        "english": "The teeth of the rich man lick the cow.",
+        "swahili": "Meno ya tajiri hulamba ng’ombe.",
+        "theme": "Possession/Enjoyment"
+    },
+    {
+        "number": 182,
+        "maasai": "Mékédíñí enkítéñg’ éñgítímé áátáá ólkátá",
+        "english": "The cow cannot refuse meat to have an owner.",
+        "swahili": "Ng’ombe hawezi kukataa nyama ili awe na mmiliki.",
+        "theme": "Self-Interest/Basic Needs"
+    },
+    {
+        "number": 183,
+        "maasai": "Éítobirákí ólñgóróí enkítéñg’ ílálá",
+        "english": "The rich man makes the cow's teeth straight.",
+        "swahili": "Tajiri hufanya meno ya ng’ombe kuwa sawa.",
+        "theme": "Maintenance/Care"
+    },
+    {
+        "number": 184,
+        "maasai": "Éédól ílálá éñgítímé ólkítéñg’",
+        "english": "The teeth see the cow’s meat.",
+        "swahili": "Meno huona nyama ya ng’ombe.",
+        "theme": "Desire/Focus"
+    },
+    {
+        "number": 185,
+        "maasai": "Mélákúá éñgítímé ólkítéñg’ óóléé",
+        "english": "The meat of the man’s cow is not far away.",
+        "swahili": "Nyama ya ng’ombe ya mwanamume si mbali.",
+        "theme": "Accessibility/Readiness"
+    },
+    {
+        "number": 186,
+        "maasai": "Éétámá ólkítéñg’ áátáá ólñgóróí éñgítímé",
+        "english": "The cow waits for the rich man’s meat.",
+        "swahili": "Ng’ombe anasubiri nyama ya tajiri.",
+        "theme": "Expectation/Dependence"
+    },
+    {
+        "number": 187,
+        "maasai": "Éélám éñgítímé ílálá enkítéñg’",
+        "english": "The meat licks the cow’s teeth.",
+        "swahili": "Nyama hulamba meno ya ng’ombe.",
+        "theme": "Mutual Benefit/Connection"
+    },
+    {
+        "number": 188,
+        "maasai": "Mékédíñí ólkátá éñgítímé óólñgóróí",
+        "english": "The owner cannot refuse the rich man’s meat.",
+        "swahili": "Mmiliki hawezi kukataa nyama ya tajiri.",
+        "theme": "Respect/Opportunity"
+    },
+    {
+        "number": 189,
+        "maasai": "Éítobirákí ólñgóróí ílálá éñgítímé",
+        "english": "The rich man makes the teeth’s meat straight.",
+        "swahili": "Tajiri hufanya nyama ya meno kuwa sawa.",
+        "theme": "Quality/Excellence"
+    },
+    {
+        "number": 190,
+        "maasai": "Éédól enkítéñg’ óóléé ílálá éñgítímé",
+        "english": "The man’s cow sees the meat’s teeth.",
+        "swahili": "Ng’ombe ya mwanamume huona meno ya nyama.",
+        "theme": "Foresight/Anticipation"
+    },
+    {
+        "number": 191,
+        "maasai": "Mélákúá ílálá éñgítímé ólkítéñg’",
+        "english": "The teeth's meat of the cow is not far away.",
+        "swahili": "Nyama ya meno ya ng’ombe si mbali.",
+        "theme": "Availability/Convenience"
+    },
+    {
+        "number": 192,
+        "maasai": "Éétámá éñgítímé ólñgóróí enkítéñg’",
+        "english": "The rich man’s meat waits for the cow.",
+        "swahili": "Nyama ya tajiri inasubiri ng’ombe.",
+        "theme": "Interdependence/Resource Flow"
+    },
+    {
+        "number": 193,
+        "maasai": "Éélám ólkátá éñgítímé ílálá",
+        "english": "The owner licks the meat’s teeth.",
+        "swahili": "Mmiliki hulamba meno ya nyama.",
+        "theme": "Satisfaction/Enjoyment"
+    },
+    {
+        "number": 194,
+        "maasai": "Mékédíñí ílálá ólkítéñg’ éñgítímé",
+        "english": "The teeth cannot refuse the cow’s meat.",
+        "swahili": "Meno hayawezi kukataa nyama ya ng’ombe.",
+        "theme": "Natural Desire/Need"
+    },
+    {
+        "number": 195,
+        "maasai": "Éítobirákí enkítéñg’ ólñgóróí éñgítímé",
+        "english": "The cow makes the rich man’s meat straight.",
+        "swahili": "Ng’ombe hufanya nyama ya tajiri kuwa sawa.",
+        "theme": "Fulfillment/Value"
+    },
+    {
+        "number": 196,
+        "maasai": "Éédól éñgítímé ílálá ólñgóróí",
+        "english": "The meat sees the teeth of the rich man.",
+        "swahili": "Nyama huona meno ya tajiri.",
+        "theme": "Recognition/Worthiness"
+    },
+    {
+        "number": 197,
+        "maasai": "Mélákúá ólñgóróí éñgítímé ílálá",
+        "english": "The rich man’s meat’s teeth are not far away.",
+        "swahili": "Meno ya nyama ya tajiri si mbali.",
+        "theme": "Security/Comfort"
+    },
+    {
+        "number": 198,
+        "maasai": "Éétámá ílálá éñgítímé ólkátá",
+        "english": "The meat’s teeth wait for the owner.",
+        "swahili": "Meno ya nyama yanasubiri mmiliki.",
+        "theme": "Completion/Awaited Action"
+    },
+    {
+        "number": 199,
+        "maasai": "Éélám ólkítéñg’ éñgítímé óólñgóróí",
+        "english": "The cow licks the rich man’s meat.",
+        "swahili": "Ng’ombe hulamba nyama ya tajiri.",
+        "theme": "Value Transfer/Admiration"
+    },
+    {
+        "number": 200,
+        "maasai": "Mékédíñí ólkátá ílálá éñgítímé",
+        "english": "The owner cannot refuse the meat’s teeth.",
+        "swahili": "Mmiliki hawezi kukataa meno ya nyama.",
+        "theme": "Acceptance/Natural Order"
+    }
+]
