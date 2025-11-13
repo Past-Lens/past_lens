@@ -382,8 +382,8 @@
     {
         "Artifact_ID": "KIK019",
         "Title": "Kikuyu Herbal Medicine",
-        "Type": "Text",
-        "Media_Link": "kikuyu_19.txt",
+        "Type": "Image",
+        "Media_Link": "https://www.theelephant.info/wp-content/uploads/2018/12/traditionalm.jpg",
         "Description": "Traditional medicine knowledge and practices.",
         "Language": "Kikuyu/English",
         "Community_Origin": "Kikuyu - Central Kenya",
