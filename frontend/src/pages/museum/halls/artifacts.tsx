@@ -19,18 +19,53 @@ import {
 import type { Artifact } from '@/types/museum';
 import axios from 'axios';
 
-const SUPPORTED_LANGUAGES = [
-    { code: 'eng_Latn', name: 'English', flag: '🇬🇧' },
-    { code: 'swa_Latn', name: 'Swahili', flag: '🇰🇪' },
-    { code: 'fra_Latn', name: 'French', flag: '🇫🇷' },
-    { code: 'spa_Latn', name: 'Spanish', flag: '🇪🇸' },
-    { code: 'ara_Arab', name: 'Arabic', flag: '🇸🇦' },
-    { code: 'zho_Hans', name: 'Chinese', flag: '🇨🇳' },
-    { code: 'deu_Latn', name: 'German', flag: '🇩🇪' },
-    { code: 'por_Latn', name: 'Portuguese', flag: '🇵🇹' },
-    { code: 'rus_Cyrl', name: 'Russian', flag: '🇷🇺' },
-    { code: 'jpn_Jpan', name: 'Japanese', flag: '🇯🇵' },
+const KENYAN_LANGUAGES = [
+    { code: 'swa_Latn', name: 'Swahili', flag: '🇰🇪', region: 'National' },
+    { code: 'eng_Latn', name: 'English', flag: '🇰🇪', region: 'National' },
+    { code: 'kik_Latn', name: 'Kikuyu', flag: '🇰🇪', region: 'Central Kenya' },
+    { code: 'luo_Latn', name: 'Dholuo', flag: '🇰🇪', region: 'Nyanza' },
+    { code: 'kam_Latn', name: 'Kamba', flag: '🇰🇪', region: 'Eastern Kenya' },
+    { code: 'luy_Latn', name: 'Luhya', flag: '🇰🇪', region: 'Western Kenya' },
+    { code: 'kln_Latn', name: 'Kalenjin', flag: '🇰🇪', region: 'Rift Valley' },
+    { code: 'mas_Latn', name: 'Maasai', flag: '🇰🇪', region: 'Southern Kenya' },
+    { code: 'mer_Latn', name: 'Meru', flag: '🇰🇪', region: 'Eastern Kenya' },
+    { code: 'emb_Latn', name: 'Embu', flag: '🇰🇪', region: 'Eastern Kenya' },
+    { code: 'guz_Latn', name: 'Kisii', flag: '🇰🇪', region: 'Nyanza' },
+    { code: 'som_Latn', name: 'Somali', flag: '🇰🇪', region: 'North Eastern' },
+    { code: 'tuk_Latn', name: 'Turkana', flag: '🇰🇪', region: 'Rift Valley' },
+    { code: 'pok_Latn', name: 'Pokot', flag: '🇰🇪', region: 'Rift Valley' },
+    { code: 'saq_Latn', name: 'Samburu', flag: '🇰🇪', region: 'Rift Valley' },
+    { code: 'tai_Latn', name: 'Taita', flag: '🇰🇪', region: 'Coast' },
+    { code: 'dav_Latn', name: 'Dawida', flag: '🇰🇪', region: 'Coast' },
+    { code: 'kab_Latn', name: 'Kabras', flag: '🇰🇪', region: 'Western Kenya' },
+    { code: 'naq_Latn', name: 'Nandi', flag: '🇰🇪', region: 'Rift Valley' },
+    { code: 'teso_Latn', name: 'Teso', flag: '🇰🇪', region: 'Western Kenya' },
 ];
+
+const INTERNATIONAL_LANGUAGES = [
+    { code: 'fra_Latn', name: 'French', flag: '🇫🇷', region: 'Europe' },
+    { code: 'spa_Latn', name: 'Spanish', flag: '🇪🇸', region: 'Europe' },
+    { code: 'deu_Latn', name: 'German', flag: '🇩🇪', region: 'Europe' },
+    { code: 'ita_Latn', name: 'Italian', flag: '🇮🇹', region: 'Europe' },
+    { code: 'por_Latn', name: 'Portuguese', flag: '🇵🇹', region: 'Europe' },
+    { code: 'nld_Latn', name: 'Dutch', flag: '🇳🇱', region: 'Europe' },
+    { code: 'rus_Cyrl', name: 'Russian', flag: '🇷🇺', region: 'Europe' },
+    { code: 'ara_Arab', name: 'Arabic', flag: '🇸🇦', region: 'Middle East' },
+    { code: 'tur_Latn', name: 'Turkish', flag: '🇹🇷', region: 'Middle East' },
+    {
+        code: 'zho_Hans',
+        name: 'Chinese (Simplified)',
+        flag: '🇨🇳',
+        region: 'Asia',
+    },
+    { code: 'jpn_Jpan', name: 'Japanese', flag: '🇯🇵', region: 'Asia' },
+    { code: 'kor_Hang', name: 'Korean', flag: '🇰🇷', region: 'Asia' },
+    { code: 'hin_Deva', name: 'Hindi', flag: '🇮🇳', region: 'Asia' },
+    { code: 'tha_Thai', name: 'Thai', flag: '🇹🇭', region: 'Asia' },
+    { code: 'vie_Latn', name: 'Vietnamese', flag: '🇻🇳', region: 'Asia' },
+];
+
+const SUPPORTED_LANGUAGES = [...KENYAN_LANGUAGES, ...INTERNATIONAL_LANGUAGES];
 
 const HF_TRANSLATION_API =
     'https://st-thomas-of-aquinas-no-language-left-behind-api.hf.space/translate';
@@ -57,6 +92,8 @@ export default function ArtifactsHall() {
     const [isPlayingAudio, setIsPlayingAudio] = useState(false);
     const [translationError, setTranslationError] = useState('');
     const [showLanguageMenu, setShowLanguageMenu] = useState(false);
+    const [showMainLanguageMenu, setShowMainLanguageMenu] = useState(false);
+    const [mainPageLanguage, setMainPageLanguage] = useState('eng_Latn');
 
     useEffect(() => {
         const fetchArtifacts = async () => {
@@ -291,7 +328,7 @@ export default function ArtifactsHall() {
                 </div>
 
                 <div className="relative z-10 container mx-auto px-4 py-8">
-                    <div className="mb-4 flex items-center justify-between">
+                    <div className="mb-4 flex items-center justify-between flex-wrap gap-4">
                         <div>
                             <h1 className="text-4xl font-bold text-white mb-2">
                                 Museum Artifacts
@@ -303,8 +340,126 @@ export default function ArtifactsHall() {
                             </p>
                         </div>
 
-                        {/* View Mode Toggle */}
-                        <div className="flex gap-2">
+                        <div className="flex gap-2 items-center">
+                            {/* Main Page Language Selector */}
+                            <div className="relative">
+                                <Button
+                                    variant="outline"
+                                    size="sm"
+                                    className="bg-white/5 hover:bg-white/10 text-white border-white/20"
+                                    onClick={() =>
+                                        setShowMainLanguageMenu(
+                                            !showMainLanguageMenu
+                                        )
+                                    }
+                                >
+                                    <Languages className="h-4 w-4 mr-2" />
+                                    {
+                                        SUPPORTED_LANGUAGES.find(
+                                            (l) => l.code === mainPageLanguage
+                                        )?.flag
+                                    }{' '}
+                                    {
+                                        SUPPORTED_LANGUAGES.find(
+                                            (l) => l.code === mainPageLanguage
+                                        )?.name
+                                    }
+                                </Button>
+
+                                {showMainLanguageMenu && (
+                                    <div className="absolute top-full right-0 mt-2 w-80 bg-slate-800 rounded-lg border border-white/20 shadow-xl z-30 max-h-96 overflow-y-auto">
+                                        {/* Kenyan Languages Section */}
+                                        <div className="px-3 py-2 bg-orange-500/20 border-b border-white/10">
+                                            <h4 className="text-white font-semibold text-sm flex items-center gap-2">
+                                                🇰🇪 Kenyan Languages
+                                            </h4>
+                                        </div>
+                                        {KENYAN_LANGUAGES.map((lang) => (
+                                            <button
+                                                key={lang.code}
+                                                className={`w-full px-4 py-2.5 text-left hover:bg-white/10 transition-colors flex items-center justify-between ${
+                                                    mainPageLanguage ===
+                                                    lang.code
+                                                        ? 'bg-orange-500/20'
+                                                        : ''
+                                                }`}
+                                                onClick={() => {
+                                                    setMainPageLanguage(
+                                                        lang.code
+                                                    );
+                                                    setShowMainLanguageMenu(
+                                                        false
+                                                    );
+                                                }}
+                                            >
+                                                <div className="flex items-center gap-3">
+                                                    <span className="text-xl">
+                                                        {lang.flag}
+                                                    </span>
+                                                    <div>
+                                                        <div className="text-white font-medium">
+                                                            {lang.name}
+                                                        </div>
+                                                        <div className="text-white/50 text-xs">
+                                                            {lang.region}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {mainPageLanguage ===
+                                                    lang.code && (
+                                                    <div className="w-2 h-2 rounded-full bg-orange-500"></div>
+                                                )}
+                                            </button>
+                                        ))}
+
+                                        {/* International Languages Section */}
+                                        <div className="px-3 py-2 bg-blue-500/20 border-t border-b border-white/10">
+                                            <h4 className="text-white font-semibold text-sm flex items-center gap-2">
+                                                🌍 International Languages
+                                            </h4>
+                                        </div>
+                                        {INTERNATIONAL_LANGUAGES.map((lang) => (
+                                            <button
+                                                key={lang.code}
+                                                className={`w-full px-4 py-2.5 text-left hover:bg-white/10 transition-colors flex items-center justify-between ${
+                                                    mainPageLanguage ===
+                                                    lang.code
+                                                        ? 'bg-blue-500/20'
+                                                        : ''
+                                                }`}
+                                                onClick={() => {
+                                                    setMainPageLanguage(
+                                                        lang.code
+                                                    );
+                                                    setShowMainLanguageMenu(
+                                                        false
+                                                    );
+                                                }}
+                                            >
+                                                <div className="flex items-center gap-3">
+                                                    <span className="text-xl">
+                                                        {lang.flag}
+                                                    </span>
+                                                    <div>
+                                                        <div className="text-white font-medium">
+                                                            {lang.name}
+                                                        </div>
+                                                        <div className="text-white/50 text-xs">
+                                                            {lang.region}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {mainPageLanguage ===
+                                                    lang.code && (
+                                                    <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                                                )}
+                                            </button>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* View Mode Toggle */}
                             <Button
                                 variant="outline"
                                 size="sm"
@@ -467,6 +622,14 @@ export default function ArtifactsHall() {
                             loaded
                         </p>
                         <p>🖼️ View Mode: {viewMode}</p>
+                        <p>
+                            🌐 Main Language:{' '}
+                            {
+                                SUPPORTED_LANGUAGES.find(
+                                    (l) => l.code === mainPageLanguage
+                                )?.name
+                            }
+                        </p>
                         {galleryImages[0] && (
                             <p className="truncate">
                                 🔗 Sample: {galleryImages[0].src}
@@ -551,14 +714,27 @@ export default function ArtifactsHall() {
                                                         </Button>
 
                                                         {showLanguageMenu && (
-                                                            <div className="absolute top-full mt-2 w-full bg-slate-700 rounded-lg border border-white/20 shadow-xl z-20 max-h-60 overflow-y-auto">
-                                                                {SUPPORTED_LANGUAGES.map(
+                                                            <div className="absolute top-full mt-2 w-80 bg-slate-700 rounded-lg border border-white/20 shadow-xl z-20 max-h-80 overflow-y-auto">
+                                                                {/* Kenyan Languages */}
+                                                                <div className="px-3 py-2 bg-orange-500/20 border-b border-white/10 sticky top-0">
+                                                                    <h4 className="text-white font-semibold text-sm">
+                                                                        🇰🇪
+                                                                        Kenyan
+                                                                        Languages
+                                                                    </h4>
+                                                                </div>
+                                                                {KENYAN_LANGUAGES.map(
                                                                     (lang) => (
                                                                         <button
                                                                             key={
                                                                                 lang.code
                                                                             }
-                                                                            className="w-full px-4 py-2 text-left text-white hover:bg-white/10 transition-colors flex items-center gap-2"
+                                                                            className={`w-full px-4 py-2 text-left hover:bg-white/10 transition-colors flex items-center justify-between ${
+                                                                                selectedLanguage ===
+                                                                                lang.code
+                                                                                    ? 'bg-orange-500/20'
+                                                                                    : ''
+                                                                            }`}
                                                                             onClick={() => {
                                                                                 translateDescription(
                                                                                     lang.code
@@ -568,16 +744,76 @@ export default function ArtifactsHall() {
                                                                                 );
                                                                             }}
                                                                         >
-                                                                            <span className="text-xl">
-                                                                                {
-                                                                                    lang.flag
-                                                                                }
-                                                                            </span>
-                                                                            <span>
-                                                                                {
-                                                                                    lang.name
-                                                                                }
-                                                                            </span>
+                                                                            <div className="flex items-center gap-2">
+                                                                                <span className="text-lg">
+                                                                                    {
+                                                                                        lang.flag
+                                                                                    }
+                                                                                </span>
+                                                                                <div>
+                                                                                    <div className="text-white text-sm">
+                                                                                        {
+                                                                                            lang.name
+                                                                                        }
+                                                                                    </div>
+                                                                                    <div className="text-white/50 text-xs">
+                                                                                        {
+                                                                                            lang.region
+                                                                                        }
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </button>
+                                                                    )
+                                                                )}
+
+                                                                {/* International Languages */}
+                                                                <div className="px-3 py-2 bg-blue-500/20 border-t border-b border-white/10 sticky top-0">
+                                                                    <h4 className="text-white font-semibold text-sm">
+                                                                        🌍
+                                                                        International
+                                                                    </h4>
+                                                                </div>
+                                                                {INTERNATIONAL_LANGUAGES.map(
+                                                                    (lang) => (
+                                                                        <button
+                                                                            key={
+                                                                                lang.code
+                                                                            }
+                                                                            className={`w-full px-4 py-2 text-left hover:bg-white/10 transition-colors flex items-center justify-between ${
+                                                                                selectedLanguage ===
+                                                                                lang.code
+                                                                                    ? 'bg-blue-500/20'
+                                                                                    : ''
+                                                                            }`}
+                                                                            onClick={() => {
+                                                                                translateDescription(
+                                                                                    lang.code
+                                                                                );
+                                                                                setShowLanguageMenu(
+                                                                                    false
+                                                                                );
+                                                                            }}
+                                                                        >
+                                                                            <div className="flex items-center gap-2">
+                                                                                <span className="text-lg">
+                                                                                    {
+                                                                                        lang.flag
+                                                                                    }
+                                                                                </span>
+                                                                                <div>
+                                                                                    <div className="text-white text-sm">
+                                                                                        {
+                                                                                            lang.name
+                                                                                        }
+                                                                                    </div>
+                                                                                    <div className="text-white/50 text-xs">
+                                                                                        {
+                                                                                            lang.region
+                                                                                        }
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
                                                                         </button>
                                                                     )
                                                                 )}
