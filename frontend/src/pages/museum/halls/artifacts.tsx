@@ -5,9 +5,35 @@ import MuseumHeader from '@/components/custom/MuseumHeader';
 import DomeGallery from '@/components/immmersive 3d/DomeGallery';
 import DotGridBackground from '@/components/immmersive 3d/DotGridBackground';
 import { Button } from '@/components/ui/button';
-import { Info, Maximize2, Grid3x3, Codepen, X } from 'lucide-react';
+import {
+    Info,
+    Maximize2,
+    Grid3x3,
+    Codepen,
+    X,
+    Languages,
+    Volume2,
+    Loader2,
+    Globe,
+} from 'lucide-react';
 import type { Artifact } from '@/types/museum';
 import axios from 'axios';
+
+const SUPPORTED_LANGUAGES = [
+    { code: 'eng_Latn', name: 'English', flag: '🇬🇧' },
+    { code: 'swa_Latn', name: 'Swahili', flag: '🇰🇪' },
+    { code: 'fra_Latn', name: 'French', flag: '🇫🇷' },
+    { code: 'spa_Latn', name: 'Spanish', flag: '🇪🇸' },
+    { code: 'ara_Arab', name: 'Arabic', flag: '🇸🇦' },
+    { code: 'zho_Hans', name: 'Chinese', flag: '🇨🇳' },
+    { code: 'deu_Latn', name: 'German', flag: '🇩🇪' },
+    { code: 'por_Latn', name: 'Portuguese', flag: '🇵🇹' },
+    { code: 'rus_Cyrl', name: 'Russian', flag: '🇷🇺' },
+    { code: 'jpn_Jpan', name: 'Japanese', flag: '🇯🇵' },
+];
+
+const HF_TRANSLATION_API =
+    'https://st-thomas-of-aquinas-no-language-left-behind-api.hf.space/translate';
 
 export default function ArtifactsHall() {
     const { themeColors } = useTheme();
@@ -21,8 +47,16 @@ export default function ArtifactsHall() {
     const [categories, setCategories] = useState<string[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
-    const [viewMode, setViewMode] = useState<'3d' | 'grid'>('grid'); // Default to grid
+    const [viewMode, setViewMode] = useState<'3d' | 'grid'>('grid');
     const [galleryError, setGalleryError] = useState(false);
+
+    // Translation & Audio states
+    const [selectedLanguage, setSelectedLanguage] = useState('eng_Latn');
+    const [translatedDescription, setTranslatedDescription] = useState('');
+    const [isTranslating, setIsTranslating] = useState(false);
+    const [isPlayingAudio, setIsPlayingAudio] = useState(false);
+    const [translationError, setTranslationError] = useState('');
+    const [showLanguageMenu, setShowLanguageMenu] = useState(false);
 
     useEffect(() => {
         const fetchArtifacts = async () => {
@@ -32,9 +66,32 @@ export default function ArtifactsHall() {
                 const res = await axios.get(
                     'http://localhost:5000/api/dataset'
                 );
-                const data = res.data as Artifact[];
+                const rawData = res.data as any[];
+
+                console.log('🔍 Raw data sample:', rawData[0]);
+
+                // Transform Media_Link to image_url
+                const data: Artifact[] = rawData.map((item) => ({
+                    Artifact_ID:
+                        item.Artifact_ID || item._id?.$numberInt || item._id,
+                    Title: item.Title || item.name || 'Untitled',
+                    Type: item.Type || 'Artifact',
+                    Community_Origin:
+                        item.Community_Origin ||
+                        item.related_community ||
+                        'Unknown',
+                    Contributor: item.Contributor || 'Unknown',
+                    Description: item.Description || item.description || '',
+                    Language: item.Language,
+                    image_url: item.Media_Link || item.image_url || '',
+                    model3dUrl: item.model3dUrl,
+                    category: item.category,
+                    position: item.position,
+                }));
 
                 console.log('✅ Fetched artifacts:', data.length);
+                console.log('📦 Transformed artifact sample:', data[0]);
+                console.log('🖼️ First image URL:', data[0]?.image_url);
 
                 if (!data || data.length === 0) {
                     setError('No artifacts found');
@@ -78,6 +135,15 @@ export default function ArtifactsHall() {
         }
     }, [activeCategory, artifacts]);
 
+    // Reset translation when artifact changes
+    useEffect(() => {
+        if (selectedArtifact) {
+            setTranslatedDescription('');
+            setSelectedLanguage('eng_Latn');
+            setTranslationError('');
+        }
+    }, [selectedArtifact]);
+
     const handleArtifactSelect = (artifact: Artifact) => {
         console.log('🖼️ Selected artifact:', artifact.Title);
         setSelectedArtifact(artifact);
@@ -92,8 +158,89 @@ export default function ArtifactsHall() {
         setIsFullscreen(!isFullscreen);
     };
 
+    const translateDescription = async (targetLang: string) => {
+        if (!selectedArtifact?.Description) return;
+
+        setIsTranslating(true);
+        setTranslationError('');
+
+        try {
+            const response = await fetch(HF_TRANSLATION_API, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    text: selectedArtifact.Description,
+                    source_lang: 'eng_Latn',
+                    target_lang: targetLang,
+                }),
+            });
+
+            if (!response.ok) {
+                throw new Error(`Translation failed: ${response.statusText}`);
+            }
+
+            const result = await response.json();
+            const translation = result.translation || result.error;
+
+            if (translation) {
+                setTranslatedDescription(translation);
+                setSelectedLanguage(targetLang);
+            } else {
+                throw new Error('No translation received');
+            }
+        } catch (error) {
+            console.error('❌ Translation error:', error);
+            setTranslationError('Translation failed. Please try again.');
+        } finally {
+            setIsTranslating(false);
+        }
+    };
+
+    const playAudioDescription = () => {
+        if (!selectedArtifact?.Description) return;
+
+        // Stop any existing speech
+        window.speechSynthesis.cancel();
+
+        const textToSpeak =
+            translatedDescription || selectedArtifact.Description;
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+
+        // Configure speech settings
+        utterance.rate = 0.9;
+        utterance.pitch = 1.0;
+        utterance.volume = 1.0;
+
+        // Try to use appropriate voice for the language
+        const voices = window.speechSynthesis.getVoices();
+        const langCode = selectedLanguage.split('_')[0];
+
+        const preferredVoice =
+            voices.find((voice) =>
+                voice.lang.toLowerCase().startsWith(langCode.toLowerCase())
+            ) || voices.find((voice) => voice.lang.startsWith('en'));
+
+        if (preferredVoice) {
+            utterance.voice = preferredVoice;
+        }
+
+        utterance.onstart = () => setIsPlayingAudio(true);
+        utterance.onend = () => setIsPlayingAudio(false);
+        utterance.onerror = () => {
+            setIsPlayingAudio(false);
+            console.error('❌ Audio playback failed');
+        };
+
+        window.speechSynthesis.speak(utterance);
+    };
+
+    const stopAudioDescription = () => {
+        window.speechSynthesis.cancel();
+        setIsPlayingAudio(false);
+    };
+
     const galleryImages = filteredArtifacts.map((a) => ({
-        src: `http://localhost:5000/media/${a.Media_Link}`,
+        src: a.image_url || '',
         alt: a.Title || 'Artifact',
     }));
 
@@ -230,13 +377,13 @@ export default function ArtifactsHall() {
                                 >
                                     <div className="aspect-square relative bg-slate-800">
                                         <img
-                                            src={`http://localhost:5000/media/${artifact.Media_Link}`}
+                                            src={artifact.image_url}
                                             alt={artifact.Title}
                                             className="w-full h-full object-cover"
                                             onError={(e) => {
                                                 console.error(
                                                     '❌ Failed to load:',
-                                                    artifact.Media_Link
+                                                    artifact.image_url
                                                 );
                                                 e.currentTarget.src =
                                                     'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400"><rect fill="%23334155" width="400" height="400"/><text x="50%" y="50%" text-anchor="middle" fill="%239ca3af" font-size="16">Image Failed</text></svg>';
@@ -244,7 +391,7 @@ export default function ArtifactsHall() {
                                             onLoad={() =>
                                                 console.log(
                                                     '✅ Loaded:',
-                                                    artifact.Media_Link
+                                                    artifact.image_url
                                                 )
                                             }
                                         />
@@ -358,7 +505,7 @@ export default function ArtifactsHall() {
                                     <div className="flex flex-col md:flex-row overflow-hidden max-h-[90vh]">
                                         <div className="md:w-2/3 bg-black/40 flex items-center justify-center p-8">
                                             <img
-                                                src={`http://localhost:5000/media/${selectedArtifact.Media_Link}`}
+                                                src={selectedArtifact.image_url}
                                                 alt={selectedArtifact.Title}
                                                 className="max-w-full max-h-[70vh] object-contain rounded-lg"
                                                 onError={(e) => {
@@ -372,6 +519,109 @@ export default function ArtifactsHall() {
                                             <h2 className="text-3xl font-bold text-white mb-4">
                                                 {selectedArtifact.Title}
                                             </h2>
+
+                                            {/* Language & Audio Controls */}
+                                            <div className="mb-6 space-y-3">
+                                                <div className="flex gap-2">
+                                                    <div className="relative flex-1">
+                                                        <Button
+                                                            variant="outline"
+                                                            className="w-full bg-white/5 hover:bg-white/10 text-white border-white/20 justify-start"
+                                                            onClick={() =>
+                                                                setShowLanguageMenu(
+                                                                    !showLanguageMenu
+                                                                )
+                                                            }
+                                                        >
+                                                            <Globe className="h-4 w-4 mr-2" />
+                                                            {
+                                                                SUPPORTED_LANGUAGES.find(
+                                                                    (l) =>
+                                                                        l.code ===
+                                                                        selectedLanguage
+                                                                )?.flag
+                                                            }{' '}
+                                                            {
+                                                                SUPPORTED_LANGUAGES.find(
+                                                                    (l) =>
+                                                                        l.code ===
+                                                                        selectedLanguage
+                                                                )?.name
+                                                            }
+                                                        </Button>
+
+                                                        {showLanguageMenu && (
+                                                            <div className="absolute top-full mt-2 w-full bg-slate-700 rounded-lg border border-white/20 shadow-xl z-20 max-h-60 overflow-y-auto">
+                                                                {SUPPORTED_LANGUAGES.map(
+                                                                    (lang) => (
+                                                                        <button
+                                                                            key={
+                                                                                lang.code
+                                                                            }
+                                                                            className="w-full px-4 py-2 text-left text-white hover:bg-white/10 transition-colors flex items-center gap-2"
+                                                                            onClick={() => {
+                                                                                translateDescription(
+                                                                                    lang.code
+                                                                                );
+                                                                                setShowLanguageMenu(
+                                                                                    false
+                                                                                );
+                                                                            }}
+                                                                        >
+                                                                            <span className="text-xl">
+                                                                                {
+                                                                                    lang.flag
+                                                                                }
+                                                                            </span>
+                                                                            <span>
+                                                                                {
+                                                                                    lang.name
+                                                                                }
+                                                                            </span>
+                                                                        </button>
+                                                                    )
+                                                                )}
+                                                            </div>
+                                                        )}
+                                                    </div>
+
+                                                    <Button
+                                                        variant="outline"
+                                                        className="bg-white/5 hover:bg-white/10 text-white border-white/20"
+                                                        onClick={
+                                                            isPlayingAudio
+                                                                ? stopAudioDescription
+                                                                : playAudioDescription
+                                                        }
+                                                        disabled={isTranslating}
+                                                    >
+                                                        {isPlayingAudio ? (
+                                                            <>
+                                                                <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                                                                Stop
+                                                            </>
+                                                        ) : (
+                                                            <>
+                                                                <Volume2 className="h-4 w-4 mr-2" />
+                                                                Listen
+                                                            </>
+                                                        )}
+                                                    </Button>
+                                                </div>
+
+                                                {isTranslating && (
+                                                    <div className="flex items-center gap-2 text-orange-400 text-sm">
+                                                        <Loader2 className="h-4 w-4 animate-spin" />
+                                                        Translating...
+                                                    </div>
+                                                )}
+
+                                                {translationError && (
+                                                    <div className="text-red-400 text-sm">
+                                                        {translationError}
+                                                    </div>
+                                                )}
+                                            </div>
 
                                             <div className="space-y-6">
                                                 <div>
@@ -423,13 +673,28 @@ export default function ArtifactsHall() {
                                                 </div>
 
                                                 <div>
-                                                    <h3 className="text-lg font-semibold text-white mb-2">
+                                                    <h3 className="text-lg font-semibold text-white mb-2 flex items-center justify-between">
                                                         Description
+                                                        {translatedDescription && (
+                                                            <span className="text-xs text-orange-400 font-normal">
+                                                                Translated to{' '}
+                                                                {
+                                                                    SUPPORTED_LANGUAGES.find(
+                                                                        (l) =>
+                                                                            l.code ===
+                                                                            selectedLanguage
+                                                                    )?.name
+                                                                }
+                                                            </span>
+                                                        )}
                                                     </h3>
-                                                    <p className="text-white/70 leading-relaxed">
-                                                        {selectedArtifact.Description ||
-                                                            'No description available.'}
-                                                    </p>
+                                                    <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                                                        <p className="text-white/70 leading-relaxed">
+                                                            {translatedDescription ||
+                                                                selectedArtifact.Description ||
+                                                                'No description available.'}
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
