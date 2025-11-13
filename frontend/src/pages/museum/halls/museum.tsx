@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useTheme } from '@/context/themecontext';
+// import { useTheme } from '@/context/themecontext';
 import MuseumHeader from '@/components/custom/MuseumHeader';
 import LightRaysBackground from '@/components/immmersive 3d/LightRaysBackground';
 import { Button } from '@/components/ui/button';
@@ -8,7 +8,7 @@ import { ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 export default function Museum() {
-    const { themeColors } = useTheme();
+    // const { themeColors } = useTheme();
     const navigate = useNavigate();
     const [showQuote, setShowQuote] = useState(false);
 
@@ -88,7 +88,7 @@ export default function Museum() {
                                             size="lg"
                                             className="border-white/20 text-black hover:bg-white/10 hover:text-gray-50"
                                             onClick={() =>
-                                                navigate('/museum/guide')
+                                                navigate('/museum/halls/vr')
                                             }
                                         >
                                             Virtual Guide Tour

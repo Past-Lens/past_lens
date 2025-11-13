@@ -18,6 +18,7 @@ import Stories from './pages/museum/halls/stories';
 import Library from './pages/museum/halls/library';
 import Guide from './pages/museum/guide';
 import Discover from './pages/museum/halls/discover';
+import ImmersiveMuseum from './pages/museum/halls/immersive';
 
 const AppRouter = () => {
     return (
@@ -34,6 +35,7 @@ const AppRouter = () => {
                 <Route path="/museum/halls/stories" element={<Stories />} />
                 <Route path="/museum/halls/library" element={<Library />} />
                 <Route path="/museum/halls/discover" element={<Discover />} />
+                <Route path="/museum/halls/vr" element={<ImmersiveMuseum />} />
                 <Route path="/museum/guide" element={<Guide />} />
                 <Route
                     path="/admin"
