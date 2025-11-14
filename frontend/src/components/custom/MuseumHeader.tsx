@@ -12,6 +12,7 @@ import {
     Menu,
     X,
     SearchIcon,
+    Home,
 } from 'lucide-react';
 
 interface NavItem {
@@ -21,6 +22,11 @@ interface NavItem {
 }
 
 const navigation: NavItem[] = [
+    {
+        label: 'Home ',
+        href: '/museum',
+        icon: <Home className="w-4 h-4" />,
+    },
     {
         label: 'Discover',
         href: '/museum/halls/discover',
@@ -41,11 +47,11 @@ const navigation: NavItem[] = [
         href: '/museum/halls/library',
         icon: <Library className="w-4 h-4" />,
     },
-    {
-        label: 'Guide',
-        href: '/museum/guide',
-        icon: <Compass className="w-4 h-4" />,
-    },
+    // {
+    //     label: 'Guide',
+    //     href: '/museum/guide',
+    //     icon: <Compass className="w-4 h-4" />,
+    // },
 ];
 
 export default function MuseumHeader() {
@@ -71,7 +77,7 @@ export default function MuseumHeader() {
             <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
-                    <Link to="/museum" className="flex items-center space-x-2">
+                    <Link to="/" className="flex items-center space-x-2">
                         <motion.img
                             src="/PLlogo.jpg"
                             alt="Past Lens"

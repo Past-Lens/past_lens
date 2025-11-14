@@ -510,17 +510,12 @@ export class AIService {
     }
 
     /* ------------------------- PROVERB EXPLAINER ------------------------- */
-
     public async explainProverb(proverb: string, community: string) {
         try {
             const cacheKey = `ai:proverb:${community}:${proverb}`;
             const cached = await this.getCachedResponse(cacheKey);
 
-            if (cached) {
-                try {
-                    return JSON.parse(cached);
-                } catch {}
-            }
+            if (cached) return cached; // already cached as string
 
             const prompt = `
 You are a cultural expert. Explain the following proverb from the ${community} community.
@@ -541,7 +536,7 @@ Return ONLY this JSON shape:
   "example": "",
   "raw": ""
 }
-            `.trim();
+        `.trim();
 
             const result = await this.genAI.models.generateContent({
                 model: this.config.defaultModel,
@@ -570,26 +565,46 @@ Return ONLY this JSON shape:
                 }
             }
 
-            const explanation = {
-                literal: parsed.literal || '',
-                meaning: parsed.meaning || '',
-                usage: parsed.usage || '',
-                example: parsed.example || '',
-                raw: parsed.raw || text,
-            };
+            // Convert to Markdown string
+            const explanationString = `
+## ${proverb}
 
-            await this.cacheResponse(cacheKey, JSON.stringify(explanation));
-            return explanation;
+###  Literal Meaning
+${parsed.literal || 'N/A'}
+
+### Cultural Meaning
+${parsed.meaning || 'N/A'}
+
+###  Usage
+${parsed.usage || 'N/A'}
+
+###  Example
+${parsed.example || 'N/A'}
+        `.trim();
+
+            // Cache the string instead of object
+            await this.cacheResponse(cacheKey, explanationString);
+            return explanationString; // <-- return string for ReactMarkdown
         } catch (err: any) {
             console.error('AIService.explainProverb error:', err);
 
-            return {
-                literal: '',
-                meaning: 'AI failed to explain this proverb.',
-                usage: '',
-                example: '',
-                raw: `error: ${err?.message || 'unknown'}`,
-            };
+            const fallback = `
+## ${proverb}
+
+###  Literal Meaning
+N/A
+
+###  Cultural Meaning
+AI failed to explain this proverb.
+
+###  Usage
+N/A
+
+###  Example
+N/A
+        `.trim();
+
+            return fallback;
         }
     }
 }

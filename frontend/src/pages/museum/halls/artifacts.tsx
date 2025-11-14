@@ -564,7 +564,7 @@ export default function ArtifactsHall() {
                         </div>
                     ) : (
                         /* 3D Dome Gallery */
-                        <div className="relative w-full h-[600px] rounded-xl overflow-hidden bg-black/20 backdrop-blur-sm">
+                        <div className="relative w-11/12 h-[600px] rounded-xl overflow-hidden bg-black/20 backdrop-blur-sm">
                             {!galleryError ? (
                                 <DomeGallery
                                     images={galleryImages}
