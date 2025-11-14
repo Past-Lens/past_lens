@@ -22,6 +22,11 @@ interface NavItem {
 
 const navigation: NavItem[] = [
     {
+        label: 'Discover',
+        href: '/museum/halls/discover',
+        icon: <SearchIcon className="w-4 h-4" />,
+    },
+    {
         label: 'Artifacts',
         href: '/museum/halls/artifacts',
         icon: <Globe className="w-4 h-4" />,
@@ -40,11 +45,6 @@ const navigation: NavItem[] = [
         label: 'Guide',
         href: '/museum/guide',
         icon: <Compass className="w-4 h-4" />,
-    },
-    {
-        label: 'Discover',
-        href: '/museum/halls/discover',
-        icon: <SearchIcon className="w-4 h-4" />,
     },
 ];
 
