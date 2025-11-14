@@ -46,7 +46,7 @@ function Appsidebar() {
         <>
             <Sidebar
                 collapsible="icon"
-                className="max-w-[15rem]"
+                className="max-w-[15rem] p-0"
                 style={{
                     background: themeColors.background,
                     color: themeColors.text,
@@ -189,8 +189,8 @@ function Appsidebar() {
                                     <SidebarMenuButton
                                         style={{ color: themeColors.text }}
                                     >
-                                        <div className="flex items-center gap-4">
-                                            <div className="w-7 h-7 min-w-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-xs">
+                                        <div className="flex items-center justify-evenly">
+                                            <div className="-left-2 w-7 h-7 min-w-7 rounded-full bg-primary text-primary-foreground relative flex items-center justify-center font-bold text-xs">
                                                 {storeUser
                                                     ? (storeUser as any)
                                                           .first_name ||
@@ -220,7 +220,7 @@ function Appsidebar() {
                                                     : 'EdenAdmin'}
                                             </span>
                                         </div>
-                                        <ChevronUp className="ml-auto" />
+                                        <ChevronUp className="ml-6" />
                                     </SidebarMenuButton>
                                 </DropdownMenuTrigger>
                                 <DropdownMenuContent

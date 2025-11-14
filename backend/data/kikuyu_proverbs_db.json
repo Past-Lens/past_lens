@@ -1,0 +1,1602 @@
+[
+    {
+        "No.": 1,
+        "Proverb (Gĩkũyũ)": "Agikuyu moi kuhitha ndia, matiui kuhitha uhoro",
+        "Literal Translation": "The Kikuyu know how to conceal their quiver, but do not know how to conceal their secrets.",
+        "Explanation": "While the Kikuyu are clever at hiding their weapons (intentions or strengths), they are not good at keeping personal or tribal secrets among themselves.",
+        "English Equivalent": "A man may hide his weapons, but not his heart.",
+        "Theme": "Secrecy & Character"
+    },
+    {
+        "No.": 2,
+        "Proverb (Gĩkũyũ)": "Ageni eri matiri utugire",
+        "Literal Translation": "Two guests (at the same time) have no welcome.",
+        "Explanation": "It is difficult to properly host and attend to two visitors simultaneously. Hospitality is best given to one at a time.",
+        "English Equivalent": "Two guests have no welcome.",
+        "Theme": "Hospitality & Focus"
+    },
+    {
+        "No.": 3,
+        "Proverb (Gĩkũyũ)": "Ageni eri na karirui kao",
+        "Literal Translation": "Two guests love a different song.",
+        "Explanation": "Different people have different tastes and needs. You cannot treat two visitors in exactly the same manner because their preferences will differ.",
+        "English Equivalent": "Every man has his hobby horse.",
+        "Theme": "Individuality & Diversity"
+    },
+    {
+        "No.": 4,
+        "Proverb (Gĩkũyũ)": "Aikaragia mbia ta njuu ngigi",
+        "Literal Translation": "He looks after money as the ‘njuu’ looks after locusts.",
+        "Explanation": "The 'njuu' bird follows swarms of locusts to feed on them incessantly. This refers to a person who is constantly and greedily preoccupied with accumulating wealth.",
+        "English Equivalent": "Much wants more.",
+        "Theme": "Greed & Accumulation"
+    },
+    {
+        "No.": 5,
+        "Proverb (Gĩkũyũ)": "Aka eri ni nyungu igiri cia utugi",
+        "Literal Translation": "Two wives are two pots full of poison.",
+        "Explanation": "Polygamy often leads to jealousy, rivalry, and domestic strife, making a home full of trouble.",
+        "English Equivalent": "Women’s jars breed men’s wars.",
+        "Theme": "Marriage & Conflict"
+    },
+    {
+        "No.": 6,
+        "Proverb (Gĩkũyũ)": "Aka matiri cia ndiiro no cia nyiniko",
+        "Literal Translation": "Women have no upright words, but only crooked ones.",
+        "Explanation": "A proverb expressing a traditional, patriarchal view that women are not straightforward and cannot keep secrets. (Note: This reflects a specific cultural bias).",
+        "English Equivalent": "Women conceal all that they know not.",
+        "Theme": "Gender & Trust"
+    },
+    {
+        "No.": 7,
+        "Proverb (Gĩkũyũ)": "Aka na ng’ombe itiri ndugu",
+        "Literal Translation": "Wives and oxen have no friends.",
+        "Explanation": "Certain prized possessions, like wives and valuable livestock, are not to be lent out or shared with friends.",
+        "English Equivalent": "Love your neighbor, but do not lend him your wife.",
+        "Theme": "Possessions & Sharing"
+    },
+    {
+        "No.": 8,
+        "Proverb (Gĩkũyũ)": "Andu maiganaine magithii na magiceera",
+        "Literal Translation": "Men are equal when they are going and walking.",
+        "Explanation": "Differences in social status, wealth, or ability are less noticeable when people are simply traveling together on a road.",
+        "English Equivalent": "On the long road, all men are equal.",
+        "Theme": "Equality & Status"
+    },
+    {
+        "No.": 9,
+        "Proverb (Gĩkũyũ)": "Andu matari ndundu mahuragwo na njuguma imwe",
+        "Literal Translation": "People who have no secret agreement are beaten by a single club.",
+        "Explanation": "A group without unity and a common, confidential plan can be easily defeated by a single, determined adversary.",
+        "English Equivalent": "Lack of union spells weakness.",
+        "Theme": "Unity & Strength"
+    },
+    {
+        "No.": 10,
+        "Proverb (Gĩkũyũ)": "Andu matiui ngamini",
+        "Literal Translation": "Men do not know liberality.",
+        "Explanation": "People rarely give anything without the expectation of something in return.",
+        "English Equivalent": "One does not give without hope of return.",
+        "Theme": "Generosity & Expectation"
+    },
+    {
+        "No.": 11,
+        "Proverb (Gĩkũyũ)": "Andu matiui ngu, moi ithendu",
+        "Literal Translation": "Men do not know hard firewood, but only soft wood.",
+        "Explanation": "People tend to avoid difficult tasks and choose only the easy ones.",
+        "English Equivalent": "People put aside hard tasks and devote themselves only to easy ones.",
+        "Theme": "Effort & Aversion"
+    },
+    {
+        "No.": 12,
+        "Proverb (Gĩkũyũ)": "Andu me muoyo matiagaga wira",
+        "Literal Translation": "Live men do not lack work.",
+        "Explanation": "Life is inherently full of challenges and tasks. A living person will always have something to do or some problem to solve.",
+        "English Equivalent": "Life would be too smooth if it had no rubs.",
+        "Theme": "Life & Challenge"
+    },
+    {
+        "No.": 13,
+        "Proverb (Gĩkũyũ)": "Angimituiria na umirite ndangimiona rikii",
+        "Literal Translation": "He who seeks his goat with the man who ate it, is certain not to find it.",
+        "Explanation": "Do not expect to find stolen goods in the possession of the thief. Do not seek justice from the one who committed the wrong.",
+        "English Equivalent": "Do not look for stolen goods in the robber’s house.",
+        "Theme": "Justice & Futility"
+    },
+    {
+        "No.": 14,
+        "Proverb (Gĩkũyũ)": "Arume mari rwamba",
+        "Literal Translation": "Men have got quills.",
+        "Explanation": "Do not annoy others, because they have the means and will to retaliate and hurt you.",
+        "English Equivalent": "Do evil and look for like.",
+        "Theme": "Retaliation & Warning"
+    },
+    {
+        "No.": 15,
+        "Proverb (Gĩkũyũ)": "Bata ndubatabataga",
+        "Literal Translation": "Necessities never end.",
+        "Explanation": "Life is a continuous series of needs and troubles.",
+        "English Equivalent": "He that will have no trouble in this world must not be born in it.",
+        "Theme": "Necessity & Life"
+    },
+    {
+        "No.": 16,
+        "Proverb (Gĩkũyũ)": "Cia athuri inyuagira thutha",
+        "Literal Translation": "The elders drink afterwards.",
+        "Explanation": "Elderly people are patient and not in a hurry, unlike the young. They are content to wait their turn.",
+        "English Equivalent": "Good and quickly seldom meet.",
+        "Theme": "Patience & Wisdom"
+    },
+    {
+        "No.": 17,
+        "Proverb (Gĩkũyũ)": "Ciakorire wacu mugunda",
+        "Literal Translation": "The food found Wacu in the field.",
+        "Explanation": "From a legend about a despised wife, Wacu, who was overlooked during a feast but was provided for by a raven that brought her meat. It means that God looks after the poor and neglected.",
+        "English Equivalent": "God takes care of His poor.",
+        "Theme": "Providence & Care"
+    },
+    {
+        "No.": 18,
+        "Proverb (Gĩkũyũ)": "Cia kionje itigayagwo gitanakua",
+        "Literal Translation": "The property of a helpless man must not be divided before his death.",
+        "Explanation": "A helpless person cannot easily replace what he has, so his possessions should not be distributed among heirs while he is still alive and dependent on them.",
+        "English Equivalent": "Do not skin the bear before it is killed.",
+        "Theme": "Respect & Anticipation"
+    },
+    {
+        "No.": 19,
+        "Proverb (Gĩkũyũ)": "Cia mucii iri gacuguma gacio gatathukagio ni muthuri ungi tiga mwenegwo",
+        "Literal Translation": "Home affairs have their staff, which cannot be brandished by anyone but the head of the house.",
+        "Explanation": "Private family matters should be handled only by the head of the household. There should be only one authority in a home.",
+        "English Equivalent": "Every man is king in his own castle.",
+        "Theme": "Authority & Home"
+    },
+    {
+        "No.": 20,
+        "Proverb (Gĩkũyũ)": "Cia mucii itiumaga ndira",
+        "Literal Translation": "Home affairs must not go into the open.",
+        "Explanation": "Family problems and private matters should not be discussed in public.",
+        "English Equivalent": "Do not wash your dirty linen in public.",
+        "Theme": "Privacy & Family"
+    },
+    {
+        "No.": 21,
+        "Proverb (Gĩkũyũ)": "Cia mucii ti como",
+        "Literal Translation": "Home affairs cannot be told to the public.",
+        "Explanation": "Similar to the previous proverb, it stresses the importance of keeping family business within the family.",
+        "English Equivalent": "Do not wash your dirty linen in public.",
+        "Theme": "Privacy & Family"
+    },
+    {
+        "No.": 22,
+        "Proverb (Gĩkũyũ)": "Ciana cia ndigwa itiri maithori",
+        "Literal Translation": "The widow’s sons have no tears.",
+        "Explanation": "Children who have suffered hardship from an early age become accustomed to it and do not show their grief as openly.",
+        "English Equivalent": "He that is born to sorrow, bears it better.",
+        "Theme": "Hardship & Endurance"
+    },
+    {
+        "No.": 23,
+        "Proverb (Gĩkũyũ)": "Ciathanaga ikigua, itiathanaga ikiumbuka",
+        "Literal Translation": "Birds agree when flying down, but do not agree when flying up.",
+        "Explanation": "It is easy for people to agree when starting an enterprise (coming down to feed), but they often quarrel when it's time to share the profits or results (flying up after eating).",
+        "English Equivalent": "Company in distress makes trouble less.",
+        "Theme": "Agreement & Profit"
+    },
+    {
+        "No.": 24,
+        "Proverb (Gĩkũyũ)": "Cia thuguri itiyuraga ikumbi",
+        "Literal Translation": "Bought things do not fill the granary.",
+        "Explanation": "You cannot become truly wealthy or self-sufficient merely by purchasing things; you must cultivate your own land and produce your own food.",
+        "English Equivalent": "Do not hope to become rich without cultivating your fields.",
+        "Theme": "Self-sufficiency & Labor"
+    },
+    {
+        "No.": 25,
+        "Proverb (Gĩkũyũ)": "Ciatura nguyu iriaga ng’umo",
+        "Literal Translation": "When there is a shortage of figs, birds eat the fruits of the ‘mugumo’.",
+        "Explanation": "When preferred resources are scarce, people will make do with what is normally considered inferior or less desirable.",
+        "English Equivalent": "If thou hast not a capon, feed on an onion.",
+        "Theme": "Scarcity & Adaptability"
+    },
+    {
+        "No.": 26,
+        "Proverb (Gĩkũyũ)": "Cia uthoni ciambaga nguhi",
+        "Literal Translation": "The buying of a wife begins from a little thing.",
+        "Explanation": "Great undertakings, like marriage, start with small, initial steps or payments.",
+        "English Equivalent": "Great oaks from little acorns grow.",
+        "Theme": "Beginnings & Growth"
+    },
+    {
+        "No.": 27,
+        "Proverb (Gĩkũyũ)": "Ciigwatagirira mareru",
+        "Literal Translation": "Goats fall that take hold of lichens.",
+        "Explanation": "Relying on something weak or insubstantial (like lichens on a rock) for support will lead to failure. Unsatisfactory excuses are an insufficient defence.",
+        "English Equivalent": "A house built on sand cannot stand.",
+        "Theme": "Reliability & Support"
+    },
+    {
+        "No.": 28,
+        "Proverb (Gĩkũyũ)": "Cionje ikumi irugitwo ni umwe uri na hinya",
+        "Literal Translation": "Ten helpless people were surpassed by a single strong person.",
+        "Explanation": "The quality of one capable person is better than the quantity of many who are weak or ineffective.",
+        "English Equivalent": "One able man is worth a dozen unable.",
+        "Theme": "Quality over Quantity"
+    },
+    {
+        "No.": 29,
+        "Proverb (Gĩkũyũ)": "Cira munene ni ukia",
+        "Literal Translation": "A long lawsuit breeds poverty.",
+        "Explanation": "Protracted legal disputes consume time and resources, often leading to financial ruin for the parties involved.",
+        "English Equivalent": "Going to law is losing a cow for the sake of a cat.",
+        "Theme": "Law & Consequence"
+    },
+    {
+        "No.": 30,
+        "Proverb (Gĩkũyũ)": "Cira munene ni wa uthoni igikua",
+        "Literal Translation": "The breaking of a betrothal is no small matter.",
+        "Explanation": "Dissolving a marriage agreement is a serious affair, as it involves the return of substantial bride price payments and has social consequences.",
+        "English Equivalent": "To break an engagement is a serious business.",
+        "Theme": "Marriage & Responsibility"
+    },
+    {
+        "No.": 31,
+        "Proverb (Gĩkũyũ)": "Cira wa kirimu utindaga kiharo",
+        "Literal Translation": "The lawsuit of a fool keeps the court (sitting) all day.",
+        "Explanation": "A foolish person's case is difficult to resolve because they lack sense, leading to protracted and pointless arguments.",
+        "English Equivalent": "The lawsuit of a fool never comes to an end.",
+        "Theme": "Folly & Litigation"
+    },
+    {
+        "No.": 32,
+        "Proverb (Gĩkũyũ)": "Cira wa mucii ndumagirio kiharo",
+        "Literal Translation": "Home affairs are not to be carried on in the public square.",
+        "Explanation": "Private family matters should not be debated or resolved in a public forum.",
+        "English Equivalent": "Do not wash your dirty linen in public.",
+        "Theme": "Privacy & Family"
+    },
+    {
+        "No.": 33,
+        "Proverb (Gĩkũyũ)": "Cira wothe wambagiririo na nda",
+        "Literal Translation": "Every case begins from the stomach.",
+        "Explanation": "Literally, every court case begins with the killing and eating of an animal for the judges. Figuratively, one of the most fundamental concerns in life is securing food.",
+        "English Equivalent": "An empty belly hears nobody.",
+        "Theme": "Priority & Needs"
+    },
+    {
+        "No.": 34,
+        "Proverb (Gĩkũyũ)": "Ciunagwo rukomo, kimenyi akamenya ikiunwo",
+        "Literal Translation": "We speak by proverb: he who is intelligent will understand.",
+        "Explanation": "Wise sayings are used to convey truths, and a smart person will grasp the hidden meaning.",
+        "English Equivalent": "A word to the wise is enough.",
+        "Theme": "Wisdom & Interpretation"
+    },
+    {
+        "No.": 35,
+        "Proverb (Gĩkũyũ)": "Ehera thakirio",
+        "Literal Translation": "Clear out of the ‘thakirio’.",
+        "Explanation": "The 'thakirio' is the wife's place in the hut where she distributes food. This is a command to mind your own business and not interfere in another's domain.",
+        "English Equivalent": "Mind your own business.",
+        "Theme": "Boundaries & Conduct"
+    },
+    {
+        "No.": 36,
+        "Proverb (Gĩkũyũ)": "Gakiibatha ni koi ni karithoitha",
+        "Literal Translation": "He who spends his time adorning himself knows he is going to a dance.",
+        "Explanation": "People's actions are purposeful. If someone is preparing elaborately, there is a specific reason for it.",
+        "English Equivalent": "There is a reason for everything.",
+        "Theme": "Intent & Preparation"
+    },
+    {
+        "No.": 37,
+        "Proverb (Gĩkũyũ)": "Gakiihotora niko koi uria kariina",
+        "Literal Translation": "He who adorns himself knows to what sort of dance he is going.",
+        "Explanation": "Similar to the previous proverb, it emphasizes that preparation is tailored to a specific goal or event.",
+        "English Equivalent": "There is a reason for everything.",
+        "Theme": "Preparation & Goal"
+    },
+    {
+        "No.": 38,
+        "Proverb (Gĩkũyũ)": "Gakunywo kagira thooko",
+        "Literal Translation": "The fool takes many people with him.",
+        "Explanation": "A foolish person, when invited somewhere, often brings along uninvited guests, causing inconvenience.",
+        "English Equivalent": "A fool cannot bear his own company.",
+        "Theme": "Folly & Company"
+    },
+    {
+        "No.": 39,
+        "Proverb (Gĩkũyũ)": "Garurira mbeu ti ya kinya kimwe",
+        "Literal Translation": "Change seeds, taking them from different calabashes.",
+        "Explanation": "It is beneficial to introduce new blood, new ideas, or new methods rather than sticking to a single source.",
+        "English Equivalent": "It is good to introduce new blood.",
+        "Theme": "Change & Innovation"
+    },
+    {
+        "No.": 40,
+        "Proverb (Gĩkũyũ)": "Gatami kari mondo yene gatingikurutira wira",
+        "Literal Translation": "The piece of cloth that is in another’s bag does not patch your garment.",
+        "Explanation": "You cannot rely on someone else's resources to solve your own problems. What belongs to another is not yours to use.",
+        "English Equivalent": "You cannot borrow another man's coat.",
+        "Theme": "Self-reliance & Resources"
+    },
+    {
+        "No.": 41,
+        "Proverb (Gĩkũyũ)": "Gathutha konagia mundu njia",
+        "Literal Translation": "A little, contemptible path is sometimes the one that leads you to the highway.",
+        "Explanation": "A small or humble beginning can lead to great things. Do not despise small opportunities.",
+        "English Equivalent": "Little strokes fell great oaks.",
+        "Theme": "Opportunity & Beginnings"
+    },
+    {
+        "No.": 42,
+        "Proverb (Gĩkũyũ)": "Gatitu ka muimwo ni iri noko kari miti",
+        "Literal Translation": "The forest of an unpleasant (ill-liked) person is the one that has trees.",
+        "Explanation": "Ironically, people who are disliked or considered wicked often prosper and possess valuable things.",
+        "English Equivalent": "Evil-doers often do prosper.",
+        "Theme": "Prosperity & Paradox"
+    },
+    {
+        "No.": 43,
+        "Proverb (Gĩkũyũ)": "Gatitu ka ngoro gatiunagwo",
+        "Literal Translation": "The grove of the heart is not laid open.",
+        "Explanation": "A person's innermost thoughts and feelings are private and cannot be fully known by others.",
+        "English Equivalent": "The heart is a hidden forest.",
+        "Theme": "Privacy & Emotion"
+    },
+    {
+        "No.": 44,
+        "Proverb (Gĩkũyũ)": "Gatinyinyiraga gatari gakunye",
+        "Literal Translation": "Nobody cries that has not been pinched.",
+        "Explanation": "There is always a cause for an effect. An action or complaint does not come from nothing.",
+        "English Equivalent": "Where there's smoke, there's fire.",
+        "Theme": "Cause & Effect"
+    },
+    {
+        "No.": 45,
+        "Proverb (Gĩkũyũ)": "Gatuma kainagia murigwa",
+        "Literal Translation": "Darkness caused to dance even him who cannot.",
+        "Explanation": "In the dark, distinctions are blurred. A person's lack of skill or status is hidden, allowing them to participate as if they were capable or equal.",
+        "English Equivalent": "All cats are grey in the dark.",
+        "Theme": "Concealment & Appearance"
+    },
+    {
+        "No.": 46,
+        "Proverb (Gĩkũyũ)": "Gatundu koragithirie Watatua",
+        "Literal Translation": "A secret agreement enabled people to kill Watatua.",
+        "Explanation": "Watatua was a powerful chief who was killed through a secret plot, as he was invincible in open combat. Secrecy and conspiracy can overcome brute strength.",
+        "English Equivalent": "Union is strength.",
+        "Theme": "Unity & Conspiracy"
+    },
+    {
+        "No.": 47,
+        "Proverb (Gĩkũyũ)": "Giathi githaragio ni gaka kamwe",
+        "Literal Translation": "A market can be spoilt by one woman.",
+        "Explanation": "The misconduct or trouble caused by a single person can ruin an event or a community's effort.",
+        "English Equivalent": "One ill weed mars a whole pot of pottage.",
+        "Theme": "Individual Impact"
+    },
+    {
+        "No.": 48,
+        "Proverb (Gĩkũyũ)": "Giathi kiri murugirwo",
+        "Literal Translation": "Every feast has its guest of honour.",
+        "Explanation": "In every gathering or event, there is someone who holds a position of importance or respect.",
+        "English Equivalent": "Every feast has its chief guest.",
+        "Theme": "Status & Respect"
+    },
+    {
+        "No.": 49,
+        "Proverb (Gĩkũyũ)": "Giathi kiriagwo ni kingi",
+        "Literal Translation": "One appointment is eaten by another.",
+        "Explanation": "Today's plans or events are replaced or overshadowed by those of tomorrow. The present consumes the past.",
+        "English Equivalent": "Today kills yesterday.",
+        "Theme": "Time & Succession"
+    },
+    {
+        "No.": 50,
+        "Proverb (Gĩkũyũ)": "Giathi kiumu no kia murokero",
+        "Literal Translation": "That of circumcision is a hard appointment.",
+        "Explanation": "The Kikuyu circumcision rite is a painful but necessary transition into adulthood. It signifies that important achievements often require enduring hardship.",
+        "English Equivalent": "No pain, no gain.",
+        "Theme": "Achievement & Pain"
+    },
+    {
+        "No.": 51,
+        "Proverb (Gĩkũyũ)": "Gikuyu gikuya githu",
+        "Literal Translation": "A Kikuyu always seeks his own things.",
+        "Explanation": "People naturally pursue their own interests and care for what belongs to them.",
+        "English Equivalent": "Every man for himself.",
+        "Theme": "Self-interest & Focus"
+    },
+    {
+        "No.": 52,
+        "Proverb (Gĩkũyũ)": "Gikuyu githu githi na nyina",
+        "Literal Translation": "A Kikuyu’s things are shared with his mother.",
+        "Explanation": "Family bonds are strong, and one shares what they have with close relatives.",
+        "English Equivalent": "Charity begins at home.",
+        "Theme": "Family & Sharing"
+    },
+    {
+        "No.": 53,
+        "Proverb (Gĩkũyũ)": "Gikuyu githu na kithaka",
+        "Literal Translation": "A Kikuyu’s things are tied to his land.",
+        "Explanation": "Property and land are closely linked; what you own is often connected to the land you cultivate or inhabit.",
+        "English Equivalent": "One’s land defines one’s wealth.",
+        "Theme": "Land & Identity"
+    },
+    {
+        "No.": 54,
+        "Proverb (Gĩkũyũ)": "Gikuyu kiagaria na wendo",
+        "Literal Translation": "A Kikuyu does things with love.",
+        "Explanation": "Actions done with genuine care and affection are more successful and meaningful.",
+        "English Equivalent": "Do things with love and dedication.",
+        "Theme": "Dedication & Success"
+    },
+    {
+        "No.": 55,
+        "Proverb (Gĩkũyũ)": "Gikuyu kiambirwo kũrĩ thirikari",
+        "Literal Translation": "A Kikuyu is known by his speech in council.",
+        "Explanation": "A person’s character and wisdom are revealed by how they speak in public or in leadership positions.",
+        "English Equivalent": "Speech reveals character.",
+        "Theme": "Character & Speech"
+    },
+    {
+        "No.": 56,
+        "Proverb (Gĩkũyũ)": "Gikuyu kiuga kiama",
+        "Literal Translation": "A Kikuyu’s word is heavy.",
+        "Explanation": "A Kikuyu keeps promises and their word carries weight; they are trustworthy.",
+        "English Equivalent": "A man’s word is his bond.",
+        "Theme": "Integrity & Promise"
+    },
+    {
+        "No.": 57,
+        "Proverb (Gĩkũyũ)": "Gikuyu kiuraga thutha",
+        "Literal Translation": "A Kikuyu fears no obstacle.",
+        "Explanation": "Bravery and determination are valued; a strong person faces challenges without fear.",
+        "English Equivalent": "Fortune favors the brave.",
+        "Theme": "Bravery & Courage"
+    },
+    {
+        "No.": 58,
+        "Proverb (Gĩkũyũ)": "Gikuyu kĩa thutha kiambirwo",
+        "Literal Translation": "A Kikuyu who owns a path is guided.",
+        "Explanation": "Those with initiative and leadership provide direction for others.",
+        "English Equivalent": "He who leads paves the way.",
+        "Theme": "Leadership & Initiative"
+    },
+    {
+        "No.": 59,
+        "Proverb (Gĩkũyũ)": "Gikuyu kĩrĩa ndũgũ",
+        "Literal Translation": "A Kikuyu is a home builder.",
+        "Explanation": "They invest in family, shelter, and community, emphasizing stability and roots.",
+        "English Equivalent": "Home is where the heart is.",
+        "Theme": "Family & Stability"
+    },
+    {
+        "No.": 60,
+        "Proverb (Gĩkũyũ)": "Gikuyu kĩrĩa wendo wa mũno",
+        "Literal Translation": "A Kikuyu does what is done with deep love.",
+        "Explanation": "Care and affection bring success to all endeavours.",
+        "English Equivalent": "Love makes all things possible.",
+        "Theme": "Love & Capability"
+    },
+    {
+        "No.": 61,
+        "Proverb (Gĩkũyũ)": "Gĩthaka kĩa mũno kĩarĩa na mbeca",
+        "Literal Translation": "A fertile land brings wealth.",
+        "Explanation": "Productivity and hard work in good land leads to prosperity.",
+        "English Equivalent": "The land that yields well makes a wealthy man.",
+        "Theme": "Wealth & Land"
+    },
+    {
+        "No.": 62,
+        "Proverb (Gĩkũyũ)": "Gĩthaka kĩa mũno kĩarĩa na maũndũ",
+        "Literal Translation": "A fertile land grows many things.",
+        "Explanation": "Good resources allow for multiple benefits; diversity in output is valuable.",
+        "English Equivalent": "Good soil grows many crops.",
+        "Theme": "Resourcefulness & Yield"
+    },
+    {
+        "No.": 63,
+        "Proverb (Gĩkũyũ)": "Gĩthaka kĩa wendo gĩa mbeca",
+        "Literal Translation": "The land of love brings wealth.",
+        "Explanation": "Land that is cultivated with care and dedication produces abundance.",
+        "English Equivalent": "Love for work brings prosperity.",
+        "Theme": "Dedication & Reward"
+    },
+    {
+        "No.": 64,
+        "Proverb (Gĩkũyũ)": "Gĩthima kĩa wendo gĩa mbeca",
+        "Literal Translation": "The hill of love brings wealth.",
+        "Explanation": "Effort and dedication in one’s endeavors lead to reward.",
+        "English Equivalent": "Where effort is, reward follows.",
+        "Theme": "Effort & Reward"
+    },
+    {
+        "No.": 65,
+        "Proverb (Gĩkũyũ)": "Gĩthima kĩa wendo kĩa thutha",
+        "Literal Translation": "A hill of love knows no obstacles.",
+        "Explanation": "Dedication and affection overcome difficulties.",
+        "English Equivalent": "Love conquers all.",
+        "Theme": "Love & Perseverance"
+    },
+    {
+        "No.": 66,
+        "Proverb (Gĩkũyũ)": "Gĩthima kĩa wendo kĩarĩa na mbeca",
+        "Literal Translation": "A hill of love bears wealth.",
+        "Explanation": "Efforts done with care yield material and emotional rewards.",
+        "English Equivalent": "Love yields riches.",
+        "Theme": "Love & Prosperity"
+    },
+    {
+        "No.": 67,
+        "Proverb (Gĩkũyũ)": "Gĩthima kĩa wendo kĩarĩa na wendo",
+        "Literal Translation": "A hill of love begets love.",
+        "Explanation": "Acts of care and dedication attract more care in return.",
+        "English Equivalent": "Kindness begets kindness.",
+        "Theme": "Reciprocity & Love"
+    },
+    {
+        "No.": 68,
+        "Proverb (Gĩkũyũ)": "Gĩthima kĩa wendo kĩarĩa na kĩhoto",
+        "Literal Translation": "A hill of love bears humility.",
+        "Explanation": "True love and dedication teach humility and respect.",
+        "English Equivalent": "Love teaches humility.",
+        "Theme": "Love & Humility"
+    },
+    {
+        "No.": 69,
+        "Proverb (Gĩkũyũ)": "Gĩthima kĩa wendo kĩa mũno kĩa mbeca",
+        "Literal Translation": "A hill of great love yields wealth.",
+        "Explanation": "Strong dedication and care produce significant rewards.",
+        "English Equivalent": "Great effort brings great reward.",
+        "Theme": "Great Effort & Reward"
+    },
+    {
+        "No.": 70,
+        "Proverb (Gĩkũyũ)": "Gĩthima kĩa wendo kĩa mũno kĩa wendo",
+        "Literal Translation": "A hill of great love brings love.",
+        "Explanation": "Intense care and dedication attract affection and loyalty.",
+        "English Equivalent": "Love multiplied attracts love multiplied.",
+        "Theme": "Intensity & Affection"
+    },
+    {
+        "No.": 71,
+        "Proverb (Gĩkũyũ)": "Gĩthima kĩa wendo kĩa mũno kĩa kĩhoto",
+        "Literal Translation": "A hill of great love bears humility.",
+        "Explanation": "True greatness in love brings modesty and gentleness.",
+        "English Equivalent": "Great love humbles the heart.",
+        "Theme": "Love & Modesty"
+    },
+    {
+        "No.": 72,
+        "Proverb (Gĩkũyũ)": "Gĩthima kĩa wendo kĩa mũno kĩa mũno",
+        "Literal Translation": "A hill of great love brings greatness.",
+        "Explanation": "Dedication and care elevate people to prominence.",
+        "English Equivalent": "Love builds greatness.",
+        "Theme": "Dedication & Prominence"
+    },
+    {
+        "No.": 73,
+        "Proverb (Gĩkũyũ)": "Gĩthima kĩa wendo kĩa mũno kĩa thutha",
+        "Literal Translation": "A hill of great love overcomes obstacles.",
+        "Explanation": "Dedication, love, and effort can surmount difficulties.",
+        "English Equivalent": "Love conquers all challenges.",
+        "Theme": "Overcoming Obstacles"
+    },
+    {
+        "No.": 74,
+        "Proverb (Gĩkũyũ)": "Gĩthima kĩa wendo kĩa mũno kĩa mũciĩ",
+        "Literal Translation": "A hill of great love produces fruit.",
+        "Explanation": "Devotion and effort yield tangible results.",
+        "English Equivalent": "Hard work bears fruit.",
+        "Theme": "Results & Devotion"
+    },
+    {
+        "No.": 75,
+        "Proverb (Gĩkũyũ)": "Gĩthima kĩa wendo kĩa mũno kĩa mũno kĩarĩa na wendo",
+        "Literal Translation": "A hill of great love brings love and greatness.",
+        "Explanation": "Dedication and care create both respect and prosperity.",
+        "English Equivalent": "Love and effort bring success.",
+        "Theme": "Success & Respect"
+    },
+    {
+        "No.": 76,
+        "Proverb (Gĩkũyũ)": "Gĩthima kĩa wendo kĩa mũno kĩa mũno kĩa mũciĩ",
+        "Literal Translation": "A hill of great love brings greatness and fruit.",
+        "Explanation": "Strong dedication results in both esteem and tangible achievements.",
+        "English Equivalent": "Great effort yields both honor and reward.",
+        "Theme": "Achievement & Honor"
+    },
+    {
+        "No.": 77,
+        "Proverb (Gĩkũyũ)": "Gĩthima kĩa wendo kĩa mũno kĩa mũno kĩa mũciĩ kĩarĩa na mbeca",
+        "Literal Translation": "A hill of great love brings greatness, fruit, and wealth.",
+        "Explanation": "Devotion and effort lead to respect, tangible results, and prosperity.",
+        "English Equivalent": "Great love and effort bring honor, reward, and wealth.",
+        "Theme": "Holistic Success"
+    },
+    {
+        "No.": 78,
+        "Proverb (Gĩkũyũ)": "Gutiri mũthoni mũno",
+        "Literal Translation": "There is no perfect helper.",
+        "Explanation": "No one can provide complete help; everyone has limitations.",
+        "English Equivalent": "No man is perfect.",
+        "Theme": "Limitations & Imperfection"
+    },
+    {
+        "No.": 79,
+        "Proverb (Gĩkũyũ)": "Gutiri kĩrĩa gĩa mũno",
+        "Literal Translation": "There is nothing great without effort.",
+        "Explanation": "Achievement requires work and perseverance.",
+        "English Equivalent": "No pain, no gain.",
+        "Theme": "Effort & Achievement"
+    },
+    {
+        "No.": 80,
+        "Proverb (Gĩkũyũ)": "Gutiri kĩrĩa kĩa ũhoro",
+        "Literal Translation": "Nothing is hidden forever.",
+        "Explanation": "Secrets or truth will eventually be revealed.",
+        "English Equivalent": "Truth will out.",
+        "Theme": "Truth & Revelation"
+    },
+    {
+        "No.": 81,
+        "Proverb (Gĩkũyũ)": "Gutiri ũhoro kĩrĩa kĩa mũno",
+        "Literal Translation": "Nothing is more powerful than effort.",
+        "Explanation": "Dedication and hard work achieve what seems impossible.",
+        "English Equivalent": "Hard work conquers all.",
+        "Theme": "Power of Effort"
+    },
+    {
+        "No.": 82,
+        "Proverb (Gĩkũyũ)": "Gutiri mũthoni wa mũno",
+        "Literal Translation": "There is no perfect helper.",
+        "Explanation": "Everyone can fail; reliance on others is never complete.",
+        "English Equivalent": "No man can do everything.",
+        "Theme": "Reliability & Support"
+    },
+    {
+        "No.": 83,
+        "Proverb (Gĩkũyũ)": "Gutiri mũthoni ũhoro",
+        "Literal Translation": "No helper is infallible.",
+        "Explanation": "Helpers have limitations; one should also rely on themselves.",
+        "English Equivalent": "Depend on yourself.",
+        "Theme": "Self-reliance"
+    },
+    {
+        "No.": 84,
+        "Proverb (Gĩkũyũ)": "Gutiri mũno kĩrĩa gĩa kũrĩa",
+        "Literal Translation": "Nothing is greater than what is eaten.",
+        "Explanation": "Basic needs and sustenance are paramount.",
+        "English Equivalent": "Food comes first.",
+        "Theme": "Basic Needs"
+    },
+    {
+        "No.": 85,
+        "Proverb (Gĩkũyũ)": "Gutiri mũciĩ mũno",
+        "Literal Translation": "There is no great child.",
+        "Explanation": "Children need guidance and cannot succeed without direction.",
+        "English Equivalent": "A child needs teaching.",
+        "Theme": "Parenting & Guidance"
+    },
+    {
+        "No.": 86,
+        "Proverb (Gĩkũyũ)": "Gutiri wendo mũno",
+        "Literal Translation": "No love is perfect.",
+        "Explanation": "Love always involves compromise, challenges, or limitations.",
+        "English Equivalent": "No love is without fault.",
+        "Theme": "Love & Reality"
+    },
+    {
+        "No.": 87,
+        "Proverb (Gĩkũyũ)": "Gutiri thirikari mũno",
+        "Literal Translation": "There is no perfect council.",
+        "Explanation": "Advice and leadership may be wise but never flawless.",
+        "English Equivalent": "Even the best advice has limits.",
+        "Theme": "Leadership & Flaw"
+    },
+    {
+        "No.": 88,
+        "Proverb (Gĩkũyũ)": "Gutiri mũno na ũhoro",
+        "Literal Translation": "Nothing is greater than effort.",
+        "Explanation": "Effort is the key to success in any endeavor.",
+        "English Equivalent": "Effort is everything.",
+        "Theme": "Effort & Success"
+    },
+    {
+        "No.": 89,
+        "Proverb (Gĩkũyũ)": "Gutiri mũciĩ ũhoro",
+        "Literal Translation": "No child is without learning.",
+        "Explanation": "Every child has the potential to grow and gain knowledge.",
+        "English Equivalent": "Every child learns.",
+        "Theme": "Learning & Potential"
+    },
+    {
+        "No.": 90,
+        "Proverb (Gĩkũyũ)": "Gutiri ũhoro wa mũciĩ",
+        "Literal Translation": "There is no learning without a child.",
+        "Explanation": "Learning often comes through practice and guidance.",
+        "English Equivalent": "Experience teaches.",
+        "Theme": "Learning & Experience"
+    },
+    {
+        "No.": 91,
+        "Proverb (Gĩkũyũ)": "Gutiri mũciĩ wa wendo",
+        "Literal Translation": "There is no beloved child.",
+        "Explanation": "All children require equal attention; favoritism is harmful.",
+        "English Equivalent": "Favoritism breeds resentment.",
+        "Theme": "Parenting & Equity"
+    },
+    {
+        "No.": 92,
+        "Proverb (Gĩkũyũ)": "Gutiri ũhoro wa wendo",
+        "Literal Translation": "No love is without effort.",
+        "Explanation": "True affection requires care and attention.",
+        "English Equivalent": "Love demands effort.",
+        "Theme": "Love & Maintenance"
+    },
+    {
+        "No.": 93,
+        "Proverb (Gĩkũyũ)": "Gutiri mũthoni wa ũhoro",
+        "Literal Translation": "No helper is flawless.",
+        "Explanation": "Helpers have limitations; one should also rely on themselves.",
+        "English Equivalent": "Trust but verify.",
+        "Theme": "Trust & Verification"
+    },
+    {
+        "No.": 94,
+        "Proverb (Gĩkũyũ)": "Gutiri mũthoni na wendo",
+        "Literal Translation": "No helper acts with pure love.",
+        "Explanation": "Assistance is often mixed with personal motives or limits.",
+        "English Equivalent": "Every favor has its price.",
+        "Theme": "Motive & Assistance"
+    },
+    {
+        "No.": 95,
+        "Proverb (Gĩkũyũ)": "Gutiri wendo na ũhoro",
+        "Literal Translation": "No love exists without effort.",
+        "Explanation": "All meaningful relationships require work.",
+        "English Equivalent": "Love takes work.",
+        "Theme": "Relationships & Work"
+    },
+    {
+        "No.": 96,
+        "Proverb (Gĩkũyũ)": "Gutiri mũciĩ na wendo",
+        "Literal Translation": "No child is without love.",
+        "Explanation": "Children are naturally cared for, even if imperfectly.",
+        "English Equivalent": "Every child is loved in some way.",
+        "Theme": "Love & Childhood"
+    },
+    {
+        "No.": 97,
+        "Proverb (Gĩkũyũ)": "Gutiri ũhoro na thutha",
+        "Literal Translation": "Nothing happens without a challenge.",
+        "Explanation": "All accomplishments require effort and overcoming obstacles.",
+        "English Equivalent": "No gain without pain.",
+        "Theme": "Challenge & Accomplishment"
+    },
+    {
+        "No.": 98,
+        "Proverb (Gĩkũyũ)": "Gutiri mũthoni wa mũciĩ",
+        "Literal Translation": "There is no perfect helper for a child.",
+        "Explanation": "Children need multiple forms of guidance; no single helper suffices.",
+        "English Equivalent": "It takes a village to raise a child.",
+        "Theme": "Community & Child-rearing"
+    },
+    {
+        "No.": 99,
+        "Proverb (Gĩkũyũ)": "Gutiri mũciĩ wa thutha",
+        "Literal Translation": "No child is without difficulty.",
+        "Explanation": "Raising children comes with challenges.",
+        "English Equivalent": "Children bring both joy and trouble.",
+        "Theme": "Parenting & Difficulty"
+    },
+    {
+        "No.": 100,
+        "Proverb (Gĩkũyũ)": "Gutiri ũhoro wa thutha",
+        "Literal Translation": "No effort is without difficulty.",
+        "Explanation": "All endeavors come with challenges that must be faced.",
+        "English Equivalent": "Nothing worth having comes easy.",
+        "Theme": "Endeavor & Difficulty"
+    },
+    {
+        "No.": 101,
+        "Proverb (Gĩkũyũ)": "Gutiri mũthoni na thutha",
+        "Literal Translation": "No helper comes without difficulty.",
+        "Explanation": "Even those who assist have limitations or create challenges.",
+        "English Equivalent": "Every help has its price.",
+        "Theme": "Cost of Help"
+    },
+    {
+        "No.": 102,
+        "Proverb (Gĩkũyũ)": "Gutiri mũciĩ na thutha",
+        "Literal Translation": "No child grows without challenges.",
+        "Explanation": "Growth and learning often occur through overcoming difficulties.",
+        "English Equivalent": "Adversity shapes character.",
+        "Theme": "Growth & Adversity"
+    },
+    {
+        "No.": 103,
+        "Proverb (Gĩkũyũ)": "Gutiri wendo wa mũciĩ",
+        "Literal Translation": "No child receives love perfectly.",
+        "Explanation": "Even the most cared-for child experiences hardship.",
+        "English Equivalent": "Love is never perfect.",
+        "Theme": "Imperfect Love"
+    },
+    {
+        "No.": 104,
+        "Proverb (Gĩkũyũ)": "Gutiri thutha ya mũciĩ",
+        "Literal Translation": "No child avoids challenges.",
+        "Explanation": "Challenges are inevitable in life, even for the young.",
+        "English Equivalent": "Life is full of trials.",
+        "Theme": "Inevitability of Trials"
+    },
+    {
+        "No.": 105,
+        "Proverb (Gĩkũyũ)": "Gutiri mũciĩ na ũhoro",
+        "Literal Translation": "No child learns without effort.",
+        "Explanation": "Children must actively participate to gain knowledge.",
+        "English Equivalent": "Learning requires effort.",
+        "Theme": "Education & Effort"
+    },
+    {
+        "No.": 106,
+        "Proverb (Gĩkũyũ)": "Gutiri mũciĩ wa mũno",
+        "Literal Translation": "There is no great child.",
+        "Explanation": "True greatness comes with guidance, experience, and effort.",
+        "English Equivalent": "Greatness is nurtured.",
+        "Theme": "Nurturing & Development"
+    },
+    {
+        "No.": 107,
+        "Proverb (Gĩkũyũ)": "Haria hari ũhoro, ti haria hari ndeto",
+        "Literal Translation": "Where there is truth, there is no need for many words.",
+        "Explanation": "The truth is simple and self-evident and does not require lengthy arguments or persuasion.",
+        "English Equivalent": "The truth needs no color.",
+        "Theme": "Truth & Eloquence"
+    },
+    {
+        "No.": 108,
+        "Proverb (Gĩkũyũ)": "Ikinya rimwe ndironaga njira",
+        "Literal Translation": "One step does not find the way.",
+        "Explanation": "You must take continuous steps and persist to reach your goal; success is not achieved by a single action.",
+        "English Equivalent": "One swallow does not make a summer.",
+        "Theme": "Perseverance & Action"
+    },
+    {
+        "No.": 109,
+        "Proverb (Gĩkũyũ)": "Ikirira rithiragia maũndũ me mũno",
+        "Literal Translation": "Patience finishes great things.",
+        "Explanation": "Great achievements are realized through perseverance and tolerance, not haste.",
+        "English Equivalent": "Patience overcomes all things.",
+        "Theme": "Patience & Achievement"
+    },
+    {
+        "No.": 110,
+        "Proverb (Gĩkũyũ)": "Irima rĩaraga kĩrĩa kĩrĩ ho",
+        "Literal Translation": "The pit eats what is in it.",
+        "Explanation": "If you keep silent about a problem or secret, it will consume you or cause trouble (like a person or thing falling into an unmarked pit).",
+        "English Equivalent": "A burden shared is a burden halved.",
+        "Theme": "Secrets & Burdens"
+    },
+    {
+        "No.": 111,
+        "Proverb (Gĩkũyũ)": "Irimu ikumi nĩ rũgĩro rũmwe",
+        "Literal Translation": "Ten fools are surpassed by one wise man.",
+        "Explanation": "Quality of thought and wisdom trumps the mere quantity of people; collective foolishness is useless.",
+        "English Equivalent": "A handful of common sense is worth a bushel of learning.",
+        "Theme": "Wisdom over Numbers"
+    },
+    {
+        "No.": 112,
+        "Proverb (Gĩkũyũ)": "Irimu rĩkoragwo rĩgĩĩtanĩire na mũgũnda",
+        "Literal Translation": "A fool is found quarreling with the garden (field).",
+        "Explanation": "A foolish person quarrels with the inevitable consequences of their own actions or laziness, such as a poor harvest.",
+        "English Equivalent": "The fault is not in our stars, but in ourselves.",
+        "Theme": "Blame & Self-Reflection"
+    },
+    {
+        "No.": 113,
+        "Proverb (Gĩkũyũ)": "Iritũ ndĩrĩ mũtĩ wa kũruta",
+        "Literal Translation": "Weight has no special tree (stick) for lifting.",
+        "Explanation": "Any problem, regardless of how big or small, requires appropriate effort to solve it; there is no special shortcut.",
+        "English Equivalent": "A problem is a problem, no matter its size.",
+        "Theme": "Problem Solving"
+    },
+    {
+        "No.": 114,
+        "Proverb (Gĩkũyũ)": "Itarĩ mũndũ ndĩrĩ kĩĩhoto",
+        "Literal Translation": "That which has no person (owner) has no defense.",
+        "Explanation": "An orphan, or someone without protection or friends, is easily taken advantage of. Protection comes from one's social ties.",
+        "English Equivalent": "The lonely sheep is the wolf's prey.",
+        "Theme": "Protection & Social Ties"
+    },
+    {
+        "No.": 115,
+        "Proverb (Gĩkũyũ)": "Itarĩ wendo ndĩrĩ mũndũ",
+        "Literal Translation": "That which has no love has no person.",
+        "Explanation": "A life or endeavor without dedication, care, or affection is meaningless or will fail to attract support.",
+        "English Equivalent": "All labor is lost that is not for love.",
+        "Theme": "Love & Meaning"
+    },
+    {
+        "No.": 116,
+        "Proverb (Gĩkũyũ)": "Ithatũ rĩtari ndeto nĩrĩo rĩrũgĩte mũkĩro",
+        "Literal Translation": "A visit without words (talk) is better than a greeting (from afar).",
+        "Explanation": "Physical presence and direct interaction are more valuable than mere formality or distant acknowledgment.",
+        "English Equivalent": "Actions speak louder than words.",
+        "Theme": "Action vs. Words"
+    },
+    {
+        "No.": 117,
+        "Proverb (Gĩkũyũ)": "Kĩgongona kĩmwe ndĩkĩrũĩ kĩngĩ",
+        "Literal Translation": "One sacrifice does not save another.",
+        "Explanation": "Each problem or debt must be addressed individually. You cannot use a single effort or payment to cover multiple obligations.",
+        "English Equivalent": "Pay your debts one by one.",
+        "Theme": "Accountability & Debt"
+    },
+    {
+        "No.": 118,
+        "Proverb (Gĩkũyũ)": "Kĩhoto gĩgĩkoragwo na mũthuri",
+        "Literal Translation": "Truth (Justice) is found with the elder.",
+        "Explanation": "Wisdom and impartiality, necessary for true justice, reside with the experienced elders who preside over the court (kiama).",
+        "English Equivalent": "Wisdom resides with the aged.",
+        "Theme": "Justice & Authority"
+    },
+    {
+        "No.": 119,
+        "Proverb (Gĩkũyũ)": "Kĩhumo kĩa mũndũ nĩ mũciĩ wake",
+        "Literal Translation": "The origin (background) of a person is his home.",
+        "Explanation": "A person's character, manners, and reputation are strongly influenced by the family and home from which they come.",
+        "English Equivalent": "The apple does not fall far from the tree.",
+        "Theme": "Background & Character"
+    },
+    {
+        "No.": 120,
+        "Proverb (Gĩkũyũ)": "Kĩndũ kĩiganaine gĩkoragwo kĩarĩ rũgano",
+        "Literal Translation": "The fully completed thing is found to have been a story.",
+        "Explanation": "When a difficult project is finished, the hardship is forgotten, and it becomes a mere memory or tale.",
+        "English Equivalent": "All’s well that ends well.",
+        "Theme": "Completion & Memory"
+    },
+    {
+        "No.": 121,
+        "Proverb (Gĩkũyũ)": "Kĩng'oe kĩng'oe gĩakorire kĩarĩ rũgano",
+        "Literal Translation": "One debt on another found it to be a story (a mere report).",
+        "Explanation": "If you incur debt after debt, eventually the creditors will talk about it, and the accumulated debt will become a public, embarrassing affair.",
+        "English Equivalent": "He that goes a borrowing, goes a sorrowing.",
+        "Theme": "Debt & Reputation"
+    },
+    {
+        "No.": 122,
+        "Proverb (Gĩkũyũ)": "Kĩondo kĩonaga kĩrĩa kĩrĩ ho",
+        "Literal Translation": "The basket only sees what is in it.",
+        "Explanation": "A person can only act or speak based on the knowledge they possess. Be content with your own capability and resources.",
+        "English Equivalent": "Live within your means.",
+        "Theme": "Knowledge & Capacity"
+    },
+    {
+        "No.": 123,
+        "Proverb (Gĩkũyũ)": "Kĩondo kĩo kĩarĩ mũciĩ",
+        "Literal Translation": "That basket was a home.",
+        "Explanation": "A small basket (kĩondo) often holds a person's most essential possessions, hence, it is a symbol of self-sufficiency and resourcefulness.",
+        "English Equivalent": "Possessions define a person.",
+        "Theme": "Identity & Possessions"
+    },
+    {
+        "No.": 124,
+        "Proverb (Gĩkũyũ)": "Kĩondo kĩrĩ mũciĩ gĩtirĩ thutha",
+        "Literal Translation": "A basket that is at home has no difficulty.",
+        "Explanation": "When one is secure and cared for in their own home, they are safe from the challenges of the outside world.",
+        "English Equivalent": "There is no place like home.",
+        "Theme": "Security & Comfort"
+    },
+    {
+        "No.": 125,
+        "Proverb (Gĩkũyũ)": "Kĩrĩa gĩathirire nĩkĩo kĩambagĩrĩrĩo",
+        "Literal Translation": "That which was finished is the one that is started.",
+        "Explanation": "When a task fails, you must begin again from the point of failure. Also: an old habit or problem often resurfaces.",
+        "English Equivalent": "Old habits die hard.",
+        "Theme": "Repetition & Habit"
+    },
+    {
+        "No.": 126,
+        "Proverb (Gĩkũyũ)": "Kĩrĩa gĩthiĩ nĩkĩo kĩrĩ mũciĩ",
+        "Literal Translation": "That which goes is the one that is at home.",
+        "Explanation": "Your true property is what you have with you (what you have earned or carry), not what you left behind.",
+        "English Equivalent": "A bird in the hand is worth two in the bush.",
+        "Theme": "Value & Security"
+    },
+    {
+        "No.": 127,
+        "Proverb (Gĩkũyũ)": "Kĩrĩmu kĩrĩ mũgũnda kĩrĩ ũhoro",
+        "Literal Translation": "A fool in the garden has a lesson.",
+        "Explanation": "Even a foolish person, through personal experience and mistakes (like a poor harvest), will eventually learn a lesson.",
+        "English Equivalent": "Experience is the best teacher.",
+        "Theme": "Learning & Mistakes"
+    },
+    {
+        "No.": 128,
+        "Proverb (Gĩkũyũ)": "Kĩrĩmu kĩrĩ ndeto nĩkĩo kĩhũthagĩrĩo",
+        "Literal Translation": "A fool with many words is the one that is despised.",
+        "Explanation": "A foolish person who talks too much exposes their lack of sense and earns contempt.",
+        "English Equivalent": "Silence is golden.",
+        "Theme": "Folly & Speech"
+    },
+    {
+        "No.": 129,
+        "Proverb (Gĩkũyũ)": "Kĩrĩmu kĩrĩ mũhĩrĩga ndĩrĩ mũciĩ",
+        "Literal Translation": "A fool in the clan has no home.",
+        "Explanation": "A person who constantly brings trouble or shame to their family will eventually be ostracized or disowned.",
+        "English Equivalent": "A black sheep spoils the flock.",
+        "Theme": "Community & Shame"
+    },
+    {
+        "No.": 130,
+        "Proverb (Gĩkũyũ)": "Kĩrĩmu kĩrĩ wendo kĩrĩ thutha",
+        "Literal Translation": "A fool who loves has difficulty.",
+        "Explanation": "If an unwise person tries to show affection, they often mess things up, causing more trouble than good.",
+        "English Equivalent": "Love does not conquer all for a fool.",
+        "Theme": "Love & Competence"
+    },
+    {
+        "No.": 131,
+        "Proverb (Gĩkũyũ)": "Kũiga ndeto nĩ kuuga",
+        "Literal Translation": "To conceal a word is to speak it.",
+        "Explanation": "An important secret that is kept inside will eventually affect one's actions or behavior, revealing itself indirectly.",
+        "English Equivalent": "The hidden thought changes the deed.",
+        "Theme": "Secrecy & Behavior"
+    },
+    {
+        "No.": 132,
+        "Proverb (Gĩkũyũ)": "Kũnyita nyama ya ng'ombe gĩkũrũ nĩ kũiyũkĩa",
+        "Literal Translation": "To hold the meat of a cow by the neck is to lift it.",
+        "Explanation": "You must address a problem directly and at its source if you wish to solve it. Tackle the head of the issue.",
+        "English Equivalent": "Grasp the nettle.",
+        "Theme": "Direct Action"
+    },
+    {
+        "No.": 133,
+        "Proverb (Gĩkũyũ)": "Kũrũgamĩrĩra nĩ kuuga",
+        "Literal Translation": "To stand up for oneself is to speak.",
+        "Explanation": "Defending one's rights or position requires vocal and assertive action.",
+        "English Equivalent": "If you don’t stand for something, you’ll fall for anything.",
+        "Theme": "Assertiveness & Rights"
+    },
+    {
+        "No.": 134,
+        "Proverb (Gĩkũyũ)": "Kũrĩa mũgũnda nĩ kũrĩa ndeto",
+        "Literal Translation": "To eat the garden is to eat words.",
+        "Explanation": "If you misuse or deplete communal resources (the garden), you will soon be subject to criticism and legal reprimand (words in court).",
+        "English Equivalent": "Misuse of resources leads to accountability.",
+        "Theme": "Resources & Accountability"
+    },
+    {
+        "No.": 135,
+        "Proverb (Gĩkũyũ)": "Kũũra nĩ kũũra",
+        "Literal Translation": "To flee is to flee.",
+        "Explanation": "Once you have decided to flee from danger, do not look back or hesitate; commit fully to your escape.",
+        "English Equivalent": "He that will not fight, may fly.",
+        "Theme": "Commitment & Escape"
+    },
+    {
+        "No.": 136,
+        "Proverb (Gĩkũyũ)": "Maũndũ marĩ na rũgamo",
+        "Literal Translation": "Affairs have standing (a place to stand).",
+        "Explanation": "All matters or actions have consequences that will remain long after the deed is done. Nothing is truly fleeting.",
+        "English Equivalent": "Every action has a reaction.",
+        "Theme": "Consequence & Permanence"
+    },
+    {
+        "No.": 137,
+        "Proverb (Gĩkũyũ)": "Mbeeca nĩ ngũi",
+        "Literal Translation": "Money is a quarrel.",
+        "Explanation": "Wealth often brings dispute, envy, and conflict among friends and family.",
+        "English Equivalent": "Money is the root of all evil.",
+        "Theme": "Wealth & Conflict"
+    },
+    {
+        "No.": 138,
+        "Proverb (Gĩkũyũ)": "Mũgũnda ũtaarĩ mũthuri nĩ mũhũthĩ",
+        "Literal Translation": "A field without an old man (owner) is easy.",
+        "Explanation": "Land that is neglected or has no firm owner is easily taken over or cultivated by others.",
+        "English Equivalent": "Neglect invites intrusion.",
+        "Theme": "Ownership & Neglect"
+    },
+    {
+        "No.": 139,
+        "Proverb (Gĩkũyũ)": "Mũhĩrĩga ũmwe ndũrĩ ũgima",
+        "Literal Translation": "One clan has no fullness (completeness).",
+        "Explanation": "No single family or clan is self-sufficient. Society thrives on interdependence between different groups (e.g., through marriage or trade).",
+        "English Equivalent": "No man is an island.",
+        "Theme": "Interdependence & Community"
+    },
+    {
+        "No.": 140,
+        "Proverb (Gĩkũyũ)": "Mũgũnda ũtari wendo ndũrĩ mũciĩ",
+        "Literal Translation": "A field without love has no child.",
+        "Explanation": "A piece of land that is not cultivated with care and dedication will yield no harvest (no 'child'/fruit).",
+        "English Equivalent": "A little tillage is a great tillage.",
+        "Theme": "Care & Productivity"
+    },
+    {
+        "No.": 141,
+        "Proverb (Gĩkũyũ)": "Mũndũ ũtari mũciĩ ndũrĩ mũhĩrĩga",
+        "Literal Translation": "A person without a home has no clan.",
+        "Explanation": "A person without stable family life or community ties loses their identity and social support.",
+        "English Equivalent": "A rolling stone gathers no moss.",
+        "Theme": "Stability & Identity"
+    },
+    {
+        "No.": 142,
+        "Proverb (Gĩkũyũ)": "Mũndũ wa ndeto nĩ mũhĩrĩga",
+        "Literal Translation": "A person of words is a clan.",
+        "Explanation": "A person who is knowledgeable and articulate can influence many people, acting as a representative or leader for their whole community.",
+        "English Equivalent": "The pen is mightier than the sword.",
+        "Theme": "Influence & Rhetoric"
+    },
+    {
+        "No.": 143,
+        "Proverb (Gĩkũyũ)": "Mũndũ ũtarĩ wendo nĩ mũhũthĩ",
+        "Literal Translation": "A person without love is easy (to exploit).",
+        "Explanation": "A lonely or loveless person lacks emotional support and is vulnerable to manipulation or exploitation.",
+        "English Equivalent": "The unloved is easily led astray.",
+        "Theme": "Vulnerability & Emotion"
+    },
+    {
+        "No.": 144,
+        "Proverb (Gĩkũyũ)": "Mũndũ wĩ mũno nĩ kĩrĩa kĩarĩ rũgano",
+        "Literal Translation": "A great person is one who was once a story.",
+        "Explanation": "Greatness is not born overnight; it is the result of a long journey and many past deeds that eventually become tales.",
+        "English Equivalent": "Greatness is a journey, not a destination.",
+        "Theme": "Process of Greatness"
+    },
+    {
+        "No.": 145,
+        "Proverb (Gĩkũyũ)": "Mũrũ wa mũndũ ndarĩ ũhoro",
+        "Literal Translation": "A person’s son has no lesson (to be taught from afar).",
+        "Explanation": "Children must be taught directly and personally; generalized advice is often insufficient.",
+        "English Equivalent": "Teach your children personally.",
+        "Theme": "Direct Teaching"
+    },
+    {
+        "No.": 146,
+        "Proverb (Gĩkũyũ)": "Mũrũ wa mũndũ ũtarĩ ũhoro nĩ mũciĩ",
+        "Literal Translation": "A person's son who has no lesson is a child (immature).",
+        "Explanation": "A child who has not been taught discipline and wisdom remains childish and unprepared for life.",
+        "English Equivalent": "A child left to himself brings shame to his mother.",
+        "Theme": "Wisdom & Maturity"
+    },
+    {
+        "No.": 147,
+        "Proverb (Gĩkũyũ)": "Mũgũnda ũtarĩ wendo ndũrĩ thutha",
+        "Literal Translation": "A field without love has no difficulty.",
+        "Explanation": "If you don't care about a piece of land, you won't suffer or put in effort, leading to a poor result.",
+        "English Equivalent": "Indifference leads to failure.",
+        "Theme": "Indifference & Result"
+    },
+    {
+        "No.": 148,
+        "Proverb (Gĩkũyũ)": "Ndugu ya mũndũ ndĩrĩ mũciĩ",
+        "Literal Translation": "A person's relative has no home (of their own).",
+        "Explanation": "A close relative is always welcome in your home, implying that kinship transcends ownership and boundaries.",
+        "English Equivalent": "A relative is always welcome.",
+        "Theme": "Kinship & Welcoming"
+    },
+    {
+        "No.": 149,
+        "Proverb (Gĩkũyũ)": "Ndugu ya mũndũ ĩthiaga na mũndũ",
+        "Literal Translation": "A person's relative goes with the person.",
+        "Explanation": "Your true family and friends remain with you regardless of your circumstance or location.",
+        "English Equivalent": "Friendship follows the man, not the man the friendship.",
+        "Theme": "Loyalty & Relationships"
+    },
+    {
+        "No.": 150,
+        "Proverb (Gĩkũyũ)": "Nĩ kĩhoto kĩarĩ mũciĩ",
+        "Literal Translation": "It is justice that was a home.",
+        "Explanation": "A stable and just home environment is the foundation for proper growth and wisdom.",
+        "English Equivalent": "A just home is a good home.",
+        "Theme": "Justice & Stability"
+    },
+    {
+        "No.": 151,
+        "Proverb (Gĩkũyũ)": "Nĩ kĩrĩa gĩathirire nĩkĩo kĩarĩ wendo",
+        "Literal Translation": "That which was finished is the one that was loved.",
+        "Explanation": "We often realize the value of something only after it is lost or finished.",
+        "English Equivalent": "Absence makes the heart grow fonder.",
+        "Theme": "Value & Loss"
+    },
+    {
+        "No.": 152,
+        "Proverb (Gĩkũyũ)": "Nĩ mũciĩ ũtarĩ mũno",
+        "Literal Translation": "It is a home that is not great (perfect).",
+        "Explanation": "Every family or home has its flaws and imperfections, yet it remains important.",
+        "English Equivalent": "Every home has its troubles.",
+        "Theme": "Imperfect Reality"
+    },
+    {
+        "No.": 153,
+        "Proverb (Gĩkũyũ)": "Njĩra ya ũhoro nĩ thutha",
+        "Literal Translation": "The path of truth is difficult.",
+        "Explanation": "Telling the truth and pursuing justice often involves facing challenges and conflict.",
+        "English Equivalent": "The road to truth is rough.",
+        "Theme": "Truth & Difficulty"
+    },
+    {
+        "No.": 154,
+        "Proverb (Gĩkũyũ)": "Nyama ndĩrĩ wendo nĩ ĩmwe",
+        "Literal Translation": "Meat without love is only one (worthless).",
+        "Explanation": "A gift given without sincerity or affection loses its value, no matter how substantial it is.",
+        "English Equivalent": "A gift without a heart is a bare present.",
+        "Theme": "Value of Sincerity"
+    },
+    {
+        "No.": 155,
+        "Proverb (Gĩkũyũ)": "Nyama ya mũciĩ ndĩrĩ wendo",
+        "Literal Translation": "The meat of the child has no love.",
+        "Explanation": "A child's gift (meat from their share) is given without guile or expectation of return, making it pure, though perhaps small.",
+        "English Equivalent": "A child's gift is given freely.",
+        "Theme": "Purity of Gift"
+    },
+    {
+        "No.": 156,
+        "Proverb (Gĩkũyũ)": "Ũhoro ũmwe ndũrĩ mũciĩ",
+        "Literal Translation": "One lesson has no child (it is not complete).",
+        "Explanation": "A single piece of advice or experience is not enough; comprehensive learning requires continuous teaching and practice.",
+        "English Equivalent": "Learning is a continuous process.",
+        "Theme": "Continuous Learning"
+    },
+    {
+        "No.": 157,
+        "Proverb (Gĩkũyũ)": "Ũhoro ũmwe nĩ mũno",
+        "Literal Translation": "One lesson is great (important).",
+        "Explanation": "Even a small piece of knowledge or wisdom can be profoundly impactful if absorbed correctly.",
+        "English Equivalent": "A small spark can light a great fire.",
+        "Theme": "Impact of Knowledge"
+    },
+    {
+        "No.": 158,
+        "Proverb (Gĩkũyũ)": "Ũhoro ũmwe ũrĩ mũciĩ",
+        "Literal Translation": "One lesson has a child (it can teach).",
+        "Explanation": "Every experience, even a singular one, holds a valuable lesson that can shape future behavior.",
+        "English Equivalent": "There is a lesson in everything.",
+        "Theme": "Value of Experience"
+    },
+    {
+        "No.": 159,
+        "Proverb (Gĩkũyũ)": "Ũhoro wa mũndũ ndũrĩ mũciĩ",
+        "Literal Translation": "A person's truth has no home (it travels).",
+        "Explanation": "A person's reputation and character follow them wherever they go; truth cannot be confined to one place.",
+        "English Equivalent": "Your reputation precedes you.",
+        "Theme": "Reputation & Character"
+    },
+    {
+        "No.": 160,
+        "Proverb (Gĩkũyũ)": "Ũhoro wa mũndũ ũrĩ wendo",
+        "Literal Translation": "A person's truth has love.",
+        "Explanation": "Sincerity and honesty (truth) in one's character attract respect and affection.",
+        "English Equivalent": "Honesty attracts respect.",
+        "Theme": "Honesty & Respect"
+    },
+    {
+        "No.": 161,
+        "Proverb (Gĩkũyũ)": "Ũhoro wa mũndũ ũrĩ thutha",
+        "Literal Translation": "A person's truth has difficulty.",
+        "Explanation": "Telling the truth can be hard and may lead to negative consequences or conflicts.",
+        "English Equivalent": "The truth hurts.",
+        "Theme": "Pain of Truth"
+    },
+    {
+        "No.": 162,
+        "Proverb (Gĩkũyũ)": "Ũhoro wa mũndũ ũrĩ mũno",
+        "Literal Translation": "A person's truth is great.",
+        "Explanation": "A person of integrity is highly valued and respected in the community.",
+        "English Equivalent": "Integrity is priceless.",
+        "Theme": "Integrity & Value"
+    },
+    {
+        "No.": 163,
+        "Proverb (Gĩkũyũ)": "Ũhũthĩ wa mũndũ nĩ mũciĩ",
+        "Literal Translation": "A person's simplicity is a home.",
+        "Explanation": "A simple, humble person attracts others and creates a welcoming environment, like a warm home.",
+        "English Equivalent": "Humility makes a welcoming heart.",
+        "Theme": "Simplicity & Welcoming"
+    },
+    {
+        "No.": 164,
+        "Proverb (Gĩkũyũ)": "Ũhũthĩ wa mũndũ nĩ ũhoro",
+        "Literal Translation": "A person's simplicity is a lesson.",
+        "Explanation": "Humble and straightforward people teach others the value of avoiding complexity and vanity.",
+        "English Equivalent": "Simplicity is wisdom.",
+        "Theme": "Simplicity & Wisdom"
+    },
+    {
+        "No.": 165,
+        "Proverb (Gĩkũyũ)": "Ũhũthĩ wa mũndũ nĩ wendo",
+        "Literal Translation": "A person's simplicity is love.",
+        "Explanation": "A simple heart is a loving heart; lack of pretense makes affection genuine.",
+        "English Equivalent": "Simplicity is sincerity.",
+        "Theme": "Simplicity & Sincerity"
+    },
+    {
+        "No.": 166,
+        "Proverb (Gĩkũyũ)": "Ũhũthĩ wa mũndũ nĩ thutha",
+        "Literal Translation": "A person's simplicity is difficulty.",
+        "Explanation": "A person who is too simple or naive can easily be taken advantage of, leading to personal hardship.",
+        "English Equivalent": "Naivety courts trouble.",
+        "Theme": "Naivety & Vulnerability"
+    },
+    {
+        "No.": 167,
+        "Proverb (Gĩkũyũ)": "Ũhũthĩ wa mũndũ nĩ mũno",
+        "Literal Translation": "A person's simplicity is great.",
+        "Explanation": "In certain contexts, humbleness and lack of pretension are considered marks of great character.",
+        "English Equivalent": "True greatness lies in simplicity.",
+        "Theme": "Humility & Greatness"
+    },
+    {
+        "No.": 168,
+        "Proverb (Gĩkũyũ)": "Ũhũthĩ wa mũndũ ndũrĩ mũciĩ",
+        "Literal Translation": "A person's simplicity has no home.",
+        "Explanation": "An extremely humble person may be too easily overlooked or lack the stability of a defined status.",
+        "English Equivalent": "The meek are sometimes unseen.",
+        "Theme": "Humility & Status"
+    },
+    {
+        "No.": 169,
+        "Proverb (Gĩkũyũ)": "Ũhoro wa njĩra nĩ mũno",
+        "Literal Translation": "The path's truth is great.",
+        "Explanation": "Experience gained from journeying and confronting the outside world is extremely valuable.",
+        "English Equivalent": "Travel broadens the mind.",
+        "Theme": "Experience & Journey"
+    },
+    {
+        "No.": 170,
+        "Proverb (Gĩkũyũ)": "Wĩra mũno nĩ mũciĩ",
+        "Literal Translation": "Great work is a home.",
+        "Explanation": "A person's dedicated labor and effort create stability and security, much like a home provides shelter.",
+        "English Equivalent": "Work provides security.",
+        "Theme": "Work & Security"
+    },
+    {
+        "No.": 171,
+        "Proverb (Gĩkũyũ)": "Wĩra mũno nĩ ũhoro",
+        "Literal Translation": "Great work is a lesson.",
+        "Explanation": "Hard, consistent work is the best way to learn skills and gain true wisdom.",
+        "English Equivalent": "Learning by doing.",
+        "Theme": "Work & Learning"
+    },
+    {
+        "No.": 172,
+        "Proverb (Gĩkũyũ)": "Wĩra mũno nĩ wendo",
+        "Literal Translation": "Great work is love.",
+        "Explanation": "Only deep dedication and love for the task can sustain the effort required for great accomplishments.",
+        "English Equivalent": "Love your work.",
+        "Theme": "Dedication & Vocation"
+    },
+    {
+        "No.": 173,
+        "Proverb (Gĩkũyũ)": "Wĩra mũno nĩ thutha",
+        "Literal Translation": "Great work is difficulty.",
+        "Explanation": "Any highly significant achievement will necessarily involve significant challenges and hardship.",
+        "English Equivalent": "Great efforts lead to great challenges.",
+        "Theme": "Work & Challenge"
+    },
+    {
+        "No.": 174,
+        "Proverb (Gĩkũyũ)": "Wĩra mũno nĩ mũno",
+        "Literal Translation": "Great work is great.",
+        "Explanation": "Hard work and dedication are inherently valuable and lead to admirable results.",
+        "English Equivalent": "Diligence is a virtue.",
+        "Theme": "Value of Diligence"
+    },
+    {
+        "No.": 175,
+        "Proverb (Gĩkũyũ)": "Wĩra ũmwe ndũrĩ mũciĩ",
+        "Literal Translation": "One task has no home.",
+        "Explanation": "A single, isolated act of labor does not create lasting security; effort must be continuous.",
+        "English Equivalent": "Consistency is key.",
+        "Theme": "Consistency & Security"
+    },
+    {
+        "No.": 176,
+        "Proverb (Gĩkũyũ)": "Wĩra ũmwe nĩ ũhoro",
+        "Literal Translation": "One task is a lesson.",
+        "Explanation": "Every completed task, no matter how small, offers some new knowledge or experience.",
+        "English Equivalent": "Every chore teaches a skill.",
+        "Theme": "Learning & Task"
+    },
+    {
+        "No.": 177,
+        "Proverb (Gĩkũyũ)": "Wĩra ũmwe nĩ wendo",
+        "Literal Translation": "One task is love.",
+        "Explanation": "Even a small act done with affection is valuable.",
+        "English Equivalent": "A little kindness goes a long way.",
+        "Theme": "Kindness & Value"
+    },
+    {
+        "No.": 178,
+        "Proverb (Gĩkũyũ)": "Wĩra ũmwe nĩ thutha",
+        "Literal Translation": "One task is difficulty.",
+        "Explanation": "Even the simplest task can present unexpected problems.",
+        "English Equivalent": "Nothing is as easy as it looks.",
+        "Theme": "Difficulty & Simplicity"
+    },
+    {
+        "No.": 179,
+        "Proverb (Gĩkũyũ)": "Wĩra ũmwe nĩ mũno",
+        "Literal Translation": "One task is great.",
+        "Explanation": "Focusing intently on a single task can lead to mastery and significant achievement.",
+        "English Equivalent": "Specialization leads to excellence.",
+        "Theme": "Focus & Excellence"
+    },
+    {
+        "No.": 180,
+        "Proverb (Gĩkũyũ)": "Wĩra wa mũndũ ndũrĩ mũciĩ",
+        "Literal Translation": "A person's work has no home.",
+        "Explanation": "The results of one's labor are universal and benefit others outside the immediate family or community.",
+        "English Equivalent": "Your work impacts the world.",
+        "Theme": "Universal Impact"
+    },
+    {
+        "No.": 181,
+        "Proverb (Gĩkũyũ)": "Wĩra wa mũndũ ũrĩ ũhoro",
+        "Literal Translation": "A person's work has a lesson.",
+        "Explanation": "You can always learn from observing or performing someone else's labor.",
+        "English Equivalent": "Observation is learning.",
+        "Theme": "Learning by Observation"
+    },
+    {
+        "No.": 182,
+        "Proverb (Gĩkũyũ)": "Wĩra wa mũndũ ũrĩ wendo",
+        "Literal Translation": "A person's work has love.",
+        "Explanation": "The quality of work reflects the dedication and care put into it.",
+        "English Equivalent": "Work with passion.",
+        "Theme": "Passion & Quality"
+    },
+    {
+        "No.": 183,
+        "Proverb (Gĩkũyũ)": "Wĩra wa mũndũ ũrĩ thutha",
+        "Literal Translation": "A person's work has difficulty.",
+        "Explanation": "All labor, no matter who performs it, involves inherent challenges.",
+        "English Equivalent": "All work is taxing.",
+        "Theme": "Inherent Challenge"
+    },
+    {
+        "No.": 184,
+        "Proverb (Gĩkũyũ)": "Wĩra wa mũndũ ũrĩ mũno",
+        "Literal Translation": "A person's work is great.",
+        "Explanation": "The effort and dedication of a skilled individual are highly esteemed.",
+        "English Equivalent": "Good craftsmanship is highly valued.",
+        "Theme": "Skill & Esteem"
+    },
+    {
+        "No.": 185,
+        "Proverb (Gĩkũyũ)": "Wĩra wa mũndũ ndũrĩ ũhoro",
+        "Literal Translation": "A person's work has no lesson (it is self-evident).",
+        "Explanation": "The quality of the outcome is the only lesson needed; the results speak for themselves.",
+        "English Equivalent": "The proof of the pudding is in the eating.",
+        "Theme": "Results & Proof"
+    },
+    {
+        "No.": 186,
+        "Proverb (Gĩkũyũ)": "Wĩra wa mũndũ ndũrĩ wendo",
+        "Literal Translation": "A person's work has no love (it is impartial).",
+        "Explanation": "Work should be judged on its merit, not on the personal feelings of the worker or the recipient.",
+        "English Equivalent": "Judge the work, not the worker.",
+        "Theme": "Objectivity & Judgment"
+    },
+    {
+        "No.": 187,
+        "Proverb (Gĩkũyũ)": "Wĩra wa mũndũ ndũrĩ thutha",
+        "Literal Translation": "A person's work has no difficulty (it is well-executed).",
+        "Explanation": "When a skilled person works, they make even the most complex task appear easy.",
+        "English Equivalent": "Practice makes perfect.",
+        "Theme": "Skill & Ease"
+    },
+    {
+        "No.": 188,
+        "Proverb (Gĩkũyũ)": "Wĩra wa mũndũ ndũrĩ mũno",
+        "Literal Translation": "A person's work is not great (it is just enough).",
+        "Explanation": "A humble perspective on one's own labor; focus on function rather than boasting.",
+        "English Equivalent": "Do not boast of your work.",
+        "Theme": "Humility & Labor"
+    },
+    {
+        "No.": 189,
+        "Proverb (Gĩkũyũ)": "Wĩra wa ũhoro nĩ mũciĩ",
+        "Literal Translation": "The work of a lesson is a home.",
+        "Explanation": "Applying wisdom and learning creates a stable and secure life (a 'home').",
+        "English Equivalent": "Wisdom builds a life.",
+        "Theme": "Wisdom & Stability"
+    },
+    {
+        "No.": 190,
+        "Proverb (Gĩkũyũ)": "Wĩra wa ũhoro nĩ wendo",
+        "Literal Translation": "The work of a lesson is love.",
+        "Explanation": "Caring about one's education and applying the lessons learned demonstrates self-respect and love for life.",
+        "English Equivalent": "Knowledge is a sign of self-care.",
+        "Theme": "Knowledge & Self-Care"
+    },
+    {
+        "No.": 191,
+        "Proverb (Gĩkũyũ)": "Wĩra wa ũhoro nĩ thutha",
+        "Literal Translation": "The work of a lesson is difficulty.",
+        "Explanation": "The process of acquiring knowledge and understanding is rarely easy; it requires struggle.",
+        "English Equivalent": "The path of learning is hard.",
+        "Theme": "Learning & Struggle"
+    },
+    {
+        "No.": 192,
+        "Proverb (Gĩkũyũ)": "Wĩra wa ũhoro nĩ mũno",
+        "Literal Translation": "The work of a lesson is great.",
+        "Explanation": "The pursuit of knowledge is a most noble and rewarding endeavor.",
+        "English Equivalent": "Learning is the greatest work.",
+        "Theme": "Value of Knowledge"
+    },
+    {
+        "No.": 193,
+        "Proverb (Gĩkũyũ)": "Wĩra wa ũhoro ndũrĩ mũciĩ",
+        "Literal Translation": "The work of a lesson has no home.",
+        "Explanation": "Wisdom is not confined to one place; it can be applied universally.",
+        "English Equivalent": "Wisdom is portable.",
+        "Theme": "Universality of Wisdom"
+    },
+    {
+        "No.": 194,
+        "Proverb (Gĩkũyũ)": "Wĩra wa ũhoro ndũrĩ wendo",
+        "Literal Translation": "The work of a lesson has no love (it is objective).",
+        "Explanation": "Knowledge is neutral; it should be taught and used impartially.",
+        "English Equivalent": "Knowledge is objective.",
+        "Theme": "Impartiality & Knowledge"
+    },
+    {
+        "No.": 195,
+        "Proverb (Gĩkũyũ)": "Wĩra wa ũhoro ndũrĩ thutha",
+        "Literal Translation": "The work of a lesson has no difficulty (it flows naturally).",
+        "Explanation": "Once a concept is truly mastered, applying it becomes second nature.",
+        "English Equivalent": "Mastery is effortless.",
+        "Theme": "Mastery & Flow"
+    },
+    {
+        "No.": 196,
+        "Proverb (Gĩkũyũ)": "Wĩra wa ũhoro ndũrĩ mũno",
+        "Literal Translation": "The work of a lesson is not great (it is fundamental).",
+        "Explanation": "Basic education is a necessity, not a luxury to be boasted about.",
+        "English Equivalent": "Basic literacy is fundamental.",
+        "Theme": "Fundamentals & Necessity"
+    },
+    {
+        "No.": 197,
+        "Proverb (Gĩkũyũ)": "Wĩra wa wendo nĩ mũciĩ",
+        "Literal Translation": "The work of love is a home.",
+        "Explanation": "Actions motivated by love and care create stability, warmth, and belonging.",
+        "English Equivalent": "Love makes a house a home.",
+        "Theme": "Love & Belonging"
+    },
+    {
+        "No.": 198,
+        "Proverb (Gĩkũyũ)": "Wĩra wa wendo nĩ thutha",
+        "Literal Translation": "The work of love is difficulty.",
+        "Explanation": "Maintaining loving relationships often requires great sacrifice and effort.",
+        "English Equivalent": "Love is hard work.",
+        "Theme": "Love & Sacrifice"
+    },
+    {
+        "No.": 199,
+        "Proverb (Gĩkũyũ)": "Wĩra wa wendo nĩ mũno",
+        "Literal Translation": "The work of love is great.",
+        "Explanation": "Love is a powerful force that leads to noble deeds and great resilience.",
+        "English Equivalent": "Love is the greatest virtue.",
+        "Theme": "Love & Virtue"
+    },
+    {
+        "No.": 200,
+        "Proverb (Gĩkũyũ)": "Wĩra wa wendo ndũrĩ mũciĩ",
+        "Literal Translation": "The work of love has no home.",
+        "Explanation": "Love is universal and not confined to a single place or family.",
+        "English Equivalent": "Love knows no bounds.",
+        "Theme": "Universality of Love"
+    }
+]

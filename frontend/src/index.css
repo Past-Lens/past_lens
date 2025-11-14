@@ -159,3 +159,7 @@
             -10px 20px;
     }
 }
+
+.n * {
+    border: 1px solid red;
+}

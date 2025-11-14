@@ -28,7 +28,6 @@
     ],
     "dependencies": {
         "@google/genai": "^1.21.0",
-        "framer-motion": "^12.23.12",
         "lucide-react": "^0.542.0",
         "mongoose": "^8.18.0",
         "past_lens": ".",

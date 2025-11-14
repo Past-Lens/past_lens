@@ -1,0 +1,407 @@
+{
+    "museumData": {
+        "title": "Gikuyu Cultural Heritage Collection",
+        "description": "Comprehensive collection of Gikuyu (Agikuyu/Kikuyu) cultural artifacts, stories, traditions, and historical information from Central Kenya",
+        "sources": [
+            "Gīkūyū Centre for Cultural Studies",
+            "National Museums of Kenya",
+            "Google Arts & Culture",
+            "British Museum"
+        ]
+    },
+    "communityOverview": {
+        "names": ["Kikuyu", "Agikuyu", "Gikuyu"],
+        "classification": "Central Bantu community",
+        "relatedCommunities": ["Embu", "Kamba", "Tharaka", "Meru", "Mbeere"],
+        "traditionalTerritory": "Around Mount Kenya, including Murang'a, Nyeri, Kiambu, Nyandarua, Kirinyaga and Nakuru counties",
+        "population": "Kenya's largest ethnic group",
+        "historicalSignificance": "Championed Kenya's independence through the Mau Mau movement and Kikuyu Central Association (KCA)",
+        "notableFigures": [
+            "Dedan Kimathi - Freedom fighter",
+            "Mzee Jomo Kenyatta - First President of Kenya (1963-1978)",
+            "Mwai Kibaki - Third President (2002-2013)",
+            "Uhuru Kenyatta - Fourth President",
+            "Professor Wangari Maathai - Nobel Peace Prize recipient",
+            "Ngugi wa Thiong'o - Award-winning writer"
+        ]
+    },
+    "artifacts": [
+        {
+            "id": "1",
+            "name": "Gicandi",
+            "category": "Musical Instrument & Poetry Device",
+            "description": "An ancient Gikuyu composition of enigmatic poetry presented in public by two poets in a dialogue of back and forth battle of wits. Composed of reportedly over 150 stanzas, the Gicandi is both a musical instrument and a mnemonic-pictorial system.",
+            "culturalSignificance": "The epitome of creative expression in Gikuyu culture. The Gicandi singer (Muini wa Gicandi) is considered the Grand Master, representing the highest level of intellectual and artistic achievement.",
+            "performance": "Two contestants would propose enigmas in turn, with the competition continuing until one failed to give the interpretation and lost the game. The losing party handed over his musical instrument to the winner.",
+            "uniqueFeature": "The drawings on the Gicandi are as enigmatic as the words and constitute a mnemonic-pictorial system that is the only kind existent among the Bantu tribes, reminiscent of hieroglyphics writing system of ancient Egypt",
+            "documentation": "Vittorio Merlo Pick, an Italian Consolata missionary, recorded 126 of originally 150 stanzas with John Kahora in 1930 in the book 'Ndai na Gicandi: Kikuyu Enigmas'",
+            "owners": [
+                {
+                    "name": "John Kahora",
+                    "imageUrl": "https://mukuyu.wordpress.com/wp-content/uploads/2016/08/wp-1471980466508.jpeg?w=700"
+                },
+                {
+                    "name": "Joseph Kang'ethe",
+                    "imageUrl": "https://mukuyu.wordpress.com/wp-content/uploads/2016/08/wp-1471980512541.jpeg?w=700"
+                },
+                {
+                    "name": "Bantu Mwaura",
+                    "imageUrl": "https://mukuyu.wordpress.com/wp-content/uploads/2016/08/wp-1471980533780.jpeg?w=700"
+                },
+                {
+                    "name": "Kimani wa Karanja",
+                    "imageUrls": [
+                        "https://mukuyu.wordpress.com/wp-content/uploads/2016/08/img_4997.jpg?w=700",
+                        "https://mukuyu.wordpress.com/wp-content/uploads/2016/08/img_20160827_124221.jpg?w=700",
+                        "https://mukuyu.wordpress.com/wp-content/uploads/2016/08/img_20160827_124436.jpg?w=700"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "name": "Gataki",
+            "category": "Traditional Artifact",
+            "description": "A traditional Gikuyu artifact shown in the collection",
+            "imageUrl": "https://mukuyu.wordpress.com/wp-content/uploads/2016/08/img_5030.jpg?w=700"
+        },
+        {
+            "id": "3",
+            "name": "Mwano (Divination Gourd)",
+            "category": "Medicine Man Equipment",
+            "description": "The most important gourd in the medicine man's arsenal, used for divination and containing medicine to heal the sick. It has a long neck, decorated with a woven leather strap and plant fibre handle, sealed with a plant fibre lid attached with leather to the neck.",
+            "culturalSignificance": "Primary apparatus of the medicine man (mundu mugo), who was a powerful person in the community consulted about the future, for healing and cleansing from ill omens",
+            "materials": "Gourd, woven leather strap, plant fibre",
+            "source": "National Museums of Kenya"
+        },
+        {
+            "id": "4",
+            "name": "Ndome (Dancing Shield)",
+            "category": "Ceremonial Weapon",
+            "period": "1850-1899",
+            "description": "Shields carved out of a single piece of wood, with a hole for the arm instead of a hand grip, worn on the upper left arm. Used by boys prior to their initiation as junior warriors.",
+            "culturalSignificance": "Each year boys of a particular territorial unit would choose a design, which they later used for their war shields once they achieved warrior status. These became family heirlooms, though designs might be scraped off and repainted many times as each new generation prepared for initiation.",
+            "materials": "Single piece of wood",
+            "source": "British Museum"
+        },
+        {
+            "id": "5",
+            "name": "Kahiu ka Irima (Digging Knife)",
+            "category": "Agricultural Tool",
+            "description": "Traditional digging knife with a wooden handle carved from Murembu wood, made by blacksmiths at Kirwara.",
+            "use": "Used by women for cultivating fields, clearing bushes, weeding and harvesting cassava and sweet potatoes",
+            "craftedBy": "Kikuyu blacksmiths (muturi)",
+            "source": "National Museums of Kenya"
+        },
+        {
+            "id": "6",
+            "name": "Kiondo (Basket)",
+            "category": "Household Item & Trade Good",
+            "description": "A woven basket made in various shapes, colors, and sizes, decorated with geometric designs. Strings for making baskets were gathered from the bark of several indigenous shrubs.",
+            "culturalSignificance": "Notable traditional economic activity among Agikuyu women",
+            "uses": "Apart from weaving baskets and trays, the strings were also used in making snares, repairing calabashes, stringing beads or tying loads",
+            "craftedBy": "Agikuyu women",
+            "source": "National Museums of Kenya"
+        },
+        {
+            "id": "7",
+            "name": "Riumba Cooking Pot",
+            "category": "Pottery",
+            "year": "1957",
+            "description": "Kikuyu pot with a straight neck and rim decorated with diagonal lines, made using a mixture of three types of clay – red, white and black – obtained from swamps and along river banks.",
+            "uses": "Used for cooking, storing grain, carrying water and for trade",
+            "materials": "Riumba (special clay)",
+            "craftedBy": "Kikuyu women potters",
+            "production": "Women collected and made these pots under the shade, in a similar manner to the Kamba",
+            "source": "National Museums of Kenya"
+        },
+        {
+            "id": "8",
+            "name": "Wooden Food Bowl",
+            "category": "Household Item",
+            "description": "Wooden food bowl made by a craftsman, used by everybody for eating dry foods",
+            "source": "National Museums of Kenya"
+        },
+        {
+            "id": "9",
+            "name": "Ceremonial Headdress",
+            "category": "Ceremonial Attire",
+            "description": "A headdress made from sisal ropes which were dyed with castor oil",
+            "use": "Used by Kikuyu elders during ceremonial occasions",
+            "source": "National Museums of Kenya"
+        },
+        {
+            "id": "10",
+            "name": "Fly Whisk",
+            "category": "Symbol of Status",
+            "description": "Made using a cow tail, fitted firmly with a wooden handle",
+            "culturalSignificance": "Made by men and carried by elders as a symbol of status",
+            "source": "National Museums of Kenya"
+        },
+        {
+            "id": "11",
+            "name": "Wandindi (Fiddle)",
+            "category": "Musical Instrument",
+            "description": "The fiddle is played by a specialist using a sisal stringed bow (muthage). The specialist would go round the countryside playing the instrument and singing in markets and at dances.",
+            "source": "National Museums of Kenya"
+        },
+        {
+            "id": "12",
+            "name": "Kigamba (Large Leg Rattles)",
+            "category": "Musical Instrument",
+            "year": "1919",
+            "description": "Large rattles made by blacksmiths and worn by travelers and dancers just below the knee during special occasions such as war dances, initiation ceremonies and other ceremonial dances. Made with four long bells sewn on a thick pad of leather.",
+            "use": "Worn by older men for dancing",
+            "modernVersion": "Today, such bells are made from scrap iron and ball bearings",
+            "source": "National Museums of Kenya"
+        },
+        {
+            "id": "13",
+            "name": "Waist Belt",
+            "category": "Traditional Attire",
+            "source": "National Museums of Kenya"
+        },
+        {
+            "id": "14",
+            "name": "Cross Shoulder Ornament",
+            "category": "Traditional Attire",
+            "source": "National Museums of Kenya"
+        },
+        {
+            "id": "15",
+            "name": "Headband",
+            "category": "Traditional Attire",
+            "culturalContext": "Associated with initiation ceremonies",
+            "source": "National Museums of Kenya"
+        }
+    ],
+    "culturalPractices": [
+        {
+            "id": "1",
+            "name": "Cengerecema",
+            "category": "Educational Mind Game",
+            "description": "A famous mind game strictly for Kikuyu neophytes used to develop and train memory, wit, shrewdness, richness of imagination, and the spirit of observation.",
+            "text": "Witagwo atia? – Cengerecema\nIi cema? – Cema uuthi\nIi uuthi? – Uuthi kagira\nIi kagira? – Kagira nyenje\nIi nyenje – Nyenje wairi\nIi wairi? – Wairi uri nda\nIi nda? – Nda ya mwene\nIi mwene? – Mwene matote\nIi matote?- Matotera thi\nIi thi? – Thi ya murogi\nIi murogi? – Murogi ciari\nIi ciari? – Ciari gatara\nIi gatara? – Gatara hungu\nIi hungu? – Hungu king'uu\nIi king'uu? – King'uira iguru",
+            "culturalContext": "Part of the educational system where young people progressed from riddles to more complex linguistic and poetic forms",
+            "progression": "Young grew up with mind games, fairy tales, riddles and enigmas, then adults deepened these skills in music and poetry like Muthunguci, Mugoiyo and Gicukia"
+        },
+        {
+            "id": "2",
+            "name": "Irua (Initiation/Circumcision)",
+            "category": "Rite of Passage",
+            "description": "The Agikuyu circumcised both boys and girls at puberty. As an important cultural practice, circumcision was characterized by celebration.",
+            "significance": "Circumcised girls became women ready for marriage, and boys became warriors. Initiates circumcised at the same time formed an age-set (riika).",
+            "modernContext": "In Kenya today, female circumcision is illegal and communities are encouraged to adopt alternative initiation rites which do not involve female genital mutilation"
+        },
+        {
+            "id": "3",
+            "name": "Nguracio (Traditional Marriage Ceremony)",
+            "category": "Social Ceremony",
+            "description": "When a young man found a suitable woman to marry, he was expected to pay bride wealth (ruracio) to her family. Parents of both bride and groom engaged in discussions, exchanged gifts, and assessed whether the couple were a suitable match.",
+            "process": "Elders and fathers of the groom and bride drank locally brewed beer (muratina) together as they negotiated for bride wealth (sheep, goats and cattle). A man could marry as many wives as he could afford.",
+            "celebration": "Characterized by a great feast, songs, dance and merry-making"
+        },
+        {
+            "id": "4",
+            "name": "Kiama (Council of Elders)",
+            "category": "Political Institution",
+            "description": "The council of elders was responsible for ensuring law and order, decision-making, ritual oath taking, religion, and administration.",
+            "authority": "The kiama presided over all issues concerning the community as a whole",
+            "culturalSignificance": "Known for proverbs-rich rhetoric. As stated in Kahora's stanza 17: 'While the warriors divide their hairs, and the young boys talk about goats, the elders discuss the secrets of the Council (ndundu cia ciira).'"
+        }
+    ],
+    "traditionalFoods": [
+        {
+            "name": "Githeri",
+            "description": "Maize and beans"
+        },
+        {
+            "name": "Mukimo",
+            "description": "Mashed green peas and potatoes"
+        },
+        {
+            "name": "Kimitu",
+            "description": "Mashed beans and potatoes"
+        },
+        {
+            "name": "Irio",
+            "description": "Mashed dry beans, corn and potatoes"
+        },
+        {
+            "name": "Mutura",
+            "description": "Sausage made using goat intestines, meat and blood"
+        },
+        {
+            "name": "Ucuru",
+            "description": "Fermented porridge made from flour of corn, millet or sorghum"
+        },
+        {
+            "name": "Muratina",
+            "description": "Locally brewed beer used in ceremonies and negotiations"
+        }
+    ],
+    "musicalInstruments": [
+        {
+            "name": "Kihembe",
+            "type": "Drums"
+        },
+        {
+            "name": "Njingiri",
+            "type": "Small rattles"
+        },
+        {
+            "name": "Kigamba",
+            "type": "Large rattles"
+        },
+        {
+            "name": "Coro",
+            "type": "Horn"
+        },
+        {
+            "name": "Muturiru",
+            "type": "Flute"
+        },
+        {
+            "name": "Wandindi",
+            "type": "Fiddle",
+            "playedWith": "Muthage (sisal stringed bow)"
+        }
+    ],
+    "musicalPoetryForms": [
+        {
+            "name": "Muthunguci",
+            "description": "A form of Gikuyu music and poetry heavy in linguistic allegory and symbolism"
+        },
+        {
+            "name": "Mugoiyo",
+            "description": "A form of Gikuyu music and poetry heavy in linguistic allegory and symbolism"
+        },
+        {
+            "name": "Gicukia",
+            "description": "A form of Gikuyu music and poetry heavy in linguistic allegory and symbolism"
+        }
+    ],
+    "religiousBeliefs": {
+        "supremeBeing": {
+            "name": "Ngai",
+            "meaning": "One creator God",
+            "dwelling": "Mount Kenya",
+            "worship": "Prayers and sacrifices at designated places such as on top of hills, Mount Kenya and under specific trees (especially fig/Mugumo trees)",
+            "sacrifices": "Conducted by members of the ruling generation, who appoint special priests for each occasion"
+        },
+        "creationMyth": {
+            "firstMan": "Gikuyu",
+            "firstWoman": "Mumbi",
+            "landGrant": "Ngai allotted Gikuyu all land south-west of Mount Kenya (currently Kirinyaga county)",
+            "sacredPlace": "Mukurwe wa Nyagathanga in Murang'a - a gazetted cultural site with many fig trees",
+            "nineDaughters": [
+                "Wanjirũ",
+                "Wambũi",
+                "Njeri",
+                "Wanjikũ",
+                "Nyambũra",
+                "Wairimũ",
+                "Waithĩra",
+                "Wangarĩ",
+                "Wangũi"
+            ],
+            "clanOrigin": "Nine men appeared under the mugumo tree who married the daughters and became the ancestors of the nine Kikuyu clans"
+        }
+    },
+    "historicalFigures": [
+        {
+            "id": "1",
+            "name": "Mugo wa Kibiru (Cege wa Kibiru)",
+            "title": "The Great Seer/Prophet",
+            "period": "18th-19th centuries",
+            "birthplace": "Kariara, Murang'a near Thika",
+            "description": "A famous Gikuyu healer and prophet man who was found alone in the forest by a hunter called Kibiru. His parents are unknown.",
+            "clan": "Anjiru clan (traditionally associated with prophecy and powerful medicine)",
+            "abilities": "Possessed powers to control animals, occasionally claimed to have been with God (Ngai)",
+            "prophecies": [
+                "Coming of the white man with skin like pale frogs (Kiengere)",
+                "Colorful clothes like butterflies (ciiuhuruta)",
+                "Magical sticks that produced fire (guns)",
+                "White men carrying fire in their pockets (matchboxes)",
+                "Destruction of Gikuyu tribal customs",
+                "Cooked food being sold by roadside",
+                "Maasai grazing plains turned into farmland",
+                "Famine before arrival of foreigners",
+                "Kenya-Uganda railway (iron snake with many legs that swallowed and spat out white men)",
+                "A fig tree in Thika that would die only after white men left the country 68 years after colonization"
+            ],
+            "imageReference": "Shujaa Stories illustration by National Museums of Kenya"
+        },
+        {
+            "id": "2",
+            "name": "Karuri wa Gakure",
+            "title": "The Great Chief",
+            "birthplace": "Gathigiyo",
+            "family": "Father from Angari clan, mother named Wangari",
+            "nickname": "Mutongoria (meaning leader)",
+            "ageSet": "Machungya makuru",
+            "description": "A famous Kikuyu medicine man and warrior who displayed leadership qualities among his peers from a young age.",
+            "activities": [
+                "Hunted elephants for ivory to trade with Arabs",
+                "Became medicine man (bought herbs for thirty goats from Githaiga wa Muya, Gikemi wa Karura and hunter-gathering communities)",
+                "Led Kikuyu warriors to battle after giving them medicine believed to make them invincible"
+            ],
+            "imageReference": "Shujaa Stories illustration by National Museums of Kenya"
+        }
+    ],
+    "economicActivities": {
+        "traditional": {
+            "primary": "Originally hunters and gatherers",
+            "evolved": "Later adopted agriculture as main source of livelihood",
+            "genderRoles": {
+                "women": "Farming and gathering of wild fruits using traditional tools (hoes, digging knives) for domestic consumption",
+                "men": "Hunting"
+            },
+            "learned": "Learnt the art of iron-making and smelting from the Gumba people"
+        },
+        "modern": {
+            "mainActivities": ["Trade", "Agriculture", "Livestock keeping"],
+            "crops": {
+                "food": [
+                    "Potatoes",
+                    "Bananas",
+                    "Millet",
+                    "Maize",
+                    "Beans",
+                    "Vegetables"
+                ],
+                "cash": ["Tea", "Coffee", "Rice"]
+            }
+        },
+        "crafts": {
+            "ironWorking": {
+                "craftsmen": "Muturi (blacksmiths)",
+                "products": "Knives and weapons from iron ore dug out of ground and smelted",
+                "trade": "In markets, tobacco, vegetables, skins and gourds were exchanged for iron, pottery, leather garments, salt and red ochre"
+            },
+            "basketMaking": {
+                "craftswomen": "Agikuyu women",
+                "products": "Kiondo baskets in various shapes, colors and sizes with geometric designs"
+            },
+            "pottery": {
+                "craftswomen": "Kikuyu women",
+                "material": "Riumba (special clay from swamps and river banks)",
+                "products": "Pots for cooking, storing grain, carrying water and trade"
+            }
+        }
+    },
+    "socialOrganization": {
+        "basicUnit": "Nyumba (family unit)",
+        "extended": "Extended through marriage",
+        "clan": "Mbari (several related families)",
+        "neighbourhood": "Itura",
+        "ageSets": "Riika (initiates circumcised at the same time)",
+        "leadership": "Kiama (council of elders)"
+    },
+    "migrationHistory": {
+        "origin": "Ancestors arrived in Kenya and settled on slopes of Mount Kenya",
+        "indigenous": "Found the Gumba people whom they assimilated",
+        "gumba": "Hunters who made iron and pottery, used honey and honey products",
+        "expansion": "As population increased, dispersed to different areas around slopes of Mount Kenya"
+    }
+}
