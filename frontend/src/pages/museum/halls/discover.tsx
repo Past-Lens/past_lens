@@ -73,17 +73,17 @@ const Discover = () => {
                         Discover an Artifact
                     </h1>
 
-                    <div className="bg-white/5 rounded-2xl p-6 max-w-4xl">
+                    <div className="bg-white/5 rounded-2xl p-6 max-w-6xl flex gap-6">
                         <form
                             onSubmit={onSubmit}
-                            className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start"
+                            className="flex gap-[15%] w-11/12 mx-auto"
                         >
                             <div className="md:col-span-2 space-y-4">
                                 <label className="block text-sm text-white/60">
                                     Upload image
                                 </label>
-                                <div className="flex items-center gap-4">
-                                    <label className="flex items-center gap-3 cursor-pointer bg-white/6 px-4 py-2 rounded-lg border border-white/10 hover:bg-white/10">
+                                <div className="flex items-center gap-4 flex-col-reverse">
+                                    <label className="flex items-center gap-3 cursor-pointer bg-white/6 px-4 w-11/12 py-2 rounded-lg border border-white/10 hover:bg-white/10">
                                         <Image className="w-5 h-5 text-white/80" />
                                         <span className="text-white">
                                             Choose file
@@ -97,7 +97,7 @@ const Discover = () => {
                                     </label>
 
                                     {preview ? (
-                                        <div className="w-40 h-40 rounded-lg overflow-hidden border border-white/10">
+                                        <div className="w-60 h-60 rounded-lg overflow-hidden border border-white/10">
                                             <img
                                                 src={preview}
                                                 alt="preview"
@@ -132,7 +132,7 @@ const Discover = () => {
                                 )}
                             </div>
 
-                            <div className="md:col-span-1 flex flex-col items-stretch">
+                            <div className=" flex flex-col  min-w-160 max-w-120 overflow-auto">
                                 <div className="mb-4">
                                     <label className="block text-sm text-white/60 mb-2">
                                         Action
@@ -172,7 +172,10 @@ const Discover = () => {
                                                 <strong>
                                                     Detailed Description:
                                                 </strong>{' '}
-                                                {result?.detailed_description}
+                                                {
+                                                    result.enhanced
+                                                        .enhanced_description
+                                                }
                                             </div>
                                             <div>
                                                 <strong>Uses:</strong>{' '}
